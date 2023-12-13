@@ -64,9 +64,35 @@ class Player():
                    ])
         
         return own_conv + on_field
+
+    def on_field_concession(self, match):
+        """
+        Calculate the number of points conceded by the team
+        while the player was on the field.
+        """
+
+        # Find the player's position and side
+        position, side = self._find_position(match)
+        # We need the other side however
+        if match.home == side:
+            side = match.away
+        else:
+            side = match.home
+
+        if not position:
+            return 0
+
+        on_field = sum([score.value for score in side.scores
+                        if score.minute in chain(*position.playing)])
+        return on_field
+
     
     def total_on_field_points(self, tournament):
         points = sum([self.on_field_points(x) for x in self.matches(tournament)])
+        return points
+
+    def total_on_field_concession(self, tournament):
+        points = sum([self.on_field_concession(x) for x in self.matches(tournament)])
         return points
 
     def __eq__(self, other):
@@ -178,7 +204,7 @@ class Lineup():
 
 class Match():
     
-    def __init__(self, home, away, stadium, date):
+    def __init__(self, home, away, stadium, date, tournament=None, round=None, url=None):
         
         self.home = Lineup(self, **home)
         self.away = Lineup(self, **away)

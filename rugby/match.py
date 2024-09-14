@@ -48,9 +48,8 @@ class Match(object):
 
         if "stadium" in row:
             self.stadium = row["stadium"]
-        if hasattr(row, "tround"):
-            self.round = row['tround']
-
+        self.round = row.get('tround', row.get('round', 0))
+            
         # Store tournament metadata
         if not isinstance(tournament, type(None)):
             self.season = tournament.season

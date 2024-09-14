@@ -185,7 +185,7 @@ class Team():
         return list(players)
 
 class Lineup():
-    def __init__(self, match, team, lineup, score, scores):
+    def __init__(self, match, team, lineup, score, scores, **kwargs):
         self.match = match
         self.team = Team(team)
         self.lineup = self.parse_lineup(lineup)
@@ -204,7 +204,7 @@ class Lineup():
 
 class Match():
     
-    def __init__(self, home, away, stadium, date, tournament=None, round=None, url=None):
+    def __init__(self, home, away, stadium, date, tournament=None, round=None, url=None, **kwargs):
         
         self.home = Lineup(self, **home)
         self.away = Lineup(self, **away)

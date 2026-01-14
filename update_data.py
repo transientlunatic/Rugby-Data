@@ -41,6 +41,10 @@ SCORING_VALUES = {
     "Missed conversion": 0
 }
 
+# Configuration constants
+SEASON_START_MONTH = 8  # Rugby season typically starts in August/September
+MAX_ERRORS_TO_DISPLAY = 5  # Maximum number of errors to show in summary
+
 
 def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:
     """
@@ -185,7 +189,13 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
                 if match_key in existing_matches:
                     old_match = existing_data[existing_matches[match_key]]
                     # Check if match has been updated (e.g., results added)
-                    if old_match.get('home', {}).get('score') is None and match_dict.get('home', {}).get('score') is not None:
+                    old_home_score = old_match.get('home', {}).get('score')
+                    old_away_score = old_match.get('away', {}).get('score')
+                    new_home_score = match_dict.get('home', {}).get('score')
+                    new_away_score = match_dict.get('away', {}).get('score')
+                    
+                    if (old_home_score is None or old_away_score is None) and \
+                       (new_home_score is not None or new_away_score is not None):
                         stats['updated_matches'] += 1
                         click.echo(f"  Updated: {match_dict['home']['team']} v {match_dict['away']['team']}")
                 else:
@@ -236,24 +246,25 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
                 
                 # Process player lineups if available
                 if 'players' in match_data.get('homeTeam', {}) and 'players' in match_data.get('awayTeam', {}):
-                    for player_1, player_2 in zip(match_data['homeTeam']['players'], match_data['awayTeam']['players']):
-                        # Home player
-                        player_ids[player_1['id']] = player_1['name']
-                        position_ids[player_1['id']] = player_1['positionId']
-                        lineup['home'][player_1['positionId']] = {
-                            "name": player_1['name'],
-                            "on": [0] if int(player_1['positionId']) <= 15 else [],
+                    # Process home team players
+                    for player in match_data['homeTeam']['players']:
+                        player_ids[player['id']] = player['name']
+                        position_ids[player['id']] = player['positionId']
+                        lineup['home'][player['positionId']] = {
+                            "name": player['name'],
+                            "on": [0] if int(player['positionId']) <= 15 else [],
                             "off": [],
                             "reds": [],
                             "yellows": []
                         }
-                        
-                        # Away player
-                        player_ids[player_2['id']] = player_2['name']
-                        position_ids[player_2['id']] = player_2['positionId']
-                        lineup['away'][player_2['positionId']] = {
-                            "name": player_2['name'],
-                            "on": [0] if int(player_2['positionId']) <= 15 else [],
+                    
+                    # Process away team players
+                    for player in match_data['awayTeam']['players']:
+                        player_ids[player['id']] = player['name']
+                        position_ids[player['id']] = player['positionId']
+                        lineup['away'][player['positionId']] = {
+                            "name": player['name'],
+                            "on": [0] if int(player['positionId']) <= 15 else [],
                             "off": [],
                             "reds": [],
                             "yellows": []
@@ -342,7 +353,7 @@ def update(season: Optional[str], tournaments: tuple, dry_run: bool):
     # Determine current season if not specified
     if season is None:
         now = datetime.now()
-        if now.month >= 8:  # Rugby season typically starts in August/September
+        if now.month >= SEASON_START_MONTH:
             season = f"{now.year}-{now.year + 1}"
         else:
             season = f"{now.year - 1}-{now.year}"
@@ -381,10 +392,10 @@ def update(season: Optional[str], tournaments: tuple, dry_run: bool):
     
     if total_stats['errors']:
         click.echo(f"  Errors: {len(total_stats['errors'])}")
-        for error in total_stats['errors'][:5]:  # Show first 5 errors
+        for error in total_stats['errors'][:MAX_ERRORS_TO_DISPLAY]:
             click.echo(f"    - {error}")
-        if len(total_stats['errors']) > 5:
-            click.echo(f"    ... and {len(total_stats['errors']) - 5} more")
+        if len(total_stats['errors']) > MAX_ERRORS_TO_DISPLAY:
+            click.echo(f"    ... and {len(total_stats['errors']) - MAX_ERRORS_TO_DISPLAY} more")
     
     # Exit with error code if there were errors
     if total_stats['errors']:

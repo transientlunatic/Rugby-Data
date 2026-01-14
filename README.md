@@ -13,6 +13,19 @@ This repository is configured to automatically update match data weekly. The sys
 - How to trigger manual updates
 - How to add support for new leagues
 
+### Supported Leagues for Automated Updates
+
+The following leagues are currently supported for automated data updates:
+
+- **United Rugby Championship (URC)** - Celtic League / Pro12 / Pro14
+- **Gallagher Premiership** - English top-tier rugby
+- **Top 14** - French top-tier rugby
+- **Pro D2** - French second-tier rugby
+- **European Rugby Champions Cup** - Premier European club competition
+- **European Rugby Challenge Cup** - Secondary European club competition
+
+Use `python update_data.py -t all` to update all supported leagues, or specify individual leagues with `-t <league-code>`.
+
 # Internationals
 
 Complete international results are available to the end of 2020, thanks to http://www.lassen.co.nz/pickandgo.php

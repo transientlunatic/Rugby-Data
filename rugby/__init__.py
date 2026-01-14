@@ -57,10 +57,10 @@ class Player():
             return 0
         
         on_field = sum([score.value for score in side.scores if (score.minute in chain(*position.playing)) 
-                    and (score.type is not "conversion")
+                    and (score.type != "conversion")
                    ])
         own_conv = sum([score.value for score in side.scores if (score.player == self) 
-                    and (score.type is "conversion")
+                    and (score.type == "conversion")
                    ])
         
         return own_conv + on_field

@@ -1,8 +1,14 @@
+# Rugby Data Repository
+
 This repository contains scoring information from various professional rugby union leagues in both YAML and JSON format.
 
 The data in each format should be the same.
 
 Please submit a pull request if you spot any mistakes!
+
+## Automated Updates
+
+This repository is configured to automatically update match data weekly. See [AUTOMATION.md](AUTOMATION.md) for details on how the automation works and how to trigger manual updates.
 
 # Internationals
 

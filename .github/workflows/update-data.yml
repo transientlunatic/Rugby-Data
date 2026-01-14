@@ -1,0 +1,94 @@
+name: Update Rugby Data
+
+on:
+  # Run every Monday at midnight (UTC)
+  schedule:
+    - cron: '0 0 * * 1'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'Season to update (e.g., "2024-2025"). Leave empty for current season.'
+        required: false
+        type: string
+      dry_run:
+        description: 'Perform a dry run (no changes will be committed)'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Update rugby data
+        id: update
+        run: |
+          SEASON_ARG=""
+          if [ -n "${{ github.event.inputs.season }}" ]; then
+            SEASON_ARG="--season ${{ github.event.inputs.season }}"
+          fi
+          
+          DRY_RUN_ARG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            DRY_RUN_ARG="--dry-run"
+          fi
+          
+          python update_data.py $SEASON_ARG $DRY_RUN_ARG -t urc
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code json/ || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Get current date for commit message
+          CURRENT_DATE=$(date -u +"%Y-%m-%d")
+          
+          # Add only JSON files
+          git add json/*.json
+          
+          # Commit with informative message
+          git commit -m "Update rugby data - $CURRENT_DATE" -m "Automated update of tournament data"
+          
+          # Push changes
+          git push
+      
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "**Dry run mode** - No changes were committed" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.git-check.outputs.changes }}" = "true" ]; then
+            echo "✅ Data updated and committed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No changes detected - data is up to date" >> $GITHUB_STEP_SUMMARY
+          fi

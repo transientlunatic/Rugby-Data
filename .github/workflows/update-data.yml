@@ -12,6 +12,11 @@ on:
         description: 'Season to update (e.g., "2024-2025"). Leave empty for current season.'
         required: false
         type: string
+      tournaments:
+        description: 'Tournaments to update (comma-separated, e.g., "urc" or "all")'
+        required: false
+        type: string
+        default: 'urc'
       dry_run:
         description: 'Perform a dry run (no changes will be committed)'
         required: false
@@ -50,17 +55,31 @@ jobs:
             SEASON_ARG="--season ${{ github.event.inputs.season }}"
           fi
           
+          TOURNAMENT_ARGS=""
+          if [ -n "${{ github.event.inputs.tournaments }}" ]; then
+            # Split tournaments by comma and add -t flag for each
+            IFS=',' read -ra TOURNAMENTS <<< "${{ github.event.inputs.tournaments }}"
+            for t in "${TOURNAMENTS[@]}"; do
+              TOURNAMENT_ARGS="$TOURNAMENT_ARGS -t $(echo $t | xargs)"
+            done
+          else
+            TOURNAMENT_ARGS="-t urc"
+          fi
+          
           DRY_RUN_ARG=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             DRY_RUN_ARG="--dry-run"
           fi
           
-          python update_data.py $SEASON_ARG $DRY_RUN_ARG -t urc
+          python update_data.py $SEASON_ARG $TOURNAMENT_ARGS $DRY_RUN_ARG
       
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code json/ || echo "changes=true" >> $GITHUB_OUTPUT
+          # Add all JSON files (both new and modified)
+          git add json/*.json || true
+          # Check if there are any changes (new or modified files)
+          git diff --cached --exit-code json/ || echo "changes=true" >> $GITHUB_OUTPUT
       
       - name: Commit and push changes
         if: steps.git-check.outputs.changes == 'true' && github.event.inputs.dry_run != 'true'
@@ -71,10 +90,7 @@ jobs:
           # Get current date for commit message
           CURRENT_DATE=$(date -u +"%Y-%m-%d")
           
-          # Add only JSON files
-          git add json/*.json
-          
-          # Commit with informative message
+          # Commit with informative message (files already added in previous step)
           git commit -m "Update rugby data - $CURRENT_DATE" -m "Automated update of tournament data"
           
           # Push changes

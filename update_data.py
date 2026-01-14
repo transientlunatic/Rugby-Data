@@ -25,9 +25,28 @@ JSON_DIR = SCRIPT_DIR / "json"
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds
 
-# URC API configuration
-URC_COMP_ID = 1068
-URC_PROVIDER = "rugbyviz"
+# League/Competition Configuration
+# Format: {'league_code': {'comp_id': int, 'provider': str, 'name': str, 'filename_prefix': str}}
+LEAGUE_CONFIGS = {
+    'urc': {
+        'comp_id': 1068,
+        'provider': 'rugbyviz',
+        'name': 'United Rugby Championship',
+        'filename_prefix': 'celtic'  # Keep historical naming for compatibility
+    },
+    # Additional leagues can be added here in the future
+    # Example:
+    # 'premiership': {
+    #     'comp_id': XXXX,
+    #     'provider': 'provider_name',
+    #     'name': 'Gallagher Premiership',
+    #     'filename_prefix': 'premiership'
+    # },
+}
+
+# Legacy constants for backward compatibility
+URC_COMP_ID = LEAGUE_CONFIGS['urc']['comp_id']
+URC_PROVIDER = LEAGUE_CONFIGS['urc']['provider']
 
 # Scoring values mapping
 SCORING_VALUES = {
@@ -126,24 +145,34 @@ def validate_match_data(match: Dict) -> bool:
     return True
 
 
-def update_urc_data(season: str, dry_run: bool = False) -> Dict:
+def update_league_data(league: str, season: str, dry_run: bool = False) -> Dict:
     """
-    Update United Rugby Championship (Celtic League) data.
+    Update data for a specific rugby league/competition.
     
     Args:
+        league: League code (e.g., 'urc', 'premiership')
         season: Season in format "YYYY-YYYY" (e.g., "2024-2025")
         dry_run: If True, don't save changes
         
     Returns:
         Dict with stats about the update
     """
-    click.echo(f"Updating URC data for {season}...")
+    if league not in LEAGUE_CONFIGS:
+        return {
+            'new_matches': 0,
+            'updated_matches': 0,
+            'total_matches': 0,
+            'errors': [f"Unknown league: {league}. Available: {', '.join(LEAGUE_CONFIGS.keys())}"]
+        }
+    
+    league_config = LEAGUE_CONFIGS[league]
+    click.echo(f"Updating {league_config['name']} data for {season}...")
     
     # Parse season
     start_year = season.split("-")[0]
     
     # API endpoint
-    base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId={URC_COMP_ID}&season={start_year}01&provider={URC_PROVIDER}"
+    base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId={league_config['comp_id']}&season={start_year}01&provider={league_config['provider']}"
     
     stats = {
         'new_matches': 0,
@@ -156,7 +185,7 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
         # Fetch data from API
         response = fetch_with_retry(base_url)
         if response is None:
-            stats['errors'].append("Failed to fetch URC data after retries")
+            stats['errors'].append(f"Failed to fetch {league_config['name']} data after retries")
             return stats
             
         api_data = response.json()
@@ -166,7 +195,7 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
             return stats
             
         # Load existing data
-        json_file = JSON_DIR / f"celtic-{season}.json"
+        json_file = JSON_DIR / f"{league_config['filename_prefix']}-{season}.json"
         existing_data = load_existing_data(json_file)
         
         # Create lookup for existing matches
@@ -176,7 +205,7 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
         
         for match in api_data['data']:
             try:
-                match_dict = process_urc_match(match, season, start_year)
+                match_dict = process_match(match, season, start_year, league_config)
                 
                 # Validate match data
                 if not validate_match_data(match_dict):
@@ -216,7 +245,7 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
         
     except requests.RequestException as e:
         stats['errors'].append(f"API request failed: {e}")
-        click.echo(f"Error fetching URC data: {e}", err=True)
+        click.echo(f"Error fetching {league_config['name']} data: {e}", err=True)
     except Exception as e:
         stats['errors'].append(f"Unexpected error: {e}")
         click.echo(f"Unexpected error: {e}", err=True)
@@ -224,8 +253,23 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
     return stats
 
 
-def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
-    """Process a single URC match from the API."""
+def update_urc_data(season: str, dry_run: bool = False) -> Dict:
+    """
+    Update United Rugby Championship (Celtic League) data.
+    Wrapper function for backward compatibility.
+    
+    Args:
+        season: Season in format "YYYY-YYYY" (e.g., "2024-2025")
+        dry_run: If True, don't save changes
+        
+    Returns:
+        Dict with stats about the update
+    """
+    return update_league_data('urc', season, dry_run)
+
+
+def process_match(match: Dict, season: str, start_year: str, league_config: Dict) -> Dict:
+    """Process a single match from the API."""
     match_date = datetime.strptime(match['date'], "%Y-%m-%dT%H:%M:%S.%fZ")
     
     # Initialize data structures
@@ -238,7 +282,7 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
     # (not too far in the future)
     if match_date <= datetime.utcnow() + timedelta(days=7):
         try:
-            match_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches/{match['id']}?season={start_year}01&provider={URC_PROVIDER}"
+            match_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches/{match['id']}?season={start_year}01&provider={league_config['provider']}"
             match_response = fetch_with_retry(match_url)
             
             if match_response and match_response.status_code == 200:
@@ -344,7 +388,7 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
 @click.command()
 @click.option('--season', default=None, help='Season to update (e.g., "2024-2025"). Defaults to current season.')
 @click.option('--tournaments', '-t', multiple=True, 
-              type=click.Choice(['urc', 'all'], case_sensitive=False),
+              type=click.Choice(list(LEAGUE_CONFIGS.keys()) + ['all'], case_sensitive=False),
               default=['urc'],
               help='Which tournaments to update')
 @click.option('--dry-run', is_flag=True, help='Show what would be updated without saving')
@@ -376,15 +420,14 @@ def update(season: Optional[str], tournaments: tuple, dry_run: bool):
     
     # Expand 'all' to include all supported tournaments
     if 'all' in tournaments:
-        tournaments = ['urc']
+        tournaments = list(LEAGUE_CONFIGS.keys())
     
     # Update each tournament
     for tournament in tournaments:
-        if tournament == 'urc':
-            stats = update_urc_data(season, dry_run)
-            for key in ['new_matches', 'updated_matches', 'total_matches']:
-                total_stats[key] += stats.get(key, 0)
-            total_stats['errors'].extend(stats.get('errors', []))
+        stats = update_league_data(tournament, season, dry_run)
+        for key in ['new_matches', 'updated_matches', 'total_matches']:
+            total_stats[key] += stats.get(key, 0)
+        total_stats['errors'].extend(stats.get('errors', []))
     
     # Print summary
     click.echo()

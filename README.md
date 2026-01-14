@@ -34,18 +34,24 @@ Complete international results are available to the end of 2020, thanks to http:
 
 ## English Premiership
 
-English Premiership data is available for the 2006-2007 season through to the 2021-2022 season.
+English Premiership data is available for the 2006-2007 season through to the 2021-2022 season. Automated updates are now available for current seasons.
+
+**Note**: RFU Championship (English second-tier) is not currently available via automated updates as it's not accessible through the current data API.
 
 ## Celtic League / Pro12 / Pro14 / United Rugby Championship
 
-Celtic League data are available (in its various guises) between the 2006-2007 season and the 2021-2022 season.
+Celtic League data are available (in its various guises) between the 2006-2007 season and the 2021-2022 season. Automated updates are now available for current seasons.
 The Pro14 Rainbow Cup is not currently included.
 
 ## Top 14
 
-Top 14 data are available from the 2009-2010 season to the 2014-2015 season, and 2016-2017 to 2021-2022 seasons.
+Top 14 data are available from the 2009-2010 season to the 2014-2015 season, and 2016-2017 to 2021-2022 seasons. Automated updates are now available for current seasons.
 The 2006-2007 and 2015-2016 seasons are incomplete.
+
+## Pro D2 (France)
+
+Pro D2 (French second-tier) data is now available via automated updates for current seasons.
 
 ## European Challenge & Champions Cup
 
-The European Champions' and Challenge Cups data are available between the 2006-2007 season and the 2021-2022 season.
+The European Champions' and Challenge Cups data are available between the 2006-2007 season and the 2021-2022 season. Automated updates are now available for current seasons.

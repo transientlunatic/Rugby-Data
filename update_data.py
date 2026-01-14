@@ -9,6 +9,7 @@ focusing only on new or updated matches, and handles future fixtures gracefully.
 import json
 import os
 import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 import requests
@@ -19,6 +20,37 @@ import click
 # Configure paths
 SCRIPT_DIR = Path(__file__).parent
 JSON_DIR = SCRIPT_DIR / "json"
+
+# Configure retry settings
+MAX_RETRIES = 3
+RETRY_DELAY = 5  # seconds
+
+
+def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:
+    """
+    Fetch URL with retry logic.
+    
+    Args:
+        url: URL to fetch
+        timeout: Request timeout in seconds
+        max_retries: Maximum number of retry attempts
+        
+    Returns:
+        Response object or None if all retries failed
+    """
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=timeout)
+            response.raise_for_status()
+            return response
+        except requests.RequestException as e:
+            if attempt < max_retries - 1:
+                click.echo(f"    Retry {attempt + 1}/{max_retries - 1} after error: {e}", err=True)
+                time.sleep(RETRY_DELAY * (attempt + 1))  # Exponential backoff
+            else:
+                click.echo(f"    Failed after {max_retries} attempts: {e}", err=True)
+                return None
+    return None
 
 
 def load_existing_data(filepath: Path) -> List[Dict]:
@@ -47,7 +79,31 @@ def get_match_key(match: Dict) -> str:
     date = match.get('date', '')
     home = match.get('home', {}).get('team', '')
     away = match.get('away', {}).get('team', '')
-    return f"{date}|{home}|{away}"
+    # Normalize the key to handle minor variations
+    return f"{date[:10]}|{home.strip()}|{away.strip()}"
+
+
+def validate_match_data(match: Dict) -> bool:
+    """
+    Validate that a match dictionary has required fields.
+    
+    Args:
+        match: Match dictionary to validate
+        
+    Returns:
+        True if valid, False otherwise
+    """
+    required_fields = ['date', 'home', 'away', 'stadium']
+    if not all(field in match for field in required_fields):
+        return False
+    
+    if not isinstance(match.get('home'), dict) or not isinstance(match.get('away'), dict):
+        return False
+        
+    if 'team' not in match['home'] or 'team' not in match['away']:
+        return False
+        
+    return True
 
 
 def update_urc_data(season: str, dry_run: bool = False) -> Dict:
@@ -78,8 +134,11 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
     
     try:
         # Fetch data from API
-        response = requests.get(base_url, timeout=30)
-        response.raise_for_status()
+        response = fetch_with_retry(base_url)
+        if response is None:
+            stats['errors'].append("Failed to fetch URC data after retries")
+            return stats
+            
         api_data = response.json()
         
         if 'data' not in api_data:
@@ -98,6 +157,12 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
         for match in api_data['data']:
             try:
                 match_dict = process_urc_match(match, season, start_year)
+                
+                # Validate match data
+                if not validate_match_data(match_dict):
+                    stats['errors'].append(f"Invalid match data for {match.get('id')}")
+                    continue
+                    
                 match_key = get_match_key(match_dict)
                 
                 # Check if this is a new match or update
@@ -148,9 +213,9 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
     if match_date <= datetime.utcnow() + timedelta(days=7):
         try:
             match_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches/{match['id']}?season={start_year}01&provider=rugbyviz"
-            match_response = requests.get(match_url, timeout=30)
+            match_response = fetch_with_retry(match_url)
             
-            if match_response.status_code == 200:
+            if match_response and match_response.status_code == 200:
                 match_data = match_response.json().get('data', {})
                 
                 # Process player lineups if available

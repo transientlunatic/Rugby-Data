@@ -308,20 +308,24 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
             # If we can't get detailed data, continue with basic match info
             click.echo(f"    Warning: Could not fetch details for match {match.get('id')}: {e}", err=True)
     
+    # Determine if the match is completed based on its status
+    status = (match.get('status') or "").lower()
+    is_completed = status in {"complete", "completed", "finished", "result", "fulltime", "ft", "played"}
+
     # Build match dictionary
     match_dict = {
         "away": {
             "lineup": lineup['away'],
             "scores": scores['away'],
             "conference": match['awayTeam'].get('group'),
-            "score": match['awayTeam'].get('score') if match.get('status') else None,
+            "score": match['awayTeam'].get('score') if is_completed else None,
             "team": match['awayTeam']['name']
         },
         "home": {
             "lineup": lineup['home'],
             "scores": scores['home'],
             "conference": match['homeTeam'].get('group'),
-            "score": match['homeTeam'].get('score') if match.get('status') else None,
+            "score": match['homeTeam'].get('score') if is_completed else None,
             "team": match['homeTeam']['name']
         },
         "round": match.get('round', 0),

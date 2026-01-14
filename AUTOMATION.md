@@ -11,12 +11,24 @@ The repository is configured to automatically update rugby match data:
 
 ## What Gets Updated
 
-Currently, the automation supports:
+Currently, the automation supports the following leagues:
 
 - **URC (United Rugby Championship)**: Latest season data including:
   - Match results for completed games
   - Future fixtures (without results)
   - Player lineups, scores, substitutions, and cards (for completed matches)
+
+- **Gallagher Premiership**: English top-tier rugby league with complete match data
+
+- **Top 14**: French top-tier rugby league with complete match data
+
+- **Pro D2**: French second-tier rugby league with complete match data
+
+- **European Rugby Champions Cup**: Premier European club competition
+
+- **European Rugby Challenge Cup**: Secondary European club competition
+
+All leagues include the same detailed data structure with match results, player lineups, scoring events, and match officials when available.
 
 ### Adding New Leagues
 
@@ -29,8 +41,8 @@ The system is designed to be easily extensible. To add support for a new league:
 LEAGUE_CONFIGS = {
     'urc': {...},
     'premiership': {
-        'comp_id': XXXX,  # Competition ID from API
-        'provider': 'provider_name',
+        'comp_id': 1011,  # Competition ID from API
+        'provider': 'rugbyviz',
         'name': 'Gallagher Premiership',
         'filename_prefix': 'premiership'
     }
@@ -69,29 +81,47 @@ python update_data.py --season "2024-2025"
 python update_data.py --dry-run
 
 # Update specific tournaments
-python update_data.py -t urc
+python update_data.py -t premiership
+python update_data.py -t euro-champions
+python update_data.py -t top14
 
 # Update all available tournaments
 python update_data.py -t all
 
 # Update multiple specific tournaments
-python update_data.py -t urc -t premiership
+python update_data.py -t urc -t premiership -t euro-champions
+
+# Available tournament codes: urc, premiership, top14, pro-d2, euro-champions, euro-challenge
 ```
 
 ## Data Sources
 
-### URC (United Rugby Championship)
-- **Source**: InCrowd Sports API (rugby-union-feeds.incrowdsports.com)
+All supported leagues use the same data source:
+
+### InCrowd Sports API
+- **Source**: rugby-union-feeds.incrowdsports.com
+- **Provider**: rugbyviz
 - **Format**: JSON API
 - **Reliability**: High - Official data feed
 - **Coverage**: Complete match data including lineups, scores, and events
 
+#### Supported Competitions
+
+| League Code | Competition ID | Description |
+|-------------|---------------|-------------|
+| urc | 1068 | United Rugby Championship (Celtic League / Pro12 / Pro14) |
+| premiership | 1011 | Gallagher Premiership (English top-tier) |
+| top14 | 1002 | French top-tier rugby |
+| pro-d2 | 1013 | French second-tier rugby |
+| euro-champions | 1008 | European Rugby Champions Cup |
+| euro-challenge | 1026 | European Rugby Challenge Cup |
+
 ### Future Enhancements
 
-The system is now designed to easily add support for:
+The system can be extended to support:
 
-- Additional tournament support (Premiership, Top 14, European competitions)
-- International matches integration
+- RFU Championship (English second-tier) - pending API availability
+- International matches integration - requires different data source
 - Improved error handling and retry logic
 - Data validation and consistency checks
 

@@ -34,14 +34,36 @@ LEAGUE_CONFIGS = {
         'name': 'United Rugby Championship',
         'filename_prefix': 'celtic'  # Keep historical naming for compatibility
     },
-    # Additional leagues can be added here in the future
-    # Example:
-    # 'premiership': {
-    #     'comp_id': XXXX,
-    #     'provider': 'provider_name',
-    #     'name': 'Gallagher Premiership',
-    #     'filename_prefix': 'premiership'
-    # },
+    'premiership': {
+        'comp_id': 1011,
+        'provider': 'rugbyviz',
+        'name': 'Gallagher Premiership',
+        'filename_prefix': 'premiership'
+    },
+    'top14': {
+        'comp_id': 1002,
+        'provider': 'rugbyviz',
+        'name': 'Top 14',
+        'filename_prefix': 'top14'
+    },
+    'pro-d2': {
+        'comp_id': 1013,
+        'provider': 'rugbyviz',
+        'name': 'Pro D2',
+        'filename_prefix': 'pro-d2'
+    },
+    'euro-champions': {
+        'comp_id': 1008,
+        'provider': 'rugbyviz',
+        'name': 'European Rugby Champions Cup',
+        'filename_prefix': 'euro-champions'
+    },
+    'euro-challenge': {
+        'comp_id': 1026,
+        'provider': 'rugbyviz',
+        'name': 'European Rugby Challenge Cup',
+        'filename_prefix': 'euro-challenge'
+    },
 }
 
 # Legacy constants for backward compatibility

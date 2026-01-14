@@ -107,14 +107,14 @@ All supported leagues use the same data source:
 
 #### Supported Competitions
 
-| League | Competition ID | Description |
-|--------|---------------|-------------|
-| URC | 1068 | United Rugby Championship (Celtic League / Pro12 / Pro14) |
-| Premiership | 1011 | Gallagher Premiership (English top-tier) |
-| Top 14 | 1002 | French top-tier rugby |
-| Pro D2 | 1013 | French second-tier rugby |
-| Euro Champions Cup | 1008 | European Rugby Champions Cup |
-| Euro Challenge Cup | 1026 | European Rugby Challenge Cup |
+| League Code | Competition ID | Description |
+|-------------|---------------|-------------|
+| urc | 1068 | United Rugby Championship (Celtic League / Pro12 / Pro14) |
+| premiership | 1011 | Gallagher Premiership (English top-tier) |
+| top14 | 1002 | French top-tier rugby |
+| pro-d2 | 1013 | French second-tier rugby |
+| euro-champions | 1008 | European Rugby Champions Cup |
+| euro-challenge | 1026 | European Rugby Challenge Cup |
 
 ### Future Enhancements
 

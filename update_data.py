@@ -25,6 +25,22 @@ JSON_DIR = SCRIPT_DIR / "json"
 MAX_RETRIES = 3
 RETRY_DELAY = 5  # seconds
 
+# URC API configuration
+URC_COMP_ID = 1068
+URC_PROVIDER = "rugbyviz"
+
+# Scoring values mapping
+SCORING_VALUES = {
+    "Try": 5,
+    "Penalty Try": 5,
+    "Penalty": 3,
+    "Conversion": 2,
+    "Drop goal": 3,
+    "Missed drop goal": 0,
+    "Missed penalty": 0,
+    "Missed conversion": 0
+}
+
 
 def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:
     """
@@ -123,7 +139,7 @@ def update_urc_data(season: str, dry_run: bool = False) -> Dict:
     start_year = season.split("-")[0]
     
     # API endpoint
-    base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId=1068&season={start_year}01&provider=rugbyviz"
+    base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId={URC_COMP_ID}&season={start_year}01&provider={URC_PROVIDER}"
     
     stats = {
         'new_matches': 0,
@@ -212,7 +228,7 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
     # (not too far in the future)
     if match_date <= datetime.utcnow() + timedelta(days=7):
         try:
-            match_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches/{match['id']}?season={start_year}01&provider=rugbyviz"
+            match_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches/{match['id']}?season={start_year}01&provider={URC_PROVIDER}"
             match_response = fetch_with_retry(match_url)
             
             if match_response and match_response.status_code == 200:
@@ -247,30 +263,19 @@ def process_urc_match(match: Dict, season: str, start_year: str) -> Dict:
                     home_id = match_data['homeTeam']['id']
                     away_id = match_data['awayTeam']['id']
                     
-                    scoring_values = {
-                        "Try": 5,
-                        "Penalty Try": 5,
-                        "Penalty": 3,
-                        "Conversion": 2,
-                        "Drop goal": 3,
-                        "Missed drop goal": 0,
-                        "Missed penalty": 0,
-                        "Missed conversion": 0
-                    }
-                    
                     for event in match_data.get('events', []):
                         if 'teamId' not in event:
                             continue
                             
                         team = "home" if event['teamId'] == home_id else "away"
                         
-                        if event['type'] in scoring_values:
+                        if event['type'] in SCORING_VALUES:
                             player = player_ids.get(event.get('playerId'), None)
                             scores[team].append({
                                 'minute': event.get('minute', 0),
                                 'type': event['type'],
                                 'player': player,
-                                'value': scoring_values[event['type']]
+                                'value': SCORING_VALUES[event['type']]
                             })
                         elif event['type'] == "Sub On" and 'playerId' in event:
                             player_pos = position_ids.get(event['playerId'])

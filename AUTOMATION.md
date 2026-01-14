@@ -11,12 +11,33 @@ The repository is configured to automatically update rugby match data:
 
 ## What Gets Updated
 
-Currently, the automation updates:
+Currently, the automation supports:
 
 - **URC (United Rugby Championship)**: Latest season data including:
   - Match results for completed games
   - Future fixtures (without results)
   - Player lineups, scores, substitutions, and cards (for completed matches)
+
+### Adding New Leagues
+
+The system is designed to be easily extensible. To add support for a new league:
+
+1. Obtain the competition ID and provider from the InCrowd Sports API
+2. Add an entry to the `LEAGUE_CONFIGS` dictionary in `update_data.py`:
+
+```python
+LEAGUE_CONFIGS = {
+    'urc': {...},
+    'premiership': {
+        'comp_id': XXXX,  # Competition ID from API
+        'provider': 'provider_name',
+        'name': 'Gallagher Premiership',
+        'filename_prefix': 'premiership'
+    }
+}
+```
+
+3. The league will automatically be available via CLI and GitHub Actions
 
 ## Manual Updates
 
@@ -27,6 +48,7 @@ You can manually trigger an update from the GitHub Actions interface:
 3. Click "Run workflow"
 4. Optionally specify:
    - A specific season (e.g., "2024-2025")
+   - Tournaments to update (e.g., "urc" or "all")
    - Dry run mode (to preview changes without committing)
 
 ## How to Run Locally
@@ -37,7 +59,7 @@ To update data locally:
 # Install dependencies
 pip install -r requirements.txt
 
-# Update current season (default)
+# Update current season (default - URC)
 python update_data.py
 
 # Update specific season
@@ -48,6 +70,12 @@ python update_data.py --dry-run
 
 # Update specific tournaments
 python update_data.py -t urc
+
+# Update all available tournaments
+python update_data.py -t all
+
+# Update multiple specific tournaments
+python update_data.py -t urc -t premiership
 ```
 
 ## Data Sources
@@ -60,12 +88,14 @@ python update_data.py -t urc
 
 ### Future Enhancements
 
-Planned improvements include:
+The system is now designed to easily add support for:
 
 - Additional tournament support (Premiership, Top 14, European competitions)
 - International matches integration
 - Improved error handling and retry logic
 - Data validation and consistency checks
+
+To add a new league, simply update the `LEAGUE_CONFIGS` dictionary in `update_data.py`.
 
 ## Troubleshooting
 

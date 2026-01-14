@@ -8,7 +8,10 @@ Please submit a pull request if you spot any mistakes!
 
 ## Automated Updates
 
-This repository is configured to automatically update match data weekly. See [AUTOMATION.md](AUTOMATION.md) for details on how the automation works and how to trigger manual updates.
+This repository is configured to automatically update match data weekly. The system now supports multiple leagues and is easily extensible. See [AUTOMATION.md](AUTOMATION.md) for:
+- How the automation works
+- How to trigger manual updates
+- How to add support for new leagues
 
 # Internationals
 

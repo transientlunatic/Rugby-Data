@@ -20,6 +20,8 @@ Currently, the automation supports the following leagues:
 
 - **Gallagher Premiership**: English top-tier rugby league with complete match data
 
+- **RFU Championship**: English second-tier rugby league with complete match data
+
 - **Top 14**: French top-tier rugby league with complete match data
 
 - **Pro D2**: French second-tier rugby league with complete match data
@@ -91,7 +93,7 @@ python update_data.py -t all
 # Update multiple specific tournaments
 python update_data.py -t urc -t premiership -t euro-champions
 
-# Available tournament codes: urc, premiership, top14, pro-d2, euro-champions, euro-challenge
+# Available tournament codes: urc, premiership, championship, top14, pro-d2, euro-champions, euro-challenge
 ```
 
 ## Data Sources
@@ -111,6 +113,7 @@ All supported leagues use the same data source:
 |-------------|---------------|-------------|
 | urc | 1068 | United Rugby Championship (Celtic League / Pro12 / Pro14) |
 | premiership | 1011 | Gallagher Premiership (English top-tier) |
+| championship | 1051 | RFU Championship (English second-tier) |
 | top14 | 1002 | French top-tier rugby |
 | pro-d2 | 1013 | French second-tier rugby |
 | euro-champions | 1008 | European Rugby Champions Cup |
@@ -120,7 +123,7 @@ All supported leagues use the same data source:
 
 The system can be extended to support:
 
-- RFU Championship (English second-tier) - pending API availability
+- Rugby Europe Super Cup - pending API availability or alternative data source
 - International matches integration - requires different data source
 - Improved error handling and retry logic
 - Data validation and consistency checks

@@ -64,6 +64,12 @@ LEAGUE_CONFIGS = {
         'name': 'European Rugby Challenge Cup',
         'filename_prefix': 'euro-challenge'
     },
+    'championship': {
+        'comp_id': 1051,
+        'provider': 'rugbyviz',
+        'name': 'RFU Championship',
+        'filename_prefix': 'championship'
+    },
 }
 
 # Legacy constants for backward compatibility

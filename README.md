@@ -19,12 +19,15 @@ The following leagues are currently supported for automated data updates:
 
 - **United Rugby Championship (URC)** - Celtic League / Pro12 / Pro14
 - **Gallagher Premiership** - English top-tier rugby
+- **RFU Championship** - English second-tier rugby
 - **Top 14** - French top-tier rugby
 - **Pro D2** - French second-tier rugby
 - **European Rugby Champions Cup** - Premier European club competition
 - **European Rugby Challenge Cup** - Secondary European club competition
 
 Use `python update_data.py -t all` to update all supported leagues, or specify individual leagues with `-t <league-code>`.
+
+Note: Historical data availability varies by competition. The RFU Championship has automated data available from the 2025-2026 season onwards.
 
 # Internationals
 
@@ -36,7 +39,9 @@ Complete international results are available to the end of 2020, thanks to http:
 
 English Premiership data is available for the 2006-2007 season through to the 2021-2022 season. Automated updates are now available for current seasons.
 
-**Note**: RFU Championship (English second-tier) is not currently available via automated updates as it's not accessible through the current data API.
+## RFU Championship
+
+RFU Championship (English second-tier) data is now available via automated updates for the 2025-2026 season. This includes teams such as Ealing Trailfinders, Cornish Pirates, Bedford Blues, and Nottingham Rugby.
 
 ## Celtic League / Pro12 / Pro14 / United Rugby Championship
 

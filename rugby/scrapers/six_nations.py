@@ -69,7 +69,51 @@ def get_wikipedia_page_title(year: int, championship_name: str) -> str:
             # For non-World Cup years, try June/July first
             # These will be tried in order by the fetch function if needed
             return f"{year} June rugby union tests"
-    
+
+    # End-of-year/Autumn rugby union internationals
+    # These happen in November and are also called "autumn internationals"
+    if any(term in championship_name.lower() for term in ["end-of-year", "end of year", "autumn", "november"]):
+        # Modern format uses "end-of-year rugby union internationals"
+        return f"{year} end-of-year rugby union internationals"
+
+    # Japan Rugby League One (uses season format with en dash)
+    if "Japan Rugby League One" in championship_name or "League One" in championship_name:
+        # Format: "2023–24 Japan Rugby League One – Division 1"
+        return f"{year}–{str(year + 1)[2:]} Japan Rugby League One – Division 1"
+
+    # Currie Cup (South Africa)
+    if "Currie Cup" in championship_name:
+        # Format: "2024 Currie Cup Premier Division"
+        return f"{year} Currie Cup Premier Division"
+
+    # New Zealand NPC (Bunnings NPC)
+    if "NPC" in championship_name or "National Provincial Championship" in championship_name:
+        # Format: "2024 Bunnings NPC"
+        return f"{year} Bunnings NPC"
+
+    # RFU Championship (England second tier)
+    if "RFU Championship" in championship_name or championship_name == "RFU Championship":
+        # Format: "2018–19 RFU Championship"
+        return f"{year}–{str(year + 1)[2:]} RFU Championship"
+
+    # United Rugby Championship / Celtic League / Pro14 / Pro12
+    if any(term in championship_name for term in ["United Rugby Championship", "Celtic League", "Pro14", "Pro12"]):
+        # Different naming by era:
+        # 2021+: United Rugby Championship
+        # 2017-2021: Pro14
+        # 2011-2017: Pro12
+        # 2003-2011: Celtic League / Magners League
+        # 2001-2003: Celtic League
+        if year >= 2021:
+            return f"{year}–{str(year + 1)[2:]} United Rugby Championship"
+        elif year >= 2017:
+            return f"{year}–{str(year + 1)[2:]} Pro14"
+        elif year >= 2011:
+            return f"{year}–{str(year + 1)[2:]} Pro12"
+        else:
+            # 2001-2011: Celtic League
+            return f"{year}–{str(year + 1)[2:]} Celtic League"
+
     # Default: "{year} {championship_name}"
     return f"{year} {championship_name}"
 
@@ -631,7 +675,7 @@ def clean_team_name(team_str: str) -> str:
         return ""
     
     # Handle {{ru|CODE}} or {{ru-rt|CODE}} format (Rugby World Cup pages)
-    # Common country codes used in World Cup pages
+    # Country codes used in international rugby pages
     rugby_codes = {
         'ARG': 'Argentina', 'AUS': 'Australia', 'ENG': 'England', 'FIJ': 'Fiji',
         'FRA': 'France', 'GEO': 'Georgia', 'IRE': 'Ireland', 'ITA': 'Italy',
@@ -640,16 +684,28 @@ def clean_team_name(team_str: str) -> str:
         'URU': 'Uruguay', 'USA': 'United States', 'WAL': 'Wales',
         'CAN': 'Canada', 'CHI': 'Chile', 'CIV': "Ivory Coast", 'ESP': 'Spain',
         'HKG': 'Hong Kong', 'KOR': 'South Korea', 'NED': 'Netherlands',
-        'POR': 'Portugal', 'RUS': 'Russia', 'ZIM': 'Zimbabwe'
+        'POR': 'Portugal', 'RUS': 'Russia', 'ZIM': 'Zimbabwe',
+        # Additional codes
+        'BEL': 'Belgium', 'BRA': 'Brazil', 'GER': 'Germany', 'KEN': 'Kenya',
+        'PAR': 'Paraguay', 'ROU': 'Romania', 'SWI': 'Switzerland', 'TGA': 'Tonga',
+        'UGA': 'Uganda', 'UAE': 'United Arab Emirates'
     }
     
-    ru_match = re.search(r'{{[Rr]u(?:-rt)?\|([A-Z]{3})}}', team_str)
+    # Handle {{ru|CODE}} or {{ru-rt|CODE}} format - try both 3-letter and 2-letter codes
+    ru_match = re.search(r'{{[Rr]u(?:-rt)?\|([A-Z]{2,3})}}', team_str)
     if ru_match:
         code = ru_match.group(1)
         if code in rugby_codes:
             return rugby_codes[code]
         # If code not in our mapping, return the code itself
         return code
+
+    # Also handle bare country codes (TGA, BEL, etc.) without template syntax
+    bare_code_match = re.search(r'\b([A-Z]{3})\b', team_str)
+    if bare_code_match and len(team_str.strip()) <= 4:  # Only if the string is very short
+        code = bare_code_match.group(1)
+        if code in rugby_codes:
+            return rugby_codes[code]
     
     # Handle [[Team Name|Display Name]] format - extract display name
     match = re.search(r'\[\[([^\]]+)\|([^\]]+)\]\]', team_str)
@@ -705,17 +761,23 @@ def parse_rugbybox(template_str: str, match_id: Optional[str] = None) -> Optiona
     if not teams_found and 'home' in params and 'away' in params:
         home = clean_team_name(params['home'])
         away = clean_team_name(params['away'])
-        
+
         match_data['home_team'] = home
         match_data['away_team'] = away
-    
+        teams_found = True
+
     # Try older format with |team1 and |team2 (used in some 1996-2005 seasons)
     if not teams_found and 'team1' in params and 'team2' in params:
         home = clean_team_name(params['team1'])
         away = clean_team_name(params['team2'])
-        
+
         match_data['home_team'] = home
         match_data['away_team'] = away
+        teams_found = True
+
+    # Validate that we have both team names
+    if not match_data.get('home_team') or not match_data.get('away_team'):
+        return None
     
     # Parse date/time
     if 'date' in params:

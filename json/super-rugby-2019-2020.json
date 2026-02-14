@@ -1,0 +1,333 @@
+[
+  {
+    "date": "2019-06-21T19:35:00",
+    "home": {
+      "team": "Crusaders",
+      "score": 38
+    },
+    "away": {
+      "team": "Highlanders",
+      "score": 14
+    },
+    "referee": "Jaco Peyper"
+  },
+  {
+    "date": "2019-06-21T19:35:00",
+    "home": {
+      "team": "Jaguares",
+      "score": 21
+    },
+    "away": {
+      "team": "Chiefs",
+      "score": 16
+    },
+    "stadium": "José Amalfitani Stadium",
+    "attendance": 16914,
+    "referee": "Glen Jackson (rugby union)"
+  },
+  {
+    "date": "2019-06-22T19:35:00",
+    "home": {
+      "team": "Hurricanes",
+      "score": 35
+    },
+    "away": {
+      "team": "Bulls",
+      "score": 28
+    },
+    "attendance": 16180,
+    "referee": "Nic Berry"
+  },
+  {
+    "date": "2019-06-22T20:00:00",
+    "home": {
+      "team": "Brumbies",
+      "score": 38
+    },
+    "away": {
+      "team": "Sharks",
+      "score": 13
+    },
+    "attendance": 11112,
+    "referee": "Mike Fraser (rugby referee)"
+  },
+  {
+    "date": "2019-06-28T20:05:00",
+    "home": {
+      "team": "Jaguares",
+      "score": 39,
+      "scores": [
+        {
+          "minute": 4,
+          "type": "Try",
+          "player": "Tomás Cubelli",
+          "value": 5
+        },
+        {
+          "minute": 5,
+          "type": "Conversion",
+          "player": "Tomás Cubelli",
+          "value": 2
+        },
+        {
+          "minute": 8,
+          "type": "Penalty",
+          "player": "Joaquín Díaz Bonilla",
+          "value": 3
+        },
+        {
+          "minute": 14,
+          "type": "Penalty",
+          "player": "Joaquín Díaz Bonilla",
+          "value": 3
+        },
+        {
+          "minute": 19,
+          "type": "Try",
+          "player": "Tomás Lavanini",
+          "value": 5
+        },
+        {
+          "minute": 20,
+          "type": "Conversion",
+          "player": "Tomás Lavanini",
+          "value": 2
+        },
+        {
+          "minute": 49,
+          "type": "Try",
+          "player": "Matías Orlando",
+          "value": 5
+        },
+        {
+          "minute": 50,
+          "type": "Conversion",
+          "player": "Matías Orlando",
+          "value": 2
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Matías Orlando",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "Matías Orlando",
+          "value": 2
+        },
+        {
+          "minute": 78,
+          "type": "Try",
+          "player": "Emiliano Boffelli",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Missed conversion",
+          "player": "Emiliano Boffelli",
+          "value": 0
+        }
+      ]
+    },
+    "away": {
+      "team": "Brumbies",
+      "score": 7,
+      "scores": [
+        {
+          "minute": 40,
+          "type": "Try",
+          "player": "Folau Fainga'a",
+          "value": 5
+        },
+        {
+          "minute": 41,
+          "type": "Conversion",
+          "player": "Folau Fainga'a",
+          "value": 2
+        }
+      ]
+    },
+    "stadium": "José Amalfitani Stadium",
+    "attendance": 31000,
+    "referee": "Mike Fraser (rugby referee)"
+  },
+  {
+    "date": "2019-06-29T19:35:00",
+    "home": {
+      "team": "Crusaders",
+      "score": 30,
+      "scores": [
+        {
+          "minute": 3,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        },
+        {
+          "minute": 13,
+          "type": "Try",
+          "player": "Sevu Reece",
+          "value": 5
+        },
+        {
+          "minute": 14,
+          "type": "Conversion",
+          "player": "Sevu Reece",
+          "value": 2
+        },
+        {
+          "minute": 33,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Richie Mo'unga",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Conversion",
+          "player": "Richie Mo'unga",
+          "value": 2
+        },
+        {
+          "minute": 58,
+          "type": "Try",
+          "player": "Sevu Reece",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Conversion",
+          "player": "Sevu Reece",
+          "value": 2
+        },
+        {
+          "minute": 73,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        }
+      ]
+    },
+    "away": {
+      "team": "Hurricanes",
+      "score": 26,
+      "scores": [
+        {
+          "minute": 39,
+          "type": "Try",
+          "player": "Ngani Laumape",
+          "value": 5
+        },
+        {
+          "minute": 40,
+          "type": "Conversion",
+          "player": "Ngani Laumape",
+          "value": 2
+        },
+        {
+          "minute": 41,
+          "type": "Try",
+          "player": "Ben Lam",
+          "value": 5
+        },
+        {
+          "minute": 42,
+          "type": "Missed conversion",
+          "player": "Ben Lam",
+          "value": 0
+        },
+        {
+          "minute": 51,
+          "type": "Try",
+          "player": "Ngani Laumape",
+          "value": 5
+        },
+        {
+          "minute": 52,
+          "type": "Conversion",
+          "player": "Ngani Laumape",
+          "value": 2
+        },
+        {
+          "minute": 61,
+          "type": "Try",
+          "player": "TJ Perenara",
+          "value": 5
+        },
+        {
+          "minute": 62,
+          "type": "Conversion",
+          "player": "TJ Perenara",
+          "value": 2
+        }
+      ]
+    },
+    "stadium": "Rugby League Park",
+    "referee": "Nic Berry"
+  },
+  {
+    "date": "2019-07-06T19:35:00",
+    "home": {
+      "team": "Crusaders",
+      "score": 19,
+      "scores": [
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Codie Taylor",
+          "value": 5
+        },
+        {
+          "minute": 26,
+          "type": "Conversion",
+          "player": "Codie Taylor",
+          "value": 2
+        },
+        {
+          "minute": 40,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        },
+        {
+          "minute": 54,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        },
+        {
+          "minute": 59,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        },
+        {
+          "minute": 75,
+          "type": "Penalty",
+          "player": "Richie Mo'unga",
+          "value": 3
+        }
+      ]
+    },
+    "away": {
+      "team": "Jaguares",
+      "score": 3,
+      "scores": [
+        {
+          "minute": 16,
+          "type": "Penalty",
+          "player": "Joaquín Díaz Bonilla",
+          "value": 3
+        }
+      ]
+    },
+    "stadium": "Rugby League Park"
+  }
+]

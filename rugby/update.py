@@ -24,7 +24,9 @@ LEAGUE_CONFIGS = {
         'comp_id': 1068,
         'provider': 'rugbyviz',
         'name': 'United Rugby Championship',
-        'filename_prefix': 'celtic'
+        'filename_prefix': 'celtic',
+        'wikipedia_fallback': True,
+        'api_cutoff_year': 2005  # API data available from 2005-2006 onwards
     },
     'premiership': {
         'comp_id': 1011,
@@ -60,13 +62,58 @@ LEAGUE_CONFIGS = {
         'comp_id': 1051,
         'provider': 'rugbyviz',
         'name': 'RFU Championship',
-        'filename_prefix': 'championship'
+        'filename_prefix': 'championship',
+        'wikipedia_fallback': True,  # Use Wikipedia for older seasons
+        'api_cutoff_year': 2024  # API data available from 2024-2025 onwards
     },
     'six-nations': {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Six Nations Championship',
         'filename_prefix': 'six-nations'
+    },
+    'mid-year-internationals': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Mid-year Internationals',
+        'filename_prefix': 'mid-year-internationals'
+    },
+    'end-of-year-internationals': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'End-of-year Internationals',
+        'filename_prefix': 'end-of-year-internationals'
+    },
+    'world-cup': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Rugby World Cup',
+        'filename_prefix': 'rugby-world-cup',
+        'use_year_only': True  # Use just year, not season
+    },
+    'super-rugby': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Super Rugby',
+        'filename_prefix': 'super-rugby'
+    },
+    'japan-league-one': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Japan Rugby League One',
+        'filename_prefix': 'japan-league-one'
+    },
+    'currie-cup': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Currie Cup',
+        'filename_prefix': 'currie-cup'
+    },
+    'npc': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'National Provincial Championship',
+        'filename_prefix': 'npc'
     },
 }
 
@@ -83,6 +130,14 @@ SCORING_VALUES = {
 
 SEASON_START_MONTH = 8
 MAX_ERRORS_TO_DISPLAY = 5
+
+# World Cup years (every 4 years since 1987)
+WORLD_CUP_YEARS = [1987, 1991, 1995, 1999, 2003, 2007, 2011, 2015, 2019, 2023, 2027, 2031, 2035]
+
+
+def is_world_cup_year(year: int) -> bool:
+    """Check if a given year is a Rugby World Cup year."""
+    return year in WORLD_CUP_YEARS or (year >= 1987 and (year - 1987) % 4 == 0)
 
 
 def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:
@@ -132,7 +187,8 @@ def get_match_key(match: Dict) -> str:
 
 def validate_match_data(match: Dict) -> bool:
     """Validate that a match dictionary has required fields."""
-    required_fields = ['date', 'home', 'away', 'stadium']
+    # Stadium is optional - not all matches have venue information
+    required_fields = ['date', 'home', 'away']
     if not all(field in match for field in required_fields):
         return False
     if not isinstance(match.get('home'), dict) or not isinstance(match.get('away'), dict):
@@ -249,6 +305,13 @@ def update_wikipedia_data(league: str, season: str, league_config: Dict,
 
     try:
         start_year = int(season.split("-")[0])
+
+        # For World Cup, check if this is a World Cup year
+        if league_config.get('use_year_only') and league_config['name'] == 'Rugby World Cup':
+            if not is_world_cup_year(start_year):
+                click.echo(f"  Skipping {start_year} - not a World Cup year (World Cups occur in: {', '.join(map(str, [y for y in WORLD_CUP_YEARS if abs(y - start_year) <= 8]))})")
+                return stats
+
         click.echo(f"  Fetching from Wikipedia for year {start_year}...")
         scraped_matches = scrape_championship(start_year, league_config['name'])
 
@@ -258,7 +321,11 @@ def update_wikipedia_data(league: str, season: str, league_config: Dict,
 
         click.echo(f"  Retrieved {len(scraped_matches)} matches from Wikipedia")
 
-        json_file = json_dir / f"{league_config['filename_prefix']}-{season}.json"
+        # Determine filename - use year only for World Cup, season for others
+        if league_config.get('use_year_only'):
+            json_file = json_dir / f"{league_config['filename_prefix']}-{start_year}.json"
+        else:
+            json_file = json_dir / f"{league_config['filename_prefix']}-{season}.json"
         existing_data = load_existing_data(json_file)
         existing_matches = {get_match_key(m): i for i, m in enumerate(existing_data)}
 
@@ -310,8 +377,17 @@ def update_league_data(league: str, season: str, json_dir: Path,
     league_config = LEAGUE_CONFIGS[league]
     click.echo(f"Updating {league_config['name']} data for {season}...")
 
+    # Check if this is a Wikipedia-only source
     if league_config['provider'] == 'wikipedia':
         return update_wikipedia_data(league, season, league_config, json_dir, dry_run)
+
+    # Check if we should use Wikipedia fallback for older seasons
+    start_year = int(season.split("-")[0])
+    if league_config.get('wikipedia_fallback'):
+        api_cutoff = league_config.get('api_cutoff_year', 2100)  # Default to far future
+        if start_year < api_cutoff:
+            click.echo(f"  Using Wikipedia for {season} (API data available from {api_cutoff}-{api_cutoff+1} onwards)")
+            return update_wikipedia_data(league, season, league_config, json_dir, dry_run)
 
     start_year = season.split("-")[0]
     base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId={league_config['comp_id']}&season={start_year}01&provider={league_config['provider']}"

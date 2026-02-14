@@ -3606,7 +3606,7 @@
       ],
       "conference": null,
       "score": 8,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -8999,7 +8999,7 @@
       ],
       "conference": null,
       "score": 10,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 2,
     "round_type": "league",
@@ -14341,7 +14341,7 @@
       ],
       "conference": null,
       "score": 10,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -19223,7 +19223,7 @@
       ],
       "conference": null,
       "score": 35,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 4,
     "round_type": "league",
@@ -25081,15 +25081,611 @@
   },
   {
     "away": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "2": {
+          "name": "Etienne Fourcade",
+          "on": [
+            0
+          ],
+          "off": [
+            68
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "George Moala",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Anthony Belleau",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Alex Newsome",
+          "on": [
+            0
+          ],
+          "off": [
+            75
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Etienne Falgoux",
+          "on": [
+            0
+          ],
+          "off": [
+            60
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Cristian Ojovan",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Killian Tixeront",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Lucas Dessaigne",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Edward Annandale",
+          "on": [
+            67
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Jules Plisson",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Irae Simone",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [
+            23
+          ],
+          "yellows": []
+        },
+        "5": {
+          "name": "Paul Jedrasiak",
+          "on": [
+            0
+          ],
+          "off": [
+            67
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Rabah Slimani",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Baptiste Jauneau",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Sebastien Bezy",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Damian Penaud",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Thibaud Lanen",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Alivereti Raka",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Giorgi Beria",
+          "on": [
+            60
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Jaco van Tonder",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Jean-Maxence Jules-Rosette",
+          "on": [
+            68
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Fritz Lee",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Bautista Delguy",
+          "on": [
+            75
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 3,
+          "type": "Penalty",
+          "player": "Anthony Belleau",
+          "value": 3
+        },
+        {
+          "minute": 20,
+          "type": "Try",
+          "player": "Irae Simone",
+          "value": 5
+        },
+        {
+          "minute": 22,
+          "type": "Missed conversion",
+          "player": "Anthony Belleau",
+          "value": 0
+        },
+        {
+          "minute": 29,
+          "type": "Try",
+          "player": "Alivereti Raka",
+          "value": 5
+        },
+        {
+          "minute": 31,
+          "type": "Conversion",
+          "player": "Anthony Belleau",
+          "value": 2
+        },
+        {
+          "minute": 35,
+          "type": "Penalty",
+          "player": "Anthony Belleau",
+          "value": 3
+        },
+        {
+          "minute": 42,
+          "type": "Missed drop goal",
+          "player": "Anthony Belleau",
+          "value": 0
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Alivereti Raka",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Missed conversion",
+          "player": "Anthony Belleau",
+          "value": 0
+        },
+        {
+          "minute": 57,
+          "type": "Missed drop goal",
+          "player": "Anthony Belleau",
+          "value": 0
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Giorgi Beria",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "Jules Plisson",
+          "value": 2
+        },
+        {
+          "minute": 70,
+          "type": "Missed drop goal",
+          "player": "Jules Plisson",
+          "value": 0
+        }
+      ],
       "conference": null,
       "score": 30,
       "team": "Clermont Auvergne"
     },
     "home": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "9": {
+          "name": "Gareth Davies",
+          "on": [
+            0
+          ],
+          "off": [
+            53
+          ],
+          "reds": [],
+          "yellows": [
+            43
+          ]
+        },
+        "12": {
+          "name": "Johnny Williams",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Aaron Shingler",
+          "on": [
+            0
+          ],
+          "off": [
+            71
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Sione Kalamafoni",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Kemsley Mathias",
+          "on": [
+            0
+          ],
+          "off": [
+            53
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Sam Lousi",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Morgan Jones",
+          "on": [
+            71
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Kieran Hardy",
+          "on": [
+            53
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Ioan Nicholas",
+          "on": [
+            23
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Carwyn Tuipulotu",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Sam Wainwright",
+          "on": [
+            43
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Ryan Conbeer",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Ken Owens",
+          "on": [
+            0
+          ],
+          "off": [
+            67
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Joe Roberts",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Shaun Evans",
+          "on": [
+            67
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Vaea Fifita",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [
+            27
+          ]
+        },
+        "3": {
+          "name": "Javan Sebastian",
+          "on": [
+            0
+          ],
+          "off": [
+            43
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Leigh Halfpenny",
+          "on": [
+            0
+          ],
+          "off": [
+            23
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Josh Macleod",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Dan Jones",
+          "on": [],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Sam Costelow",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Steff Evans",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Wyn Jones",
+          "on": [
+            53
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Penalty",
+          "player": "Leigh Halfpenny",
+          "value": 3
+        },
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Leigh Halfpenny",
+          "value": 5
+        },
+        {
+          "minute": 8,
+          "type": "Missed conversion",
+          "player": "Leigh Halfpenny",
+          "value": 0
+        },
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Sam Costelow",
+          "value": 5
+        },
+        {
+          "minute": 15,
+          "type": "Conversion",
+          "player": "Leigh Halfpenny",
+          "value": 2
+        },
+        {
+          "minute": 24,
+          "type": "Missed penalty",
+          "player": "Sam Costelow",
+          "value": 0
+        },
+        {
+          "minute": 36,
+          "type": "Try",
+          "player": "Johnny Williams",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Conversion",
+          "player": "Sam Costelow",
+          "value": 2
+        },
+        {
+          "minute": 68,
+          "type": "Penalty",
+          "player": "Sam Costelow",
+          "value": 3
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Ryan Conbeer",
+          "value": 5
+        },
+        {
+          "minute": 76,
+          "type": "Conversion",
+          "player": "Sam Costelow",
+          "value": 2
+        }
+      ],
       "conference": null,
       "score": 32,
       "team": "Scarlets"

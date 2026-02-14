@@ -1481,7 +1481,7 @@
       ],
       "conference": null,
       "score": 26,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -3428,7 +3428,7 @@
       ],
       "conference": null,
       "score": 14,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 2,
     "round_type": "league",
@@ -7325,15 +7325,566 @@
   },
   {
     "away": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "11": {
+          "name": "Ollie Hassell-Collins",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Josh Bassett",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Tommy Reffell",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Will Hurd",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Joe Heyes",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Mike Brown",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Joe Powell",
+          "on": [
+            64
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Charlie Atkinson",
+          "on": [],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Charlie Clare",
+          "on": [
+            0
+          ],
+          "off": [
+            77
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Jamie Shillcock",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Tom Whiteley",
+          "on": [
+            0
+          ],
+          "off": [
+            64
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Cameron Henderson",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Matt Rogerson",
+          "on": [
+            0
+          ],
+          "off": [
+            58
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Harry Wells",
+          "on": [
+            0
+          ],
+          "off": [
+            64
+          ],
+          "reds": [],
+          "yellows": [
+            52
+          ]
+        },
+        "17": {
+          "name": "Francois van Wyk",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Sam Carter",
+          "on": [
+            58
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Phil Cokanasiga",
+          "on": [],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Nic Dolly",
+          "on": [
+            77
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Emeka Ilione",
+          "on": [
+            64
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Dan Kelly",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "James Cronin",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Hanro Liebenberg",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Guy Porter",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 3,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 23,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 34,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 46,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 58,
+          "type": "Missed penalty",
+          "player": "Jamie Shillcock",
+          "value": 0
+        },
+        {
+          "minute": 66,
+          "type": "Try",
+          "player": "Charlie Clare",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Conversion",
+          "player": "Jamie Shillcock",
+          "value": 2
+        },
+        {
+          "minute": 75,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 81,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        }
+      ],
       "conference": null,
       "score": 25,
       "team": "Leicester Tigers"
     },
     "home": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "13": {
+          "name": "Max Ojomoh",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Josh McNally",
+          "on": [
+            0
+          ],
+          "off": [
+            73
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Finn Russell",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Miles Reid",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Joe Cokanasiga",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Cameron Redpath",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Alfie Barbeary",
+          "on": [
+            0
+          ],
+          "off": [
+            72
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Beno Obano",
+          "on": [
+            0
+          ],
+          "off": [
+            67
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Niall Annett",
+          "on": [
+            67
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Ben Spencer",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Fergus Lee-Warner",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Will Muir",
+          "on": [
+            0,
+            40
+          ],
+          "off": [
+            36
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Louis Schreuder",
+          "on": [],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Juan Schoeman",
+          "on": [
+            67
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Tom Dunn",
+          "on": [
+            0
+          ],
+          "off": [
+            67
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Matt Gallagher",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Ewan Richards",
+          "on": [
+            73
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Chris Cloete",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Orlando Bailey",
+          "on": [
+            36
+          ],
+          "off": [
+            40
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Thomas du Toit",
+          "on": [
+            0
+          ],
+          "off": [
+            67
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Jaco Coetzee",
+          "on": [
+            72
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Charlie Ewels",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Johannes Jonker",
+          "on": [
+            67
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Will Muir",
+          "value": 5
+        },
+        {
+          "minute": 15,
+          "type": "Missed conversion",
+          "player": "Finn Russell",
+          "value": 0
+        },
+        {
+          "minute": 37,
+          "type": "Penalty",
+          "player": "Finn Russell",
+          "value": 3
+        },
+        {
+          "minute": 41,
+          "type": "Missed drop goal",
+          "player": "Finn Russell",
+          "value": 0
+        },
+        {
+          "minute": 48,
+          "type": "Penalty",
+          "player": "Finn Russell",
+          "value": 3
+        },
+        {
+          "minute": 54,
+          "type": "Try",
+          "player": "Thomas du Toit",
+          "value": 5
+        },
+        {
+          "minute": 55,
+          "type": "Conversion",
+          "player": "Finn Russell",
+          "value": 2
+        },
+        {
+          "minute": 71,
+          "type": "Penalty",
+          "player": "Finn Russell",
+          "value": 3
+        },
+        {
+          "minute": 78,
+          "type": "Penalty",
+          "player": "Finn Russell",
+          "value": 3
+        }
+      ],
       "conference": null,
       "score": 24,
       "team": "Bath Rugby"
@@ -7859,7 +8410,7 @@
       ],
       "conference": null,
       "score": 14,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 3,
     "round_type": "league",
@@ -8690,7 +9241,7 @@
       ],
       "conference": null,
       "score": 12,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -13016,7 +13567,7 @@
       ],
       "conference": null,
       "score": 12,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 5,
     "round_type": "league",
@@ -14436,7 +14987,7 @@
       ],
       "conference": null,
       "score": 22,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -19314,7 +19865,7 @@
       ],
       "conference": null,
       "score": 14,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 7,
     "round_type": "league",
@@ -21872,7 +22423,7 @@
       ],
       "conference": null,
       "score": 3,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -28848,7 +29399,7 @@
       ],
       "conference": null,
       "score": 3,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 11,
     "round_type": "league",
@@ -31312,7 +31863,7 @@
       ],
       "conference": null,
       "score": 13,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -34895,7 +35446,7 @@
       ],
       "conference": null,
       "score": 16,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -36901,7 +37452,7 @@
       ],
       "conference": null,
       "score": 13,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 14,
     "round_type": "league",
@@ -44522,7 +45073,7 @@
       ],
       "conference": null,
       "score": 14,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 16,
     "round_type": "league",
@@ -46218,7 +46769,7 @@
       ],
       "conference": null,
       "score": 17,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "round": 17,
     "round_type": "league",
@@ -48918,7 +49469,7 @@
       ],
       "conference": null,
       "score": 14,
-      "team": "Newcastle Red Bulls"
+      "team": "Newcastle Falcons"
     },
     "home": {
       "lineup": {
@@ -49256,15 +49807,614 @@
   },
   {
     "away": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "7": {
+          "name": "Fitz Harding",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Jake Woolmore",
+          "on": [
+            36
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Benjamin Grondona",
+          "on": [
+            72
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "James Williams",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "James Dun",
+          "on": [
+            0
+          ],
+          "off": [
+            72
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Noah Heward",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Benhard Janse van Rensburg",
+          "on": [
+            0
+          ],
+          "off": [
+            3
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Magnus Bradbury",
+          "on": [
+            0
+          ],
+          "off": [
+            72
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Max Malins",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Harry Thacker",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Callum Sheedy",
+          "on": [
+            0
+          ],
+          "off": [
+            36
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Ellis Genge",
+          "on": [
+            0
+          ],
+          "off": [
+            36
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Harry Randall",
+          "on": [
+            0
+          ],
+          "off": [
+            74
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Steven Luatua",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Gabriel Ibitoye",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Joe Batley",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Siva Naulago",
+          "on": [
+            36
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Kyle Sinckler",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Kieran Marmion",
+          "on": [
+            74
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Max Lahiff",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Gabriel Oghre",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Josh Caulfield",
+          "on": [
+            72
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Virimi Vakatawa",
+          "on": [
+            3
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 0,
+          "type": "Try",
+          "player": "James Williams",
+          "value": 5
+        },
+        {
+          "minute": 1,
+          "type": "Conversion",
+          "player": "Callum Sheedy",
+          "value": 2
+        },
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Ellis Genge",
+          "value": 5
+        },
+        {
+          "minute": 14,
+          "type": "Conversion",
+          "player": "Callum Sheedy",
+          "value": 2
+        },
+        {
+          "minute": 24,
+          "type": "Try",
+          "player": "Gabriel Ibitoye",
+          "value": 5
+        },
+        {
+          "minute": 25,
+          "type": "Conversion",
+          "player": "Callum Sheedy",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Harry Thacker",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Missed conversion",
+          "player": "James Williams",
+          "value": 0
+        },
+        {
+          "minute": 57,
+          "type": "Penalty",
+          "player": "James Williams",
+          "value": 3
+        },
+        {
+          "minute": 62,
+          "type": "Try",
+          "player": "Max Lahiff",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "James Williams",
+          "value": 2
+        },
+        {
+          "minute": 68,
+          "type": "Penalty",
+          "player": "James Williams",
+          "value": 3
+        },
+        {
+          "minute": 70,
+          "type": "Try",
+          "player": "Noah Heward",
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Conversion",
+          "player": "James Williams",
+          "value": 2
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Gabriel Oghre",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Conversion",
+          "player": "James Williams",
+          "value": 2
+        }
+      ],
       "conference": null,
       "score": 53,
       "team": "Bristol Bears"
     },
     "home": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "18": {
+          "name": "Dillon Lewis",
+          "on": [
+            50
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Danny Care",
+          "on": [
+            0
+          ],
+          "off": [
+            50
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Sam Riley",
+          "on": [
+            72
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Will Collier",
+          "on": [
+            0
+          ],
+          "off": [
+            50
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Stephan Lewies",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Will Porter",
+          "on": [
+            50
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Jack Walker",
+          "on": [
+            0
+          ],
+          "off": [
+            72
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Alex Dombrandt",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Andre Esterhuizen",
+          "on": [
+            0
+          ],
+          "off": [
+            48
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "James Chisholm",
+          "on": [
+            14,
+            59
+          ],
+          "off": [
+            23
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Oscar Beard",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Irne Herbst",
+          "on": [
+            0
+          ],
+          "off": [
+            68
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Simon Kerrod",
+          "on": [
+            59
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Will Joseph",
+          "on": [
+            48
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Luke Northmore",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Marcus Smith",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Fin Baxter",
+          "on": [
+            0
+          ],
+          "off": [
+            59
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Tyrone Green",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Louis Lynagh",
+          "on": [
+            0
+          ],
+          "off": [
+            59
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Chandler Cunningham-South",
+          "on": [
+            0,
+            23
+          ],
+          "off": [
+            14,
+            59
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Jarrod Evans",
+          "on": [
+            59
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "George Hammond",
+          "on": [
+            68
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Will Evans",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 8,
+          "type": "Try",
+          "player": "Chandler Cunningham-South",
+          "value": 5
+        },
+        {
+          "minute": 9,
+          "type": "Conversion",
+          "player": "Marcus Smith",
+          "value": 2
+        },
+        {
+          "minute": 21,
+          "type": "Try",
+          "player": "Alex Dombrandt",
+          "value": 5
+        },
+        {
+          "minute": 22,
+          "type": "Conversion",
+          "player": "Marcus Smith",
+          "value": 2
+        },
+        {
+          "minute": 46,
+          "type": "Try",
+          "player": "Luke Northmore",
+          "value": 5
+        },
+        {
+          "minute": 47,
+          "type": "Conversion",
+          "player": "Marcus Smith",
+          "value": 2
+        },
+        {
+          "minute": 51,
+          "type": "Try",
+          "player": "Chandler Cunningham-South",
+          "value": 5
+        },
+        {
+          "minute": 52,
+          "type": "Conversion",
+          "player": "Marcus Smith",
+          "value": 2
+        }
+      ],
       "conference": null,
       "score": 28,
       "team": "Harlequins"

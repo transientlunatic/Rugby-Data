@@ -42965,15 +42965,546 @@
   },
   {
     "away": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "17": {
+          "name": "Hugo Djehi",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Sione Kalamafoni",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Francis Saili",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Michael Ruru",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Mako Vunipola",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Leon Boulier",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Paul Surano",
+          "on": [
+            0
+          ],
+          "off": [
+            70
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Romaric Camou",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Fabrice Metz",
+          "on": [
+            0
+          ],
+          "off": [
+            76
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Paga Tafili",
+          "on": [
+            70
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Bautista Pedemonte",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": [
+            20
+          ]
+        },
+        "18": {
+          "name": "Anton Bresler",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Alex Arrate",
+          "on": [],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Eric Marks",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Jules Lebail",
+          "on": [
+            70
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Theo Costosseque",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Santiago Medrano",
+          "on": [
+            0
+          ],
+          "off": [
+            70
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Francisco Gorrissen",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Salesi Rayasi",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Cyril Blanchard",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Theo Beziat",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Timothe Mezou",
+          "on": [
+            76
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Maxime Lafage",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Bautista Pedemonte",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Conversion",
+          "player": "Maxime Lafage",
+          "value": 2
+        },
+        {
+          "minute": 51,
+          "type": "Try",
+          "player": "Michael Ruru",
+          "value": 5
+        },
+        {
+          "minute": 52,
+          "type": "Conversion",
+          "player": "Maxime Lafage",
+          "value": 2
+        },
+        {
+          "minute": 61,
+          "type": "Missed penalty",
+          "player": "Maxime Lafage",
+          "value": 0
+        },
+        {
+          "minute": 66,
+          "type": "Penalty",
+          "player": "Maxime Lafage",
+          "value": 3
+        },
+        {
+          "minute": 68,
+          "type": "Penalty",
+          "player": "Maxime Lafage",
+          "value": 3
+        },
+        {
+          "minute": 76,
+          "type": "Penalty",
+          "player": "Maxime Lafage",
+          "value": 3
+        }
+      ],
       "conference": null,
       "score": 23,
       "team": "Vannes"
     },
     "home": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "22": {
+          "name": "Teddy Thomas",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Quentin Lespiaucq",
+          "on": [
+            0
+          ],
+          "off": [
+            57
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "UJ Seuteni",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Kane Douglas",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Hoani Bosmorin",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Teddy Iribaren",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Brice Dulin",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Suliasi Vunivalu",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Uini Atonio",
+          "on": [
+            0,
+            72
+          ],
+          "off": [
+            57
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Joel Sclavi",
+          "on": [
+            57
+          ],
+          "off": [
+            72
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Reda Wardi",
+          "on": [
+            0,
+            72
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Thomas Lavault",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Levani Botia",
+          "on": [
+            0,
+            19
+          ],
+          "off": [
+            5,
+            76
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Matthias Haddad",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Hugo Reus",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Ihaia West",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Lucas Andjisseramatchi",
+          "on": [
+            5,
+            76
+          ],
+          "off": [
+            19
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Jonathan Danty",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Tolu Latu",
+          "on": [
+            57
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Will Skelton",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Oscar Jegou",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Jack Nowell",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Alexandre Kaddouri",
+          "on": [
+            61
+          ],
+          "off": [
+            72
+          ],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 15,
+          "type": "Try",
+          "player": "Quentin Lespiaucq",
+          "value": 5
+        },
+        {
+          "minute": 16,
+          "type": "Conversion",
+          "player": "Ihaia West",
+          "value": 2
+        },
+        {
+          "minute": 43,
+          "type": "Try",
+          "player": "Quentin Lespiaucq",
+          "value": 5
+        },
+        {
+          "minute": 44,
+          "type": "Conversion",
+          "player": "Ihaia West",
+          "value": 2
+        }
+      ],
       "conference": null,
       "score": 14,
       "team": "La Rochelle"
@@ -85053,15 +85584,573 @@
   },
   {
     "away": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "1": {
+          "name": "David Ainu'u",
+          "on": [
+            0
+          ],
+          "off": [
+            60
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Joel Merkler",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Thomas Alary",
+          "on": [
+            75
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Santiago Chocobares",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [
+            21
+          ]
+        },
+        "11": {
+          "name": "Matthis Lebel",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Joshua Brennan",
+          "on": [
+            0
+          ],
+          "off": [
+            75
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Dimitri Delibes",
+          "on": [
+            0
+          ],
+          "off": [
+            75
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Juan-Cruz Mallia",
+          "on": [
+            0
+          ],
+          "off": [
+            79
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Malachi Hawkes",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Simon Daroque",
+          "on": [
+            65
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Alban Placines",
+          "on": [
+            60
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Nelson Epee",
+          "on": [
+            51
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Clement Verge",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Th\u00e9o Ntamack",
+          "on": [
+            0,
+            73
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Guillaume Cramont",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Richie Arnold",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Matias Remue",
+          "on": [
+            0,
+            79
+          ],
+          "off": [
+            51
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Paul Costes",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Peato Mauvaka",
+          "on": [
+            0,
+            75
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Mathis Castro-Ferreira",
+          "on": [
+            0
+          ],
+          "off": [
+            60
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Naoto Saito",
+          "on": [
+            0
+          ],
+          "off": [
+            65
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Leo Banos",
+          "on": [
+            0
+          ],
+          "off": [
+            73
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Hugo Reilhes",
+          "on": [
+            60
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 2,
+          "type": "Try",
+          "player": "Leo Banos",
+          "value": 5
+        },
+        {
+          "minute": 3,
+          "type": "Conversion",
+          "player": "Juan-Cruz Mallia",
+          "value": 2
+        },
+        {
+          "minute": 9,
+          "type": "Penalty",
+          "player": "Juan-Cruz Mallia",
+          "value": 3
+        },
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Paul Costes",
+          "value": 5
+        },
+        {
+          "minute": 13,
+          "type": "Conversion",
+          "player": "Juan-Cruz Mallia",
+          "value": 2
+        },
+        {
+          "minute": 56,
+          "type": "Penalty",
+          "player": "Juan-Cruz Mallia",
+          "value": 3
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Juan-Cruz Mallia",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "Juan-Cruz Mallia",
+          "value": 2
+        },
+        {
+          "minute": 69,
+          "type": "Missed penalty",
+          "player": "Juan-Cruz Mallia",
+          "value": 0
+        }
+      ],
       "conference": null,
       "score": 27,
       "team": "Toulouse"
     },
     "home": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "11": {
+          "name": "Charles Laloi",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Leo Barre",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Sergo Abramishvili",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Tanginoa Halaifonua",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Louis Carbonel",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Thibaut Motassi",
+          "on": [
+            71
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Giorgi Melikidze",
+          "on": [
+            51
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Lester Etien",
+          "on": [
+            0
+          ],
+          "off": [
+            53
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Peniasi Dakuwaqa",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Lucas Peyresblanques",
+          "on": [
+            0,
+            19
+          ],
+          "off": [
+            9,
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Zack Henry",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Samuel Ezeala",
+          "on": [
+            53
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Moses Alo-Emile",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Baptiste Pesenti",
+          "on": [
+            0
+          ],
+          "off": [
+            48
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Romain Briatte",
+          "on": [
+            0
+          ],
+          "off": [
+            67
+          ],
+          "reds": [],
+          "yellows": [
+            9
+          ]
+        },
+        "18": {
+          "name": "Pierre-Henri Azagoh",
+          "on": [
+            48
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Paul Abadie",
+          "on": [
+            0
+          ],
+          "off": [
+            71
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Sekou Macalou",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Paul Alo-Emile",
+          "on": [
+            0
+          ],
+          "off": [
+            51
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Juan-Martin Scelzo",
+          "on": [
+            67
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Paul Gabrillagues",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Alvaro Garcia Albo",
+          "on": [
+            9,
+            56
+          ],
+          "off": [
+            19
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Joe Marchant",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 23,
+          "type": "Try",
+          "player": "Louis Carbonel",
+          "value": 5
+        },
+        {
+          "minute": 24,
+          "type": "Conversion",
+          "player": "Louis Carbonel",
+          "value": 2
+        },
+        {
+          "minute": 31,
+          "type": "Try",
+          "player": "Romain Briatte",
+          "value": 5
+        },
+        {
+          "minute": 32,
+          "type": "Conversion",
+          "player": "Louis Carbonel",
+          "value": 2
+        },
+        {
+          "minute": 76,
+          "type": "Try",
+          "player": "Sekou Macalou",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Conversion",
+          "player": "Zack Henry",
+          "value": 2
+        }
+      ],
       "conference": null,
       "score": 21,
       "team": "Stade Francais Paris"

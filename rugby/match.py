@@ -8,8 +8,6 @@ import json, yaml
 import pandas as pd
 import numpy as np
 
-from flask import url_for
-
 from .player import Player
 from .scores import Scores
 from .utils import json_serial, total_time_from_ranges
@@ -23,7 +21,7 @@ class Match(object):
         """
 
 
-        if row['home']['score'] in ["C", "P", ""]:
+        if row['home']['score'] in ["C", "P", "", None]:
             self.score = {"home": float("nan"), "away": float("nan")}
 
         else:
@@ -69,7 +67,7 @@ class Match(object):
         else:
             self.lineups = None
 
-        if "scores" in row['home']:
+        if "scores" in row['home'] and "scores" in row['away']:
             # Handle the scores
             self.scores = {'home': Scores(row['home']['scores']),
                            'away': Scores(row['away']['scores'])
@@ -79,6 +77,8 @@ class Match(object):
                     continue
                 self.scores['home'].scores.at[i, 'player'] = (self.find_player(score['player']))
             for i, score in self.scores['away'].scores.iterrows():
+                if score['player']==None:
+                    continue
                 self.scores['away'].scores.at[i, 'player'] = (self.find_player(score['player']))
                 
         else:
@@ -89,12 +89,13 @@ class Match(object):
             self.url = None
 
     def find_player(self, search):
+        if search is None:
+            return None
         if self.lineups:
             for i, player in pd.concat([self.lineups['home'].lineup, self.lineups['away'].lineup]).iterrows():
-                if search in player['name']: 
+                if search in player['name']:
                     return player['name']
-                else:
-                    return None
+        return None
             
     def all_scores(self):
         """
@@ -145,31 +146,6 @@ class Match(object):
         else:
             return yaml.safe_dump(self.to_dict())
 
-    def to_rest(self):
-        home = self.teams['home'].short_name
-        away = self.teams['away'].short_name
-
-        if pd.isna(self.score['home']):
-                score = None
-        else:
-            score = self.score
-        
-        return dict(date=self.date, 
-                    season=self.season,
-                    tournament=self.tournament,
-                    url=url_for("match", home=home, away=away,
-                                date=f"{self.date:%Y-%m-%d}",
-                                _external=False),
-                    lineups=url_for("lineup", home=home, away=away, date=f"{self.date:%Y-%m-%d}", _external=False),
-                    events=url_for("events", home=home, away=away, date=f"{self.date:%Y-%m-%d}", _external=False), 
-                    stadium=None,
-                    
-                    score = score,
-                    home={"name": home,
-                          "url": url_for("team", shortname=home, _external=False)}, 
-                    away={"name": away,
-                          "url": url_for("team", shortname=away,  _external=False)})
-        
     @classmethod
     def from_json(cls, file):
         """

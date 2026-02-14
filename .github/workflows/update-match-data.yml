@@ -1,0 +1,88 @@
+name: Update Match Data
+
+on:
+  schedule:
+    - cron: '0 20 * * 0'  # Sunday 20:00 UTC (weekend results)
+    - cron: '0 12 * * 4'  # Thursday 12:00 UTC (lineup announcements)
+    - cron: '0 12 * * 5'  # Friday 12:00 UTC (more lineups)
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'Season (e.g., "2025-2026")'
+        required: false
+      tournaments:
+        description: 'Tournaments (comma-separated or "all")'
+        default: 'all'
+      dry_run:
+        description: 'Dry run (no commit)'
+        type: boolean
+        default: false
+
+jobs:
+  update-matches:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Update match data
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.season }}" ]; then
+            ARGS="--season ${{ github.event.inputs.season }}"
+          fi
+          if [ -n "${{ github.event.inputs.tournaments }}" ]; then
+            IFS=',' read -ra TOURNAMENTS <<< "${{ github.event.inputs.tournaments }}"
+            for t in "${TOURNAMENTS[@]}"; do
+              ARGS="$ARGS -t $(echo $t | xargs)"
+            done
+          else
+            ARGS="$ARGS -t all"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+
+          rugby data update $ARGS
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          git add json/*.json || true
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check-changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update rugby data - $(date -u +%Y-%m-%d)" \
+                     -m "Automated match data update"
+          git push
+
+      - name: Summary
+        run: |
+          echo "### Match Data Update" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check-changes.outputs.changed }}" = "true" ]; then
+            echo "✅ Data updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No changes" >> $GITHUB_STEP_SUMMARY
+          fi

@@ -1,0 +1,174 @@
+name: Train Model (Weekly VI)
+
+on:
+  schedule:
+    - cron: '30 20 * * 0'  # Sunday 20:30 UTC
+  workflow_dispatch:
+    inputs:
+      training-iterations:
+        description: 'VI iterations'
+        default: '10000'
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install rugby-ranking package
+        run: |
+          pip install --upgrade pip
+          pip install git+https://github.com/transientlunatic/rugby-ranking.git
+
+      - name: Download MCMC checkpoint from Release (if available)
+        id: download-mcmc
+        continue-on-error: true
+        run: |
+          # Try to download latest MCMC checkpoint from rugby-ranking releases
+          LATEST_RELEASE=$(gh release list --repo transientlunatic/rugby-ranking --limit 1 --json tagName --jq '.[0].tagName' 2>/dev/null || echo "")
+
+          if [ -n "$LATEST_RELEASE" ]; then
+            echo "Found release: $LATEST_RELEASE"
+            if gh release download "$LATEST_RELEASE" \
+              --repo transientlunatic/rugby-ranking \
+              --pattern 'mcmc-*.tar.gz' \
+              --dir /tmp/mcmc-checkpoint 2>/dev/null; then
+              echo "found=true" >> $GITHUB_OUTPUT
+              echo "✓ Downloaded MCMC checkpoint from $LATEST_RELEASE"
+            else
+              echo "found=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Download previous VI checkpoint (fallback)
+        if: steps.download-mcmc.outputs.found != 'true'
+        id: download-vi
+        uses: dawidd6/action-download-artifact@v2
+        continue-on-error: true
+        with:
+          workflow: train-model-weekly.yml
+          name: model-checkpoint-weekly
+          path: /tmp/vi-checkpoint
+          if_no_artifact_found: warn
+
+      - name: Restore checkpoint
+        run: |
+          # Prefer MCMC checkpoint if available
+          if [ "${{ steps.download-mcmc.outputs.found }}" = "true" ] && [ -f /tmp/mcmc-checkpoint/mcmc-*.tar.gz ]; then
+            echo "✓ Using MCMC checkpoint from Release"
+            mkdir -p ~/.cache/rugby_ranking/weekly-model
+            cd ~/.cache/rugby_ranking/weekly-model
+            tar -xzf /tmp/mcmc-checkpoint/mcmc-*.tar.gz
+          elif [ -d "/tmp/vi-checkpoint" ] && [ -f "/tmp/vi-checkpoint/checkpoint.tar.gz" ]; then
+            echo "✓ Using previous VI checkpoint"
+            mkdir -p ~/.cache/rugby_ranking/weekly-model
+            cd ~/.cache/rugby_ranking/weekly-model
+            tar -xzf /tmp/vi-checkpoint/checkpoint.tar.gz
+          else
+            echo "ℹ No checkpoint found, will train fresh"
+          fi
+
+      - name: Train model
+        run: |
+          python -c "
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, str(Path.home() / '.local/lib/python3.11/site-packages'))
+
+          from rugby_ranking.model.data import MatchDataset
+          from rugby_ranking.model.core import RugbyModel, ModelConfig
+          from rugby_ranking.model.inference import ModelFitter, InferenceConfig
+
+          # Load data
+          dataset = MatchDataset('json', fuzzy_match_names=False)
+          dataset.load_json_files()
+          df = dataset.to_dataframe(played_only=True)
+
+          # Filter recent seasons
+          seasons = sorted(df['season'].unique())
+          df = df[df['season'].isin(seasons[-3:])].copy()
+
+          print(f'Training on {len(df):,} observations')
+
+          # Build model
+          config = ModelConfig(
+              include_defense=True,
+              separate_kicking_effect=True,
+          )
+          model = RugbyModel(config)
+          model.build_joint(df)
+
+          # Try to load previous checkpoint
+          try:
+              fitter = ModelFitter.load('weekly-model', model)
+              print('✓ Loaded previous checkpoint')
+
+              # Continue training with warm-start
+              if fitter._vi_approx is not None:
+                  print('✓ Continuing VI training with warm-start')
+                  trace = fitter.fit_vi(
+                      warm_start=True,
+                      n_samples=500,
+                      verbose=True,
+                  )
+              else:
+                  print('⚠ No VI approximation, training fresh')
+                  fitter = ModelFitter(model, InferenceConfig(vi_n_iterations=${{ github.event.inputs.training-iterations || 10000 }}))
+                  trace = fitter.fit_vi(n_samples=500, verbose=True)
+          except (FileNotFoundError, ValueError):
+              print('ℹ No previous checkpoint, training fresh')
+              fitter = ModelFitter(model, InferenceConfig(vi_n_iterations=${{ github.event.inputs.training-iterations || 10000 }}))
+              trace = fitter.fit_vi(n_samples=500, verbose=True)
+
+          # Save checkpoint
+          fitter.save('weekly-model')
+          print('✓ Checkpoint saved')
+          "
+
+      - name: Compress checkpoint
+        run: |
+          cd ~/.cache/rugby_ranking/weekly-model
+          tar -czf checkpoint.tar.gz trace.nc vi_approx.pkl metadata.pkl
+
+      - name: Upload checkpoint artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: model-checkpoint-weekly
+          path: ~/.cache/rugby_ranking/weekly-model/checkpoint.tar.gz
+          retention-days: 14
+
+      - name: Upload weekly snapshot
+        if: github.event.schedule
+        uses: actions/upload-artifact@v3
+        with:
+          name: model-checkpoint-${{ github.run_number }}
+          path: ~/.cache/rugby_ranking/weekly-model/checkpoint.tar.gz
+          retention-days: 90
+
+      - name: Summary
+        run: |
+          echo "### Model Training Complete" >> $GITHUB_STEP_SUMMARY
+          echo "✅ VI training completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ steps.download-mcmc.outputs.found }}" = "true" ]; then
+            echo "**Starting point**: MCMC checkpoint from Release" >> $GITHUB_STEP_SUMMARY
+          elif [ -f ~/.cache/rugby_ranking/weekly-model/trace.nc ]; then
+            echo "**Starting point**: Previous VI checkpoint (warm-start)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Starting point**: Fresh training" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "**Iterations**: ${{ github.event.inputs.training-iterations || '10000' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Saved as**: weekly-model" >> $GITHUB_STEP_SUMMARY

@@ -1,16 +1,20 @@
 import click
 import rugby
 
-import rugby.scrape
+from rugby.commands.data import data
+from rugby.commands.analysis import analysis
+from rugby.commands.plot import plot
+from rugby.commands.config import config
+
 
 @click.version_option(rugby.__version__)
 @click.group()
-@click.pass_context
-def app(ctx):
-    """
-    The rugby data CLI app.
-    """
-    click.echo("Rugby Data")
+def app():
+    """Rugby Data - data acquisition, storage, and analysis tools."""
+    pass
 
-app.add_command(rugby.scrape.scrape)
-app()
+
+app.add_command(data)
+app.add_command(analysis)
+app.add_command(plot)
+app.add_command(config)

@@ -6,7 +6,6 @@ import numpy as np
 
 import json
 
-from . import models
 from .match import Match, Lineup
 from .team import Team
 from . import utils
@@ -73,21 +72,6 @@ class Tournament():
 
         return cls(name, season, matches)
 
-    def to_database(self):
-        """
-        Save this tournament to the database.
-        """
-        season = models.Season.add(self)
-        
-        for team in self.teams():
-            models.Team.add(team)
-
-        for match in self.matches:
-            models.Match.add(match)
-
-        for match in self.future:
-            models.Match.add(match)
-    
     def to_json(self, filename=None):
         """Serialise this tournament as a json."""
         data = {}
@@ -181,19 +165,25 @@ class Tournament():
         return positions #list(positions)
 
     def fixtures_table(self, future=False):
+        def _tn(team):
+            return team.short_name if hasattr(team, 'short_name') else str(team)
+
         if not future:
-            data = [[pd.to_datetime(match.date), match.teams['home'].short_name, match.teams['away'].short_name] for match in self.matches]
+            data = [[pd.to_datetime(match.date), _tn(match.teams['home']), _tn(match.teams['away'])] for match in self.matches]
         else:
-            data = [[pd.to_datetime(match.date), match.teams['home'].short_name, match.teams['away'].short_name] for match in self.future]
+            data = [[pd.to_datetime(match.date), _tn(match.teams['home']), _tn(match.teams['away'])] for match in self.future]
         return pd.DataFrame(data, columns=["date", "home", "away"])
     
     def results_table(self):
-        scores = [[match.teams['home'].short_name, match.teams['away'].short_name, match.score['home'], match.score['away'],
+        def _team_name(team):
+            return team.short_name if hasattr(team, 'short_name') else str(team)
+
+        scores = [[_team_name(match.teams['home']), _team_name(match.teams['away']), match.score['home'], match.score['away'],
                    match.score['home']-match.score['away'],
                    match.scores['home'].count("try"),
                    match.scores['away'].count("try")]
                   for match in self.matches if not match.scores==None]
-        scores += [[str(match.teams['home']), str(match.teams['away']), match.score['home'], match.score['away'],
+        scores += [[_team_name(match.teams['home']), _team_name(match.teams['away']), match.score['home'], match.score['away'],
                    match.score['home']-match.score['away'],
                     None,
                     None]

@@ -1,0 +1,107 @@
+name: Update Predictions & Dashboard
+
+on:
+  schedule:
+    - cron: '30 21 * * 0'  # Sunday 21:30 UTC (after training)
+    - cron: '30 12 * * 4'  # Thursday 12:30 UTC (after lineup update)
+    - cron: '0 18 * * 5'   # Friday 18:00 UTC (pre-match)
+    - cron: '0 12 * * 6'   # Saturday 12:00 UTC (pre-match)
+  workflow_dispatch:
+
+jobs:
+  generate-predictions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install rugby-ranking package
+        run: |
+          pip install --upgrade pip
+          pip install git+https://github.com/transientlunatic/rugby-ranking.git
+
+      - name: Download model checkpoint
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: train-model-weekly.yml
+          name: model-checkpoint-weekly
+          path: /tmp/checkpoint
+          if_no_artifact_found: fail
+
+      - name: Extract checkpoint
+        run: |
+          mkdir -p ~/.cache/rugby_ranking/weekly-model
+          cd ~/.cache/rugby_ranking/weekly-model
+          tar -xzf /tmp/checkpoint/checkpoint.tar.gz
+
+      - name: Export dashboard data
+        run: |
+          python -c "
+          from pathlib import Path
+          from rugby_ranking.tools.export_dashboard_data import export_dashboard_data
+
+          export_dashboard_data(
+              data_dir=Path('json'),
+              output_dir=Path('dashboard/data'),
+              checkpoint_name='weekly-model',
+              recent_seasons_only=3,
+          )
+          "
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          git add dashboard/data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit dashboard data
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update dashboard data - $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Summary
+        run: |
+          echo "### Dashboard Update" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check-changes.outputs.changed }}" = "true" ]; then
+            echo "✅ Dashboard data updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No changes to dashboard data" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  deploy:
+    needs: generate-predictions
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dashboard
+          publish_branch: gh-pages
+
+      - name: Summary
+        run: |
+          echo "### GitHub Pages Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Dashboard deployed to GitHub Pages" >> $GITHUB_STEP_SUMMARY

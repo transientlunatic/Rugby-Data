@@ -3,50 +3,1641 @@
     "date": "2026-02-05T21:10:00",
     "home": {
       "team": "France",
-      "score": 0
+      "score": 36,
+      "lineup": {
+        "15": {
+          "name": "Thomas Ramos",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        },
+        "14": {
+          "name": "Th\u00e9o Attissogbe",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RW"
+        },
+        "13": {
+          "name": "Nicolas Depoort\u00e8re",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OC"
+        },
+        "12": {
+          "name": "Yoram Moefana",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "IC"
+        },
+        "11": {
+          "name": "Louis Bielle-Biarrey",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LW"
+        },
+        "10": {
+          "name": "Matthieu Jalibert",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "9": {
+          "name": "Antoine Dupont",
+          "on": [
+            0
+          ],
+          "off": [
+            73
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "8": {
+          "name": "Anthony Jelonch",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "7": {
+          "name": "Oscar J\u00e9gou",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OF"
+        },
+        "6": {
+          "name": "Fran\u00e7ois Cros",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "BF"
+        },
+        "5": {
+          "name": "Micka\u00ebl Guillard",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "RL"
+        },
+        "4": {
+          "name": "Charles Ollivon",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "LL"
+        },
+        "3": {
+          "name": "Dorian Aldegheri",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "TP"
+        },
+        "2": {
+          "name": "Julien Marchand",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "1": {
+          "name": "Jean-Baptiste Gros",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "LP"
+        },
+        "16": {
+          "name": "Peato Mauvaka",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "17": {
+          "name": "Rodrigue Neti",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "18": {
+          "name": "R\u00e9gis Montagne",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "19": {
+          "name": "Emmanuel Meafou",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "20": {
+          "name": "Hugo Auradou",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "21": {
+          "name": "Lenni Nouchi",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FL"
+        },
+        "22": {
+          "name": "Baptiste Serin",
+          "on": [
+            73
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "23": {
+          "name": "Kalvin Gourgues",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "CE"
+        }
+      },
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Bielle-Biarrey",
+          "value": 5
+        },
+        {
+          "minute": 13,
+          "type": "Conversion",
+          "player": "Bielle-Biarrey",
+          "value": 2
+        },
+        {
+          "minute": 21,
+          "type": "Try",
+          "player": "Jalibert",
+          "value": 5
+        },
+        {
+          "minute": 22,
+          "type": "Missed conversion",
+          "player": "Jalibert",
+          "value": 0
+        },
+        {
+          "minute": 27,
+          "type": "Penalty",
+          "player": "Ramos",
+          "value": 3
+        },
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Ollivon",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Conversion",
+          "player": "Ollivon",
+          "value": 2
+        },
+        {
+          "minute": 46,
+          "type": "Try",
+          "player": "Bielle-Biarrey",
+          "value": 5
+        },
+        {
+          "minute": 47,
+          "type": "Conversion",
+          "player": "Bielle-Biarrey",
+          "value": 2
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Attissogbe",
+          "value": 5
+        },
+        {
+          "minute": 81,
+          "type": "Conversion",
+          "player": "Attissogbe",
+          "value": 2
+        }
+      ]
     },
     "away": {
       "team": "Ireland",
-      "score": 0
+      "score": 14,
+      "lineup": {
+        "15": {
+          "name": "Jamie Osborne",
+          "on": [
+            0
+          ],
+          "off": [
+            73
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        },
+        "14": {
+          "name": "Tommy O'Brien",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "RW"
+        },
+        "13": {
+          "name": "Garry Ringrose",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OC"
+        },
+        "12": {
+          "name": "Stuart McCloskey",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "IC"
+        },
+        "11": {
+          "name": "Jacob Stockdale",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LW"
+        },
+        "10": {
+          "name": "Sam Prendergast",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "9": {
+          "name": "Jamison Gibson-Park",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "8": {
+          "name": "Caelan Doris",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "7": {
+          "name": "Josh van der Flier",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "OF"
+        },
+        "6": {
+          "name": "Cian Prendergast",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "BF"
+        },
+        "5": {
+          "name": "Tadhg Beirne",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RL"
+        },
+        "4": {
+          "name": "Joe McCarthy",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "LL"
+        },
+        "3": {
+          "name": "Tom Clarkson",
+          "on": [
+            0
+          ],
+          "off": [
+            59
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "TP"
+        },
+        "2": {
+          "name": "Dan Sheehan",
+          "on": [
+            0
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "1": {
+          "name": "Jeremy Loughman",
+          "on": [
+            0
+          ],
+          "off": [
+            59
+          ],
+          "reds": [],
+          "yellows": [],
+          "position": "LP"
+        },
+        "16": {
+          "name": "R\u00f3nan Kelleher",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "17": {
+          "name": "Michael Milne",
+          "on": [
+            59
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "18": {
+          "name": "Finlay Bealham",
+          "on": [
+            59
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "19": {
+          "name": "James Ryan",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "20": {
+          "name": "Jack Conan",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "21": {
+          "name": "Nick Timoney",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FL"
+        },
+        "22": {
+          "name": "Craig Casey",
+          "on": [
+            73
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "23": {
+          "name": "Jack Crowley",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        }
+      },
+      "scores": [
+        {
+          "minute": 58,
+          "type": "Try",
+          "player": "Timoney",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Conversion",
+          "player": "Timoney",
+          "value": 2
+        },
+        {
+          "minute": 61,
+          "type": "Try",
+          "player": "Milne",
+          "value": 5
+        },
+        {
+          "minute": 62,
+          "type": "Conversion",
+          "player": "Milne",
+          "value": 2
+        }
+      ]
     },
     "stadium": "Stade de France, Saint-Denis, Seine-Saint-Denis|Saint-Denis",
+    "attendance": 80000,
     "referee": "Karl Dickson"
   },
   {
     "date": "2026-02-07T15:10:00",
     "home": {
       "team": "Italy",
-      "score": 0
+      "score": 18,
+      "lineup": {
+        "15": {
+          "name": "Leonardo Marin",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        },
+        "14": {
+          "name": "Louis Lynagh",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RW"
+        },
+        "13": {
+          "name": "Ignacio Brex",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OC"
+        },
+        "12": {
+          "name": "Tommaso Menoncello",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "IC"
+        },
+        "11": {
+          "name": "Monty Ioane",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LW"
+        },
+        "10": {
+          "name": "Paolo Garbisi",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "9": {
+          "name": "Alessandro Fusco",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "8": {
+          "name": "Lorenzo Cannone",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "7": {
+          "name": "Manuel Zuliani",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OF"
+        },
+        "6": {
+          "name": "Michele Lamaro",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "BF"
+        },
+        "5": {
+          "name": "Andrea Zambonin",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RL"
+        },
+        "4": {
+          "name": "Niccol\u00f2 Cannone",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LL"
+        },
+        "3": {
+          "name": "Simone Ferrari",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "TP"
+        },
+        "2": {
+          "name": "Giacomo Nicotera",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "1": {
+          "name": "Danilo Fischetti",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LP"
+        },
+        "16": {
+          "name": "Tommaso Di Bartolomeo",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "17": {
+          "name": "Mirco Spagnolo",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "18": {
+          "name": "Muhamed Hasa",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "19": {
+          "name": "Federico Ruzza",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "20": {
+          "name": "Riccardo Favretto",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "21": {
+          "name": "Alessandro Garbisi",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "22": {
+          "name": "Giacomo Da Re",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "23": {
+          "name": "Lorenzo Pani",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        }
+      },
+      "scores": [
+        {
+          "minute": 8,
+          "type": "Try",
+          "player": "Lynagh",
+          "value": 5
+        },
+        {
+          "minute": 9,
+          "type": "Missed conversion",
+          "player": "Lynagh",
+          "value": 0
+        },
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Menoncello",
+          "value": 5
+        },
+        {
+          "minute": 15,
+          "type": "Conversion",
+          "player": "Menoncello",
+          "value": 2
+        },
+        {
+          "minute": 35,
+          "type": "Penalty",
+          "player": "Garbisi",
+          "value": 3
+        },
+        {
+          "minute": 49,
+          "type": "Penalty",
+          "player": "Garbisi",
+          "value": 3
+        }
+      ]
     },
     "away": {
       "team": "Scotland",
-      "score": 0
+      "score": 15,
+      "lineup": {
+        "15": {
+          "name": "Tom Jordan",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        },
+        "14": {
+          "name": "Kyle Steyn",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RW"
+        },
+        "13": {
+          "name": "Huw Jones",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OC"
+        },
+        "12": {
+          "name": "Sione Tuipulotu",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "IC"
+        },
+        "11": {
+          "name": "Jamie Dobie",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LW"
+        },
+        "10": {
+          "name": "Finn Russell",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "9": {
+          "name": "Ben White",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "8": {
+          "name": "Jack Dempsey",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "7": {
+          "name": "Rory Darge",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OF"
+        },
+        "6": {
+          "name": "Matt Fagerson",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "BF"
+        },
+        "5": {
+          "name": "Grant Gilchrist",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RL"
+        },
+        "4": {
+          "name": "Scott Cummings",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LL"
+        },
+        "3": {
+          "name": "Zander Fagerson",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "TP"
+        },
+        "2": {
+          "name": "Ewan Ashman",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "1": {
+          "name": "Pierre Schoeman",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LP"
+        },
+        "16": {
+          "name": "George Turner",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "17": {
+          "name": "Nathan McBeth",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "18": {
+          "name": "Elliot Millar Mills",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "19": {
+          "name": "Max Williamson",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "20": {
+          "name": "Gregor Brown",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FL"
+        },
+        "21": {
+          "name": "George Horne",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "22": {
+          "name": "Adam Hastings",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "23": {
+          "name": "Darcy Graham",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "WG"
+        }
+      },
+      "scores": [
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Dempsey",
+          "value": 5
+        },
+        {
+          "minute": 26,
+          "type": "Conversion",
+          "player": "Dempsey",
+          "value": 2
+        },
+        {
+          "minute": 47,
+          "type": "Penalty",
+          "player": "Russell",
+          "value": 3
+        },
+        {
+          "minute": 67,
+          "type": "Try",
+          "player": "Horne",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Missed conversion",
+          "player": "Horne",
+          "value": 0
+        }
+      ]
     },
     "stadium": "Stadio Olimpico, Rome",
+    "attendance": 68245,
     "referee": "Ben O'Keeffe"
   },
   {
     "date": "2026-02-07T16:40:00",
     "home": {
       "team": "England",
-      "score": 0
+      "score": 48,
+      "lineup": {
+        "15": {
+          "name": "Freddie Steward",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        },
+        "14": {
+          "name": "Tom Roebuck",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RW"
+        },
+        "13": {
+          "name": "Tommy Freeman",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OC"
+        },
+        "12": {
+          "name": "Fraser Dingwall",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "IC"
+        },
+        "11": {
+          "name": "Henry Arundell",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LW"
+        },
+        "10": {
+          "name": "George Ford",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "9": {
+          "name": "Alex Mitchell",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "8": {
+          "name": "Ben Earl",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "7": {
+          "name": "Sam Underhill",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OF"
+        },
+        "6": {
+          "name": "Guy Pepper",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "BF"
+        },
+        "5": {
+          "name": "Ollie Chessum",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RL"
+        },
+        "4": {
+          "name": "Alex Coles",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LL"
+        },
+        "3": {
+          "name": "Joe Heyes",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "TP"
+        },
+        "2": {
+          "name": "Jamie George",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "1": {
+          "name": "Ellis Genge",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LP"
+        },
+        "16": {
+          "name": "Luke Cowan-Dickie",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "17": {
+          "name": "Bevan Rodd",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "18": {
+          "name": "Trevor Davison",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "19": {
+          "name": "Maro Itoje",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "20": {
+          "name": "Tom Curry",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FL"
+        },
+        "21": {
+          "name": "Henry Pollock",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "22": {
+          "name": "Ben Spencer",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "23": {
+          "name": "Marcus Smith",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        }
+      }
     },
     "away": {
       "team": "Wales",
-      "score": 0
+      "score": 7,
+      "lineup": {
+        "15": {
+          "name": "Louis Rees-Zammit",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FB"
+        },
+        "14": {
+          "name": "Ellis Mee",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RW"
+        },
+        "13": {
+          "name": "Eddie James",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OC"
+        },
+        "12": {
+          "name": "Ben Thomas",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "IC"
+        },
+        "11": {
+          "name": "Josh Adams",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LW"
+        },
+        "10": {
+          "name": "Dan Edwards",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FH"
+        },
+        "9": {
+          "name": "Tomos Williams",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "8": {
+          "name": "Aaron Wainwright",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "N8"
+        },
+        "7": {
+          "name": "Josh Macleod",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "OF"
+        },
+        "6": {
+          "name": "Alex Mann",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "BF"
+        },
+        "5": {
+          "name": "Adam Beard",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "RL"
+        },
+        "4": {
+          "name": "Dafydd Jenkins",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LL"
+        },
+        "3": {
+          "name": "Archie Griffin",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "TP"
+        },
+        "2": {
+          "name": "Dewi Lake",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "1": {
+          "name": "Nicky Smith",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LP"
+        },
+        "16": {
+          "name": "Liam Belcher",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "HK"
+        },
+        "17": {
+          "name": "Rhys Carr\u00e9",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "18": {
+          "name": "Tomas Francis",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "PR"
+        },
+        "19": {
+          "name": "Ben Carter",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "LK"
+        },
+        "20": {
+          "name": "Taine Plumtree",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FL"
+        },
+        "21": {
+          "name": "Harri Deaves",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "FL"
+        },
+        "22": {
+          "name": "Kieran Hardy",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "SH"
+        },
+        "23": {
+          "name": "Mason Grady",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": [],
+          "position": "CE"
+        }
+      }
     },
     "stadium": "Twickenham Stadium, London",
+    "attendance": 81953,
     "referee": "Pierre Brousset"
   },
   {
     "date": "2026-02-14T14:10:00",
     "home": {
       "team": "Ireland",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Italy",
-      "score": 0
+      "score": null
     },
     "stadium": "Aviva Stadium, Dublin",
     "referee": "Hollie Davidson"
@@ -55,11 +1646,11 @@
     "date": "2026-02-14T16:40:00",
     "home": {
       "team": "Scotland",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "England",
-      "score": 0
+      "score": null
     },
     "stadium": "Murrayfield Stadium, Edinburgh",
     "referee": "Nika Amashukeli"
@@ -68,11 +1659,11 @@
     "date": "2026-02-15T15:10:00",
     "home": {
       "team": "Wales",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "France",
-      "score": 0
+      "score": null
     },
     "stadium": "Millennium Stadium, Cardiff",
     "referee": "James Doleman"
@@ -81,11 +1672,11 @@
     "date": "2026-02-21T14:10:00",
     "home": {
       "team": "England",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Ireland",
-      "score": 0
+      "score": null
     },
     "stadium": "Twickenham Stadium, London",
     "referee": "Andrea Piardi"
@@ -94,11 +1685,11 @@
     "date": "2026-02-21T16:40:00",
     "home": {
       "team": "Wales",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Scotland",
-      "score": 0
+      "score": null
     },
     "stadium": "Millennium Stadium, Cardiff",
     "referee": "Matthew Carley"
@@ -107,11 +1698,11 @@
     "date": "2026-02-22T16:10:00",
     "home": {
       "team": "France",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Italy",
-      "score": 0
+      "score": null
     },
     "stadium": "Stade Pierre-Mauroy, Lille",
     "referee": "Andrew Brace"
@@ -120,11 +1711,11 @@
     "date": "2026-03-06T20:10:00",
     "home": {
       "team": "Ireland",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Wales",
-      "score": 0
+      "score": null
     },
     "stadium": "Aviva Stadium, Dublin",
     "referee": "Karl Dickson"
@@ -133,11 +1724,11 @@
     "date": "2026-03-07T14:10:00",
     "home": {
       "team": "Scotland",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "France",
-      "score": 0
+      "score": null
     },
     "stadium": "Murrayfield Stadium, Edinburgh",
     "referee": "Angus Gardner"
@@ -146,11 +1737,11 @@
     "date": "2026-03-07T17:40:00",
     "home": {
       "team": "Italy",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "England",
-      "score": 0
+      "score": null
     },
     "stadium": "Stadio Olimpico, Rome",
     "referee": "Luc Ramos"
@@ -159,11 +1750,11 @@
     "date": "2026-03-14T14:10:00",
     "home": {
       "team": "Ireland",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Scotland",
-      "score": 0
+      "score": null
     },
     "stadium": "Aviva Stadium, Dublin",
     "referee": "Luke Pearce"
@@ -172,11 +1763,11 @@
     "date": "2026-03-14T16:40:00",
     "home": {
       "team": "Wales",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Italy",
-      "score": 0
+      "score": null
     },
     "stadium": "Millennium Stadium, Cardiff",
     "referee": "Christophe Ridley"
@@ -185,11 +1776,11 @@
     "date": "2026-03-14T21:10:00",
     "home": {
       "team": "France",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "England",
-      "score": 0
+      "score": null
     },
     "stadium": "Stade de France, Saint-Denis, Seine-Saint-Denis|Saint-Denis",
     "referee": "Nic Berry"

@@ -45,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install .
       
       - name: Update rugby data
         id: update
@@ -63,7 +63,7 @@ jobs:
               TOURNAMENT_ARGS="$TOURNAMENT_ARGS -t $(echo $t | xargs)"
             done
           else
-            TOURNAMENT_ARGS="-t urc"
+            TOURNAMENT_ARGS="-t all"
           fi
           
           DRY_RUN_ARG=""
@@ -71,7 +71,7 @@ jobs:
             DRY_RUN_ARG="--dry-run"
           fi
           
-          python update_data.py $SEASON_ARG $TOURNAMENT_ARGS $DRY_RUN_ARG
+          rugby data update $SEASON_ARG $TOURNAMENT_ARGS $DRY_RUN_ARG
       
       - name: Check for changes
         id: git-check

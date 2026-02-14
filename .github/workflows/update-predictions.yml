@@ -28,7 +28,7 @@ jobs:
           pip install git+https://github.com/transientlunatic/rugby-ranking.git
 
       - name: Download model checkpoint
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: train-model-weekly.yml
           name: model-checkpoint-weekly

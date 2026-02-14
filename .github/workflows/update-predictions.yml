@@ -25,7 +25,7 @@ jobs:
       - name: Install rugby-ranking package
         run: |
           pip install --upgrade pip
-          pip install git+https://github.com/transientlunatic/rugby-ranking.git
+          pip install git+https://${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-ranking.git
 
       - name: Download model checkpoint
         uses: dawidd6/action-download-artifact@v6

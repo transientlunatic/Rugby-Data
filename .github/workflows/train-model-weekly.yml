@@ -54,7 +54,7 @@ jobs:
       - name: Download previous VI checkpoint (fallback)
         if: steps.download-mcmc.outputs.found != 'true'
         id: download-vi
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         continue-on-error: true
         with:
           workflow: train-model-weekly.yml

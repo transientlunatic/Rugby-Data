@@ -28,20 +28,24 @@ jobs:
           pip install git+https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-pymc.git
 
       - name: Download model checkpoint
+        id: download-checkpoint
         uses: dawidd6/action-download-artifact@v6
+        continue-on-error: true
         with:
           workflow: train-model-weekly.yml
           name: model-checkpoint-weekly
           path: /tmp/checkpoint
-          if_no_artifact_found: fail
+          if_no_artifact_found: warn
 
       - name: Extract checkpoint
+        if: steps.download-checkpoint.outcome == 'success'
         run: |
           mkdir -p ~/.cache/rugby_ranking/weekly-model
           cd ~/.cache/rugby_ranking/weekly-model
           tar -xzf /tmp/checkpoint/checkpoint.tar.gz
 
       - name: Export dashboard data
+        if: steps.download-checkpoint.outcome == 'success'
         run: |
           python -c "
           from pathlib import Path
@@ -76,7 +80,10 @@ jobs:
       - name: Summary
         run: |
           echo "### Dashboard Update" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.check-changes.outputs.changed }}" = "true" ]; then
+          if [ "${{ steps.download-checkpoint.outcome }}" != "success" ]; then
+            echo "⚠️ No model checkpoint found - skipped dashboard update" >> $GITHUB_STEP_SUMMARY
+            echo "Run the train-model-weekly workflow first to generate a checkpoint" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.check-changes.outputs.changed }}" = "true" ]; then
             echo "✅ Dashboard data updated" >> $GITHUB_STEP_SUMMARY
           else
             echo "ℹ️ No changes to dashboard data" >> $GITHUB_STEP_SUMMARY

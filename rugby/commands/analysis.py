@@ -43,25 +43,31 @@ def analysis():
 
 
 @analysis.command(name='league-table')
-@click.argument('league')
-@click.argument('season')
+@click.option('--competition', '-c', required=True, help='Competition name (e.g., celtic, premiership)')
+@click.option('--season', '-s', required=True, help='Season (e.g., 2025-2026)')
 @click.option('--data-dir', '-d', type=click.Path(exists=True), default=None,
               help='Data directory (default: json/)')
-def league_table(league, season, data_dir):
+def league_table(competition, season, data_dir):
     """Display the league table for a competition.
 
     Examples:
-        rugby analysis league-table celtic 2025-2026
-        rugby analysis league-table premiership 2025-2026
+        rugby analysis league-table -c celtic -s 2025-2026
+        rugby analysis league-table -c premiership -s 2025-2026
     """
-    tournament = load_tournament(league, season, data_dir)
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
+
+    tournament = load_tournament(competition, season, data_dir)
     if not tournament:
-        click.echo(f"No data found for {league} {season}", err=True)
+        click.echo(f"No data found for {competition} {season}", err=True)
         sys.exit(1)
 
     try:
         table = tournament.league_table()
-        click.echo(f"\n{league.upper()} {season} - League Table\n")
+        click.echo(f"\n{competition.upper()} {season} - League Table\n")
         click.echo(table.to_string(index=False))
     except Exception as e:
         click.echo(f"Error generating league table: {e}", err=True)
@@ -69,25 +75,31 @@ def league_table(league, season, data_dir):
 
 
 @analysis.command()
-@click.argument('league')
-@click.argument('season')
+@click.option('--competition', '-c', required=True, help='Competition name (e.g., celtic, six-nations)')
+@click.option('--season', '-s', required=True, help='Season (e.g., 2025-2026)')
 @click.option('--data-dir', '-d', type=click.Path(exists=True), default=None,
               help='Data directory (default: json/)')
-def results(league, season, data_dir):
+def results(competition, season, data_dir):
     """Display match results for a competition.
 
     Examples:
-        rugby analysis results celtic 2025-2026
-        rugby analysis results six-nations 2025-2026
+        rugby analysis results -c celtic -s 2025-2026
+        rugby analysis results -c six-nations -s 2025-2026
     """
-    tournament = load_tournament(league, season, data_dir)
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
+
+    tournament = load_tournament(competition, season, data_dir)
     if not tournament:
-        click.echo(f"No data found for {league} {season}", err=True)
+        click.echo(f"No data found for {competition} {season}", err=True)
         sys.exit(1)
 
     try:
         results_df = tournament.results_table()
-        click.echo(f"\n{league.upper()} {season} - Results\n")
+        click.echo(f"\n{competition.upper()} {season} - Results\n")
         click.echo(results_df.to_string(index=False))
     except Exception as e:
         click.echo(f"Error generating results: {e}", err=True)
@@ -96,23 +108,25 @@ def results(league, season, data_dir):
 
 @analysis.command(name='player-stats')
 @click.argument('player')
-@click.option('--league', '-l', default=None, help='Filter by league')
-@click.option('--season', '-s', default=None, help='Filter by season')
+@click.option('--competition', '-c', required=True, help='Competition name (e.g., six-nations, celtic)')
+@click.option('--season', '-s', required=True, help='Season (e.g., 2025-2026)')
 @click.option('--data-dir', '-d', type=click.Path(exists=True), default=None,
               help='Data directory (default: json/)')
-def player_stats(player, league, season, data_dir):
+def player_stats(player, competition, season, data_dir):
     """Display statistics for a player.
 
     Examples:
-        rugby analysis player-stats "Finn Russell" -l six-nations -s 2025-2026
+        rugby analysis player-stats "Finn Russell" -c six-nations -s 2025-2026
     """
-    if not league or not season:
-        click.echo("Both --league and --season are required for player-stats.", err=True)
-        sys.exit(1)
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
 
-    tournament = load_tournament(league, season, data_dir)
+    tournament = load_tournament(competition, season, data_dir)
     if not tournament:
-        click.echo(f"No data found for {league} {season}", err=True)
+        click.echo(f"No data found for {competition} {season}", err=True)
         sys.exit(1)
 
     try:
@@ -120,11 +134,11 @@ def player_stats(player, league, season, data_dir):
         player_data = lineup_data[lineup_data['name'].str.contains(player, case=False, na=False)]
 
         if player_data.empty:
-            click.echo(f"No data found for player '{player}' in {league} {season}", err=True)
+            click.echo(f"No data found for player '{player}' in {competition} {season}", err=True)
             sys.exit(1)
 
         click.echo(f"\nPlayer Stats: {player}")
-        click.echo(f"Competition: {league} {season}\n")
+        click.echo(f"Competition: {competition} {season}\n")
 
         total_time = player_data['game time'].sum()
         matches_played = len(player_data)
@@ -268,6 +282,290 @@ def squad_analysis(squad_file, team, season, model_path, output, output_format):
             click.echo(f"Depth Score: {analysis_result.depth_score:.2f}")
 
 
+@analysis.command(name='predict')
+@click.option('--competition', '-c', default='six-nations', help='Competition name')
+@click.option('--season', '-s', default='2025-2026', help='Season')
+@click.option('--model-path', '-m', type=click.Path(), help='Path to trained model checkpoint')
+@click.option('--data-dir', '-d', type=click.Path(exists=True), help='Data directory')
+@click.option('--n-simulations', '-n', default=1000, type=int, help='Number of Monte Carlo simulations')
+@click.option('--output', '-o', type=click.Path(), help='Output JSON file')
+@click.option('--format', 'output_format', type=click.Choice(['table', 'json']),
+              default='table', help='Output format')
+@click.option('--force-knockout/--no-force-knockout', default=None,
+              help='Override automatic knockout detection')
+@click.option('--detailed-samples/--no-detailed-samples', default=False,
+              help='Store detailed simulation samples for paths analysis')
+def predict(competition, season, model_path, data_dir, n_simulations, output,
+            output_format, force_knockout, detailed_samples):
+    """
+    Predict tournament outcomes - auto-detects league vs knockout format.
+
+    Examples:
+        rugby analysis predict -c six-nations -s 2025-2026
+        rugby analysis predict -c celtic -s 2024-2025 -n 5000
+        rugby analysis predict -c premiership --force-knockout
+    """
+    if not check_rugby_ranking_available():
+        click.echo("Error: rugby-ranking package is required.", err=True)
+        sys.exit(1)
+
+    from rugby_ranking.model.season_predictor import SeasonPredictor
+    from rugby_ranking.model.predictions import MatchPredictor
+    from rugby_ranking.model.core import RugbyModel
+    from rugby_ranking.model.data import MatchDataset
+    from rugby_ranking.model.data_utils import prepare_season_data
+    from rugby_ranking.model.inference import ModelFitter
+    from rugby_ranking.model.knockout_forecast import (
+        TournamentTreeSimulator, URCPlayoffBracket,
+        WorldCupBracket, ChampionsCupBracket
+    )
+
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
+
+    # Map competition names to bonus point rules
+    BONUS_RULES_MAP = {
+        'six-nations': 'urc',
+        'premiership': 'premiership',
+        'top14': 'top14',
+        'celtic': 'urc',
+        'urc': 'urc',
+    }
+    bonus_rules = BONUS_RULES_MAP.get(competition, 'urc')
+
+    if not data_dir:
+        data_dir = str(find_data_dir())
+
+    # Determine checkpoint name
+    if not model_path:
+        checkpoint_name = 'international-mini5'
+    else:
+        model_path = Path(model_path)
+        checkpoint_name = model_path.parent.name if model_path.name == 'trace.nc' else model_path.stem
+
+    click.echo(f"Predicting {competition} {season}...")
+    click.echo(f"Simulations: {n_simulations}")
+
+    # Load data and model (with posterior caching now!)
+    data_dir = Path(data_dir)
+    try:
+        dataset = MatchDataset(data_dir, fuzzy_match_names=False)
+        dataset.load_json_files()
+
+        click.echo(f"Loading model from checkpoint: {checkpoint_name}")
+        model = RugbyModel()
+        fitter = ModelFitter.load(checkpoint_name, model)
+        trace = fitter.trace
+    except Exception as e:
+        click.echo(f"Error loading dataset/model: {e}", err=True)
+        sys.exit(1)
+
+    # Prepare season data
+    try:
+        played_matches, remaining_fixtures = prepare_season_data(
+            dataset, season=season, competition=competition, include_tries=True
+        )
+    except Exception as e:
+        click.echo(f"Error preparing season data: {e}", err=True)
+        sys.exit(1)
+
+    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining")
+
+    # Handle edge case: no matches found
+    if len(played_matches) == 0 and len(remaining_fixtures) == 0:
+        click.echo(f"\nNo matches found for {competition} {season}", err=True)
+        click.echo("Please check that the competition and season names are correct.", err=True)
+        click.echo(f"Available competitions: {', '.join(dataset.get_competition_names())}", err=True)
+        sys.exit(1)
+
+    # Detect knockout format (unless overridden)
+    has_knockout = force_knockout if force_knockout is not None else \
+                   _detect_knockout_format(remaining_fixtures, competition)
+
+    if has_knockout:
+        click.echo("Detected knockout stage - will predict both league and playoff rounds")
+
+        # Filter out TBC matches (playoff brackets to be determined)
+        # These will be predicted by the knockout simulator
+        if len(remaining_fixtures) > 0 and 'home_team' in remaining_fixtures.columns:
+            league_fixtures = remaining_fixtures[
+                ~remaining_fixtures['home_team'].str.contains('TBC', case=False, na=False) &
+                ~remaining_fixtures['away_team'].str.contains('TBC', case=False, na=False)
+            ].copy()
+        else:
+            league_fixtures = remaining_fixtures.copy()
+
+        n_playoff_matches = len(remaining_fixtures) - len(league_fixtures)
+        if n_playoff_matches > 0:
+            click.echo(f"Found {n_playoff_matches} playoff matches (TBC opponents)")
+    else:
+        league_fixtures = remaining_fixtures
+
+    # Create predictors (uses posterior parameter caching now!)
+    match_predictor = MatchPredictor(model, trace)
+    season_predictor = SeasonPredictor(match_predictor, competition=bonus_rules)
+
+    # Run league stage prediction
+    click.echo(f"Running league stage simulation ({len(league_fixtures)} remaining league matches)...")
+    league_prediction = season_predictor.predict_season(
+        played_matches=played_matches,
+        remaining_fixtures=league_fixtures,
+        season=season,
+        n_simulations=n_simulations,
+        return_samples=has_knockout or detailed_samples  # Need samples for knockout
+    )
+
+    # Run knockout prediction if detected
+    knockout_forecast = None
+    if has_knockout:
+        click.echo("Running knockout stage simulation...")
+        bracket = _infer_bracket_structure(competition, league_prediction)
+
+        knockout_simulator = TournamentTreeSimulator(
+            match_predictor=match_predictor,
+            bracket_structure=bracket,
+            season=season
+        )
+
+        knockout_forecast = knockout_simulator.simulate_knockout(
+            pool_position_probabilities=league_prediction.position_probabilities,
+            n_simulations=n_simulations,
+            pool_standings=league_prediction.current_standings
+        )
+
+    # Output results
+    _output_prediction_results(
+        league_prediction, knockout_forecast,
+        competition, season, output, output_format
+    )
+
+
+def _detect_knockout_format(remaining_fixtures, competition):
+    """
+    Detect if tournament has knockout stage by checking for:
+    1. TBC (To Be Confirmed) teams - indicates playoff brackets with unknown opponents
+    2. Stage markers (QF, SF, Final) in fixture data
+    3. Known knockout competitions near end of season
+    """
+    # Check for TBC teams - strong indicator of playoff/knockout fixtures
+    if 'home_team' in remaining_fixtures.columns and 'away_team' in remaining_fixtures.columns:
+        teams = pd.concat([remaining_fixtures['home_team'], remaining_fixtures['away_team']])
+        if 'TBC' in teams.values or any('TBC' in str(team).upper() for team in teams.dropna()):
+            return True
+
+    # Check for stage column with knockout markers
+    if 'stage' in remaining_fixtures.columns:
+        knockout_stages = {'QF', 'SF', 'FINAL', 'R16', 'BRONZE', 'PLAYOFF'}
+        stages = set(str(s).upper() for s in remaining_fixtures['stage'].dropna())
+        if knockout_stages & stages:
+            return True
+
+    # Known knockout competitions - check if near playoffs
+    knockout_comps = {'urc', 'celtic', 'champions-cup', 'euro-champions', 'world-cup'}
+    if any(kc in competition.lower() for kc in knockout_comps):
+        # If less than 30 remaining matches, likely in playoff phase
+        if len(remaining_fixtures) < 30:
+            return True
+
+    return False
+
+
+def _infer_bracket_structure(competition, league_prediction):
+    """Infer bracket structure from competition name."""
+    from rugby_ranking.model.knockout_forecast import (
+        URCPlayoffBracket, WorldCupBracket, ChampionsCupBracket
+    )
+
+    comp_lower = competition.lower()
+
+    if 'world-cup' in comp_lower or 'rugby-world-cup' in comp_lower:
+        return WorldCupBracket()
+    elif 'champions' in comp_lower or 'euro-champions' in comp_lower:
+        return ChampionsCupBracket()
+    elif 'urc' in comp_lower or 'celtic' in comp_lower:
+        return URCPlayoffBracket()
+
+    # Fallback: choose by number of teams
+    n_teams = len(league_prediction.current_standings)
+    return URCPlayoffBracket() if n_teams <= 10 else ChampionsCupBracket()
+
+
+def _output_prediction_results(league_pred, knockout_pred, competition, season,
+                                output_file, output_format):
+    """Output combined league and knockout predictions."""
+    if output_format == 'json' or output_file:
+        result = {
+            'competition': competition,
+            'season': season,
+            'league': {
+                'current_standings': league_pred.current_standings.to_dict(orient='records'),
+                'predicted_standings': league_pred.predicted_standings.to_dict(orient='records'),
+            }
+        }
+
+        if league_pred.position_probabilities is not None:
+            result['league']['position_probabilities'] = \
+                league_pred.position_probabilities.to_dict(orient='records')
+
+        if knockout_pred:
+            result['knockout'] = {
+                'winner_probabilities': knockout_pred.winner_probabilities,
+                'runner_up_probabilities': knockout_pred.runner_up_probabilities,
+            }
+
+        if output_file:
+            with open(output_file, 'w') as f:
+                json.dump(result, f, indent=2)
+            click.echo(f"\nResults saved to {output_file}")
+        else:
+            click.echo(json.dumps(result, indent=2))
+    else:
+        # Table output
+        click.echo(f"\n{'='*70}")
+        click.echo(f"PREDICTION: {competition.upper()} {season}")
+        click.echo("=" * 70)
+
+        # Show predicted match results instead of current standings
+        click.echo("\nPredicted Match Results:")
+        click.echo("-" * 70)
+        if league_pred.remaining_fixtures is not None and len(league_pred.remaining_fixtures) > 0:
+            for _, match in league_pred.remaining_fixtures.iterrows():
+                home_team = match.get('home_team', '?')
+                away_team = match.get('away_team', '?')
+                home_score = match.get('home_score_pred', 0)
+                away_score = match.get('away_score_pred', 0)
+                home_win_prob = match.get('home_win_prob', 0) * 100
+
+                # Determine likely winner
+                if home_win_prob > 50:
+                    winner_indicator = f"{home_team} ({home_win_prob:.0f}%)"
+                elif home_win_prob < 50:
+                    winner_indicator = f"{away_team} ({100-home_win_prob:.0f}%)"
+                else:
+                    winner_indicator = "Toss-up"
+
+                click.echo(f"{home_team:15} {home_score:5.0f} - {away_score:5.0f} {away_team:15}  [{winner_indicator}]")
+        else:
+            click.echo("No remaining fixtures")
+
+        click.echo("\n\nPredicted Final Standings:")
+        click.echo(league_pred.predicted_standings.to_string(index=False))
+
+        if knockout_pred:
+            click.echo(f"\n{'='*70}")
+            click.echo("KNOCKOUT STAGE PREDICTIONS")
+            click.echo("=" * 70)
+
+            click.echo("\nTournament Winner Probabilities:")
+            sorted_winners = sorted(knockout_pred.winner_probabilities.items(),
+                                    key=lambda x: x[1], reverse=True)
+            for team, prob in sorted_winners[:10]:
+                click.echo(f"  {team:<30} {prob:>6.1%}")
+
+
 @analysis.command(name='tournament-predict')
 @click.option('--competition', '-c', default='six-nations', help='Competition name')
 @click.option('--season', '-s', default='2025-2026', help='Season')
@@ -280,10 +578,18 @@ def squad_analysis(squad_file, team, season, model_path, output, output_format):
 @click.option('--detailed-samples/--no-detailed-samples', default=False,
               help='Store detailed simulation samples for paths analysis (uses more memory)')
 def tournament_predict(competition, season, model_path, data_dir, n_simulations, output, output_format, detailed_samples):
-    """Predict tournament outcomes (requires rugby-ranking)."""
+    """Predict tournament outcomes (requires rugby-ranking).
+
+    DEPRECATED: Use 'rugby analysis predict' instead.
+    """
     if not check_rugby_ranking_available():
         click.echo("Error: rugby-ranking package is required for tournament prediction.", err=True)
         sys.exit(1)
+
+    # Show deprecation warning
+    click.secho("Warning: 'tournament-predict' is deprecated. Use 'rugby analysis predict' instead.",
+                fg='yellow', err=True)
+    click.echo()
 
     from rugby_ranking.model.season_predictor import SeasonPredictor
     from rugby_ranking.model.predictions import MatchPredictor
@@ -291,6 +597,12 @@ def tournament_predict(competition, season, model_path, data_dir, n_simulations,
     from rugby_ranking.model.data import MatchDataset
     from rugby_ranking.model.data_utils import prepare_season_data
     from rugby_ranking.model.inference import ModelFitter
+
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
 
     # Map competition names to bonus point rules
     # Six Nations uses same bonus system as URC
@@ -464,6 +776,12 @@ def paths_to_victory(competition, season, team, target_position, model_path, dat
     from rugby_ranking.model.data_utils import prepare_season_data
     from rugby_ranking.model.inference import ModelFitter
     from rugby_ranking.model.paths_to_victory import PathsAnalyzer
+
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
 
     # Map competition names to bonus point rules
     BONUS_RULES_MAP = {
@@ -644,6 +962,12 @@ def critical_games(competition, season, model_path, data_dir, n_simulations, top
     from rugby_ranking.model.inference import ModelFitter
     from rugby_ranking.model.paths_to_victory import PathsAnalyzer
 
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
+
     # Map competition names to bonus point rules
     BONUS_RULES_MAP = {
         'six-nations': 'urc',
@@ -793,10 +1117,9 @@ def export_dashboard(data_dir, output_dir, checkpoint, seasons):
 
 
 @analysis.command(name='knockout-predict')
-@click.option('--tournament', '-t', required=True,
-              type=click.Choice(['urc', 'world-cup', 'champions-cup']),
-              help='Tournament format')
-@click.option('--competition', '-c', default='urc', help='Competition name (for data)')
+@click.option('--competition', '-c', required=True,
+              type=click.Choice(['urc', 'celtic', 'world-cup', 'champions-cup']),
+              help='Competition name (urc, world-cup, champions-cup)')
 @click.option('--season', '-s', default='2025-2026', help='Season')
 @click.option('--model-path', '-m', type=click.Path(), help='Path to trained model checkpoint')
 @click.option('--data-dir', '-d', type=click.Path(exists=True), help='Data directory')
@@ -804,20 +1127,27 @@ def export_dashboard(data_dir, output_dir, checkpoint, seasons):
 @click.option('--output', '-o', type=click.Path(), help='Output JSON file')
 @click.option('--format', 'output_format', type=click.Choice(['table', 'json']),
               default='table', help='Output format')
-def knockout_predict(tournament, competition, season, model_path, data_dir,
+def knockout_predict(competition, season, model_path, data_dir,
                      n_simulations, output, output_format):
     """Predict knockout/playoff rounds with uncertain seeding (requires rugby-ranking).
+
+    DEPRECATED: Use 'rugby analysis predict --force-knockout' instead.
 
     Simulates tournament knockout stages with cascading uncertainty from
     pool positions through to finals.
 
     Examples:
-        rugby analysis knockout-predict -t urc -c celtic -s 2025-2026
-        rugby analysis knockout-predict -t world-cup -n 20000 --format json
+        rugby analysis knockout-predict -c urc -s 2025-2026
+        rugby analysis knockout-predict -c world-cup -s 2023 -n 20000 --format json
     """
     if not check_rugby_ranking_available():
         click.echo("Error: rugby-ranking package is required for knockout predictions.", err=True)
         sys.exit(1)
+
+    # Show deprecation warning
+    click.secho("Warning: 'knockout-predict' is deprecated. Use 'rugby analysis predict --force-knockout' instead.",
+                fg='yellow', err=True)
+    click.echo()
 
     from rugby_ranking.model.season_predictor import SeasonPredictor
     from rugby_ranking.model.predictions import MatchPredictor
@@ -833,14 +1163,25 @@ def knockout_predict(tournament, competition, season, model_path, data_dir,
         format_knockout_forecast,
     )
 
-    # Map tournament names to bracket structures
+    # Map competition names to bracket structures
     BRACKET_MAP = {
         'urc': URCPlayoffBracket(),
+        'celtic': URCPlayoffBracket(),  # Alias for URC
         'world-cup': WorldCupBracket(),
         'champions-cup': ChampionsCupBracket(),
     }
 
-    bracket = BRACKET_MAP[tournament]
+    bracket = BRACKET_MAP.get(competition)
+    if not bracket:
+        click.echo(f"Error: No bracket structure defined for '{competition}'", err=True)
+        click.echo(f"Supported competitions: {', '.join(BRACKET_MAP.keys())}", err=True)
+        sys.exit(1)
+
+    # For data loading, map 'urc' to 'celtic' (filename convention)
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    data_competition = COMPETITION_ALIASES.get(competition, competition)
 
     if not data_dir:
         data_dir = str(find_data_dir())
@@ -852,7 +1193,7 @@ def knockout_predict(tournament, competition, season, model_path, data_dir,
         model_path = Path(model_path)
         checkpoint_name = model_path.parent.name if model_path.name == 'trace.nc' else model_path.stem
 
-    click.echo(f"Predicting {tournament} knockout rounds...")
+    click.echo(f"Predicting {competition} knockout rounds...")
     click.echo(f"Simulations: {n_simulations}")
 
     data_dir = Path(data_dir)
@@ -872,7 +1213,7 @@ def knockout_predict(tournament, competition, season, model_path, data_dir,
     # First, run season prediction to get pool position probabilities
     try:
         played_matches, remaining_fixtures = prepare_season_data(
-            dataset, season=season, competition=competition, include_tries=True
+            dataset, season=season, competition=data_competition, include_tries=True
         )
     except Exception as e:
         click.echo(f"Error preparing season data: {e}", err=True)

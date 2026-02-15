@@ -36,9 +36,9 @@ class Tournament():
             self.matches = [Match(x, tournament=self) for i, x in matches.iterrows()]
         else:
             self.matches = [Match(x, tournament=self) for x in matches]
-            
+
         self.future = [match for match in self.matches if (match.score==None) or (pd.isna(match.score['home']))]
-        
+
         for match in self.future:
             self.matches.remove(match)
         
@@ -178,16 +178,19 @@ class Tournament():
         def _team_name(team):
             return team.short_name if hasattr(team, 'short_name') else str(team)
 
+        # Filter out matches with NaN/null scores (future/unplayed matches)
+        played_matches = [match for match in self.matches if not pd.isna(match.score['home'])]
+
         scores = [[_team_name(match.teams['home']), _team_name(match.teams['away']), match.score['home'], match.score['away'],
                    match.score['home']-match.score['away'],
                    match.scores['home'].count("try"),
                    match.scores['away'].count("try")]
-                  for match in self.matches if not match.scores==None]
+                  for match in played_matches if not match.scores==None]
         scores += [[_team_name(match.teams['home']), _team_name(match.teams['away']), match.score['home'], match.score['away'],
                    match.score['home']-match.score['away'],
                     None,
                     None]
-                  for match in self.matches if  match.scores==None]
+                  for match in played_matches if  match.scores==None]
         return pd.DataFrame(scores, columns=["home", "away", "home_score", "away_score", "difference", "home tries", "away tries"])
 
     def league_table(self):

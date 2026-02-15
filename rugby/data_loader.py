@@ -46,8 +46,9 @@ def find_json_files(data_dir: Path = None, league: str = None,
     if not data_dir.exists():
         return []
 
-    # Search recursively for JSON files
-    all_files = sorted(data_dir.rglob("*.json"))
+    # Search only in the root data directory (not subdirectories)
+    # This avoids old files in json/internationals/ or other subdirs
+    all_files = sorted(data_dir.glob("*.json"))
 
     results = []
     for f in all_files:

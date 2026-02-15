@@ -33,10 +33,25 @@ def update(season, tournaments, dry_run):
     """Update rugby data from various sources."""
     if season is None:
         now = datetime.now()
-        if now.month >= SEASON_START_MONTH:
+
+        # Check if any of the selected tournaments use calendar year
+        # (internationals and Southern Hemisphere competitions)
+        uses_calendar_year = False
+        tournament_list = list(LEAGUE_CONFIGS.keys()) if 'all' in tournaments else tournaments
+        for tournament in tournament_list:
+            if tournament in LEAGUE_CONFIGS and LEAGUE_CONFIGS[tournament].get('use_calendar_year'):
+                uses_calendar_year = True
+                break
+
+        # For calendar-year competitions, always use current year
+        # For Northern Hemisphere club competitions, use August-based season
+        if uses_calendar_year:
             season = f"{now.year}-{now.year + 1}"
         else:
-            season = f"{now.year - 1}-{now.year}"
+            if now.month >= SEASON_START_MONTH:
+                season = f"{now.year}-{now.year + 1}"
+            else:
+                season = f"{now.year - 1}-{now.year}"
 
     json_dir = find_data_dir()
 
@@ -45,7 +60,7 @@ def update(season, tournaments, dry_run):
         click.echo("DRY RUN - No changes will be saved")
     click.echo()
 
-    total_stats = {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': []}
+    total_stats = {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': [], 'warnings': []}
 
     if 'all' in tournaments:
         tournaments = list(LEAGUE_CONFIGS.keys())
@@ -55,6 +70,7 @@ def update(season, tournaments, dry_run):
         for key in ['new_matches', 'updated_matches', 'total_matches']:
             total_stats[key] += stats.get(key, 0)
         total_stats['errors'].extend(stats.get('errors', []))
+        total_stats['warnings'].extend(stats.get('warnings', []))
 
     click.echo()
     click.echo("=" * 50)
@@ -62,6 +78,13 @@ def update(season, tournaments, dry_run):
     click.echo(f"  New matches: {total_stats['new_matches']}")
     click.echo(f"  Updated matches: {total_stats['updated_matches']}")
     click.echo(f"  Total matches: {total_stats['total_matches']}")
+
+    if total_stats['warnings']:
+        click.echo(f"  Warnings: {len(total_stats['warnings'])}")
+        for warning in total_stats['warnings'][:MAX_ERRORS_TO_DISPLAY]:
+            click.echo(f"    - {warning}")
+        if len(total_stats['warnings']) > MAX_ERRORS_TO_DISPLAY:
+            click.echo(f"    ... and {len(total_stats['warnings']) - MAX_ERRORS_TO_DISPLAY} more")
 
     if total_stats['errors']:
         click.echo(f"  Errors: {len(total_stats['errors'])}")

@@ -20,7 +20,6 @@ class Match(object):
         A row from the JSON data file.
         """
 
-
         if row['home']['score'] in ["C", "P", "", None]:
             self.score = {"home": float("nan"), "away": float("nan")}
 

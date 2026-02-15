@@ -70,32 +70,37 @@ LEAGUE_CONFIGS = {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Six Nations Championship',
-        'filename_prefix': 'six-nations'
+        'filename_prefix': 'six-nations',
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
     'mid-year-internationals': {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Mid-year Internationals',
-        'filename_prefix': 'mid-year-internationals'
+        'filename_prefix': 'mid-year-internationals',
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
     'end-of-year-internationals': {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'End-of-year Internationals',
-        'filename_prefix': 'end-of-year-internationals'
+        'filename_prefix': 'end-of-year-internationals',
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
     'world-cup': {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Rugby World Cup',
         'filename_prefix': 'rugby-world-cup',
-        'use_year_only': True  # Use just year, not season
+        'use_year_only': True,  # Use just year, not season
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
     'super-rugby': {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Super Rugby',
-        'filename_prefix': 'super-rugby'
+        'filename_prefix': 'super-rugby',
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
     'japan-league-one': {
         'comp_id': None,
@@ -107,13 +112,15 @@ LEAGUE_CONFIGS = {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Currie Cup',
-        'filename_prefix': 'currie-cup'
+        'filename_prefix': 'currie-cup',
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
     'npc': {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'National Provincial Championship',
-        'filename_prefix': 'npc'
+        'filename_prefix': 'npc',
+        'use_calendar_year': True  # Use calendar year for season calculation
     },
 }
 
@@ -301,7 +308,7 @@ def process_match(match: Dict, season: str, start_year: str, league_config: Dict
 def update_wikipedia_data(league: str, season: str, league_config: Dict,
                           json_dir: Path, dry_run: bool = False) -> Dict:
     """Update data for competitions that use Wikipedia as the source."""
-    stats = {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': []}
+    stats = {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': [], 'warnings': []}
 
     try:
         start_year = int(season.split("-")[0])
@@ -316,7 +323,8 @@ def update_wikipedia_data(league: str, season: str, league_config: Dict,
         scraped_matches = scrape_championship(start_year, league_config['name'])
 
         if not scraped_matches:
-            stats['errors'].append(f"No matches found on Wikipedia for {start_year}")
+            stats['warnings'].append(f"No matches found on Wikipedia for {start_year}")
+            click.echo(f"  No matches found on Wikipedia for {start_year}", err=True)
             return stats
 
         click.echo(f"  Retrieved {len(scraped_matches)} matches from Wikipedia")
@@ -371,7 +379,8 @@ def update_league_data(league: str, season: str, json_dir: Path,
     if league not in LEAGUE_CONFIGS:
         return {
             'new_matches': 0, 'updated_matches': 0, 'total_matches': 0,
-            'errors': [f"Unknown league: {league}. Available: {', '.join(LEAGUE_CONFIGS.keys())}"]
+            'errors': [f"Unknown league: {league}. Available: {', '.join(LEAGUE_CONFIGS.keys())}"],
+            'warnings': []
         }
 
     league_config = LEAGUE_CONFIGS[league]
@@ -392,7 +401,7 @@ def update_league_data(league: str, season: str, json_dir: Path,
     start_year = season.split("-")[0]
     base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId={league_config['comp_id']}&season={start_year}01&provider={league_config['provider']}"
 
-    stats = {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': []}
+    stats = {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': [], 'warnings': []}
 
     try:
         response = fetch_with_retry(base_url)

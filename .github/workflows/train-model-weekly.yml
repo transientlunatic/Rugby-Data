@@ -142,7 +142,7 @@ jobs:
           tar -czf checkpoint.tar.gz trace.nc vi_approx.pkl metadata.pkl
 
       - name: Upload checkpoint artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: model-checkpoint-weekly
           path: ~/.cache/rugby_ranking/weekly-model/checkpoint.tar.gz
@@ -150,7 +150,7 @@ jobs:
 
       - name: Upload weekly snapshot
         if: github.event.schedule
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: model-checkpoint-${{ github.run_number }}
           path: ~/.cache/rugby_ranking/weekly-model/checkpoint.tar.gz

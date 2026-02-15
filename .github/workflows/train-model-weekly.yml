@@ -25,19 +25,19 @@ jobs:
       - name: Install rugby-ranking package
         run: |
           pip install --upgrade pip
-          pip install git+https://${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-ranking.git
+          pip install git+https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-pymc.git
 
       - name: Download MCMC checkpoint from Release (if available)
         id: download-mcmc
         continue-on-error: true
         run: |
-          # Try to download latest MCMC checkpoint from rugby-ranking releases
-          LATEST_RELEASE=$(gh release list --repo transientlunatic/rugby-ranking --limit 1 --json tagName --jq '.[0].tagName' 2>/dev/null || echo "")
+          # Try to download latest MCMC checkpoint from rugby-pymc releases
+          LATEST_RELEASE=$(gh release list --repo transientlunatic/rugby-pymc --limit 1 --json tagName --jq '.[0].tagName' 2>/dev/null || echo "")
 
           if [ -n "$LATEST_RELEASE" ]; then
             echo "Found release: $LATEST_RELEASE"
             if gh release download "$LATEST_RELEASE" \
-              --repo transientlunatic/rugby-ranking \
+              --repo transientlunatic/rugby-pymc \
               --pattern 'mcmc-*.tar.gz' \
               --dir /tmp/mcmc-checkpoint 2>/dev/null; then
               echo "found=true" >> $GITHUB_OUTPUT

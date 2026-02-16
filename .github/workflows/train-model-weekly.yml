@@ -105,9 +105,8 @@ jobs:
           df = dataset.to_dataframe(played_only=True)
 
           # Filter to recent years (last 3 years of actual matches)
-          from datetime import datetime, timedelta
-          cutoff_date = datetime.now() - timedelta(days=3*365)
-          df['date'] = pd.to_datetime(df['date'])
+          cutoff_date = pd.Timestamp.now(tz='UTC') - timedelta(days=3*365)
+          df['date'] = pd.to_datetime(df['date'], utc=True)
           df = df[df['date'] >= cutoff_date].copy()
 
           print(f'Training on matches since {cutoff_date.date()}')

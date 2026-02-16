@@ -296,25 +296,18 @@
                     <h2 class="section-title">
                         <i class="bi bi-activity"></i> Team Strength Trends
                     </h2>
+                    <p class="text-muted">Use global controls above to select score type. Select team and metric below.</p>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label for="trend-team" class="form-label">Team</label>
                     <select class="form-select" id="trend-team">
                         <option value="">Loading...</option>
                     </select>
                 </div>
-                <div class="col-md-4">
-                    <label for="trend-score-type" class="form-label">Score Type</label>
-                    <select class="form-select" id="trend-score-type">
-                        <option value="tries">Tries</option>
-                        <option value="penalties">Penalties</option>
-                        <option value="conversions">Conversions</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label for="trend-metric" class="form-label">Metric</label>
                     <select class="form-select" id="trend-metric">
                         <option value="offense">Offense</option>
@@ -337,21 +330,7 @@
                     <h2 class="section-title">
                         <i class="bi bi-flag"></i> Final Finish Positions
                     </h2>
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="position-competition" class="form-label">Competition</label>
-                    <select class="form-select" id="position-competition">
-                        <option value="">Loading...</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="position-season" class="form-label">Season (Optional)</label>
-                    <select class="form-select" id="position-season">
-                        <option value="">All Seasons</option>
-                    </select>
+                    <p class="text-muted">Use global controls above to select competition and season</p>
                 </div>
             </div>
 
@@ -369,32 +348,7 @@
                     <h2 class="section-title">
                         <i class="bi bi-shield-check"></i> Team Rankings
                     </h2>
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <div class="row mb-3">
-                <div class="col-md-4">
-                    <label for="season-select" class="form-label">Season</label>
-                    <select class="form-select" id="season-select">
-                        <option value="">Loading...</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label for="score-type-select" class="form-label">Score Type</label>
-                    <select class="form-select" id="score-type-select">
-                        <option value="tries">Tries</option>
-                        <option value="penalties">Penalties</option>
-                        <option value="conversions">Conversions</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label for="rank-limit" class="form-label">Show Top</label>
-                    <select class="form-select" id="rank-limit">
-                        <option value="10">10</option>
-                        <option value="20" selected>20</option>
-                        <option value="50">50</option>
-                    </select>
+                    <p class="text-muted">Use global controls above to filter by competition, season, score type, and ranking limit</p>
                 </div>
             </div>
 

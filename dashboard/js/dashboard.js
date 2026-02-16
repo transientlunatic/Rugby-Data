@@ -16,6 +16,7 @@ const state = {
     leagueTableData: {},
     seasonPredictionData: {},
     heatmapData: {},
+    selectedCompetition: null,  // Global competition filter
     selectedLeagueTableCompetition: null,
     selectedLeagueTableSeason: null,
     selectedSeasonPredictionCompetition: null,
@@ -42,14 +43,80 @@ const loadedSections = {
     leagueTables: false
 };
 
-// Heatmap rendering stub (to be implemented with D3)
+// Heatmap rendering with D3
 function renderHeatmap(data, teams, container) {
-    // Placeholder: implement D3 heatmap rendering here
-    // data: 2D array (teams x teams), teams: array of team names
-    // container: selector string (e.g., '#heatmap-container')
     const el = document.querySelector(container);
     if (!el) return;
-    el.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+
+    // Clear existing content
+    el.innerHTML = '';
+
+    if (!data || !teams || teams.length === 0) {
+        el.innerHTML = '<div class="text-muted text-center py-5">No heatmap data available</div>';
+        return;
+    }
+
+    // Set dimensions
+    const margin = {top: 100, right: 50, bottom: 50, left: 100};
+    const cellSize = 40;
+    const width = cellSize * teams.length + margin.left + margin.right;
+    const height = cellSize * teams.length + margin.top + margin.bottom;
+
+    // Create SVG
+    const svg = d3.select(el)
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height);
+
+    const g = svg.append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // Create color scale (lighter = better for team, darker = worse)
+    const colorScale = d3.scaleSequential(d3.interpolateRdYlGn)
+        .domain([-40, 40]); // Adjust based on your data range
+
+    // Draw cells
+    for (let i = 0; i < teams.length; i++) {
+        for (let j = 0; j < teams.length; j++) {
+            const value = data[i][j];
+            if (value !== null && value !== undefined) {
+                g.append('rect')
+                    .attr('x', j * cellSize)
+                    .attr('y', i * cellSize)
+                    .attr('width', cellSize)
+                    .attr('height', cellSize)
+                    .attr('fill', colorScale(value))
+                    .attr('stroke', '#fff')
+                    .attr('stroke-width', 1)
+                    .append('title')
+                    .text(`${teams[i]} vs ${teams[j]}: ${value !== null ? value.toFixed(1) : 'N/A'}`);
+            }
+        }
+    }
+
+    // Add row labels (teams on Y-axis)
+    g.selectAll('.row-label')
+        .data(teams)
+        .enter()
+        .append('text')
+        .attr('x', -5)
+        .attr('y', (d, i) => i * cellSize + cellSize / 2)
+        .attr('dy', '.35em')
+        .attr('text-anchor', 'end')
+        .attr('font-size', '10px')
+        .text(d => d);
+
+    // Add column labels (teams on X-axis)
+    g.selectAll('.col-label')
+        .data(teams)
+        .enter()
+        .append('text')
+        .attr('x', (d, i) => i * cellSize + cellSize / 2)
+        .attr('y', -5)
+        .attr('text-anchor', 'start')
+        .attr('transform', (d, i) => `rotate(-45, ${i * cellSize + cellSize / 2}, -5)`)
+        .attr('font-size', '10px')
+        .text(d => d);
 }
 
 // Lazy load heatmap data (only for existing files)
@@ -603,23 +670,24 @@ function setupEventListeners() {
             const globalScoreType = document.getElementById('global-score-type');
             const globalRankLimit = document.getElementById('global-rank-limit');
 
-            if (globalComp && globalComp.value) {
+            if (globalComp) {
+                state.selectedCompetition = globalComp.value || null;
                 state.selectedLeagueTableCompetition = globalComp.value;
                 state.selectedSeasonPredictionCompetition = globalComp.value;
                 state.selectedHeatmapCompetition = globalComp.value;
             }
-            
-            if (globalSeason && globalSeason.value) {
-                state.selectedSeason = globalSeason.value;
+
+            if (globalSeason) {
+                state.selectedSeason = globalSeason.value || null;
                 state.selectedLeagueTableSeason = globalSeason.value;
                 state.selectedSeasonPredictionSeason = globalSeason.value;
                 state.selectedHeatmapSeason = globalSeason.value;
             }
-            
+
             if (globalScoreType) {
                 state.selectedScoreType = globalScoreType.value;
             }
-            
+
             if (globalRankLimit) {
                 state.selectedRankLimit = parseInt(globalRankLimit.value);
             }
@@ -629,6 +697,8 @@ function setupEventListeners() {
             updateLeagueTable();
             updateSeasonPrediction();
             updateHeatmap();
+            updateFinishPositionChart();
+            updateTrendChart();
         });
     }
 
@@ -637,9 +707,10 @@ function setupEventListeners() {
     const globalSeason = document.getElementById('global-season');
     const globalScoreType = document.getElementById('global-score-type');
     const globalRankLimit = document.getElementById('global-rank-limit');
-    
+
     if (globalComp) {
         globalComp.addEventListener('change', (e) => {
+            state.selectedCompetition = e.target.value || null;
             state.selectedLeagueTableCompetition = e.target.value;
             state.selectedSeasonPredictionCompetition = e.target.value;
             state.selectedHeatmapCompetition = e.target.value;
@@ -667,21 +738,7 @@ function setupEventListeners() {
         });
     }
 
-    // Individual control event listeners (only for controls that still exist in HTML)
-    document.getElementById('season-select').addEventListener('change', (e) => {
-        state.selectedSeason = e.target.value;
-        updateAllVisualizations();
-    });
-
-    document.getElementById('score-type-select').addEventListener('change', (e) => {
-        state.selectedScoreType = e.target.value;
-        updateTeamVisualizations();
-    });
-
-    document.getElementById('rank-limit').addEventListener('change', (e) => {
-        state.selectedRankLimit = parseInt(e.target.value);
-        updateTeamVisualizations();
-    });
+    // Individual control event listeners removed - now using global controls only
 
     document.getElementById('player-score-type').addEventListener('change', (e) => {
         updatePlayerVisualizations(e.target.value);
@@ -701,25 +758,14 @@ function setupEventListeners() {
 
     const trendTeam = document.getElementById('trend-team');
     if (trendTeam) {
-        trendTeam.addEventListener('change', updateTeamTrends);
-    }
-    const trendScore = document.getElementById('trend-score-type');
-    if (trendScore) {
-        trendScore.addEventListener('change', updateTeamTrends);
+        trendTeam.addEventListener('change', updateTrendChart);
     }
     const trendMetric = document.getElementById('trend-metric');
     if (trendMetric) {
-        trendMetric.addEventListener('change', updateTeamTrends);
+        trendMetric.addEventListener('change', updateTrendChart);
     }
 
-    const positionCompetition = document.getElementById('position-competition');
-    if (positionCompetition) {
-        positionCompetition.addEventListener('change', updateFinishPositions);
-    }
-    const positionSeason = document.getElementById('position-season');
-    if (positionSeason) {
-        positionSeason.addEventListener('change', updateFinishPositions);
-    }
+    // Position chart now uses global controls - no local listeners needed
 
     const pathsCompetition = document.getElementById('paths-competition');
     if (pathsCompetition) {
@@ -857,22 +903,9 @@ function populateTrendTeamSelect() {
 }
 
 function populateFinishPositionSelects() {
-    if (!state.teamFinishPositions) {
-        return;
-    }
-    const competitionSelect = document.getElementById('position-competition');
-    const seasonSelect = document.getElementById('position-season');
-    if (!competitionSelect || !seasonSelect) {
-        return;
-    }
-    const competitions = [...new Set(state.teamFinishPositions.map(d => d.competition))].sort();
-    competitionSelect.innerHTML = competitions.map(c => `<option value="${c}">${c}</option>`).join('');
-    const seasons = [...new Set(state.teamFinishPositions.map(d => d.season))].sort().reverse();
-    seasonSelect.innerHTML = '<option value="">All Seasons</option>' +
-        seasons.map(s => `<option value="${s}">${s}</option>`).join('');
-    
-    // Trigger initial update
-    updateFinishPositions();
+    // This function is no longer needed as we use global controls
+    // Just trigger the update using current global state
+    updateFinishPositionChart();
 }
 
 function populatePathsSelects() {
@@ -905,14 +938,18 @@ function populateSquadSelects() {
     seasonSelect.innerHTML = seasons.map(s => `<option value="${s}">${s}</option>`).join('');
 }
 
-function updateTeamTrends() {
+function updateTrendChart() {
     if (!state.teamStrengthSeries) {
         return;
     }
     const team = document.getElementById('trend-team')?.value;
-    const scoreType = document.getElementById('trend-score-type')?.value || 'tries';
+    const scoreType = state.selectedScoreType || 'tries';  // Use global score type
     const metric = document.getElementById('trend-metric')?.value || 'offense';
     if (!team) {
+        const container = document.querySelector('#trend-chart');
+        if (container) {
+            container.innerHTML = '<div class="text-muted text-center py-5">Please select a team</div>';
+        }
         return;
     }
 
@@ -921,28 +958,51 @@ function updateTeamTrends() {
         .filter(d => d.team === team && d.score_type === scoreType)
         .sort((a, b) => a.season.localeCompare(b.season));
 
+    if (filtered.length === 0) {
+        const container = document.querySelector('#trend-chart');
+        if (container) {
+            container.innerHTML = '<div class="text-muted text-center py-5">No data available for selected team and filters</div>';
+        }
+        return;
+    }
+
     RugbyCharts.renderLineChart({
         container: '#trend-chart',
         data: filtered.map(d => ({ season: d.season, value: d[key] })),
         xKey: 'season',
         yKey: 'value',
+        yLabel: metric === 'defense' ? 'Defensive Strength' : 'Offensive Strength',
         tooltipFormatter: d => `<strong>${team}</strong><br/>${d.season}: ${d.value.toFixed(3)}`,
     });
 }
 
-function updateFinishPositions() {
+function updateFinishPositionChart() {
     if (!state.teamFinishPositions) {
         return;
     }
-    const competition = document.getElementById('position-competition')?.value;
-    const season = document.getElementById('position-season')?.value;
-    if (!competition) {
-        return;
+
+    // Use global competition and season filters
+    const competition = state.selectedCompetition;
+    const season = state.selectedSeason;
+
+    // Filter by competition if selected
+    let filtered = state.teamFinishPositions;
+    if (competition) {
+        filtered = filtered.filter(d => d.competition === competition);
     }
 
-    let filtered = state.teamFinishPositions.filter(d => d.competition === competition);
+    // Filter by season if selected
     if (season) {
         filtered = filtered.filter(d => d.season === season);
+    }
+
+    // If no data, show message
+    if (filtered.length === 0) {
+        const container = document.querySelector('#position-chart');
+        if (container) {
+            container.innerHTML = '<div class="text-muted text-center py-5">No finish position data available for selected filters</div>';
+        }
+        return;
     }
 
     // Group by team for multi-series visualization

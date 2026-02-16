@@ -27,6 +27,21 @@ const state = {
     selectedRankLimit: 20
 };
 
+// Track which sections have been loaded
+const loadedSections = {
+    core: false,
+    teams: false,
+    players: false,
+    trends: false,
+    positions: false,
+    matches: false,
+    predictions: false,
+    paths: false,
+    squads: false,
+    heatmaps: false,
+    leagueTables: false
+};
+
 // Heatmap rendering stub (to be implemented with D3)
 function renderHeatmap(data, teams, container) {
     // Placeholder: implement D3 heatmap rendering here
@@ -37,19 +52,34 @@ function renderHeatmap(data, teams, container) {
     el.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
 }
 
+// Lazy load heatmap data (only for existing files)
 async function loadHeatmapData() {
-    const dataDir = 'data/';
-    const competitions = [
-        'six-nations', 'premiership', 'celtic', 'pro-d2', 'top14', 'euro-champions', 'euro-challenge',
-        'mid-year-internationals', 'end-of-year-internationals', 'championship'
-    ];
-    const seasons = state.summary.seasons || [];
-    state.heatmapData = {};
-    for (const comp of competitions) {
-        for (const season of seasons) {
-            const file = `${dataDir}team_heatmap_${comp}_${season}.json`;
-            state.heatmapData[`${comp}_${season}`] = await loadJsonSafe(file, null);
+    if (loadedSections.heatmaps) return;
+
+    showSectionLoader('heatmaps-section');
+
+    try {
+        const dataDir = 'data/';
+        // Only load heatmaps for competitions that exist in summary
+        const competitions = state.summary.competitions || ['rugby-world'];
+        const seasons = state.summary.seasons || [];
+
+        state.heatmapData = {};
+        for (const comp of competitions) {
+            for (const season of seasons) {
+                const file = `${dataDir}team_heatmap_${comp}_${season}.json`;
+                const data = await loadJsonSafe(file, null);
+                if (data) {  // Only store if file exists
+                    state.heatmapData[`${comp}_${season}`] = data;
+                }
+            }
         }
+
+        loadedSections.heatmaps = true;
+    } catch (error) {
+        console.error('Error loading heatmap data:', error);
+    } finally {
+        hideSectionLoader('heatmaps-section');
     }
 }
 
@@ -143,24 +173,44 @@ function updateSeasonPrediction() {
         </tr>
     `).join('');
 }
-// Dynamically load all league table and season prediction files
+// Lazy load league table and season prediction data (only for existing files)
 async function loadLeagueTableAndSeasonPredictionData() {
-    const dataDir = 'data/';
-    // List of files is static, but could be made dynamic with a manifest
-    const competitions = [
-        'six-nations', 'premiership', 'celtic', 'pro-d2', 'top14', 'euro-champions', 'euro-challenge',
-        'mid-year-internationals', 'end-of-year-internationals', 'championship'
-    ];
-    const seasons = state.summary.seasons || [];
-    state.leagueTableData = {};
-    state.seasonPredictionData = {};
-    for (const comp of competitions) {
-        for (const season of seasons) {
-            const leagueTableFile = `${dataDir}league_table_${comp}_${season}.json`;
-            const seasonPredFile = `${dataDir}season_predicted_standings_${comp}_${season}.json`;
-            state.leagueTableData[`${comp}_${season}`] = await loadJsonSafe(leagueTableFile, null);
-            state.seasonPredictionData[`${comp}_${season}`] = await loadJsonSafe(seasonPredFile, null);
+    if (loadedSections.leagueTables) return;
+
+    showSectionLoader('league-tables-section');
+
+    try {
+        const dataDir = 'data/';
+        // Only load for competitions that exist in summary
+        const competitions = state.summary.competitions || ['rugby-world'];
+        const seasons = state.summary.seasons || [];
+
+        state.leagueTableData = {};
+        state.seasonPredictionData = {};
+
+        for (const comp of competitions) {
+            for (const season of seasons) {
+                const leagueTableFile = `${dataDir}league_table_${comp}_${season}.json`;
+                const seasonPredFile = `${dataDir}season_predicted_standings_${comp}_${season}.json`;
+
+                const leagueData = await loadJsonSafe(leagueTableFile, null);
+                const predData = await loadJsonSafe(seasonPredFile, null);
+
+                // Only store if files exist
+                if (leagueData) {
+                    state.leagueTableData[`${comp}_${season}`] = leagueData;
+                }
+                if (predData) {
+                    state.seasonPredictionData[`${comp}_${season}`] = predData;
+                }
+            }
         }
+
+        loadedSections.leagueTables = true;
+    } catch (error) {
+        console.error('Error loading league table data:', error);
+    } finally {
+        hideSectionLoader('league-tables-section');
     }
 }
 
@@ -200,150 +250,274 @@ async function loadJsonSafe(url, fallback = null) {
     }
 }
 
-// Load all data
+// Show loading spinner in a section
+function showSectionLoader(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const existingLoader = section.querySelector('.section-loader');
+    if (existingLoader) return; // Already showing
+
+    const loader = document.createElement('div');
+    loader.className = 'section-loader text-center py-5';
+    loader.innerHTML = `
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="text-muted mt-2">Loading data...</p>
+    `;
+    section.insertBefore(loader, section.firstChild);
+}
+
+// Hide loading spinner
+function hideSectionLoader(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const loader = section.querySelector('.section-loader');
+    if (loader) {
+        loader.remove();
+    }
+}
+
+// Load initial data (only summary)
 async function loadData() {
-    // Load summary and all main data first
     try {
-        const [summary, teamOffense, teamDefense, playerRankings, matchStats, teamStats,
-            teamStrengthSeries, teamFinishPositions, upcomingPredictions, pathsToVictory, squadDepth] = await Promise.all([
-            d3.json('data/summary.json'),
-            d3.json('data/team_offense.json'),
-            d3.json('data/team_defense.json'),
-            d3.json('data/player_rankings.json'),
-            d3.json('data/match_stats.json'),
-            d3.json('data/team_stats.json'),
-            loadJsonSafe('data/team_strength_series.json'),
-            loadJsonSafe('data/team_finish_positions.json'),
-            loadJsonSafe('data/upcoming_predictions.json'),
-            loadJsonSafe('data/paths_to_victory.json'),
-            loadJsonSafe('data/squad_depth.json')
-        ]);
-
+        const summary = await d3.json('data/summary.json');
         state.summary = summary;
-        state.teamOffense = teamOffense;
-        state.teamDefense = teamDefense;
-        state.playerRankings = playerRankings;
-        state.matchStats = matchStats;
-        state.teamStats = teamStats;
-        state.teamStrengthSeries = teamStrengthSeries;
-        state.teamFinishPositions = teamFinishPositions;
-        state.upcomingPredictions = upcomingPredictions;
-        state.pathsToVictory = pathsToVictory;
-        state.squadDepth = squadDepth;
-
-        // Now safe to load heatmap and other dependent data
-        await loadHeatmapData();
-        await loadLeagueTableAndSeasonPredictionData();
 
         // Set default season to most recent
         state.selectedSeason = summary.seasons[summary.seasons.length - 1];
 
-        initializeDashboard();
-    } catch (error) {
-        console.error('Error loading data:', error);
-        showError('Failed to load dashboard data. Please ensure data files are generated.');
-    }
-
-    function populateLeagueTableSelects() {
-        const compSelect = document.getElementById('league-table-competition');
-        const seasonSelect = document.getElementById('league-table-season');
-        if (!compSelect || !seasonSelect) return;
-        const competitions = [...new Set(Object.keys(state.leagueTableData).map(k => k.split('_')[0]))];
-        const seasons = state.summary.seasons || [];
-        compSelect.innerHTML = '<option value="">Select...</option>' + competitions.map(c => `<option value="${c}">${c}</option>`).join('');
-        seasonSelect.innerHTML = '<option value="">Select...</option>' + seasons.map(s => `<option value="${s}">${s}</option>`).join('');
-        // Set defaults
-        state.selectedLeagueTableCompetition = competitions[0] || '';
-        state.selectedLeagueTableSeason = seasons[seasons.length-1] || '';
-    }
-
-    function populateSeasonPredictionSelects() {
-        const compSelect = document.getElementById('season-prediction-competition');
-        const seasonSelect = document.getElementById('season-prediction-season');
-        if (!compSelect || !seasonSelect) return;
-        const competitions = [...new Set(Object.keys(state.seasonPredictionData).map(k => k.split('_')[0]))];
-        const seasons = state.summary.seasons || [];
-        compSelect.innerHTML = '<option value="">Select...</option>' + competitions.map(c => `<option value="${c}">${c}</option>`).join('');
-        seasonSelect.innerHTML = '<option value="">Select...</option>' + seasons.map(s => `<option value="${s}">${s}</option>`).join('');
-        // Set defaults
-        state.selectedSeasonPredictionCompetition = competitions[0] || '';
-        state.selectedSeasonPredictionSeason = seasons[seasons.length-1] || '';
-    }
-    try {
-        const [summary, teamOffense, teamDefense, playerRankings, matchStats, teamStats,
-            teamStrengthSeries, teamFinishPositions, upcomingPredictions, pathsToVictory, squadDepth] = await Promise.all([
-            d3.json('data/summary.json'),
-            d3.json('data/team_offense.json'),
-            d3.json('data/team_defense.json'),
-            d3.json('data/player_rankings.json'),
-            d3.json('data/match_stats.json'),
-            d3.json('data/team_stats.json'),
-            loadJsonSafe('data/team_strength_series.json'),
-            loadJsonSafe('data/team_finish_positions.json'),
-            loadJsonSafe('data/upcoming_predictions.json'),
-            loadJsonSafe('data/paths_to_victory.json'),
-            loadJsonSafe('data/squad_depth.json')
-        ]);
-
-        state.summary = summary;
-        state.teamOffense = teamOffense;
-        state.teamDefense = teamDefense;
-        state.playerRankings = playerRankings;
-        state.matchStats = matchStats;
-        state.teamStats = teamStats;
-        state.teamStrengthSeries = teamStrengthSeries;
-        state.teamFinishPositions = teamFinishPositions;
-        state.upcomingPredictions = upcomingPredictions;
-        state.pathsToVictory = pathsToVictory;
-        state.squadDepth = squadDepth;
-
-        await loadLeagueTableAndSeasonPredictionData();
-
-        // Set default season to most recent
-        state.selectedSeason = summary.seasons[summary.seasons.length - 1];
+        loadedSections.core = true;
 
         initializeDashboard();
-    // Dynamically load all league table and season prediction files
-    async function loadLeagueTableAndSeasonPredictionData() {
-        const dataDir = 'data/';
-        // List of files is static, but could be made dynamic with a manifest
-        const competitions = [
-            'six-nations', 'premiership', 'celtic', 'pro-d2', 'top14', 'euro-champions', 'euro-challenge',
-            'mid-year-internationals', 'end-of-year-internationals', 'championship'
-        ];
-        const seasons = state.summary.seasons || [];
-        state.leagueTableData = {};
-        state.seasonPredictionData = {};
-        for (const comp of competitions) {
-            for (const season of seasons) {
-                const leagueTableFile = `${dataDir}league_table_${comp}_${season}.json`;
-                const seasonPredFile = `${dataDir}season_predicted_standings_${comp}_${season}.json`;
-                state.leagueTableData[`${comp}_${season}`] = await loadJsonSafe(leagueTableFile, null);
-                state.seasonPredictionData[`${comp}_${season}`] = await loadJsonSafe(seasonPredFile, null);
-            }
-        }
-    }
     } catch (error) {
         console.error('Error loading data:', error);
         showError('Failed to load dashboard data. Please ensure data files are generated.');
     }
 }
 
+// Lazy load core team and player data (for Overview, Teams, Players sections)
+async function loadCoreData() {
+    if (loadedSections.teams && loadedSections.players) return;
+
+    try {
+        const [teamOffense, teamDefense, playerRankings] = await Promise.all([
+            d3.json('data/team_offense.json'),
+            d3.json('data/team_defense.json'),
+            d3.json('data/player_rankings.json')
+        ]);
+
+        state.teamOffense = teamOffense;
+        state.teamDefense = teamDefense;
+        state.playerRankings = playerRankings;
+
+        loadedSections.teams = true;
+        loadedSections.players = true;
+    } catch (error) {
+        console.error('Error loading core data:', error);
+        throw error;
+    }
+}
+
+// Lazy load trends data
+async function loadTrendsData() {
+    if (loadedSections.trends) return;
+
+    showSectionLoader('trends');
+
+    try {
+        const teamStrengthSeries = await loadJsonSafe('data/team_strength_series.json');
+        state.teamStrengthSeries = teamStrengthSeries;
+        loadedSections.trends = true;
+    } catch (error) {
+        console.error('Error loading trends data:', error);
+    } finally {
+        hideSectionLoader('trends');
+    }
+}
+
+// Lazy load positions data
+async function loadPositionsData() {
+    if (loadedSections.positions) return;
+
+    showSectionLoader('positions');
+
+    try {
+        const teamFinishPositions = await loadJsonSafe('data/team_finish_positions.json');
+        state.teamFinishPositions = teamFinishPositions;
+        loadedSections.positions = true;
+    } catch (error) {
+        console.error('Error loading positions data:', error);
+    } finally {
+        hideSectionLoader('positions');
+    }
+}
+
+// Lazy load matches data
+async function loadMatchesData() {
+    if (loadedSections.matches) return;
+
+    showSectionLoader('matches');
+
+    try {
+        const [matchStats, teamStats] = await Promise.all([
+            d3.json('data/match_stats.json'),
+            d3.json('data/team_stats.json')
+        ]);
+
+        state.matchStats = matchStats;
+        state.teamStats = teamStats;
+        loadedSections.matches = true;
+    } catch (error) {
+        console.error('Error loading matches data:', error);
+    } finally {
+        hideSectionLoader('matches');
+    }
+}
+
+// Lazy load predictions data
+async function loadPredictionsData() {
+    if (loadedSections.predictions) return;
+
+    showSectionLoader('predictions');
+
+    try {
+        const upcomingPredictions = await loadJsonSafe('data/upcoming_predictions.json');
+        state.upcomingPredictions = upcomingPredictions;
+        loadedSections.predictions = true;
+    } catch (error) {
+        console.error('Error loading predictions data:', error);
+    } finally {
+        hideSectionLoader('predictions');
+    }
+}
+
+// Lazy load paths to victory data
+async function loadPathsData() {
+    if (loadedSections.paths) return;
+
+    showSectionLoader('paths');
+
+    try {
+        const pathsToVictory = await loadJsonSafe('data/paths_to_victory.json');
+        state.pathsToVictory = pathsToVictory;
+        loadedSections.paths = true;
+    } catch (error) {
+        console.error('Error loading paths data:', error);
+    } finally {
+        hideSectionLoader('paths');
+    }
+}
+
+// Lazy load squad depth data
+async function loadSquadsData() {
+    if (loadedSections.squads) return;
+
+    showSectionLoader('squads');
+
+    try {
+        const squadDepth = await loadJsonSafe('data/squad_depth.json');
+        state.squadDepth = squadDepth;
+        loadedSections.squads = true;
+    } catch (error) {
+        console.error('Error loading squads data:', error);
+    } finally {
+        hideSectionLoader('squads');
+    }
+}
+
 // Initialize dashboard
 function initializeDashboard() {
-            populateHeatmapSelects();
-        populateLeagueTableSelects();
-        populateSeasonPredictionSelects();
+    // Only initialize summary cards and basic controls
     updateSummaryCards();
-    populateGlobalControls();
-    populateSeasonSelects();
-    populateTeamSelect();
-    populateTrendTeamSelect();
-    populateFinishPositionSelects();
-    populatePathsSelects();
-    populateSquadSelects();
-    updateAllVisualizations();
     setupEventListeners();
+    setupNavigationHandlers();
+
+    // Load core data for overview section
+    loadCoreData().then(() => {
+        populateGlobalControls();
+        updateTeamRankings();  // Show initial overview data
+    });
+}
+
+// Setup navigation handlers for lazy loading
+function setupNavigationHandlers() {
+    // Handle hash changes for section navigation
+    window.addEventListener('hashchange', handleSectionNavigation);
+
+    // Handle initial hash on page load
+    if (window.location.hash) {
+        handleSectionNavigation();
+    }
+
+    // Also add click handlers to nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Let default navigation happen, hashchange will trigger loading
+        });
+    });
+}
+
+// Handle section navigation and lazy load data
+async function handleSectionNavigation() {
+    const hash = window.location.hash.slice(1); // Remove the #
+
+    switch (hash) {
+        case 'overview':
+        case 'teams':
+            await loadCoreData();
+            populateSeasonSelects();
+            populateTeamSelect();
+            updateAllVisualizations();
+            break;
+
+        case 'players':
+            await loadCoreData();
+            updatePlayerRankings();
+            break;
+
+        case 'trends':
+            await loadTrendsData();
+            populateTrendTeamSelect();
+            updateTrendChart();
+            break;
+
+        case 'positions':
+            await loadPositionsData();
+            populateFinishPositionSelects();
+            updateFinishPositionChart();
+            break;
+
+        case 'matches':
+            await loadMatchesData();
+            updateMatchStats();
+            break;
+
+        case 'predictions':
+            await loadPredictionsData();
+            updatePredictions();
+            break;
+
+        case 'paths':
+            await loadPathsData();
+            populatePathsSelects();
+            updatePathsToVictory();
+            break;
+
+        case 'squads':
+            await loadSquadsData();
+            populateSquadSelects();
+            updateSquadDepth();
+            break;
+
+        default:
+            // Default to overview
+            await loadCoreData();
+            updateAllVisualizations();
+            break;
+    }
 }
 
 // Update summary cards

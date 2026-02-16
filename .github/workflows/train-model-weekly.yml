@@ -8,6 +8,10 @@ on:
       training-iterations:
         description: 'VI iterations (default: 50000, matching train_model.py)'
         default: '50000'
+      force-fresh-training:
+        description: 'Force fresh training (skip loading checkpoints)'
+        type: boolean
+        default: false
 
 jobs:
   train:
@@ -29,6 +33,7 @@ jobs:
           pip install git+https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-pymc.git
 
       - name: Download MCMC checkpoint from Release (if available)
+        if: github.event.inputs.force-fresh-training != 'true'
         id: download-mcmc
         continue-on-error: true
         run: |
@@ -53,7 +58,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Download previous VI checkpoint (fallback)
-        if: steps.download-mcmc.outputs.found != 'true'
+        if: steps.download-mcmc.outputs.found != 'true' && github.event.inputs.force-fresh-training != 'true'
         id: download-vi
         uses: dawidd6/action-download-artifact@v6
         continue-on-error: true
@@ -64,6 +69,7 @@ jobs:
           if_no_artifact_found: warn
 
       - name: Restore checkpoint
+        if: github.event.inputs.force-fresh-training != 'true'
         run: |
           # Prefer MCMC checkpoint if available
           if [ "${{ steps.download-mcmc.outputs.found }}" = "true" ] && [ -f /tmp/mcmc-checkpoint/mcmc-*.tar.gz ]; then
@@ -119,30 +125,36 @@ jobs:
           # Configure inference (use 50k iterations as per train_model.py default)
           vi_iterations = ${{ github.event.inputs.training-iterations || 50000 }}
           inference_config = InferenceConfig(vi_n_iterations=vi_iterations)
+          force_fresh = '${{ github.event.inputs.force-fresh-training }}' == 'true'
 
-          # Try to load previous checkpoint and continue training
-          try:
-              fitter = ModelFitter.load('weekly-model', model)
-              print('✓ Loaded previous checkpoint')
-
-              # Continue training with warm-start
-              if fitter._vi_approx is not None:
-                  print(f'✓ Continuing VI training with warm-start for {vi_iterations:,} additional iterations')
-                  # Update the inference config for continued training
-                  fitter.config = inference_config
-                  trace = fitter.fit_vi(
-                      warm_start=True,
-                      n_samples=500,
-                      verbose=True,
-                  )
-              else:
-                  print(f'⚠ No VI approximation, training fresh for {vi_iterations:,} iterations')
-                  fitter = ModelFitter(model, inference_config)
-                  trace = fitter.fit_vi(n_samples=500, verbose=True)
-          except (FileNotFoundError, ValueError) as e:
-              print(f'ℹ No previous checkpoint ({e}), training fresh for {vi_iterations:,} iterations')
+          # Try to load previous checkpoint and continue training (unless force-fresh)
+          if force_fresh:
+              print('🔄 Force fresh training enabled - skipping checkpoint loading')
               fitter = ModelFitter(model, inference_config)
               trace = fitter.fit_vi(n_samples=500, verbose=True)
+          else:
+              try:
+                  fitter = ModelFitter.load('weekly-model', model)
+                  print('✓ Loaded previous checkpoint')
+
+                  # Continue training with warm-start
+                  if fitter._vi_approx is not None:
+                      print(f'✓ Continuing VI training with warm-start for {vi_iterations:,} additional iterations')
+                      # Update the inference config for continued training
+                      fitter.config = inference_config
+                      trace = fitter.fit_vi(
+                          warm_start=True,
+                          n_samples=500,
+                          verbose=True,
+                      )
+                  else:
+                      print(f'⚠ No VI approximation, training fresh for {vi_iterations:,} iterations')
+                      fitter = ModelFitter(model, inference_config)
+                      trace = fitter.fit_vi(n_samples=500, verbose=True)
+              except (FileNotFoundError, ValueError) as e:
+                  print(f'ℹ No previous checkpoint ({e}), training fresh for {vi_iterations:,} iterations')
+                  fitter = ModelFitter(model, inference_config)
+                  trace = fitter.fit_vi(n_samples=500, verbose=True)
 
           # Save checkpoint
           fitter.save('weekly-model')
@@ -175,7 +187,9 @@ jobs:
           echo "✅ VI training completed successfully" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if [ "${{ steps.download-mcmc.outputs.found }}" = "true" ]; then
+          if [ "${{ github.event.inputs.force-fresh-training }}" = "true" ]; then
+            echo "**Starting point**: 🔄 Fresh training (forced)" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.download-mcmc.outputs.found }}" = "true" ]; then
             echo "**Starting point**: MCMC checkpoint from Release (warm-start)" >> $GITHUB_STEP_SUMMARY
           elif [ "${{ steps.download-vi.outcome }}" = "success" ]; then
             echo "**Starting point**: Previous VI checkpoint (warm-start)" >> $GITHUB_STEP_SUMMARY

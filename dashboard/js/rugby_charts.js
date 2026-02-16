@@ -321,10 +321,220 @@
         }
     }
 
+    // Team type utilities
+    const INTERNATIONAL_TEAMS = new Set([
+        'Argentina', 'Australia', 'England', 'Fiji', 'France', 'Georgia',
+        'Ireland', 'Italy', 'Japan', 'Namibia', 'New Zealand', 'Romania',
+        'Samoa', 'Scotland', 'South Africa', 'Tonga', 'Uruguay', 'USA',
+        'Wales', 'Canada', 'Chile', 'Portugal', 'Spain'
+    ]);
+
+    const COMPETITION_TYPES = {
+        'rugby-world': 'international',
+        'six-nations': 'international',
+        'rugby-championship': 'international',
+        'autumn-nations': 'international',
+        'internationals': 'international',
+        'urc': 'club',
+        'premiership': 'club',
+        'top-14': 'club',
+        'champions-cup': 'club',
+        'challenge-cup': 'club'
+    };
+
+    function getTeamType(teamName, competition) {
+        // Check competition first (most reliable)
+        if (competition) {
+            const compType = COMPETITION_TYPES[competition.toLowerCase()];
+            if (compType) return compType;
+        }
+        // Fall back to team name matching
+        return INTERNATIONAL_TEAMS.has(teamName) ? 'international' : 'club';
+    }
+
+    function filterDataByTeamType(data, teamType, teamKey = 'team', competitionKey = 'competition') {
+        if (!teamType || teamType === 'all') return data;
+        return data.filter(d => {
+            const type = getTeamType(d[teamKey], d[competitionKey]);
+            return type === teamType;
+        });
+    }
+
+    // High-level embeddable widget functions
+    function renderTeamComparisonWidget(options) {
+        const {
+            container,
+            offenseData,
+            defenseData,
+            season,
+            scoreType = 'tries',
+            teamType = 'all',  // 'all', 'international', 'club'
+            height = 500
+        } = options;
+
+        // Filter and merge data
+        let filteredOffense = filterDataByTeamType(offenseData, teamType);
+        let filteredDefense = filterDataByTeamType(defenseData, teamType);
+
+        if (season) {
+            filteredOffense = filteredOffense.filter(d => d.season === season);
+            filteredDefense = filteredDefense.filter(d => d.season === season);
+        }
+
+        filteredOffense = filteredOffense.filter(d => d.score_type === scoreType);
+        filteredDefense = filteredDefense.filter(d => d.score_type === scoreType);
+
+        // Merge offense and defense by team
+        const teamMap = new Map();
+        filteredOffense.forEach(d => {
+            teamMap.set(d.team, {
+                team: d.team,
+                season: d.season,
+                offense: d.offense_mean || 0
+            });
+        });
+        filteredDefense.forEach(d => {
+            if (teamMap.has(d.team)) {
+                teamMap.get(d.team).defense = d.defense_mean || 0;
+            }
+        });
+
+        const comparisonData = Array.from(teamMap.values())
+            .filter(d => d.offense !== undefined && d.defense !== undefined);
+
+        renderScatterPlot({
+            container,
+            data: comparisonData,
+            xKey: 'offense',
+            yKey: 'defense',
+            labelKey: 'team',
+            height,
+            xLabel: 'Offensive Strength',
+            yLabel: 'Defensive Strength',
+            tooltipFormatter: d => `<strong>${d.team}</strong><br/>Offense: ${d.offense.toFixed(2)}<br/>Defense: ${d.defense.toFixed(2)}`
+        });
+    }
+
+    function renderPlayerComparisonWidget(options) {
+        const {
+            container,
+            playerData,
+            players = [],  // Array of player names to compare
+            scoreType = 'tries',
+            topN = 20,
+            height = 600
+        } = options;
+
+        let filteredData = playerData.filter(d => d.score_type === scoreType);
+
+        // If specific players requested, filter to those
+        if (players.length > 0) {
+            filteredData = filteredData.filter(d => players.includes(d.player));
+        } else {
+            // Otherwise show top N
+            filteredData = filteredData
+                .sort((a, b) => b.effect_mean - a.effect_mean)
+                .slice(0, topN);
+        }
+
+        renderBarChartWithCI({
+            container,
+            data: filteredData,
+            labelKey: 'player',
+            meanKey: 'effect_mean',
+            lowerKey: 'effect_lower',
+            upperKey: 'effect_upper',
+            color: scoreType === 'tries' ? '#198754' : '#0d6efd',
+            height,
+            tooltipFormatter: d => `<strong>${d.player}</strong><br/>Effect: ${d.effect_mean.toFixed(3)}<br/>95% CI: [${d.effect_lower.toFixed(3)}, ${d.effect_upper.toFixed(3)}]`
+        });
+    }
+
+    function renderMatchPredictorWidget(options) {
+        const {
+            container,
+            prediction,  // Prediction object with home/away data
+            showDistribution = true
+        } = options;
+
+        const el = clearContainer(container);
+        if (!el) return;
+
+        // Create FiveThirtyEight-style narrative
+        const favorite = prediction.home_win_prob > 0.5
+            ? prediction.home_team
+            : prediction.away_team;
+        const winProb = Math.max(prediction.home_win_prob, prediction.away_win_prob);
+        const margin = Math.abs(prediction.home_score_mean - prediction.away_score_mean);
+
+        const confidence = winProb > 0.85 ? "heavily"
+                         : winProb > 0.70 ? "strongly"
+                         : "slightly";
+
+        // Build widget HTML
+        const html = `
+            <div class="match-predictor-widget">
+                <div class="prediction-narrative" style="padding: 20px; background: #f8f9fa; border-radius: 8px; margin-bottom: 20px;">
+                    <p style="font-size: 18px; line-height: 1.6; margin: 0;">
+                        <strong style="color: #0d6efd;">${favorite}</strong> is ${confidence} favored to win by
+                        <strong>${margin.toFixed(1)} points</strong> with
+                        <strong>${(winProb * 100).toFixed(0)}%</strong> confidence.
+                    </p>
+                    <p style="font-size: 14px; color: #6c757d; margin: 10px 0 0 0;">
+                        Expected score: ${prediction.home_team} ${prediction.home_score_mean.toFixed(0)} -
+                        ${prediction.away_team} ${prediction.away_score_mean.toFixed(0)}
+                    </p>
+                </div>
+
+                <div class="win-probability" style="margin-bottom: 20px;">
+                    <h5 style="margin-bottom: 10px;">Win Probability</h5>
+                    <div style="display: flex; height: 40px; border-radius: 4px; overflow: hidden;">
+                        <div style="width: ${(prediction.home_win_prob * 100).toFixed(1)}%; background: #0d6efd; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                            ${(prediction.home_win_prob * 100).toFixed(0)}%
+                        </div>
+                        ${prediction.draw_prob > 0.01 ? `
+                        <div style="width: ${(prediction.draw_prob * 100).toFixed(1)}%; background: #6c757d; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">
+                            Draw ${(prediction.draw_prob * 100).toFixed(0)}%
+                        </div>` : ''}
+                        <div style="width: ${(prediction.away_win_prob * 100).toFixed(1)}%; background: #dc3545; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                            ${(prediction.away_win_prob * 100).toFixed(0)}%
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 14px; color: #6c757d;">
+                        <span>${prediction.home_team}</span>
+                        <span>${prediction.away_team}</span>
+                    </div>
+                </div>
+
+                <div class="score-ranges" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div style="padding: 15px; background: rgba(13, 110, 253, 0.1); border-radius: 8px;">
+                        <strong style="display: block; margin-bottom: 5px;">${prediction.home_team}</strong>
+                        <div style="font-size: 24px; font-weight: bold; color: #0d6efd;">${prediction.home_score_mean.toFixed(1)}</div>
+                        <div style="font-size: 12px; color: #6c757d;">Range: ${prediction.home_score_lower} - ${prediction.home_score_upper}</div>
+                    </div>
+                    <div style="padding: 15px; background: rgba(220, 53, 69, 0.1); border-radius: 8px;">
+                        <strong style="display: block; margin-bottom: 5px;">${prediction.away_team}</strong>
+                        <div style="font-size: 24px; font-weight: bold; color: #dc3545;">${prediction.away_score_mean.toFixed(1)}</div>
+                        <div style="font-size: 12px; color: #6c757d;">Range: ${prediction.away_score_lower} - ${prediction.away_score_upper}</div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        el.innerHTML = html;
+    }
+
     global.RugbyCharts = {
         renderBarChartWithCI,
         renderScatterPlot,
         renderLineChart,
+        // High-level embeddable widgets
+        renderTeamComparisonWidget,
+        renderPlayerComparisonWidget,
+        renderMatchPredictorWidget,
+        // Utility functions
+        getTeamType,
+        filterDataByTeamType,
         renderMultiLineChart: function(options) {
             // Wrapper that uses renderLineChart with seriesKey
             const {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rugby Rankings Widget Examples</title>
+
+    <!-- D3.js for visualizations -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Rugby Charts library -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/rugby_charts.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f8f9fa;
+        }
+        .widget-example {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .widget-example h2 {
+            color: #0d6efd;
+            margin-top: 0;
+        }
+        .code-block {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #0d6efd;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        h1 {
+            color: #212529;
+        }
+        .intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>Rugby Rankings Widget Examples</h1>
+        <p>Interactive visualizations you can embed in your blog posts or web pages.</p>
+        <p style="margin: 0;">See <a href="EMBED_GUIDE.md" style="color: #ffd700;">EMBED_GUIDE.md</a> for full documentation.</p>
+    </div>
+
+    <!-- Example 1: Team Comparison -->
+    <div class="widget-example">
+        <h2>1. Team Comparison Widget</h2>
+        <p>Shows teams plotted by offensive vs defensive strength. Hover to see details.</p>
+
+        <div id="team-comparison-example"></div>
+
+        <div class="code-block">
+            <strong>Usage:</strong>
+            <pre><code>RugbyCharts.renderTeamComparisonWidget({
+    container: '#team-comparison',
+    offenseData: offenseData,
+    defenseData: defenseData,
+    season: 'cup-2023',
+    scoreType: 'tries',
+    teamType: 'international',
+    height: 500
+});</code></pre>
+        </div>
+    </div>
+
+    <!-- Example 2: Player Rankings -->
+    <div class="widget-example">
+        <h2>2. Player Rankings Widget</h2>
+        <p>Horizontal bar chart with confidence intervals showing player rankings.</p>
+
+        <div id="player-rankings-example"></div>
+
+        <div class="code-block">
+            <strong>Usage:</strong>
+            <pre><code>RugbyCharts.renderPlayerComparisonWidget({
+    container: '#player-rankings',
+    playerData: playerData,
+    scoreType: 'tries',
+    topN: 10,
+    height: 500
+});</code></pre>
+        </div>
+    </div>
+
+    <!-- Example 3: Match Predictor -->
+    <div class="widget-example">
+        <h2>3. Match Predictor Widget</h2>
+        <p>FiveThirtyEight-style match prediction with narrative, probabilities, and score ranges.</p>
+
+        <div id="match-predictor-example"></div>
+
+        <div class="code-block">
+            <strong>Usage:</strong>
+            <pre><code>RugbyCharts.renderMatchPredictorWidget({
+    container: '#match-predictor',
+    prediction: {
+        home_team: 'Ireland',
+        away_team: 'France',
+        home_score_mean: 23.4,
+        home_score_lower: 14,
+        home_score_upper: 34,
+        away_score_mean: 19.2,
+        away_score_lower: 10,
+        away_score_upper: 30,
+        home_win_prob: 0.62,
+        away_win_prob: 0.35,
+        draw_prob: 0.03
+    }
+});</code></pre>
+        </div>
+    </div>
+
+    <script>
+        // Base URL for data (use relative for local, absolute for deployed)
+        const BASE_URL = 'data';
+
+        // Load all required data
+        Promise.all([
+            fetch(`${BASE_URL}/team_offense.json`).then(r => r.json()),
+            fetch(`${BASE_URL}/team_defense.json`).then(r => r.json()),
+            fetch(`${BASE_URL}/player_rankings.json`).then(r => r.json())
+        ]).then(([offenseData, defenseData, playerData]) => {
+
+            // Example 1: Team Comparison
+            RugbyCharts.renderTeamComparisonWidget({
+                container: '#team-comparison-example',
+                offenseData: offenseData,
+                defenseData: defenseData,
+                season: 'cup-2023',
+                scoreType: 'tries',
+                teamType: 'international',
+                height: 500
+            });
+
+            // Example 2: Player Rankings (Top 10)
+            RugbyCharts.renderPlayerComparisonWidget({
+                container: '#player-rankings-example',
+                playerData: playerData,
+                scoreType: 'tries',
+                topN: 10,
+                height: 500
+            });
+
+            // Example 3: Match Predictor (Example data)
+            const examplePrediction = {
+                home_team: 'Ireland',
+                away_team: 'France',
+                home_score_mean: 23.4,
+                home_score_std: 6.2,
+                home_score_lower: 14,
+                home_score_upper: 34,
+                away_score_mean: 19.2,
+                away_score_std: 5.8,
+                away_score_lower: 10,
+                away_score_upper: 30,
+                home_win_prob: 0.62,
+                away_win_prob: 0.35,
+                draw_prob: 0.03
+            };
+
+            RugbyCharts.renderMatchPredictorWidget({
+                container: '#match-predictor-example',
+                prediction: examplePrediction
+            });
+
+        }).catch(error => {
+            console.error('Error loading data:', error);
+            document.body.innerHTML += `
+                <div style="background: #f8d7da; color: #721c24; padding: 20px; margin: 20px 0; border-radius: 8px;">
+                    <strong>Error loading data:</strong> ${error.message}
+                    <p>Make sure you're viewing this from a web server, not as a local file.</p>
+                    <p>Try: <code>python3 serve_local.py</code></p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

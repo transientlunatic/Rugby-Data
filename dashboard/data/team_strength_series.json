@@ -1,1622 +1,542 @@
 [
   {
-    "team": "South Africa",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.4490594314156117,
-    "offense_std": 0.1729841135599656,
-    "defense_mean": 0.3624303624406931,
-    "defense_std": 0.29493072258496966
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.3621205379678236,
-    "offense_std": 0.16725729254670535,
-    "defense_mean": 0.3183278650510458,
-    "defense_std": 0.27350569710042527
-  },
-  {
     "team": "New Zealand",
-    "season": "cup-2015",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": 0.30195717246186804,
-    "offense_std": 0.17067676339166352,
-    "defense_mean": 0.5514130355309425,
-    "defense_std": 0.3352707530006556
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.263541085091515,
-    "offense_std": 0.188043728069236,
-    "defense_mean": 0.1587573602324997,
-    "defense_std": 0.24844000070401168
-  },
-  {
-    "team": "France",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.17122647980360273,
-    "offense_std": 0.1881829730054927,
-    "defense_mean": 0.5612932066204057,
-    "defense_std": 0.34351214978329425
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.14710008397632096,
-    "offense_std": 0.17974500001497623,
-    "defense_mean": 0.7070108266227061,
-    "defense_std": 0.33678824362347776
+    "offense_mean": 0.5262368946319654,
+    "offense_std": 0.095530996229643,
+    "defense_mean": 0.30668421939211793,
+    "defense_std": 0.1713170240368437
   },
   {
     "team": "Ireland",
-    "season": "cup-2015",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": 0.09269309732784706,
-    "offense_std": 0.2007555874326672,
-    "defense_mean": 0.8953583497459779,
-    "defense_std": 0.3707284062902584
-  },
-  {
-    "team": "England",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.030007478200946763,
-    "offense_std": 0.17996031488198796,
-    "defense_mean": 0.4151702794322615,
-    "defense_std": 0.30172299988583756
-  },
-  {
-    "team": "Namibia",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.0070434733251355545,
-    "offense_std": 0.21453588523757205,
-    "defense_mean": -0.6261506235470155,
-    "defense_std": 0.17040981730618374
-  },
-  {
-    "team": "Romania",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": 0.006717107107373918,
-    "offense_std": 0.229273447994719,
-    "defense_mean": -0.2869887399958142,
-    "defense_std": 0.19911102352764035
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": -0.02060641250234406,
-    "offense_std": 0.21056261867682047,
-    "defense_mean": 0.1440352445264436,
-    "defense_std": 0.23908081395424782
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": -0.06997749196337508,
-    "offense_std": 0.2043071739131508,
-    "defense_mean": 0.1657256495604937,
-    "defense_std": 0.24952682377783444
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": -0.08622702130034356,
-    "offense_std": 0.22215505051493434,
-    "defense_mean": 0.2277359611057132,
-    "defense_std": 0.2492853300067778
+    "offense_mean": 0.4319332970551098,
+    "offense_std": 0.10606240248319922,
+    "defense_mean": 0.34016055539518014,
+    "defense_std": 0.17254873258793238
   },
   {
     "team": "Wales",
-    "season": "cup-2015",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.12330927966434314,
-    "offense_std": 0.2083416753407499,
-    "defense_mean": 0.811567749661677,
-    "defense_std": 0.3374874020877267
+    "offense_mean": 0.14007020148681712,
+    "offense_std": 0.11429859657821312,
+    "defense_mean": 0.06009631702084934,
+    "defense_std": 0.1644518072794963
   },
   {
-    "team": "Georgia",
-    "season": "cup-2015",
+    "team": "Fiji",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.22643101573220667,
-    "offense_std": 0.2263303936706496,
-    "defense_mean": -0.2430826491226777,
-    "defense_std": 0.1977981416349127
+    "offense_mean": 0.07433911465151606,
+    "offense_std": 0.14656108019977782,
+    "defense_mean": 0.07882779405806824,
+    "defense_std": 0.15683807269472202
   },
   {
-    "team": "Uruguay",
-    "season": "cup-2015",
+    "team": "South Africa",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.276299884607534,
-    "offense_std": 0.262658338417604,
-    "defense_mean": -0.8460284300189156,
-    "defense_std": 0.17013637038201598
+    "offense_mean": 0.06728944119369176,
+    "offense_std": 0.10760687602794154,
+    "defense_mean": 0.33472525620202187,
+    "defense_std": 0.18800089483931395
   },
   {
-    "team": "United States",
-    "season": "cup-2015",
+    "team": "Japan",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.2877533049819187,
-    "offense_std": 0.22941531152083922,
-    "defense_mean": -0.37592685188145114,
-    "defense_std": 0.18470491211393197
+    "offense_mean": 0.06647188251367027,
+    "offense_std": 0.12324644451875603,
+    "defense_mean": -0.05181819139979774,
+    "defense_std": 0.1592631122955979
+  },
+  {
+    "team": "Argentina",
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": 0.06147326922915094,
+    "offense_std": 0.12718473418253842,
+    "defense_mean": 0.24172927779715975,
+    "defense_std": 0.1785082716672316
+  },
+  {
+    "team": "Scotland",
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": 0.058369352580120014,
+    "offense_std": 0.10191972746802576,
+    "defense_mean": 0.14436864737792154,
+    "defense_std": 0.15211172696832734
   },
   {
     "team": "Tonga",
-    "season": "cup-2015",
+    "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.30897749392008994,
-    "offense_std": 0.22438706529933627,
-    "defense_mean": -0.3977732089764418,
-    "defense_std": 0.20268194217533458
-  },
-  {
-    "team": "Samoa",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": -0.37268367745959935,
-    "offense_std": 0.2304581612775239,
-    "defense_mean": -0.025111410339692875,
-    "defense_std": 0.2309279369169435
-  },
-  {
-    "team": "Canada",
-    "season": "cup-2015",
-    "score_type": "tries",
-    "offense_mean": -0.38105740521832165,
-    "offense_std": 0.2643920469065339,
-    "defense_mean": -0.3514325302463364,
-    "defense_std": 0.19551059734029425
-  },
-  {
-    "team": "South Africa",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.09053733697545045,
-    "offense_std": 0.09299937368515288,
-    "defense_mean": 0.009342505898820776,
-    "defense_std": 0.016750492409499582
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.0740429498187043,
-    "offense_std": 0.08708688243025035,
-    "defense_mean": 0.008968751879992075,
-    "defense_std": 0.021142303372963536
-  },
-  {
-    "team": "New Zealand",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.06378612878208233,
-    "offense_std": 0.07836340111963114,
-    "defense_mean": 0.015042518198396384,
-    "defense_std": 0.030637916354616126
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.0573200721713412,
-    "offense_std": 0.0813374708561928,
-    "defense_mean": 0.004776193497182429,
-    "defense_std": 0.012605820248422732
+    "offense_mean": 0.043854232114639964,
+    "offense_std": 0.13903316628035647,
+    "defense_mean": -0.33190381709819755,
+    "defense_std": 0.1364929087927598
   },
   {
     "team": "France",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.03265710416293509,
-    "offense_std": 0.06165341589964091,
-    "defense_mean": 0.01596780985856116,
-    "defense_std": 0.030031098429807043
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.03152218193565009,
-    "offense_std": 0.07318422910658363,
-    "defense_mean": 0.020474532176716544,
-    "defense_std": 0.04544376422988289
-  },
-  {
-    "team": "Ireland",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.022001667828652604,
-    "offense_std": 0.06155910835586411,
-    "defense_mean": 0.02334785967251975,
-    "defense_std": 0.04213150064867658
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": -0.012337535617660635,
+    "offense_std": 0.08911342370128097,
+    "defense_mean": 0.30370901316655796,
+    "defense_std": 0.16867955601402607
   },
   {
     "team": "England",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.008150025488784426,
-    "offense_std": 0.04522890158776875,
-    "defense_mean": 0.010949358659481349,
-    "defense_std": 0.020338673778419164
-  },
-  {
-    "team": "Romania",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": 0.002582533072881561,
-    "offense_std": 0.06150403156490592,
-    "defense_mean": -0.007432431947472607,
-    "defense_std": 0.012154734379375079
-  },
-  {
-    "team": "Namibia",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.00017175090593684917,
-    "offense_std": 0.06751635158740237,
-    "defense_mean": -0.01660770897105823,
-    "defense_std": 0.02523168877504285
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.003287462042495073,
-    "offense_std": 0.053738561994422805,
-    "defense_mean": 0.0032066943006301848,
-    "defense_std": 0.00958129478522993
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.01732878621970075,
-    "offense_std": 0.064520608426547,
-    "defense_mean": 0.00528867221496451,
-    "defense_std": 0.01936799405143359
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.018025791747496935,
-    "offense_std": 0.07727508188695706,
-    "defense_mean": 0.00518029447976282,
-    "defense_std": 0.010934936669064208
-  },
-  {
-    "team": "Wales",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.02687545259238245,
-    "offense_std": 0.06747687136924378,
-    "defense_mean": 0.020922433187015588,
-    "defense_std": 0.03512682178284442
-  },
-  {
-    "team": "Georgia",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.04548881102938639,
-    "offense_std": 0.07163904887430951,
-    "defense_mean": -0.0064183870069622695,
-    "defense_std": 0.013271763722092666
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": -0.01727192071242176,
+    "offense_std": 0.10630082986409045,
+    "defense_mean": 0.40945266896336097,
+    "defense_std": 0.18005289983449224
   },
   {
     "team": "Uruguay",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.057704423340082675,
-    "offense_std": 0.08968383703525017,
-    "defense_mean": -0.022645030737334947,
-    "defense_std": 0.0374794464429849
-  },
-  {
-    "team": "United States",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.0628896575297643,
-    "offense_std": 0.09389342124099227,
-    "defense_mean": -0.009753261042563962,
-    "defense_std": 0.018683170334778832
-  },
-  {
-    "team": "Tonga",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.06713425567177529,
-    "offense_std": 0.09817640770965615,
-    "defense_mean": -0.010664045290865282,
-    "defense_std": 0.019996045272796033
-  },
-  {
-    "team": "Samoa",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.07599562081532471,
-    "offense_std": 0.09792486894782153,
-    "defense_mean": -0.0003369706456134112,
-    "defense_std": 0.011387185978697508
-  },
-  {
-    "team": "Canada",
-    "season": "cup-2015",
-    "score_type": "penalties",
-    "offense_mean": -0.08071511797913765,
-    "offense_std": 0.11725638469695647,
-    "defense_mean": -0.009595382693205893,
-    "defense_std": 0.021134536739087953
-  },
-  {
-    "team": "South Africa",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.4797079963217298,
-    "offense_std": 0.18590247195481877,
-    "defense_mean": 0.397468705724125,
-    "defense_std": 0.3279886855989489
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.3903087730298488,
-    "offense_std": 0.18575754384062917,
-    "defense_mean": 0.35136968814430836,
-    "defense_std": 0.30510646474117625
-  },
-  {
-    "team": "New Zealand",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.3217550305574074,
-    "offense_std": 0.18209614857288495,
-    "defense_mean": 0.6069755088119508,
-    "defense_std": 0.36900426310030526
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.28313308973435936,
-    "offense_std": 0.20449646447548933,
-    "defense_mean": 0.17348359828859647,
-    "defense_std": 0.2710809560634708
-  },
-  {
-    "team": "France",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.18269214376900575,
-    "offense_std": 0.201475762145117,
-    "defense_mean": 0.6180402843702266,
-    "defense_std": 0.3784446817070009
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": -0.03360409829371866,
+    "offense_std": 0.13957448789955162,
+    "defense_mean": -0.04077232117374776,
+    "defense_std": 0.12605116282087425
   },
   {
     "team": "Australia",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.15889949247511878,
-    "offense_std": 0.1954473093385725,
-    "defense_mean": 0.7792789857392977,
-    "defense_std": 0.3810205753594378
-  },
-  {
-    "team": "Ireland",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.09970626824863695,
-    "offense_std": 0.21448637765411568,
-    "defense_mean": 0.9829534725713691,
-    "defense_std": 0.4002513419570099
-  },
-  {
-    "team": "England",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.030065466926842987,
-    "offense_std": 0.19266685555237703,
-    "defense_mean": 0.45516262233291654,
-    "defense_std": 0.333166471975795
-  },
-  {
-    "team": "Namibia",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.007615395631563767,
-    "offense_std": 0.2290195764543544,
-    "defense_mean": -0.6879315929464379,
-    "defense_std": 0.18742887462544214
-  },
-  {
-    "team": "Romania",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": 0.006489758084076942,
-    "offense_std": 0.24512105290132755,
-    "defense_mean": -0.3156847602789725,
-    "defense_std": 0.21914908952454576
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.019797467301297996,
-    "offense_std": 0.22824730303862023,
-    "defense_mean": 0.1573214919520007,
-    "defense_std": 0.2620541410881916
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.07474844976504785,
-    "offense_std": 0.21722535572987392,
-    "defense_mean": 0.18212300557701488,
-    "defense_std": 0.2747103145487355
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": -0.05867732878371569,
+    "offense_std": 0.1334898163256249,
+    "defense_mean": 0.09574843159411947,
+    "defense_std": 0.1601877016206615
   },
   {
     "team": "Italy",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.09248452555662595,
-    "offense_std": 0.23530090473069004,
-    "defense_mean": 0.24957327575434715,
-    "defense_std": 0.27443434889888274
-  },
-  {
-    "team": "Wales",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.13345846826823715,
-    "offense_std": 0.2214184305673595,
-    "defense_mean": 0.8958262781305937,
-    "defense_std": 0.3789781822106927
-  },
-  {
-    "team": "Georgia",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.2422114577017772,
-    "offense_std": 0.23960584062613863,
-    "defense_mean": -0.2665565297781727,
-    "defense_std": 0.21583717557035642
-  },
-  {
-    "team": "Uruguay",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.2946933987988547,
-    "offense_std": 0.2788882065562498,
-    "defense_mean": -0.9298809428055724,
-    "defense_std": 0.18965810904797825
-  },
-  {
-    "team": "United States",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.30635486085487473,
-    "offense_std": 0.24193461057258278,
-    "defense_mean": -0.41361722223207115,
-    "defense_std": 0.2046239765938882
-  },
-  {
-    "team": "Tonga",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.3304458503531672,
-    "offense_std": 0.24340980090347264,
-    "defense_mean": -0.4377263096021264,
-    "defense_std": 0.22242911168753657
-  },
-  {
-    "team": "Samoa",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.3970360676485714,
-    "offense_std": 0.23255253036925141,
-    "defense_mean": -0.026611869480355505,
-    "defense_std": 0.25437091044750837
-  },
-  {
-    "team": "Canada",
-    "season": "cup-2015",
-    "score_type": "conversions",
-    "offense_mean": -0.408634539814802,
-    "offense_std": 0.2866883468158675,
-    "defense_mean": -0.38808791360954564,
-    "defense_std": 0.21750875861799582
-  },
-  {
-    "team": "South Africa",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.39347989562668106,
-    "offense_std": 0.16855126382468114,
-    "defense_mean": 0.7046174765845616,
-    "defense_std": 0.3421324984291858
-  },
-  {
-    "team": "New Zealand",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.25856719265008404,
-    "offense_std": 0.18203488539053456,
-    "defense_mean": 0.972191764041173,
-    "defense_std": 0.4443520399869209
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.23137395734278499,
-    "offense_std": 0.1691907895007636,
-    "defense_mean": 0.2922984850183773,
-    "defense_std": 0.29245541037974093
-  },
-  {
-    "team": "Ireland",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.2310006197502832,
-    "offense_std": 0.17774969072295638,
-    "defense_mean": 0.9561347676127385,
-    "defense_std": 0.373003658395584
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.19079058349852426,
-    "offense_std": 0.18466363386842022,
-    "defense_mean": -0.19674496200191277,
-    "defense_std": 0.22822939827309294
-  },
-  {
-    "team": "England",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.17663511925665226,
-    "offense_std": 0.1787650802757589,
-    "defense_mean": 0.5067709359659679,
-    "defense_std": 0.3461270277338391
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.1545736035660107,
-    "offense_std": 0.19296974292042238,
-    "defense_mean": -0.3548514716633441,
-    "defense_std": 0.23475468200459032
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.09867460283452423,
-    "offense_std": 0.18436568883335866,
-    "defense_mean": 0.05234638407290212,
-    "defense_std": 0.2719556315262892
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.08804578992673404,
-    "offense_std": 0.17486329636283798,
-    "defense_mean": -0.19946671278705894,
-    "defense_std": 0.22022765844347358
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.08654034101634277,
-    "offense_std": 0.1912698548985021,
-    "defense_mean": 0.15613909205627008,
-    "defense_std": 0.2593788041478419
-  },
-  {
-    "team": "Tonga",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": 0.008183561475164556,
-    "offense_std": 0.20829949589205798,
-    "defense_mean": -0.24128252277179077,
-    "defense_std": 0.1975795019693283
-  },
-  {
-    "team": "Georgia",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.11275444666549395,
-    "offense_std": 0.19828106770149306,
-    "defense_mean": -0.37996595877047984,
-    "defense_std": 0.20343861918509748
-  },
-  {
-    "team": "France",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.12436911202912025,
-    "offense_std": 0.19974430282666955,
-    "defense_mean": 0.06142214400321745,
-    "defense_std": 0.3158080201229473
-  },
-  {
-    "team": "Samoa",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.12822178535001635,
-    "offense_std": 0.22637468046480952,
-    "defense_mean": -0.193234243626906,
-    "defense_std": 0.209060505386105
-  },
-  {
-    "team": "Uruguay",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.15369693914851812,
-    "offense_std": 0.220192031093307,
-    "defense_mean": -0.39635298877345937,
-    "defense_std": 0.1893179815075794
-  },
-  {
-    "team": "United States",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.1657583918905395,
-    "offense_std": 0.21956490523206854,
-    "defense_mean": -0.6406646715713571,
-    "defense_std": 0.1719425950621272
-  },
-  {
-    "team": "Wales",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.17269518234714604,
-    "offense_std": 0.20335628577141512,
-    "defense_mean": 0.2575198615852401,
-    "defense_std": 0.24982535763167035
-  },
-  {
-    "team": "Namibia",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.48118744672414826,
-    "offense_std": 0.23881707523895468,
-    "defense_mean": -0.5178868965350681,
-    "defense_std": 0.17919130743250575
-  },
-  {
-    "team": "Canada",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.4915414630053635,
-    "offense_std": 0.24381225823362562,
-    "defense_mean": -0.4274547257231715,
-    "defense_std": 0.17720183225951874
-  },
-  {
-    "team": "Russia",
-    "season": "cup-2019",
-    "score_type": "tries",
-    "offense_mean": -0.6188098854726782,
-    "offense_std": 0.2679032968712792,
-    "defense_mean": -0.5242887342030924,
-    "defense_std": 0.18813083805799335
-  },
-  {
-    "team": "South Africa",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.08402011971978839,
-    "offense_std": 0.10101532751333848,
-    "defense_mean": 0.019439852476103095,
-    "defense_std": 0.03782260635336572
-  },
-  {
-    "team": "New Zealand",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.05204270844788746,
-    "offense_std": 0.06486484293660141,
-    "defense_mean": 0.024677141575115673,
-    "defense_std": 0.03809025517839944
-  },
-  {
-    "team": "Ireland",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.046365603815751937,
-    "offense_std": 0.06792515644340155,
-    "defense_mean": 0.025588984809686993,
-    "defense_std": 0.04805470146621644
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.04402646482529883,
-    "offense_std": 0.05587079244308392,
-    "defense_mean": 0.008043185503649939,
-    "defense_std": 0.01852090684610394
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.03637155496732264,
-    "offense_std": 0.05828015257617978,
-    "defense_mean": -0.004978870172203423,
-    "defense_std": 0.013437131598888501
-  },
-  {
-    "team": "England",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.034561980646696334,
-    "offense_std": 0.060239751347697615,
-    "defense_mean": 0.013538509759801446,
-    "defense_std": 0.025632887087069855
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.03098021393939926,
-    "offense_std": 0.06063348548845178,
-    "defense_mean": -0.008883948723359835,
-    "defense_std": 0.015545837995476538
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.021652430234572473,
-    "offense_std": 0.05182974025231552,
-    "defense_mean": 0.0017577564556813159,
-    "defense_std": 0.013830555165942181
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.018332169607036094,
-    "offense_std": 0.05921534327218101,
-    "defense_mean": 0.004121806951779045,
-    "defense_std": 0.012523553328434325
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": 0.017873308543399052,
-    "offense_std": 0.04785258459491691,
-    "defense_mean": -0.004871871122342743,
-    "defense_std": 0.010121935308477135
-  },
-  {
-    "team": "Tonga",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.0014014443355886252,
-    "offense_std": 0.05775279057626955,
-    "defense_mean": -0.006685624500875678,
-    "defense_std": 0.01418791334511625
-  },
-  {
-    "team": "Georgia",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.025367832323902093,
-    "offense_std": 0.0635596370329771,
-    "defense_mean": -0.01021878058415761,
-    "defense_std": 0.01901547825183071
-  },
-  {
-    "team": "France",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.025637166222097125,
-    "offense_std": 0.055342704678012423,
-    "defense_mean": 0.0013763815420317705,
-    "defense_std": 0.013209331688291456
-  },
-  {
-    "team": "Samoa",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.02607551295710875,
-    "offense_std": 0.0774624043206495,
-    "defense_mean": -0.005450246843945627,
-    "defense_std": 0.016444205622005104
-  },
-  {
-    "team": "Uruguay",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.030640079175840655,
-    "offense_std": 0.06739382483646476,
-    "defense_mean": -0.010750878926199392,
-    "defense_std": 0.0192555597921091
-  },
-  {
-    "team": "Wales",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.03381768822592544,
-    "offense_std": 0.05978653710811853,
-    "defense_mean": 0.0070234834541506785,
-    "defense_std": 0.016233591620592586
-  },
-  {
-    "team": "United States",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.03651408624531373,
-    "offense_std": 0.07700016920070415,
-    "defense_mean": -0.017084231573612677,
-    "defense_std": 0.026995535669460082
-  },
-  {
-    "team": "Canada",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.1021496143831579,
-    "offense_std": 0.11753969306695489,
-    "defense_mean": -0.011044639228730727,
-    "defense_std": 0.01817421220467135
-  },
-  {
-    "team": "Namibia",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.10239504055736295,
-    "offense_std": 0.13332256705955975,
-    "defense_mean": -0.014080858854623566,
-    "defense_std": 0.02642005063408241
-  },
-  {
-    "team": "Russia",
-    "season": "cup-2019",
-    "score_type": "penalties",
-    "offense_mean": -0.12403133405402474,
-    "offense_std": 0.13152930300068155,
-    "defense_mean": -0.014428787141605613,
-    "defense_std": 0.025034953026248072
-  },
-  {
-    "team": "South Africa",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.42093287159245996,
-    "offense_std": 0.18022578304176562,
-    "defense_mean": 0.7764972160979491,
-    "defense_std": 0.3809444778630614
-  },
-  {
-    "team": "New Zealand",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.27983502810503325,
-    "offense_std": 0.19815824240434096,
-    "defense_mean": 1.0687032374810963,
-    "defense_std": 0.4922741743989971
-  },
-  {
-    "team": "Ireland",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.24883161317193897,
-    "offense_std": 0.19495095344314364,
-    "defense_mean": 1.0483201785861485,
-    "defense_std": 0.4036032019958018
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.24797329394553638,
-    "offense_std": 0.18204514701976823,
-    "defense_mean": 0.3219887339254873,
-    "defense_std": 0.3197222293977498
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.20396949951380608,
-    "offense_std": 0.19456904100135208,
-    "defense_mean": -0.2176712338858177,
-    "defense_std": 0.25361437553304894
-  },
-  {
-    "team": "England",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.1890553105438466,
-    "offense_std": 0.1921732463439931,
-    "defense_mean": 0.5582298232072014,
-    "defense_std": 0.3811795824527284
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.16605649377792092,
-    "offense_std": 0.21118153802388928,
-    "defense_mean": -0.3897162166659094,
-    "defense_std": 0.25842929170820167
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.10419766003584088,
-    "offense_std": 0.193375467622626,
-    "defense_mean": 0.05743178440428098,
-    "defense_std": 0.30125051503097566
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.09934518203210194,
-    "offense_std": 0.19017832752511737,
-    "defense_mean": -0.22093448277218417,
-    "defense_std": 0.2422002780537842
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.09348550340297647,
-    "offense_std": 0.20528606716543976,
-    "defense_mean": 0.17207218255021361,
-    "defense_std": 0.2848266179725341
-  },
-  {
-    "team": "Tonga",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": 0.011085052522430935,
-    "offense_std": 0.22691603849223294,
-    "defense_mean": -0.2649319410089912,
-    "defense_std": 0.2172727576371797
-  },
-  {
-    "team": "Georgia",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.1191129938992801,
-    "offense_std": 0.21290489280537947,
-    "defense_mean": -0.41819359358844155,
-    "defense_std": 0.22413192102446225
-  },
-  {
-    "team": "France",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.1317121662543566,
-    "offense_std": 0.21653290803300268,
-    "defense_mean": 0.06709952850032162,
-    "defense_std": 0.346372011001112
-  },
-  {
-    "team": "Samoa",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.13901656387975417,
-    "offense_std": 0.24408560099024387,
-    "defense_mean": -0.21208337800686372,
-    "defense_std": 0.22790600260995444
-  },
-  {
-    "team": "Uruguay",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.16386466898930807,
-    "offense_std": 0.2305820296986225,
-    "defense_mean": -0.436850260964023,
-    "defense_std": 0.21064610496156375
-  },
-  {
-    "team": "United States",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.17807403478561193,
-    "offense_std": 0.23394337252368866,
-    "defense_mean": -0.7036932002280436,
-    "defense_std": 0.18670747121385275
-  },
-  {
-    "team": "Wales",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.18542652443386617,
-    "offense_std": 0.21591385674958463,
-    "defense_mean": 0.28085809933921324,
-    "defense_std": 0.2727898852823196
-  },
-  {
-    "team": "Namibia",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.5147335871215596,
-    "offense_std": 0.2519753111541131,
-    "defense_mean": -0.5694965695715674,
-    "defense_std": 0.19725059705415832
-  },
-  {
-    "team": "Canada",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.5248391768952646,
-    "offense_std": 0.2629780536964449,
-    "defense_mean": -0.4710580786821386,
-    "defense_std": 0.19515790778983327
-  },
-  {
-    "team": "Russia",
-    "season": "cup-2019",
-    "score_type": "conversions",
-    "offense_mean": -0.6592008496788262,
-    "offense_std": 0.279394641375176,
-    "defense_mean": -0.5771230602829392,
-    "defense_std": 0.20987524697656426
-  },
-  {
-    "team": "New Zealand",
     "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": 0.629585550948698,
-    "offense_std": 0.1648094992708184,
-    "defense_mean": 0.49980165367430246,
-    "defense_std": 0.2812203165826594
-  },
-  {
-    "team": "Ireland",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.35176486396002626,
-    "offense_std": 0.14500804587249727,
-    "defense_mean": 0.5457685517284749,
-    "defense_std": 0.3065428181603524
-  },
-  {
-    "team": "France",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.3210100978388298,
-    "offense_std": 0.15687040871050478,
-    "defense_mean": 0.49131811604251296,
-    "defense_std": 0.32475558129528087
-  },
-  {
-    "team": "Wales",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.30076946866566334,
-    "offense_std": 0.18648713902624206,
-    "defense_mean": -0.0062008770631953964,
-    "defense_std": 0.255886260408412
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.22259884383719783,
-    "offense_std": 0.15644212789477308,
-    "defense_mean": -0.02519284128857049,
-    "defense_std": 0.2356880790479767
-  },
-  {
-    "team": "England",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.18441585387184278,
-    "offense_std": 0.17650622800111446,
-    "defense_mean": 0.8832623101792046,
-    "defense_std": 0.3693577569538472
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.12803105483363092,
-    "offense_std": 0.18130946406529555,
-    "defense_mean": -0.2101821705471394,
-    "defense_std": 0.23521390956497076
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.0841514584554593,
-    "offense_std": 0.17496195994058014,
-    "defense_mean": 0.408661570656688,
-    "defense_std": 0.27516156708795014
-  },
-  {
-    "team": "Fiji",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.055542649400027184,
-    "offense_std": 0.1991216108682728,
-    "defense_mean": -0.02894612621247969,
-    "defense_std": 0.24124454710069246
-  },
-  {
-    "team": "South Africa",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": 0.0147294166815814,
-    "offense_std": 0.15382393774919384,
-    "defense_mean": 0.625637196252372,
-    "defense_std": 0.3344212955491728
+    "offense_mean": -0.09145991359580904,
+    "offense_std": 0.11251649850705991,
+    "defense_mean": -0.31653751110443634,
+    "defense_std": 0.12832136695809246
   },
   {
     "team": "Portugal",
     "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": 0.00796492348388407,
-    "offense_std": 0.21127534630479775,
-    "defense_mean": -0.07476113491482951,
-    "defense_std": 0.21907472698022457
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": -0.004510471797047028,
-    "offense_std": 0.1856116896754415,
-    "defense_mean": -0.7579552233269035,
-    "defense_std": 0.16424985819980742
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": -0.07579153282039122,
-    "offense_std": 0.20492408571966628,
-    "defense_mean": 0.07299267251835101,
-    "defense_std": 0.24595919831523227
-  },
-  {
-    "team": "Tonga",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": -0.08493926549476123,
-    "offense_std": 0.18358207837511875,
-    "defense_mean": -0.8411623673710241,
-    "defense_std": 0.16176345615529966
-  },
-  {
-    "team": "Georgia",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": -0.14048444843077348,
-    "offense_std": 0.21904670177192737,
-    "defense_mean": -0.1588939026779742,
-    "defense_std": 0.20215830084022246
+    "offense_mean": -0.1141493262141397,
+    "offense_std": 0.13348129965862227,
+    "defense_mean": 0.022202277371347674,
+    "defense_std": 0.1670114369266968
   },
   {
     "team": "Samoa",
     "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.16571594295992173,
-    "offense_std": 0.19686511597990528,
-    "defense_mean": 0.4020350157181024,
-    "defense_std": 0.29464451991028456
+    "offense_mean": -0.13388103064956527,
+    "offense_std": 0.1330900683008733,
+    "defense_mean": 0.27397041302487124,
+    "defense_std": 0.1678518965684407
   },
   {
-    "team": "Uruguay",
+    "team": "Georgia",
     "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.2840118727047599,
-    "offense_std": 0.20121003963869533,
-    "defense_mean": -0.4499660541127625,
-    "defense_std": 0.16990386523069562
-  },
-  {
-    "team": "Romania",
-    "season": "cup-2023",
-    "score_type": "tries",
-    "offense_mean": -0.3117410475145658,
-    "offense_std": 0.2291893258825142,
-    "defense_mean": -1.1750296584612259,
-    "defense_std": 0.1540232811085053
+    "offense_mean": -0.18579671585412555,
+    "offense_std": 0.1418337419939453,
+    "defense_mean": 0.05588118647432451,
+    "defense_std": 0.1481116547390511
   },
   {
     "team": "Chile",
     "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.33547723185103445,
-    "offense_std": 0.25853685267387944,
-    "defense_mean": -0.9068997315574562,
-    "defense_std": 0.16090165016881958
+    "offense_mean": -0.20419035808342811,
+    "offense_std": 0.14829186090365862,
+    "defense_mean": -0.5230743661060152,
+    "defense_std": 0.13146190284586223
+  },
+  {
+    "team": "Romania",
+    "season": "cup-2023",
+    "score_type": "tries",
+    "offense_mean": -0.2274916041637594,
+    "offense_std": 0.15042388752912147,
+    "defense_mean": -0.7165372824783977,
+    "defense_std": 0.12303215284751172
   },
   {
     "team": "Namibia",
     "season": "cup-2023",
     "score_type": "tries",
-    "offense_mean": -0.42412603744180477,
-    "offense_std": 0.25939245411886996,
-    "defense_mean": -0.9203110913314588,
-    "defense_std": 0.14277506868198583
+    "offense_mean": -0.23498784312146967,
+    "offense_std": 0.1584049599326704,
+    "defense_mean": -0.43397664948449843,
+    "defense_std": 0.12057317006490759
   },
   {
     "team": "New Zealand",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": 0.13044949497138042,
-    "offense_std": 0.1339931694290326,
-    "defense_mean": 0.013421865721903374,
-    "defense_std": 0.027370832277998587
+    "offense_mean": 0.011039186284208321,
+    "offense_std": 0.018214854709732324,
+    "defense_mean": 0.002557881773085477,
+    "defense_std": 0.005370837168163804
   },
   {
     "team": "Ireland",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": 0.07222019194575534,
-    "offense_std": 0.07803356516440042,
-    "defense_mean": 0.01566525325483943,
-    "defense_std": 0.03368575292496011
-  },
-  {
-    "team": "France",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": 0.06932129655683149,
-    "offense_std": 0.09079524338099763,
-    "defense_mean": 0.01283401412971948,
-    "defense_std": 0.02368765246379426
+    "offense_mean": 0.008756025575929164,
+    "offense_std": 0.014253038829548566,
+    "defense_mean": 0.0025712805897919345,
+    "defense_std": 0.0048353114061826675
   },
   {
     "team": "Wales",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": 0.0632136353941249,
-    "offense_std": 0.08415933281693677,
-    "defense_mean": -0.0009018812036970818,
-    "defense_std": 0.015872876712860983
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": 0.04465373652972996,
-    "offense_std": 0.06201606940394662,
-    "defense_mean": -0.0014926946605364018,
-    "defense_std": 0.013769053010548649
-  },
-  {
-    "team": "England",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": 0.04039045029330319,
-    "offense_std": 0.07197847162457537,
-    "defense_mean": 0.024558649056667093,
-    "defense_std": 0.04503981294599073
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": 0.02501426289323824,
-    "offense_std": 0.053806569628709236,
-    "defense_mean": -0.005712036737073112,
-    "defense_std": 0.014320582105739154
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": 0.017344355948680223,
-    "offense_std": 0.05110348985123987,
-    "defense_mean": 0.010671585066771527,
-    "defense_std": 0.02271589256556135
+    "offense_mean": 0.00301546662364482,
+    "offense_std": 0.007303662261792345,
+    "defense_mean": 0.00043941431572911256,
+    "defense_std": 0.0027921756273321763
   },
   {
     "team": "Fiji",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": 0.009002383425817802,
-    "offense_std": 0.05453449414455608,
-    "defense_mean": -0.001150402872580707,
-    "defense_std": 0.01050143076329093
+    "offense_mean": 0.0015580070495927283,
+    "offense_std": 0.00578976183807269,
+    "defense_mean": 0.00048505569781009386,
+    "defense_std": 0.0017629232960248767
+  },
+  {
+    "team": "Japan",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": 0.0014824114044802092,
+    "offense_std": 0.007607536047094353,
+    "defense_mean": -0.00046201741501850486,
+    "defense_std": 0.0030883747575119196
+  },
+  {
+    "team": "Scotland",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": 0.001324343614519512,
+    "offense_std": 0.00556795115735471,
+    "defense_mean": 0.0012601801697378781,
+    "defense_std": 0.0034997607327605642
+  },
+  {
+    "team": "Argentina",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": 0.0013172077940647885,
+    "offense_std": 0.005756812074597826,
+    "defense_mean": 0.001787983419956203,
+    "defense_std": 0.004027941361692926
   },
   {
     "team": "South Africa",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": 0.0015466269625605445,
-    "offense_std": 0.037037626829602995,
-    "defense_mean": 0.01682446839121431,
-    "defense_std": 0.029569789398490254
-  },
-  {
-    "team": "Portugal",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": 0.0006015824525511253,
-    "offense_std": 0.0584216736204339,
-    "defense_mean": -0.0019185928954243232,
-    "defense_std": 0.009296641666043251
-  },
-  {
-    "team": "Italy",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": -0.0013578263730617765,
-    "offense_std": 0.05239781215196168,
-    "defense_mean": -0.0203729500235141,
-    "defense_std": 0.032934705875839784
-  },
-  {
-    "team": "Australia",
-    "season": "cup-2023",
-    "score_type": "penalties",
-    "offense_mean": -0.016414957214138055,
-    "offense_std": 0.06173135529545039,
-    "defense_mean": 0.002078876317339591,
-    "defense_std": 0.013245318679093317
+    "offense_mean": 0.0012933332817652817,
+    "offense_std": 0.004624532092012578,
+    "defense_mean": 0.0025337040583173435,
+    "defense_std": 0.004435392677577952
   },
   {
     "team": "Tonga",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.020325672755269204,
-    "offense_std": 0.05363192362710978,
-    "defense_mean": -0.02298153483939332,
-    "defense_std": 0.039114339135768755
+    "offense_mean": 0.0005861818410960541,
+    "offense_std": 0.005802664121242075,
+    "defense_mean": -0.002591526928864952,
+    "defense_std": 0.004399218719771419
   },
   {
-    "team": "Georgia",
+    "team": "France",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.029625588683382855,
-    "offense_std": 0.06492208119411787,
-    "defense_mean": -0.003787471988950795,
-    "defense_std": 0.009399114433186173
+    "offense_mean": -0.00014210702608073887,
+    "offense_std": 0.0034940117345057644,
+    "defense_mean": 0.0025722073296443417,
+    "defense_std": 0.006244980274778576
   },
   {
-    "team": "Samoa",
+    "team": "England",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.0320523029197916,
-    "offense_std": 0.05699854292621381,
-    "defense_mean": 0.010750792854622458,
-    "defense_std": 0.02276920508397389
+    "offense_mean": -0.00048783833875337625,
+    "offense_std": 0.003945818956596677,
+    "defense_mean": 0.003194654118966911,
+    "defense_std": 0.005217998931743073
   },
   {
     "team": "Uruguay",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.05777100346465184,
-    "offense_std": 0.08012659734809129,
-    "defense_mean": -0.012076306266240065,
-    "defense_std": 0.02152075979764005
+    "offense_mean": -0.0007792382997093959,
+    "offense_std": 0.005846372936803144,
+    "defense_mean": -0.00030251386483991563,
+    "defense_std": 0.0018849765277999992
   },
   {
-    "team": "Romania",
+    "team": "Australia",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.059397019884198564,
-    "offense_std": 0.07566157473869649,
-    "defense_mean": -0.03146671214800358,
-    "defense_std": 0.04907020002294722
+    "offense_mean": -0.0014276907828300643,
+    "offense_std": 0.007170009133751184,
+    "defense_mean": 0.0007812579671924047,
+    "defense_std": 0.002821536987990097
+  },
+  {
+    "team": "Italy",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": -0.002139386523398918,
+    "offense_std": 0.005874644744830923,
+    "defense_mean": -0.0024435561465185234,
+    "defense_std": 0.0038553942610408303
+  },
+  {
+    "team": "Portugal",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": -0.0022038047439594663,
+    "offense_std": 0.004852562802992945,
+    "defense_mean": 0.00019251419669394574,
+    "defense_std": 0.0023568958145296676
+  },
+  {
+    "team": "Samoa",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": -0.0029290773701972682,
+    "offense_std": 0.006112995125120648,
+    "defense_mean": 0.0020504190113458244,
+    "defense_std": 0.00372999048343259
+  },
+  {
+    "team": "Georgia",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": -0.0037307890450531097,
+    "offense_std": 0.007183068317621821,
+    "defense_mean": 0.0004625572455290867,
+    "defense_std": 0.002235962513439858
   },
   {
     "team": "Chile",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.06692262482686612,
-    "offense_std": 0.10117462161067119,
-    "defense_mean": -0.024226376744360373,
-    "defense_std": 0.04165157719073485
+    "offense_mean": -0.004227318763007083,
+    "offense_std": 0.008912462439634302,
+    "defense_mean": -0.004099168532301653,
+    "defense_std": 0.00647357108180562
   },
   {
     "team": "Namibia",
     "season": "cup-2023",
     "score_type": "penalties",
-    "offense_mean": -0.09103385426910993,
-    "offense_std": 0.13321142784906317,
-    "defense_mean": -0.024917332126514917,
-    "defense_std": 0.040298565663497515
+    "offense_mean": -0.004848789917586869,
+    "offense_std": 0.008663774947725873,
+    "defense_mean": -0.0034058605463697113,
+    "defense_std": 0.0054083546092444645
+  },
+  {
+    "team": "Romania",
+    "season": "cup-2023",
+    "score_type": "penalties",
+    "offense_mean": -0.005106948075791623,
+    "offense_std": 0.009812410923315223,
+    "defense_mean": -0.005620434723189641,
+    "defense_std": 0.008843122740177858
   },
   {
     "team": "New Zealand",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": 0.6751259762873079,
-    "offense_std": 0.18307130335889746,
-    "defense_mean": 0.5484115754258818,
-    "defense_std": 0.3060034764203801
+    "offense_mean": 1.0065584340433762,
+    "offense_std": 0.1755364695329701,
+    "defense_mean": 0.3701940826122107,
+    "defense_std": 0.2082859477349341
   },
   {
     "team": "Ireland",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": 0.3778186720352355,
-    "offense_std": 0.15977368208062293,
-    "defense_mean": 0.5996391196708873,
-    "defense_std": 0.33930949239524727
-  },
-  {
-    "team": "France",
-    "season": "cup-2023",
-    "score_type": "conversions",
-    "offense_mean": 0.343692282861863,
-    "offense_std": 0.16597737655943937,
-    "defense_mean": 0.5378682571782899,
-    "defense_std": 0.35702229307633376
+    "offense_mean": 0.8272694259844378,
+    "offense_std": 0.2024024873026274,
+    "defense_mean": 0.40946396734867274,
+    "defense_std": 0.20655279714189526
   },
   {
     "team": "Wales",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": 0.32426350758046424,
-    "offense_std": 0.20251745705680124,
-    "defense_mean": -0.008223114613616075,
-    "defense_std": 0.28250033374611627
-  },
-  {
-    "team": "Scotland",
-    "season": "cup-2023",
-    "score_type": "conversions",
-    "offense_mean": 0.2380111157185157,
-    "offense_std": 0.16688417451820697,
-    "defense_mean": -0.02856639557872339,
-    "defense_std": 0.26076070542453306
-  },
-  {
-    "team": "England",
-    "season": "cup-2023",
-    "score_type": "conversions",
-    "offense_mean": 0.19731745506696918,
-    "offense_std": 0.1907427799079225,
-    "defense_mean": 0.9705713033613089,
-    "defense_std": 0.4052696469498224
-  },
-  {
-    "team": "Japan",
-    "season": "cup-2023",
-    "score_type": "conversions",
-    "offense_mean": 0.13584250766352826,
-    "offense_std": 0.19563129318680053,
-    "defense_mean": -0.23168180842190458,
-    "defense_std": 0.2587763712218677
-  },
-  {
-    "team": "Argentina",
-    "season": "cup-2023",
-    "score_type": "conversions",
-    "offense_mean": 0.0905972922329209,
-    "offense_std": 0.1888432210049528,
-    "defense_mean": 0.4487275873635513,
-    "defense_std": 0.3022731770011446
+    "offense_mean": 0.2676145369117269,
+    "offense_std": 0.21763467715821116,
+    "defense_mean": 0.07258899092809712,
+    "defense_std": 0.19731511321511555
   },
   {
     "team": "Fiji",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": 0.06086373507596333,
-    "offense_std": 0.21587398138185637,
-    "defense_mean": -0.03117991588852299,
-    "defense_std": 0.26423478981637677
+    "offense_mean": 0.14187030179126123,
+    "offense_std": 0.2796376360329088,
+    "defense_mean": 0.09479613878008766,
+    "defense_std": 0.19010780289882925
   },
   {
     "team": "South Africa",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": 0.014164507422414251,
-    "offense_std": 0.16255562965295797,
-    "defense_mean": 0.6883389568625284,
-    "defense_std": 0.3702123243678623
+    "offense_mean": 0.1294659706466114,
+    "offense_std": 0.20604604097202062,
+    "defense_mean": 0.4036710626032547,
+    "defense_std": 0.2282673802754295
   },
   {
-    "team": "Portugal",
+    "team": "Japan",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": 0.012537106304360446,
-    "offense_std": 0.22787258990572118,
-    "defense_mean": -0.08201878805810921,
-    "defense_std": 0.2417601999082694
+    "offense_mean": 0.12676564899173814,
+    "offense_std": 0.23501603701487173,
+    "defense_mean": -0.06283785178883025,
+    "defense_std": 0.1917735961043494
   },
   {
-    "team": "Italy",
+    "team": "Argentina",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.0038546156146043392,
-    "offense_std": 0.19964369184436334,
-    "defense_mean": -0.8330188619340436,
-    "defense_std": 0.180880029493648
+    "offense_mean": 0.11791246229256382,
+    "offense_std": 0.24339874581345394,
+    "defense_mean": 0.2915687721740631,
+    "defense_std": 0.21686410412677412
   },
   {
-    "team": "Australia",
+    "team": "Scotland",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.08562516056819192,
-    "offense_std": 0.2202783950257638,
-    "defense_mean": 0.0786667089528812,
-    "defense_std": 0.272977563948843
+    "offense_mean": 0.11089495304099897,
+    "offense_std": 0.1937686617714545,
+    "defense_mean": 0.17399736941889213,
+    "defense_std": 0.18422767351605981
   },
   {
     "team": "Tonga",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.09249185635377934,
-    "offense_std": 0.19581581500990713,
-    "defense_mean": -0.9252725177479522,
-    "defense_std": 0.18480140730262226
+    "offense_mean": 0.08355647524121705,
+    "offense_std": 0.2652709895105754,
+    "defense_mean": -0.3997187863214156,
+    "defense_std": 0.1637862995130724
   },
   {
-    "team": "Georgia",
+    "team": "France",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.14798671195467047,
-    "offense_std": 0.23429964789934352,
-    "defense_mean": -0.17455350298489924,
-    "defense_std": 0.2214330352622519
+    "offense_mean": -0.023753570438848688,
+    "offense_std": 0.16991445045930959,
+    "defense_mean": 0.36624795346344297,
+    "defense_std": 0.20370618051717748
   },
   {
-    "team": "Samoa",
+    "team": "England",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.17947269332163865,
-    "offense_std": 0.2179486985999542,
-    "defense_mean": 0.4422347664211795,
-    "defense_std": 0.32883119016827955
+    "offense_mean": -0.0331439850103647,
+    "offense_std": 0.20328555373917187,
+    "defense_mean": 0.49346124139027214,
+    "defense_std": 0.21776429229217642
   },
   {
     "team": "Uruguay",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.3014425825185944,
-    "offense_std": 0.2138581573847326,
-    "defense_mean": -0.49424478582059955,
-    "defense_std": 0.18612119332225724
+    "offense_mean": -0.06436929316441763,
+    "offense_std": 0.26559010091297736,
+    "defense_mean": -0.048677600031283325,
+    "defense_std": 0.15257026375217708
   },
   {
-    "team": "Romania",
+    "team": "Australia",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.3364945681133194,
-    "offense_std": 0.24899013607909684,
-    "defense_mean": -1.2922590082940952,
-    "defense_std": 0.17658347216251274
+    "offense_mean": -0.11177223707619101,
+    "offense_std": 0.25605881327959384,
+    "defense_mean": 0.11474716599512629,
+    "defense_std": 0.19153949616716476
+  },
+  {
+    "team": "Italy",
+    "season": "cup-2023",
+    "score_type": "conversions",
+    "offense_mean": -0.17567369727773458,
+    "offense_std": 0.2155489475059918,
+    "defense_mean": -0.3812990777525435,
+    "defense_std": 0.15411487111003647
+  },
+  {
+    "team": "Portugal",
+    "season": "cup-2023",
+    "score_type": "conversions",
+    "offense_mean": -0.21850866986777862,
+    "offense_std": 0.2540630951304998,
+    "defense_mean": 0.026771872464017323,
+    "defense_std": 0.2007535189146718
+  },
+  {
+    "team": "Samoa",
+    "season": "cup-2023",
+    "score_type": "conversions",
+    "offense_mean": -0.2564423664788996,
+    "offense_std": 0.2544963686094646,
+    "defense_mean": 0.33009216016921633,
+    "defense_std": 0.2027330035775682
+  },
+  {
+    "team": "Georgia",
+    "season": "cup-2023",
+    "score_type": "conversions",
+    "offense_mean": -0.35488942434678755,
+    "offense_std": 0.26832973774421237,
+    "defense_mean": 0.06757606719852897,
+    "defense_std": 0.1784919614866502
   },
   {
     "team": "Chile",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.36196423619674123,
-    "offense_std": 0.27929605367956223,
-    "defense_mean": -0.9966661693887986,
-    "defense_std": 0.17830259789498176
+    "offense_mean": -0.3914797821879865,
+    "offense_std": 0.28466870962671165,
+    "defense_mean": -0.6307469274320501,
+    "defense_std": 0.15995911985317007
+  },
+  {
+    "team": "Romania",
+    "season": "cup-2023",
+    "score_type": "conversions",
+    "offense_mean": -0.4353135989703826,
+    "offense_std": 0.2873279763025958,
+    "defense_mean": -0.8631477538698996,
+    "defense_std": 0.1474337016434169
   },
   {
     "team": "Namibia",
     "season": "cup-2023",
     "score_type": "conversions",
-    "offense_mean": -0.4516526634225339,
-    "offense_std": 0.2764503454203214,
-    "defense_mean": -1.012361362093473,
-    "defense_std": 0.16414546557223345
+    "offense_mean": -0.4495623344792978,
+    "offense_std": 0.3014086227214414,
+    "defense_mean": -0.5226089073301812,
+    "defense_std": 0.1446034874425839
   }
 ]

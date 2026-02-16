@@ -3,136 +3,837 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rugby Ranking Dashboard</title>
+    <title>Rugby Bayesian Rankings Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
+        .global-controls {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            padding: 1rem 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .stat-box {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .stat-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: #667eea;
-        }
-        .stat-label {
-            color: #666;
-            margin-top: 5px;
-        }
-        a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        
+        body {
+            padding-top: 0;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Rugby Ranking Dashboard</h1>
-        <p>Bayesian hierarchical model for rugby union player and team rankings</p>
-        <p id="last-update">Loading...</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bar-chart-line"></i> Rugby Bayesian Rankings
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#teams">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trends">Trends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#positions">Positions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#players">Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#matches">Matches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#predictions">Predictions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paths">Paths</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#squads">Squads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Global Controls - Fixed at Top -->
+    <div class="global-controls">
+        <div class="container-fluid">
+            <div class="row align-items-end g-2">
+                <div class="col-md-3">
+                    <label for="global-competition" class="form-label fw-bold mb-1">
+                        <i class="bi bi-trophy"></i> Competition
+                    </label>
+                    <select class="form-select form-select-sm" id="global-competition">
+                        <option value="">All Competitions</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="global-season" class="form-label fw-bold mb-1">
+                        <i class="bi bi-calendar3"></i> Season
+                    </label>
+                    <select class="form-select form-select-sm" id="global-season">
+                        <option value="">All Seasons</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="global-score-type" class="form-label fw-bold mb-1">
+                        <i class="bi bi-graph-up"></i> Score Type
+                    </label>
+                    <select class="form-select form-select-sm" id="global-score-type">
+                        <option value="tries">Tries</option>
+                        <option value="penalties">Penalties</option>
+                        <option value="conversions">Conversions</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="global-rank-limit" class="form-label fw-bold mb-1">
+                        <i class="bi bi-list-ol"></i> Show Top
+                    </label>
+                    <select class="form-select form-select-sm" id="global-rank-limit">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div class="col-md-3 text-end">
+                    <label class="form-label fw-bold mb-1">&nbsp;</label>
+                    <div>
+                        <button class="btn btn-primary btn-sm w-100" id="apply-filters">
+                            <i class="bi bi-arrow-repeat"></i> Apply Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>Dashboard Data</h2>
-        <p>This dashboard provides pre-computed JSON data for rugby analytics applications.</p>
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-speedometer2"></i> Dashboard Overview
+                    </h2>
+                    <p class="text-muted">Hierarchical Bayesian model with defensive effects for rugby rankings</p>
+                </div>
+            </div>
 
-        <h3>Available Datasets</h3>
-        <ul>
-            <li><a href="data/summary.json">Summary Statistics</a></li>
-            <li><a href="data/team_offense.json">Team Offensive Rankings</a></li>
-            <li><a href="data/team_defense.json">Team Defensive Rankings</a></li>
-            <li><a href="data/player_rankings.json">Player Rankings</a></li>
-            <li><a href="data/upcoming_predictions.json">Upcoming Match Predictions</a></li>
-            <li><a href="data/paths_to_victory.json">Paths to Victory Analysis</a></li>
-            <li><a href="data/squad_depth.json">Squad Depth Analysis</a></li>
-            <li><a href="data/matches_index.json">Match Index</a></li>
-            <li><a href="data/players.json">Player Profiles</a></li>
-        </ul>
+            <!-- Summary Cards -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <i class="bi bi-calendar3"></i> Seasons
+                            </h6>
+                            <h3 class="card-title" id="stat-seasons">-</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <i class="bi bi-trophy"></i> Matches
+                            </h6>
+                            <h3 class="card-title" id="stat-matches">-</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <i class="bi bi-shield-check"></i> Teams
+                            </h6>
+                            <h3 class="card-title" id="stat-teams">-</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <i class="bi bi-people"></i> Players
+                            </h6>
+                            <h3 class="card-title" id="stat-players">-</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h3>Competition Data</h3>
-        <p>League tables and season predictions are organized by competition and season:</p>
-        <ul>
-            <li>League Tables: <code>league_table_{competition}_{season}.json</code></li>
-            <li>Position Probabilities: <code>season_position_probs_{competition}_{season}.json</code></li>
-            <li>Playoff Probabilities: <code>season_playoff_probs_{competition}_{season}.json</code></li>
-            <li>Team Heatmaps: <code>team_heatmap_{competition}_{season}.json</code></li>
-        </ul>
-    </div>
+            <!-- Model Info -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info" role="alert">
+                        <h6 class="alert-heading"><i class="bi bi-info-circle"></i> Model Information</h6>
+                        <p class="mb-0">
+                            This dashboard presents results from a hierarchical Bayesian model that captures:
+                            <strong>player effects</strong> (intrinsic ability),
+                            <strong>team offensive effects</strong> (scoring ability),
+                            <strong>team defensive effects</strong> (opponent scoring prevention), and
+                            <strong>position effects</strong> (base rates by jersey number).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div id="stats-container"></div>
+        <!-- Heatmap Section -->
+        <section id="heatmap-section" class="mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            <i class="bi bi-grid-3x3-gap"></i> Team vs Team Heatmap
+                        </h2>
+                        <p class="text-muted">Use global controls above to select competition and season</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div id="heatmap-container"></div>
+                    </div>
+                </div>
+            </section>
 
-    <div class="card">
-        <h3>About</h3>
-        <p>This dashboard is powered by a Bayesian hierarchical model that tracks player and team performance across rugby union competitions. The model is updated weekly with new match data.</p>
-        <p>Data sources: URC/Celtic, Premiership, Top 14, European competitions, Six Nations</p>
-        <p><a href="https://github.com/transientlunatic/rugby-ranking">View on GitHub</a></p>
-    </div>
+        <!-- League Table Section -->
+        <section id="league-table-section" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-table"></i> League Table
+                    </h2>
+                    <p class="text-muted">Use global controls above to select competition and season</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="league-table">
+                            <thead>
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Team</th>
+                                    <th>Played</th>
+                                    <th>Won</th>
+                                    <th>Drawn</th>
+                                    <th>Lost</th>
+                                    <th>PF</th>
+                                    <th>PA</th>
+                                    <th>Diff</th>
+                                    <th>Tries For</th>
+                                    <th>Tries Against</th>
+                                    <th>Bonus</th>
+                                    <th>Match Pts</th>
+                                    <th>Total Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <script>
-        // Load summary data and display stats
-        fetch('data/summary.json')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('last-update').textContent =
-                    `Last updated: ${new Date(data.generated_at).toLocaleString()}`;
+        <!-- Season Prediction Section -->
+        <section id="season-prediction-section" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-bar-chart"></i> Season Prediction
+                    </h2>
+                    <p class="text-muted">Use global controls above to select competition and season</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="season-prediction-table">
+                            <thead>
+                                <tr>
+                                    <th>Team</th>
+                                    <th>Expected Points</th>
+                                    <th>Expected Wins</th>
+                                    <th>Expected Diff</th>
+                                    <th>Predicted Position</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                const statsHtml = `
-                    <div class="card">
-                        <h2>Data Coverage</h2>
-                        <div class="stats-grid">
-                            <div class="stat-box">
-                                <div class="stat-value">${data.total_matches.toLocaleString()}</div>
-                                <div class="stat-label">Matches</div>
+        <!-- Team Trends Section -->
+        <section id="trends" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-activity"></i> Team Strength Trends
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="trend-team" class="form-label">Team</label>
+                    <select class="form-select" id="trend-team">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="trend-score-type" class="form-label">Score Type</label>
+                    <select class="form-select" id="trend-score-type">
+                        <option value="tries">Tries</option>
+                        <option value="penalties">Penalties</option>
+                        <option value="conversions">Conversions</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="trend-metric" class="form-label">Metric</label>
+                    <select class="form-select" id="trend-metric">
+                        <option value="offense">Offense</option>
+                        <option value="defense">Defense</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div id="trend-chart"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finish Positions Section -->
+        <section id="positions" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-flag"></i> Final Finish Positions
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="position-competition" class="form-label">Competition</label>
+                    <select class="form-select" id="position-competition">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="position-season" class="form-label">Season (Optional)</label>
+                    <select class="form-select" id="position-season">
+                        <option value="">All Seasons</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div id="position-chart"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Rankings Section -->
+        <section id="teams" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-shield-check"></i> Team Rankings
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="season-select" class="form-label">Season</label>
+                    <select class="form-select" id="season-select">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="score-type-select" class="form-label">Score Type</label>
+                    <select class="form-select" id="score-type-select">
+                        <option value="tries">Tries</option>
+                        <option value="penalties">Penalties</option>
+                        <option value="conversions">Conversions</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="rank-limit" class="form-label">Show Top</label>
+                    <select class="form-select" id="rank-limit">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tabs for Offense/Defense -->
+            <ul class="nav nav-tabs mb-3" id="teamTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="offense-tab" data-bs-toggle="tab"
+                            data-bs-target="#offense-panel" type="button">
+                        <i class="bi bi-lightning"></i> Offensive Rankings
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="defense-tab" data-bs-toggle="tab"
+                            data-bs-target="#defense-panel" type="button">
+                        <i class="bi bi-shield"></i> Defensive Rankings
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="comparison-tab" data-bs-toggle="tab"
+                            data-bs-target="#comparison-panel" type="button">
+                        <i class="bi bi-graph-up"></i> Offense vs Defense
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="teamTabsContent">
+                <!-- Offensive Rankings -->
+                <div class="tab-pane fade show active" id="offense-panel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Top Offensive Teams</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="offense-chart"></div>
+                                </div>
                             </div>
-                            <div class="stat-box">
-                                <div class="stat-value">${data.total_players.toLocaleString()}</div>
-                                <div class="stat-label">Players</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-value">${data.total_teams}</div>
-                                <div class="stat-label">Teams</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-value">${data.seasons.length}</div>
-                                <div class="stat-label">Seasons</div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Rankings Table</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover" id="offense-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Rank</th>
+                                                    <th>Team</th>
+                                                    <th>Effect</th>
+                                                    <th>Uncertainty</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                `;
-                document.getElementById('stats-container').innerHTML = statsHtml;
-            })
-            .catch(err => console.error('Error loading summary:', err));
-    </script>
+                </div>
+
+                <!-- Defensive Rankings -->
+                <div class="tab-pane fade" id="defense-panel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Top Defensive Teams</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="defense-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Rankings Table</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover" id="defense-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Rank</th>
+                                                    <th>Team</th>
+                                                    <th>Effect</th>
+                                                    <th>Uncertainty</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offense vs Defense Comparison -->
+                <div class="tab-pane fade" id="comparison-panel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Team Offense vs Defense</h5>
+                            <small class="text-muted">Hover over points to see team names</small>
+                        </div>
+                        <div class="card-body">
+                            <div id="comparison-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Predictions Section -->
+        <section id="predictions" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-graph-up"></i> Upcoming Match Predictions
+                    </h2>
+                    <p class="text-muted">Predictions for upcoming fixtures across all competitions</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="prediction-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Home</th>
+                                    <th>Prediction</th>
+                                    <th>Away</th>
+                                    <th>Win Prob</th>
+                                    <th>Competition</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paths to Victory Section -->
+        <section id="paths" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-signpost-split"></i> Paths to Victory
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="paths-competition" class="form-label">Competition</label>
+                    <select class="form-select" id="paths-competition">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="paths-team" class="form-label">Team</label>
+                    <select class="form-select" id="paths-team">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <pre class="bg-light p-3" id="paths-narrative">No data available.</pre>
+                    <div class="table-responsive">
+                        <table class="table table-sm" id="paths-critical-games">
+                            <thead>
+                                <tr>
+                                    <th>Match</th>
+                                    <th>Mutual Information</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Squad Depth Section -->
+        <section id="squads" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-people-fill"></i> Squad Depth
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="squad-team" class="form-label">Team</label>
+                    <select class="form-select" id="squad-team">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="squad-season" class="form-label">Season</label>
+                    <select class="form-select" id="squad-season">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div id="squad-summary" class="mb-3 text-muted">No data available.</div>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="squad-table">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Top Players</th>
+                                    <th>Strength</th>
+                                    <th>Depth</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Player Rankings Section -->
+        <section id="players" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-people"></i> Player Rankings
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="player-score-type" class="form-label">Score Type</label>
+                    <select class="form-select" id="player-score-type">
+                        <option value="tries">Tries</option>
+                        <option value="penalties">Penalties</option>
+                        <option value="conversions">Conversions</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="player-search" class="form-label">Search Player</label>
+                    <input type="text" class="form-control" id="player-search"
+                           placeholder="Type to filter players...">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Top Players</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="player-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Player List</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-sm" id="player-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Player</th>
+                                            <th>Effect</th>
+                                            <th>95% CI</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section id="matches" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-trophy"></i> Recent Matches
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="match-season" class="form-label">Season</label>
+                    <select class="form-select" id="match-season">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="match-team" class="form-label">Filter by Team</label>
+                    <select class="form-select" id="match-team">
+                        <option value="">All Teams</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="match-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Home</th>
+                                    <th>Score</th>
+                                    <th>Away</th>
+                                    <th>Competition</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-info-circle"></i> About
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Model Description</h5>
+                            <p>
+                                This dashboard visualizes results from a hierarchical Bayesian model for rugby rankings.
+                                The model estimates:
+                            </p>
+                            <ul>
+                                <li><strong>Player Effects (β)</strong>: Intrinsic ability that follows players across teams</li>
+                                <li><strong>Team Offensive Effects (γ)</strong>: Team's ability to score points</li>
+                                <li><strong>Team Defensive Effects (δ)</strong>: Team's ability to prevent opponent scoring</li>
+                                <li><strong>Position Effects (θ)</strong>: Base scoring rates by jersey number</li>
+                                <li><strong>Home Advantage (η)</strong>: Boost for playing at home</li>
+                            </ul>
+
+                            <h5 class="mt-4">Model Structure</h5>
+                            <p>The log-linear predictor is:</p>
+                            <pre class="bg-light p-3"><code>log(λ) = α + β_player + γ_offense[team] - δ_defense[opponent]
+         + θ_position + η_home × is_home + log(minutes/80)</code></pre>
+
+                            <p>Where scoring events follow a Poisson distribution: <code>N_score ~ Poisson(λ)</code></p>
+
+                            <h5 class="mt-4">Technical Details</h5>
+                            <ul>
+                                <li><strong>Inference</strong>: Variational Inference (ADVI) with 50,000 iterations</li>
+                                <li><strong>Framework</strong>: PyMC for probabilistic programming</li>
+                                <li><strong>Data Source</strong>: Match-level data from multiple competitions</li>
+                                <li><strong>Update Frequency</strong>: Weekly (automated)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="bi bi-github"></i>
+                                    <a href="https://github.com/transientlunatic/rugby-ranking" target="_blank">
+                                        Model Repository
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-github"></i>
+                                    <a href="https://github.com/transientlunatic/Rugby-Data" target="_blank">
+                                        Data Repository
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                    <a href="https://github.com/transientlunatic/rugby-ranking/blob/main/DEFENSIVE_MINIBATCH_UPDATE.md" target="_blank">
+                                        Documentation
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <h5 class="mt-4">Last Updated</h5>
+                            <p id="last-updated" class="text-muted">-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">
+                Rugby Bayesian Rankings Dashboard |
+                Built with <a href="https://getbootstrap.com" class="text-white">Bootstrap</a> &
+                <a href="https://d3js.org" class="text-white">D3.js</a> |
+                Powered by <a href="https://www.pymc.io" class="text-white">PyMC</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/rugby_charts.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

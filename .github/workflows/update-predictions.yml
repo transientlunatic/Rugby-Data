@@ -52,11 +52,14 @@ jobs:
           from pathlib import Path
           from rugby_ranking.tools.export_dashboard_data import export_dashboard_data
 
-          # Use all available data (don't filter by 'recent_seasons_only' to avoid World Cup-only filtering)
+          # Use a large number of seasons to ensure we get all recent actual seasons
+          # (not just World Cups which sort alphabetically to the end)
+          # TODO: Fix export_dashboard_data in rugby-pymc to use date-based filtering
           export_dashboard_data(
               data_dir=Path('json'),
               output_dir=Path('dashboard/data'),
               checkpoint_name='weekly-model',
+              recent_seasons_only=50,  # Large enough to include all real seasons
           )
           "
 

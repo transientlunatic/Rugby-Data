@@ -104,12 +104,19 @@ jobs:
           dataset.load_json_files()
           df = dataset.to_dataframe(played_only=True)
 
-          # Filter to recent years (last 3 years of actual matches)
+          # Filter to recent years (last 3 years) but keep complete seasons
           cutoff_date = pd.Timestamp.now(tz='UTC') - timedelta(days=3*365)
           df['date'] = pd.to_datetime(df['date'], utc=True)
-          df = df[df['date'] >= cutoff_date].copy()
 
-          print(f'Training on matches since {cutoff_date.date()}')
+          # Find matches after cutoff to identify relevant seasons
+          recent_matches = df[df['date'] >= cutoff_date]
+          recent_seasons = recent_matches['season'].unique()
+
+          # Include ALL matches from those seasons (don't cut seasons in half)
+          df = df[df['season'].isin(recent_seasons)].copy()
+
+          print(f'Cutoff date: {cutoff_date.date()}')
+          print(f'Seasons included: {sorted(recent_seasons)}')
           print(f'Training on {len(df):,} observations')
           print(f'Date range: {df[\"date\"].min().date()} to {df[\"date\"].max().date()}')
 

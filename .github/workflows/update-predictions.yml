@@ -52,11 +52,11 @@ jobs:
           from pathlib import Path
           from rugby_ranking.tools.export_dashboard_data import export_dashboard_data
 
+          # Use all available data (don't filter by 'recent_seasons_only' to avoid World Cup-only filtering)
           export_dashboard_data(
               data_dir=Path('json'),
               output_dir=Path('dashboard/data'),
               checkpoint_name='weekly-model',
-              recent_seasons_only=3,
           )
           "
 

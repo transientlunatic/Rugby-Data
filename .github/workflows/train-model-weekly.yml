@@ -85,6 +85,8 @@ jobs:
           python -c "
           import sys
           from pathlib import Path
+          from datetime import datetime, timedelta
+          import pandas as pd
           sys.path.insert(0, str(Path.home() / '.local/lib/python3.11/site-packages'))
 
           from rugby_ranking.model.data import MatchDataset
@@ -96,11 +98,15 @@ jobs:
           dataset.load_json_files()
           df = dataset.to_dataframe(played_only=True)
 
-          # Filter recent seasons
-          seasons = sorted(df['season'].unique())
-          df = df[df['season'].isin(seasons[-3:])].copy()
+          # Filter to recent years (last 3 years of actual matches)
+          from datetime import datetime, timedelta
+          cutoff_date = datetime.now() - timedelta(days=3*365)
+          df['date'] = pd.to_datetime(df['date'])
+          df = df[df['date'] >= cutoff_date].copy()
 
+          print(f'Training on matches since {cutoff_date.date()}')
           print(f'Training on {len(df):,} observations')
+          print(f'Date range: {df[\"date\"].min().date()} to {df[\"date\"].max().date()}')
 
           # Build model
           config = ModelConfig(

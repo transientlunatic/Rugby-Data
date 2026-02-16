@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
     inputs:
       training-iterations:
-        description: 'VI iterations'
-        default: '10000'
+        description: 'VI iterations (default: 50000, matching train_model.py)'
+        default: '50000'
 
 jobs:
   train:
@@ -25,6 +25,7 @@ jobs:
       - name: Install rugby-ranking package
         run: |
           pip install --upgrade pip
+          pip install scikit-learn
           pip install git+https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-pymc.git
 
       - name: Download MCMC checkpoint from Release (if available)
@@ -109,26 +110,32 @@ jobs:
           model = RugbyModel(config)
           model.build_joint(df)
 
-          # Try to load previous checkpoint
+          # Configure inference (use 50k iterations as per train_model.py default)
+          vi_iterations = ${{ github.event.inputs.training-iterations || 50000 }}
+          inference_config = InferenceConfig(vi_n_iterations=vi_iterations)
+
+          # Try to load previous checkpoint and continue training
           try:
               fitter = ModelFitter.load('weekly-model', model)
               print('✓ Loaded previous checkpoint')
 
               # Continue training with warm-start
               if fitter._vi_approx is not None:
-                  print('✓ Continuing VI training with warm-start')
+                  print(f'✓ Continuing VI training with warm-start for {vi_iterations:,} additional iterations')
+                  # Update the inference config for continued training
+                  fitter.config = inference_config
                   trace = fitter.fit_vi(
                       warm_start=True,
                       n_samples=500,
                       verbose=True,
                   )
               else:
-                  print('⚠ No VI approximation, training fresh')
-                  fitter = ModelFitter(model, InferenceConfig(vi_n_iterations=${{ github.event.inputs.training-iterations || 10000 }}))
+                  print(f'⚠ No VI approximation, training fresh for {vi_iterations:,} iterations')
+                  fitter = ModelFitter(model, inference_config)
                   trace = fitter.fit_vi(n_samples=500, verbose=True)
-          except (FileNotFoundError, ValueError):
-              print('ℹ No previous checkpoint, training fresh')
-              fitter = ModelFitter(model, InferenceConfig(vi_n_iterations=${{ github.event.inputs.training-iterations || 10000 }}))
+          except (FileNotFoundError, ValueError) as e:
+              print(f'ℹ No previous checkpoint ({e}), training fresh for {vi_iterations:,} iterations')
+              fitter = ModelFitter(model, inference_config)
               trace = fitter.fit_vi(n_samples=500, verbose=True)
 
           # Save checkpoint
@@ -163,12 +170,14 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
 
           if [ "${{ steps.download-mcmc.outputs.found }}" = "true" ]; then
-            echo "**Starting point**: MCMC checkpoint from Release" >> $GITHUB_STEP_SUMMARY
-          elif [ -f ~/.cache/rugby_ranking/weekly-model/trace.nc ]; then
+            echo "**Starting point**: MCMC checkpoint from Release (warm-start)" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.download-vi.outcome }}" = "success" ]; then
             echo "**Starting point**: Previous VI checkpoint (warm-start)" >> $GITHUB_STEP_SUMMARY
           else
-            echo "**Starting point**: Fresh training" >> $GITHUB_STEP_SUMMARY
+            echo "**Starting point**: Fresh training (no checkpoint)" >> $GITHUB_STEP_SUMMARY
           fi
 
-          echo "**Iterations**: ${{ github.event.inputs.training-iterations || '10000' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**VI Iterations**: ${{ github.event.inputs.training-iterations || '50000' }}" >> $GITHUB_STEP_SUMMARY
           echo "**Saved as**: weekly-model" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "_Note: Weekly training uses 50k VI iterations by default (matching train_model.py)_" >> $GITHUB_STEP_SUMMARY

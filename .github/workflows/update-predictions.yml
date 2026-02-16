@@ -25,6 +25,7 @@ jobs:
       - name: Install rugby-ranking package
         run: |
           pip install --upgrade pip
+          pip install scikit-learn
           pip install git+https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/transientlunatic/rugby-pymc.git
 
       - name: Download model checkpoint

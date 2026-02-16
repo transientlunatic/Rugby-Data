@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-02-16T11:03:05.823187",
+  "seasons": [
+    "cup-2015",
+    "cup-2019",
+    "cup-2023"
+  ],
+  "total_matches": 118,
+  "total_teams": 23,
+  "total_players": 1443,
+  "competitions": [
+    "rugby-world"
+  ],
+  "model_config": {
+    "include_defense": true,
+    "separate_kicking_effect": true,
+    "defense_effect_sd": 0.3
+  }
+}

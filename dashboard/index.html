@@ -63,6 +63,9 @@
                         <a class="nav-link" href="#predictions">Predictions</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#bracket">Bracket</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#paths">Paths</a>
                     </li>
                     <li class="nav-item">
@@ -494,6 +497,43 @@
                             </thead>
                             <tbody></tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knockout Bracket Section -->
+        <section id="bracket" class="mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">
+                        <i class="bi bi-diagram-3"></i> Knockout Bracket
+                    </h2>
+                    <p class="text-muted">Tournament knockout stage predictions</p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="bracket-competition" class="form-label">Competition</label>
+                    <select class="form-select" id="bracket-competition">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="bracket-season" class="form-label">Season</label>
+                    <select class="form-select" id="bracket-season">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div id="bracket-container">
+                        <div class="text-muted text-center py-5">
+                            Select a competition and season with knockout fixtures
+                        </div>
                     </div>
                 </div>
             </div>

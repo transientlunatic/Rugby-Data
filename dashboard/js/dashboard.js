@@ -16,6 +16,7 @@ const state = {
     leagueTableData: {},
     seasonPredictionData: {},
     heatmapData: {},
+    bracketData: {},
     selectedCompetition: null,  // Global competition filter
     selectedLeagueTableCompetition: null,
     selectedLeagueTableSeason: null,
@@ -23,6 +24,8 @@ const state = {
     selectedSeasonPredictionSeason: null,
     selectedHeatmapCompetition: null,
     selectedHeatmapSeason: null,
+    selectedBracketCompetition: null,
+    selectedBracketSeason: null,
     selectedSeason: null,
     selectedScoreType: 'tries',
     selectedRankLimit: 20
@@ -40,7 +43,8 @@ const loadedSections = {
     paths: false,
     squads: false,
     heatmaps: false,
-    leagueTables: false
+    leagueTables: false,
+    bracket: false
 };
 
 // Heatmap rendering with D3
@@ -505,7 +509,7 @@ function initializeDashboard() {
     // Load core data for overview section
     loadCoreData().then(() => {
         populateGlobalControls();
-        updateTeamRankings();  // Show initial overview data
+        updateAllVisualizations();  // Show initial overview data
     });
 }
 
@@ -577,6 +581,12 @@ async function handleSectionNavigation() {
             await loadSquadsData();
             populateSquadSelects();
             updateSquadDepth();
+            break;
+
+        case 'bracket':
+            await loadBracketData();
+            populateBracketSelects();
+            updateBracket();
             break;
 
         default:
@@ -656,6 +666,194 @@ function populateGlobalControls() {
         state.selectedSeasonPredictionSeason = latestSeason;
         state.selectedHeatmapSeason = latestSeason;
     }
+}
+
+// Lazy load bracket data
+async function loadBracketData() {
+    if (loadedSections.bracket) return;
+
+    showSectionLoader('bracket');
+
+    try {
+        const dataDir = 'data/';
+        const competitions = state.summary.competitions || [];
+        const seasons = state.summary.seasons || [];
+
+        state.bracketData = {};
+
+        for (const comp of competitions) {
+            for (const season of seasons) {
+                const file = `${dataDir}knockout_bracket_${comp}_${season}.json`;
+                const data = await loadJsonSafe(file, null);
+                if (data && data.matches && data.matches.length > 0) {
+                    state.bracketData[`${comp}_${season}`] = data;
+                }
+            }
+        }
+
+        loadedSections.bracket = true;
+    } catch (error) {
+        console.error('Error loading bracket data:', error);
+    } finally {
+        hideSectionLoader('bracket');
+    }
+}
+
+function populateBracketSelects() {
+    const compSelect = document.getElementById('bracket-competition');
+    const seasonSelect = document.getElementById('bracket-season');
+    if (!compSelect || !seasonSelect) return;
+
+    const keys = Object.keys(state.bracketData);
+    if (keys.length === 0) {
+        compSelect.innerHTML = '<option value="">No knockout tournaments available</option>';
+        seasonSelect.innerHTML = '<option value="">No data</option>';
+        return;
+    }
+
+    const competitions = [...new Set(keys.map(k => k.split('_')[0]))];
+    const seasons = state.summary.seasons || [];
+
+    compSelect.innerHTML = '<option value="">Select...</option>' +
+        competitions.map(c => `<option value="${c}">${c}</option>`).join('');
+    seasonSelect.innerHTML = '<option value="">Select...</option>' +
+        seasons.map(s => `<option value="${s}">${s}</option>`).join('');
+
+    // Set defaults to first available
+    state.selectedBracketCompetition = competitions[0] || '';
+    state.selectedBracketSeason = seasons[seasons.length - 1] || '';
+
+    compSelect.value = state.selectedBracketCompetition;
+    seasonSelect.value = state.selectedBracketSeason;
+
+    // Add event listeners
+    compSelect.addEventListener('change', (e) => {
+        state.selectedBracketCompetition = e.target.value;
+        updateBracket();
+    });
+
+    seasonSelect.addEventListener('change', (e) => {
+        state.selectedBracketSeason = e.target.value;
+        updateBracket();
+    });
+}
+
+function updateBracket() {
+    const container = document.getElementById('bracket-container');
+    if (!container) return;
+
+    const comp = state.selectedBracketCompetition;
+    const season = state.selectedBracketSeason;
+
+    if (!comp || !season) {
+        container.innerHTML = '<div class="text-muted text-center py-5">Select competition and season</div>';
+        return;
+    }
+
+    const key = `${comp}_${season}`;
+    const bracketData = state.bracketData[key];
+
+    if (!bracketData || !bracketData.matches || bracketData.matches.length === 0) {
+        container.innerHTML = '<div class="text-muted text-center py-5">No knockout fixtures for this selection</div>';
+        return;
+    }
+
+    // Render bracket as a list for now (can enhance with visual bracket later)
+    let html = '';
+
+    if (bracketData.note) {
+        html += `<div class="alert alert-info mb-3">${bracketData.note}</div>`;
+    }
+
+    // Group matches by round
+    const byRound = {};
+    for (const match of bracketData.matches) {
+        const roundType = match.round_type || 'knockout';
+        if (!byRound[roundType]) {
+            byRound[roundType] = [];
+        }
+        byRound[roundType].push(match);
+    }
+
+    // Render each round
+    const roundOrder = ['round_of_16', 'quarterfinal', 'semifinal', 'third_place', 'final'];
+    const roundNames = {
+        'round_of_16': 'Round of 16',
+        'quarterfinal': 'Quarterfinals',
+        'semifinal': 'Semifinals',
+        'third_place': 'Third Place',
+        'final': 'Final',
+        'knockout': 'Knockout'
+    };
+
+    for (const round of roundOrder) {
+        if (byRound[round]) {
+            html += `<h5 class="mt-4 mb-3">${roundNames[round] || round}</h5>`;
+            html += '<div class="row g-3">';
+
+            for (const match of byRound[round]) {
+                const isTBC = match.home_team.includes('TBC') || match.away_team.includes('TBC');
+                const cardClass = isTBC ? 'border-warning' : 'border-primary';
+                const dateStr = match.date ? new Date(match.date).toLocaleDateString() : 'TBD';
+
+                html += `
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card ${cardClass} h-100">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <strong>${match.home_team}</strong>
+                                    <div class="text-muted my-2">vs</div>
+                                    <strong>${match.away_team}</strong>
+                                </div>
+                                <div class="text-muted text-center mt-2 small">
+                                    ${dateStr}
+                                    ${match.stadium ? `<br>${match.stadium}` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            html += '</div>';
+        }
+    }
+
+    // Handle any other rounds not in the standard order
+    for (const round in byRound) {
+        if (!roundOrder.includes(round)) {
+            html += `<h5 class="mt-4 mb-3">${roundNames[round] || round}</h5>`;
+            html += '<div class="row g-3">';
+
+            for (const match of byRound[round]) {
+                const isTBC = match.home_team.includes('TBC') || match.away_team.includes('TBC');
+                const cardClass = isTBC ? 'border-warning' : 'border-primary';
+                const dateStr = match.date ? new Date(match.date).toLocaleDateString() : 'TBD';
+
+                html += `
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card ${cardClass} h-100">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <strong>${match.home_team}</strong>
+                                    <div class="text-muted my-2">vs</div>
+                                    <strong>${match.away_team}</strong>
+                                </div>
+                                <div class="text-muted text-center mt-2 small">
+                                    ${dateStr}
+                                    ${match.stadium ? `<br>${match.stadium}` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            html += '</div>';
+        }
+    }
+
+    container.innerHTML = html;
 }
 
 // Setup event listeners

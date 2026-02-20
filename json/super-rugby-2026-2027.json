@@ -268,7 +268,6 @@
       ]
     },
     "stadium": "2026 Super Rugby Pacific season|2026 season, 2026 Super Rugby Pacific season",
-    "attendance": 20000,
     "referee": "Ben O'Keeffe"
   },
   {
@@ -364,23 +363,148 @@
     "date": "2026-02-20T19:05:00",
     "home": {
       "team": "Hurricanes",
-      "score": null
+      "score": 52,
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Fehi Fineanganofo",
+          "value": 5
+        },
+        {
+          "minute": 17,
+          "type": "Try",
+          "player": "Josh Moorby",
+          "value": 5
+        },
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Fehi Fineanganofo",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Try",
+          "player": "Josh Moorby",
+          "value": 5
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Josh Moorby",
+          "value": 5
+        },
+        {
+          "minute": 62,
+          "type": "Try",
+          "player": "Brayden Iose",
+          "value": 5
+        },
+        {
+          "minute": 74,
+          "type": "Try",
+          "player": "Brayden Iose",
+          "value": 5
+        },
+        {
+          "minute": 78,
+          "type": "Try",
+          "player": "Billy Proctor",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Moana Pasifika",
-      "score": null
-    }
+      "score": 10,
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Tuna Tuitama",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Try",
+          "player": "Patrick Pellegrini",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Angus Gardner"
   },
   {
     "date": "2026-02-20T19:35:00",
     "home": {
       "team": "Waratahs",
-      "score": null
+      "score": 36,
+      "scores": [
+        {
+          "minute": 10,
+          "type": "Try",
+          "player": "Charlie Gamble",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Try",
+          "player": "Max Jorgensen",
+          "value": 5
+        },
+        {
+          "minute": 50,
+          "type": "Try",
+          "player": "Ioane Moananu",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Try",
+          "player": "Angus Blyth",
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Ioane Moananu",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Max Jorgensen",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Drua",
-      "score": null
-    }
+      "score": 13,
+      "scores": [
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Taniela Rakuro",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        },
+        {
+          "minute": 45,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        }
+      ]
+    },
+    "attendance": 13578,
+    "referee": "Nic Berry"
   },
   {
     "date": "2026-02-21T19:05:00",

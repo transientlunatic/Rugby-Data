@@ -372,7 +372,8 @@ def predict(competition, season, model_path, data_dir, n_simulations, output,
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining")
+    n_played = len(played_matches) // 2  # league table format has 2 rows per match
+    click.echo(f"Found {n_played} played, {len(remaining_fixtures)} remaining")
 
     # Handle edge case: no matches found
     if len(played_matches) == 0 and len(remaining_fixtures) == 0:
@@ -664,7 +665,7 @@ def tournament_predict(competition, season, model_path, data_dir, n_simulations,
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining")
+    click.echo(f"Found {len(played_matches) // 2} played, {len(remaining_fixtures)} remaining")
 
     # Handle edge cases
     if len(played_matches) == 0 and len(remaining_fixtures) == 0:
@@ -830,7 +831,7 @@ def paths_to_victory(competition, season, team, target_position, model_path, dat
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining")
+    click.echo(f"Found {len(played_matches) // 2} played, {len(remaining_fixtures)} remaining")
 
     if len(remaining_fixtures) == 0:
         click.echo("\nAll matches have been played - no paths analysis needed!", err=True)
@@ -1014,7 +1015,7 @@ def critical_games(competition, season, model_path, data_dir, n_simulations, top
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining")
+    click.echo(f"Found {len(played_matches) // 2} played, {len(remaining_fixtures)} remaining")
 
     if len(remaining_fixtures) == 0:
         click.echo("\nAll matches have been played - no critical games to analyze!", err=True)
@@ -1149,7 +1150,7 @@ def season_standings(competition, season, model_path, data_dir, n_simulations, o
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining", err=True)
+    click.echo(f"Found {len(played_matches) // 2} played, {len(remaining_fixtures)} remaining", err=True)
 
     if len(played_matches) == 0 and len(remaining_fixtures) == 0:
         click.echo(f"\nNo matches found for {competition} {season}", err=True)
@@ -1369,7 +1370,7 @@ def playoff_bracket(competition, season, model_path, data_dir, n_simulations,
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining", err=True)
+    click.echo(f"Found {len(played_matches) // 2} played, {len(remaining_fixtures)} remaining", err=True)
 
     if len(played_matches) == 0 and len(remaining_fixtures) == 0:
         click.echo(f"\nNo matches found for {competition} {season}", err=True)
@@ -1661,7 +1662,7 @@ def knockout_predict(competition, season, model_path, data_dir,
         click.echo(f"Error preparing season data: {e}", err=True)
         sys.exit(1)
 
-    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining")
+    click.echo(f"Found {len(played_matches) // 2} played, {len(remaining_fixtures)} remaining")
 
     # Run pool/league stage prediction
     click.echo(f"\nSimulating pool/league stage...")

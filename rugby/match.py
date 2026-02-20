@@ -59,7 +59,7 @@ class Match(object):
             self.tournament = None
             
         # Handle the lineups
-        if "lineup" in row['home']:
+        if "lineup" in row['home'] and "lineup" in row['away']:
             self.lineups = {'home': Lineup(row['home']['lineup']),
                             'away': Lineup(row['away']['lineup'])
             }

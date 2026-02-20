@@ -1070,6 +1070,448 @@ def critical_games(competition, season, model_path, data_dir, n_simulations, top
             click.echo(f"{i+1:2}. {home:15} vs {away:15}  [Impact: {impact:.3f}]{date_str}")
 
 
+@analysis.command(name='season-standings')
+@click.option('--competition', '-c', default='six-nations', help='Competition name')
+@click.option('--season', '-s', default='2025-2026', help='Season')
+@click.option('--model-path', '-m', type=click.Path(), help='Path to trained model checkpoint')
+@click.option('--data-dir', '-d', type=click.Path(exists=True), help='Data directory')
+@click.option('--n-simulations', '-n', default=1000, type=int, help='Number of Monte Carlo simulations')
+@click.option('--format', 'output_format', type=click.Choice(['markdown', 'json']),
+              default='markdown', help='Output format')
+@click.option('--output', '-o', type=click.Path(), help='Output file')
+def season_standings(competition, season, model_path, data_dir, n_simulations, output_format, output):
+    """Show position probability table for a league season (requires rugby-ranking).
+
+    Outputs a table showing the probability of each team finishing in each
+    position, highlighting the most likely finishing position for each team.
+
+    Examples:
+        rugby analysis season-standings -c six-nations -s 2025-2026
+        rugby analysis season-standings -c celtic -s 2025-2026 -n 5000
+    """
+    if not check_rugby_ranking_available():
+        click.echo("Error: rugby-ranking package is required for season standings.", err=True)
+        sys.exit(1)
+
+    from rugby_ranking.model.season_predictor import SeasonPredictor
+    from rugby_ranking.model.predictions import MatchPredictor
+    from rugby_ranking.model.core import RugbyModel
+    from rugby_ranking.model.data import MatchDataset
+    from rugby_ranking.model.data_utils import prepare_season_data
+    from rugby_ranking.model.inference import ModelFitter
+
+    # Competition name aliases (URC files are named 'celtic')
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    competition = COMPETITION_ALIASES.get(competition, competition)
+
+    BONUS_RULES_MAP = {
+        'six-nations': 'urc',
+        'premiership': 'premiership',
+        'top14': 'top14',
+        'celtic': 'urc',
+        'urc': 'urc',
+    }
+    bonus_rules = BONUS_RULES_MAP.get(competition, 'urc')
+
+    if not data_dir:
+        data_dir = str(find_data_dir())
+
+    if not model_path:
+        checkpoint_name = 'international-mini5'
+    else:
+        model_path = Path(model_path)
+        checkpoint_name = model_path.parent.name if model_path.name == 'trace.nc' else model_path.stem
+
+    click.echo(f"Computing position probabilities for {competition} {season}...", err=True)
+    click.echo(f"Simulations: {n_simulations}", err=True)
+
+    data_dir = Path(data_dir)
+
+    try:
+        dataset = MatchDataset(data_dir, fuzzy_match_names=False)
+        dataset.load_json_files()
+
+        click.echo(f"Loading model from checkpoint: {checkpoint_name}", err=True)
+        model = RugbyModel()
+        fitter = ModelFitter.load(checkpoint_name, model)
+        trace = fitter.trace
+    except Exception as e:
+        click.echo(f"Error loading dataset/model: {e}", err=True)
+        sys.exit(1)
+
+    try:
+        played_matches, remaining_fixtures = prepare_season_data(
+            dataset, season=season, competition=competition, include_tries=True
+        )
+    except Exception as e:
+        click.echo(f"Error preparing season data: {e}", err=True)
+        sys.exit(1)
+
+    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining", err=True)
+
+    if len(played_matches) == 0 and len(remaining_fixtures) == 0:
+        click.echo(f"\nNo matches found for {competition} {season}", err=True)
+        sys.exit(1)
+
+    click.echo(f"Running {n_simulations} simulations...", err=True)
+
+    match_predictor = MatchPredictor(model, trace)
+    season_predictor = SeasonPredictor(match_predictor, competition=bonus_rules)
+
+    prediction = season_predictor.predict_season(
+        played_matches=played_matches,
+        remaining_fixtures=remaining_fixtures,
+        season=season,
+        n_simulations=n_simulations,
+        return_samples=False,
+    )
+
+    pos_probs = prediction.position_probabilities
+    if pos_probs is None:
+        click.echo("Error: Position probabilities not available for this prediction.", err=True)
+        sys.exit(1)
+
+    # Normalise: ensure teams are in the index (not a column)
+    if 'team' in pos_probs.columns:
+        pos_probs = pos_probs.set_index('team')
+
+    # Extract position columns (e.g. 'P(pos 1)', 'P(pos 2)', ...)
+    pos_cols = [c for c in pos_probs.columns if c.startswith('P(pos ')]
+    pos_cols_sorted = sorted(pos_cols, key=lambda c: int(c.split('P(pos ')[1].rstrip(')')))
+    n_positions = len(pos_cols_sorted)
+
+    if output_format == 'json':
+        result = {
+            'competition': competition,
+            'season': season,
+            'position_probabilities': pos_probs[pos_cols_sorted + ['most_likely_position']].to_dict(orient='index')
+        }
+        text = json.dumps(result, indent=2)
+        if output:
+            with open(output, 'w') as f:
+                f.write(text)
+            click.echo(f"Results saved to {output}", err=True)
+        else:
+            click.echo(text)
+        return
+
+    # Build ordinal labels: 1st, 2nd, 3rd, 4th, ...
+    def ordinal(n):
+        if 11 <= n <= 13:
+            return f"{n}th"
+        return f"{n}{['th','st','nd','rd','th','th','th','th','th','th'][n % 10]}"
+
+    position_labels = [ordinal(i + 1) for i in range(n_positions)]
+
+    # Build markdown table
+    col_width = 7  # width of each position column
+    team_width = max(len(t) for t in pos_probs.index) + 2
+
+    header_cells = [f"{'Team':<{team_width}}"]
+    for lbl in position_labels:
+        header_cells.append(f"{lbl:^{col_width}}")
+    header_cells.append(f"{'Most likely':^{col_width + 4}}")
+    header_line = "| " + " | ".join(header_cells) + " |"
+
+    sep_cells = ["-" * team_width]
+    for _ in position_labels:
+        sep_cells.append("-" * col_width + ":")
+    sep_cells.append("-" * (col_width + 4) + ":")
+    sep_line = "| " + " | ".join(sep_cells) + " |"
+
+    lines = [
+        f"\n**Position probabilities — {competition.upper()} {season}**\n",
+        header_line,
+        sep_line,
+    ]
+
+    # Sort teams by most likely position, then by probability of that position
+    def sort_key(team):
+        most_likely = pos_probs.loc[team, 'most_likely_position'] \
+            if 'most_likely_position' in pos_probs.columns else 0
+        best_col = f"P(pos {most_likely})"
+        best_prob = pos_probs.loc[team, best_col] if best_col in pos_probs.columns else 0.0
+        return (most_likely, -best_prob)
+
+    teams_sorted = sorted(pos_probs.index, key=sort_key)
+
+    for team in teams_sorted:
+        most_likely = pos_probs.loc[team, 'most_likely_position'] \
+            if 'most_likely_position' in pos_probs.columns else None
+
+        row_cells = [f"{team:<{team_width}}"]
+        for i, col in enumerate(pos_cols_sorted):
+            pct = pos_probs.loc[team, col] * 100
+            pos_num = i + 1
+            cell_str = f"{pct:.0f}%" if pct >= 0.5 else "<1%"
+            if pos_num == most_likely:
+                cell_str = f"**{cell_str}**"
+            row_cells.append(f"{cell_str:^{col_width}}")
+
+        ml_label = ordinal(most_likely) if most_likely else "?"
+        row_cells.append(f"{'**' + ml_label + '**':^{col_width + 4}}")
+        lines.append("| " + " | ".join(row_cells) + " |")
+
+    table = "\n".join(lines) + "\n"
+
+    if output:
+        with open(output, 'w') as f:
+            f.write(table)
+        click.echo(f"Results saved to {output}", err=True)
+    else:
+        click.echo(table)
+
+
+@analysis.command(name='playoff-bracket')
+@click.option('--competition', '-c', required=True, help='Competition name (urc, celtic, champions-cup, world-cup)')
+@click.option('--season', '-s', default='2025-2026', help='Season')
+@click.option('--model-path', '-m', type=click.Path(), help='Path to trained model checkpoint')
+@click.option('--data-dir', '-d', type=click.Path(exists=True), help='Data directory')
+@click.option('--n-simulations', '-n', default=5000, type=int, help='Number of Monte Carlo simulations')
+@click.option('--top-matchups', type=int, default=5, help='Most likely matchups to show per stage')
+@click.option('--format', 'output_format', type=click.Choice(['markdown', 'json']),
+              default='markdown', help='Output format')
+@click.option('--output', '-o', type=click.Path(), help='Output file')
+def playoff_bracket(competition, season, model_path, data_dir, n_simulations,
+                    top_matchups, output_format, output):
+    """Show likely playoff bracket with matchup probabilities (requires rugby-ranking).
+
+    Runs a full league + knockout simulation and renders the most probable
+    matchups at each stage, together with team qualification probabilities
+    and tournament winner odds.
+
+    Examples:
+        rugby analysis playoff-bracket -c urc -s 2025-2026
+        rugby analysis playoff-bracket -c celtic -s 2025-2026 -n 10000
+        rugby analysis playoff-bracket -c champions-cup -s 2024-2025
+    """
+    if not check_rugby_ranking_available():
+        click.echo("Error: rugby-ranking package is required for playoff bracket.", err=True)
+        sys.exit(1)
+
+    from rugby_ranking.model.season_predictor import SeasonPredictor
+    from rugby_ranking.model.predictions import MatchPredictor
+    from rugby_ranking.model.core import RugbyModel
+    from rugby_ranking.model.data import MatchDataset
+    from rugby_ranking.model.data_utils import prepare_season_data
+    from rugby_ranking.model.inference import ModelFitter
+    from rugby_ranking.model.knockout_forecast import (
+        TournamentTreeSimulator,
+        URCPlayoffBracket,
+        WorldCupBracket,
+        ChampionsCupBracket,
+    )
+
+    COMPETITION_ALIASES = {
+        'urc': 'celtic',
+    }
+    data_competition = COMPETITION_ALIASES.get(competition, competition)
+
+    BRACKET_MAP = {
+        'urc':           URCPlayoffBracket(),
+        'celtic':        URCPlayoffBracket(),
+        'world-cup':     WorldCupBracket(),
+        'champions-cup': ChampionsCupBracket(),
+    }
+    bracket = BRACKET_MAP.get(competition)
+    if not bracket:
+        # Attempt to infer from name
+        comp_lower = competition.lower()
+        if 'world' in comp_lower:
+            bracket = WorldCupBracket()
+        elif 'champions' in comp_lower or 'euro' in comp_lower:
+            bracket = ChampionsCupBracket()
+        else:
+            bracket = URCPlayoffBracket()
+
+    BONUS_RULES_MAP = {
+        'six-nations': 'urc',
+        'premiership': 'premiership',
+        'top14': 'top14',
+        'celtic': 'urc',
+        'urc': 'urc',
+    }
+    bonus_rules = BONUS_RULES_MAP.get(data_competition, 'urc')
+
+    if not data_dir:
+        data_dir = str(find_data_dir())
+
+    if not model_path:
+        checkpoint_name = 'international-mini5'
+    else:
+        model_path = Path(model_path)
+        checkpoint_name = model_path.parent.name if model_path.name == 'trace.nc' else model_path.stem
+
+    click.echo(f"Simulating playoff bracket for {competition} {season}...", err=True)
+    click.echo(f"Simulations: {n_simulations}", err=True)
+
+    data_dir = Path(data_dir)
+
+    try:
+        dataset = MatchDataset(data_dir, fuzzy_match_names=False)
+        dataset.load_json_files()
+
+        click.echo(f"Loading model from checkpoint: {checkpoint_name}", err=True)
+        model = RugbyModel()
+        fitter = ModelFitter.load(checkpoint_name, model)
+        trace = fitter.trace
+    except Exception as e:
+        click.echo(f"Error loading dataset/model: {e}", err=True)
+        sys.exit(1)
+
+    try:
+        played_matches, remaining_fixtures = prepare_season_data(
+            dataset, season=season, competition=data_competition, include_tries=True
+        )
+    except Exception as e:
+        click.echo(f"Error preparing season data: {e}", err=True)
+        sys.exit(1)
+
+    click.echo(f"Found {len(played_matches)} played, {len(remaining_fixtures)} remaining", err=True)
+
+    if len(played_matches) == 0 and len(remaining_fixtures) == 0:
+        click.echo(f"\nNo matches found for {competition} {season}", err=True)
+        sys.exit(1)
+
+    # Filter out TBC playoff fixtures - pool stage only
+    if 'home_team' in remaining_fixtures.columns:
+        league_fixtures = remaining_fixtures[
+            ~remaining_fixtures['home_team'].str.contains('TBC', case=False, na=False) &
+            ~remaining_fixtures['away_team'].str.contains('TBC', case=False, na=False)
+        ].copy()
+    else:
+        league_fixtures = remaining_fixtures.copy()
+
+    click.echo("Simulating league stage...", err=True)
+    match_predictor = MatchPredictor(model, trace)
+    season_predictor = SeasonPredictor(match_predictor, competition=bonus_rules)
+
+    pool_prediction = season_predictor.predict_season(
+        played_matches=played_matches,
+        remaining_fixtures=league_fixtures,
+        season=season,
+        n_simulations=n_simulations,
+        return_samples=False,
+    )
+
+    click.echo("Simulating knockout stages...", err=True)
+    knockout_simulator = TournamentTreeSimulator(
+        match_predictor=match_predictor,
+        bracket_structure=bracket,
+        season=season,
+    )
+
+    forecast = knockout_simulator.simulate_knockout(
+        pool_position_probabilities=pool_prediction.position_probabilities,
+        n_simulations=n_simulations,
+        pool_standings=pool_prediction.current_standings,
+    )
+
+    if output_format == 'json':
+        result = {
+            'competition': competition,
+            'season': season,
+            'bracket': bracket.name,
+            'stages': [
+                {
+                    'stage': stage.stage,
+                    'team_probabilities': stage.team_probabilities,
+                    'top_matchups': [
+                        {'home': home, 'away': away, 'probability': prob}
+                        for (home, away), prob in sorted(
+                            stage.matchup_probabilities.items(),
+                            key=lambda x: x[1], reverse=True
+                        )[:top_matchups]
+                    ],
+                }
+                for stage in forecast.knockout_stages
+            ],
+            'winner_probabilities': forecast.winner_probabilities,
+            'runner_up_probabilities': forecast.runner_up_probabilities,
+        }
+        text = json.dumps(result, indent=2)
+        if output:
+            with open(output, 'w') as f:
+                f.write(text)
+            click.echo(f"Results saved to {output}", err=True)
+        else:
+            click.echo(text)
+        return
+
+    # --- Markdown rendering ---
+    team_width = max(
+        (len(t) for stage in forecast.knockout_stages
+         for t in stage.team_probabilities),
+        default=15
+    ) + 2
+
+    lines = [f"\n**{bracket.name} — {season}**\n"]
+
+    for stage_result in forecast.knockout_stages:
+        stage_label = {
+            'R16': 'Round of 16',
+            'QF': 'Quarter-Finals',
+            'SF': 'Semi-Finals',
+            'Bronze': 'Bronze Final (3rd place)',
+            'Final': 'Final',
+        }.get(stage_result.stage, stage_result.stage)
+
+        lines.append(f"### {stage_label}\n")
+
+        # Most likely matchups
+        sorted_matchups = sorted(
+            stage_result.matchup_probabilities.items(),
+            key=lambda x: x[1], reverse=True
+        )[:top_matchups]
+
+        if sorted_matchups:
+            lines.append(f"| {'Home':<{team_width}} | {'Away':<{team_width}} | {'Prob':>6} |")
+            lines.append(f"| {'-'*team_width} | {'-'*team_width} | {'------':>6} |")
+            for (home, away), prob in sorted_matchups:
+                lines.append(
+                    f"| {home:<{team_width}} | {away:<{team_width}} | {prob:>5.0%} |"
+                )
+            lines.append("")
+
+        # Team qualification probabilities
+        sorted_teams = sorted(
+            stage_result.team_probabilities.items(),
+            key=lambda x: x[1], reverse=True
+        )
+        lines.append(f"| {'Team':<{team_width}} | {'P(qualify)':>10} |")
+        lines.append(f"| {'-'*team_width} | {'----------':>10} |")
+        for team, prob in sorted_teams:
+            prob_str = f"**{prob:.0%}**" if prob == max(stage_result.team_probabilities.values()) else f"{prob:.0%}"
+            lines.append(f"| {team:<{team_width}} | {prob_str:>10} |")
+        lines.append("")
+
+    # Tournament winner table
+    lines.append("### Tournament winner\n")
+    sorted_winners = sorted(
+        forecast.winner_probabilities.items(),
+        key=lambda x: x[1], reverse=True
+    )
+    lines.append(f"| {'Team':<{team_width}} | {'P(win)':>8} | {'P(final)':>9} |")
+    lines.append(f"| {'-'*team_width} | {'--------':>8} | {'---------':>9} |")
+    max_win_prob = sorted_winners[0][1] if sorted_winners else 0
+    for team, win_prob in sorted_winners:
+        runner_up_prob = forecast.runner_up_probabilities.get(team, 0.0)
+        final_prob = win_prob + runner_up_prob
+        win_str = f"**{win_prob:.0%}**" if win_prob == max_win_prob else f"{win_prob:.0%}"
+        lines.append(f"| {team:<{team_width}} | {win_str:>8} | {final_prob:>9.0%} |")
+
+    table = "\n".join(lines) + "\n"
+
+    if output:
+        with open(output, 'w') as f:
+            f.write(table)
+        click.echo(f"Results saved to {output}", err=True)
+    else:
+        click.echo(table)
+
+
 @analysis.command(name='export-dashboard')
 @click.option('--data-dir', '-d', type=click.Path(exists=True), default=None,
               help='Rugby-Data json/ directory (default: auto-detect)')

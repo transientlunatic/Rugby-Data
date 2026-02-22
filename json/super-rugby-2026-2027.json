@@ -510,34 +510,249 @@
     "date": "2026-02-21T19:05:00",
     "home": {
       "team": "Highlanders",
-      "score": null
+      "score": 23,
+      "scores": [
+        {
+          "minute": 3,
+          "type": "Try",
+          "player": "Jona Nareki",
+          "value": 5
+        },
+        {
+          "minute": 42,
+          "type": "Penalty",
+          "player": "Cam Millar",
+          "value": 3
+        },
+        {
+          "minute": 45,
+          "type": "Penalty",
+          "player": "Cam Millar",
+          "value": 3
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Caleb Tangitau",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Veveni Lasaqa",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Chiefs",
-      "score": null
-    }
+      "score": 26,
+      "scores": [
+        {
+          "minute": 8,
+          "type": "Try",
+          "player": "Samisoni Taukei'aho",
+          "value": 5
+        },
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Leroy Carter",
+          "value": 5
+        },
+        {
+          "minute": 62,
+          "type": "Try",
+          "player": "Samisoni Taukei'aho",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Try",
+          "player": "Kaylum Boshier",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 15476,
+    "referee": "Angus Mabey"
   },
   {
     "date": "2026-02-21T16:35:00",
     "home": {
       "team": "Force",
-      "score": null
+      "score": 32,
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Harry Johnson-Holmes",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Penalty",
+          "player": "Ben Donaldson",
+          "value": 3
+        },
+        {
+          "minute": 40,
+          "type": "Try",
+          "player": "Carlo Tizzano",
+          "value": 5
+        },
+        {
+          "minute": 47,
+          "type": "Penalty",
+          "player": "Ben Donaldson",
+          "value": 3
+        },
+        {
+          "minute": 67,
+          "type": "Try",
+          "player": "Bayley Kuenzle",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Try",
+          "player": "Ben Donaldson",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Blues",
-      "score": null
-    }
+      "score": 42,
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Try",
+          "player": "Josh Fusitu'a",
+          "value": 5
+        },
+        {
+          "minute": 21,
+          "type": "Try",
+          "player": "Stephen Perofeta",
+          "value": 5
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Zarn Sullivan",
+          "value": 5
+        },
+        {
+          "minute": 53,
+          "type": "Try",
+          "player": "Torian Barnes",
+          "value": 5
+        },
+        {
+          "minute": 60,
+          "type": "Try",
+          "player": "Cole Forbes",
+          "value": 5
+        },
+        {
+          "minute": 70,
+          "type": "Try",
+          "player": "Josh Beehre",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 5131,
+    "referee": "Damon Murphy"
   },
   {
     "date": "2026-02-22T15:35:00",
     "home": {
       "team": "Crusaders",
-      "score": null
+      "score": 24,
+      "scores": [
+        {
+          "minute": 9,
+          "type": "Try",
+          "player": "David Havili",
+          "value": 5
+        },
+        {
+          "minute": 24,
+          "type": "Try",
+          "player": "George Bell",
+          "value": 5
+        },
+        {
+          "minute": 57,
+          "type": "Try",
+          "player": "Sevu Reece",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Try",
+          "player": "Leicester Fainga\u02bbanuku",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Brumbies",
-      "score": null
-    }
+      "score": 50,
+      "scores": [
+        {
+          "minute": 19,
+          "type": "Try",
+          "player": "Andy Muirhead",
+          "value": 5
+        },
+        {
+          "minute": 30,
+          "type": "Try",
+          "player": "James Slipper",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Try",
+          "player": "Charlie Cale",
+          "value": 5
+        },
+        {
+          "minute": 54,
+          "type": "Try",
+          "player": "Kadin Pritchard",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Try",
+          "player": "Charlie Cale",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Try",
+          "player": "Liam Bowron",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Try",
+          "player": "Rob Valetini",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Try",
+          "player": "Corey Toole",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Ben O'Keeffe"
   },
   {
     "date": "2026-02-27T19:05:00",

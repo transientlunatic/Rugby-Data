@@ -508,6 +508,8 @@ function initializeDashboard() {
 
     // Load core data for overview section
     loadCoreData().then(() => {
+        const overlay = document.getElementById('loading-overlay');
+        if (overlay) overlay.remove();
         populateGlobalControls();
         updateAllVisualizations();  // Show initial overview data
     });
@@ -546,7 +548,7 @@ async function handleSectionNavigation() {
 
         case 'players':
             await loadCoreData();
-            updatePlayerRankings();
+            updatePlayerVisualizations('tries');
             break;
 
         case 'trends':
@@ -563,12 +565,12 @@ async function handleSectionNavigation() {
 
         case 'matches':
             await loadMatchesData();
-            updateMatchStats();
+            updateMatchTable(state.selectedSeason, '');
             break;
 
         case 'predictions':
             await loadPredictionsData();
-            updatePredictions();
+            updatePredictionTable();
             break;
 
         case 'paths':
@@ -635,8 +637,8 @@ function populateGlobalControls() {
     
     if (!globalComp || !globalSeason) return;
     
-    // Get competitions from league table data (or could use summary.competitions)
-    const competitions = [...new Set(Object.keys(state.leagueTableData).map(k => k.split('_')[0]))].sort();
+    // Get competitions from summary data
+    const competitions = (state.summary.competitions || []).slice().sort();
     const seasons = state.summary.seasons || [];
     
     // Populate competition dropdown
@@ -990,102 +992,13 @@ function updateAllVisualizations() {
     updateTeamVisualizations();
     updatePlayerVisualizations('tries');
     updateMatchTable(state.selectedSeason, '');
-    updateTeamTrends();
+    updateTrendChart();
     // updateFinishPositions() is now called by populateFinishPositionSelects()
     updatePredictionTable();
     updatePathsToVictory();
     updateSquadDepth();
     updateLeagueTable();
     updateSeasonPrediction();
-
-// Render league table
-function populateLeagueTableSelects() {
-    const compSelect = document.getElementById('league-table-competition');
-    const seasonSelect = document.getElementById('league-table-season');
-    if (!compSelect || !seasonSelect) return;
-    const competitions = [...new Set(Object.keys(state.leagueTableData).map(k => k.split('_')[0]))];
-    const seasons = state.summary.seasons || [];
-    compSelect.innerHTML = '<option value="">Select...</option>' + competitions.map(c => `<option value="${c}">${c}</option>`).join('');
-    seasonSelect.innerHTML = '<option value="">Select...</option>' + seasons.map(s => `<option value="${s}">${s}</option>`).join('');
-    // Set defaults
-    state.selectedLeagueTableCompetition = competitions[0] || '';
-    state.selectedLeagueTableSeason = seasons[seasons.length-1] || '';
-}
-
-function updateLeagueTable() {
-    const tbody = document.querySelector('#league-table tbody');
-    if (!tbody) return;
-    const comp = state.selectedLeagueTableCompetition;
-    const season = state.selectedLeagueTableSeason;
-    if (!comp || !season) {
-        tbody.innerHTML = '<tr><td colspan="14">Select competition and season.</td></tr>';
-        return;
-    }
-    const key = `${comp}_${season}`;
-    const data = state.leagueTableData[key];
-    if (!data || !Array.isArray(data)) {
-        tbody.innerHTML = '<tr><td colspan="14">No data available for this selection.</td></tr>';
-        return;
-    }
-    tbody.innerHTML = data.map(row => `
-        <tr>
-            <td>${row.position}</td>
-            <td><strong>${row.team}</strong></td>
-            <td>${row.played}</td>
-            <td>${row.won}</td>
-            <td>${row.drawn}</td>
-            <td>${row.lost}</td>
-            <td>${row.points_for}</td>
-            <td>${row.points_against}</td>
-            <td>${row.points_diff}</td>
-            <td>${row.tries_for}</td>
-            <td>${row.tries_against}</td>
-            <td>${row.bonus_points}</td>
-            <td>${row.match_points}</td>
-            <td>${row.total_points}</td>
-        </tr>
-    `).join('');
-}
-
-// Render season prediction
-function populateSeasonPredictionSelects() {
-    const compSelect = document.getElementById('season-prediction-competition');
-    const seasonSelect = document.getElementById('season-prediction-season');
-    if (!compSelect || !seasonSelect) return;
-    const competitions = [...new Set(Object.keys(state.seasonPredictionData).map(k => k.split('_')[0]))];
-    const seasons = state.summary.seasons || [];
-    compSelect.innerHTML = '<option value="">Select...</option>' + competitions.map(c => `<option value="${c}">${c}</option>`).join('');
-    seasonSelect.innerHTML = '<option value="">Select...</option>' + seasons.map(s => `<option value="${s}">${s}</option>`).join('');
-    // Set defaults
-    state.selectedSeasonPredictionCompetition = competitions[0] || '';
-    state.selectedSeasonPredictionSeason = seasons[seasons.length-1] || '';
-}
-
-function updateSeasonPrediction() {
-    const tbody = document.querySelector('#season-prediction-table tbody');
-    if (!tbody) return;
-    const comp = state.selectedSeasonPredictionCompetition;
-    const season = state.selectedSeasonPredictionSeason;
-    if (!comp || !season) {
-        tbody.innerHTML = '<tr><td colspan="5">Select competition and season.</td></tr>';
-        return;
-    }
-    const key = `${comp}_${season}`;
-    const data = state.seasonPredictionData[key];
-    if (!data || !Array.isArray(data)) {
-        tbody.innerHTML = '<tr><td colspan="5">No data available for this selection.</td></tr>';
-        return;
-    }
-    tbody.innerHTML = data.map(row => `
-        <tr>
-            <td><strong>${row.team}</strong></td>
-            <td>${row.expected_points}</td>
-            <td>${row.expected_wins}</td>
-            <td>${row.expected_diff}</td>
-            <td>${row.predicted_position}</td>
-        </tr>
-    `).join('');
-}
 }
 
 function populateTrendTeamSelect() {

@@ -623,6 +623,7 @@ function populateSeasonSelects() {
 
 // Populate team filter
 function populateTeamSelect() {
+    if (!state.matchStats) return;
     const teamSelect = document.getElementById('match-team');
     const teams = [...new Set(state.matchStats.map(m => m.team))].sort();
 
@@ -1415,6 +1416,7 @@ function filterPlayerTable(searchTerm) {
 
 // Update match table
 function updateMatchTable(season, team) {
+    if (!state.matchStats) return;
     let filtered = state.matchStats.filter(d => d.season === season);
 
     if (team) {

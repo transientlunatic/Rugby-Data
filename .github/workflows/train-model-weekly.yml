@@ -170,7 +170,13 @@ jobs:
       - name: Compress checkpoint
         run: |
           cd ~/.cache/rugby_ranking/weekly-model
-          tar -czf checkpoint.tar.gz trace.nc vi_approx.pkl metadata.pkl
+          # Include vi_approx.pkl only if it exists (it may fail to pickle)
+          if [ -f vi_approx.pkl ]; then
+            tar -czf checkpoint.tar.gz trace.nc vi_approx.pkl metadata.pkl
+          else
+            echo "⚠ vi_approx.pkl not found, creating checkpoint without it"
+            tar -czf checkpoint.tar.gz trace.nc metadata.pkl
+          fi
 
       - name: Upload checkpoint artifact
         uses: actions/upload-artifact@v4

@@ -48,20 +48,20 @@ jobs:
       - name: Export dashboard data
         if: steps.download-checkpoint.outcome == 'success'
         run: |
-          python -c "
-          from pathlib import Path
-          from rugby_ranking.tools.export_dashboard_data import export_dashboard_data
+python -c "
+from pathlib import Path
+from rugby_ranking.tools.export_dashboard_data import export_dashboard_data
 
-          # Use a large number of seasons to ensure we get all recent actual seasons
-          # (not just World Cups which sort alphabetically to the end)
-          # TODO: Fix export_dashboard_data in rugby-pymc to use date-based filtering
-          export_dashboard_data(
-              data_dir=Path('json'),
-              output_dir=Path('dashboard/data'),
-              checkpoint_name='weekly-model',
-              recent_seasons_only=50,  # Large enough to include all real seasons
-          )
-          "
+# Use a large number of seasons to ensure we get all recent actual seasons
+# (not just World Cups which sort alphabetically to the end)
+# TODO: Fix export_dashboard_data in rugby-pymc to use date-based filtering
+export_dashboard_data(
+    data_dir=Path('json'),
+    output_dir=Path('dashboard/data'),
+    checkpoint_name='weekly-model',
+    recent_seasons_only=50,  # Large enough to include all real seasons
+)
+"
 
       - name: Check for changes
         id: check-changes

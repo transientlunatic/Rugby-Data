@@ -143,6 +143,16 @@ jobs:
                   fitter = ModelFitter.load('weekly-model', model)
                   print('✓ Loaded previous checkpoint')
 
+                  # Re-apply the current data's indices: ModelFitter.load() restores
+                  # the old checkpoint's _team_season_ids (and related mappings), but
+                  # build_joint(df) already built the PyMC model for the *new* data.
+                  # If team-season combinations have changed since the checkpoint was
+                  # saved, the saved indices would be stale and cause a KeyError when
+                  # the trace dimension no longer matches _team_season_ids. Rebuilding
+                  # the indices from df here ensures metadata and trace stay in sync.
+                  model._build_indices(df)
+                  print('✓ Re-applied current data indices after checkpoint load')
+
                   # Continue training with warm-start
                   if fitter._vi_approx is not None:
                       print(f'✓ Continuing VI training with warm-start for {vi_iterations:,} additional iterations')

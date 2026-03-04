@@ -875,40 +875,249 @@
         }
       ]
     },
+    "attendance": 13016,
     "referee": "Nic Berry"
   },
   {
     "date": "2026-02-28T15:35:00",
     "home": {
       "team": "Drua",
-      "score": null
+      "score": 25,
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        },
+        {
+          "minute": 30,
+          "type": "Try",
+          "player": "Motikai Murray",
+          "value": 5
+        },
+        {
+          "minute": 39,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        },
+        {
+          "minute": 50,
+          "type": "Try",
+          "player": "Tuidraki Samusamuvodre",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Try",
+          "player": "Etonia Waqa",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Hurricanes",
-      "score": null
-    }
+      "score": 20,
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Fehi Fineanganofo",
+          "value": 5
+        },
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Peter Lakai",
+          "value": 5
+        },
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Billy Proctor",
+          "value": 5
+        },
+        {
+          "minute": 49,
+          "type": "Penalty",
+          "player": "Jordie Barrett",
+          "value": 3
+        }
+      ]
+    },
+    "referee": "Ben O'Keeffe"
   },
   {
     "date": "2026-02-28T19:05:00",
     "home": {
       "team": "Chiefs",
-      "score": null
+      "score": 33,
+      "scores": [
+        {
+          "minute": 5,
+          "type": "Try",
+          "player": "Quinn Tupaea",
+          "value": 5
+        },
+        {
+          "minute": 8,
+          "type": "Try",
+          "player": "Etene Nanai-Seturo",
+          "value": 5
+        },
+        {
+          "minute": 22,
+          "type": "Try",
+          "player": "Samisoni Taukei'aho",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Try",
+          "player": "Tupou Vaa'i",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Emoni Narawa",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Crusaders",
-      "score": null
-    }
+      "score": 43,
+      "scores": [
+        {
+          "minute": 19,
+          "type": "Try",
+          "player": "George Bell",
+          "value": 5
+        },
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Noah Hotham",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Try",
+          "player": "Christian Lio-Willie",
+          "value": 5
+        },
+        {
+          "minute": 40,
+          "type": "Penalty",
+          "player": "Taha Kemara",
+          "value": 3
+        },
+        {
+          "minute": 52,
+          "type": "Try",
+          "player": "Christian Lio-Willie",
+          "value": 5
+        },
+        {
+          "minute": 58,
+          "type": "Try",
+          "player": "David Havili",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Try",
+          "player": "Christian Lio-Willie",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 18330,
+    "referee": "James Doleman"
   },
   {
     "date": "2026-02-28T19:35:00",
     "home": {
       "team": "Brumbies",
-      "score": null
+      "score": 30,
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Declan Meredith",
+          "value": 5
+        },
+        {
+          "minute": 16,
+          "type": "Penalty",
+          "player": "Ryan Lonergan",
+          "value": 3
+        },
+        {
+          "minute": 22,
+          "type": "Try",
+          "player": "Billy Pollard",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Penalty",
+          "player": "Ryan Lonergan",
+          "value": 3
+        },
+        {
+          "minute": 71,
+          "type": "Try",
+          "player": "Luke Reimer",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Charlie Cale",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Blues",
-      "score": null
-    }
+      "score": 27,
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Caleb Clarke",
+          "value": 5
+        },
+        {
+          "minute": 28,
+          "type": "Penalty",
+          "player": "Stephen Perofeta",
+          "value": 3
+        },
+        {
+          "minute": 30,
+          "type": "Try",
+          "player": "AJ Lam",
+          "value": 5
+        },
+        {
+          "minute": 50,
+          "type": "Try",
+          "player": "Caleb Clarke",
+          "value": 5
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Dalton Papali'i",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Angus Gardner"
   },
   {
     "date": "2026-03-06T19:05:00",

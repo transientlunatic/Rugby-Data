@@ -1072,11 +1072,9 @@
         "16": {
           "name": "George Turner",
           "on": [
-            0
-          ],
-          "off": [
             49
           ],
+          "off": [],
           "reds": [],
           "yellows": [
             54
@@ -5426,7 +5424,7 @@
         "21": {
           "name": "David Odiase",
           "on": [
-            60
+            73
           ],
           "off": [],
           "reds": [],
@@ -5483,7 +5481,7 @@
     "date": "2026-03-06T20:10:00",
     "home": {
       "team": "Ireland",
-      "score": null,
+      "score": 27,
       "lineup": {
         "15": {
           "name": "Jamie Osborne",
@@ -5510,7 +5508,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            70
+          ],
           "reds": [],
           "yellows": [],
           "position": "OC"
@@ -5530,7 +5530,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            70
+          ],
           "reds": [],
           "yellows": [],
           "position": "LW"
@@ -5548,9 +5550,12 @@
         "9": {
           "name": "Jamison Gibson-Park",
           "on": [
-            0
+            32
           ],
-          "off": [],
+          "off": [
+            24,
+            76
+          ],
           "reds": [],
           "yellows": [],
           "position": "SH"
@@ -5570,7 +5575,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            60
+          ],
           "reds": [],
           "yellows": [],
           "position": "OF"
@@ -5600,7 +5607,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            60
+          ],
           "reds": [],
           "yellows": [],
           "position": "LL"
@@ -5610,7 +5619,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            60
+          ],
           "reds": [],
           "yellows": [],
           "position": "TP"
@@ -5620,7 +5631,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            64
+          ],
           "reds": [],
           "yellows": [],
           "position": "HK"
@@ -5630,7 +5643,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            64
+          ],
           "reds": [],
           "yellows": [],
           "position": "LP"
@@ -5638,7 +5653,7 @@
         "16": {
           "name": "Tom Stewart",
           "on": [
-            0
+            64
           ],
           "off": [],
           "reds": [],
@@ -5648,7 +5663,7 @@
         "17": {
           "name": "Michael Milne",
           "on": [
-            0
+            64
           ],
           "off": [],
           "reds": [],
@@ -5658,7 +5673,7 @@
         "18": {
           "name": "Tom Clarkson",
           "on": [
-            0
+            60
           ],
           "off": [],
           "reds": [],
@@ -5668,7 +5683,7 @@
         "19": {
           "name": "Joe McCarthy",
           "on": [
-            0
+            60
           ],
           "off": [],
           "reds": [],
@@ -5678,7 +5693,7 @@
         "20": {
           "name": "Josh van der Flier",
           "on": [
-            0
+            60
           ],
           "off": [],
           "reds": [],
@@ -5688,9 +5703,11 @@
         "21": {
           "name": "Nathan Doak",
           "on": [
-            0
+            76
           ],
-          "off": [],
+          "off": [
+            32
+          ],
           "reds": [],
           "yellows": [],
           "position": "SH"
@@ -5698,7 +5715,7 @@
         "22": {
           "name": "Tom Farrell",
           "on": [
-            0
+            60
           ],
           "off": [],
           "reds": [],
@@ -5708,18 +5725,74 @@
         "23": {
           "name": "Ciar\u00e1n Frawley",
           "on": [
-            0
+            70
           ],
           "off": [],
           "reds": [],
           "yellows": [],
           "position": "CE"
         }
-      }
+      },
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Try",
+          "player": "Stockdale",
+          "value": 5
+        },
+        {
+          "minute": 7,
+          "type": "Conversion",
+          "player": "Stockdale",
+          "value": 2
+        },
+        {
+          "minute": 37,
+          "type": "Try",
+          "player": "Crowley",
+          "value": 5
+        },
+        {
+          "minute": 38,
+          "type": "Missed conversion",
+          "player": "Crowley",
+          "value": 0
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Conan",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Conversion",
+          "player": "Conan",
+          "value": 2
+        },
+        {
+          "minute": 68,
+          "type": "Try",
+          "player": "Osborne",
+          "value": 5
+        },
+        {
+          "minute": 69,
+          "type": "Missed conversion",
+          "player": "Osborne",
+          "value": 0
+        },
+        {
+          "minute": 77,
+          "type": "Penalty",
+          "player": "Crowley",
+          "value": 3
+        }
+      ]
     },
     "away": {
       "team": "Wales",
-      "score": null,
+      "score": 17,
       "lineup": {
         "15": {
           "name": "Louis Rees-Zammit",
@@ -5736,7 +5809,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            70
+          ],
           "reds": [],
           "yellows": [],
           "position": "RW"
@@ -5796,7 +5871,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": [],
           "position": "N8"
@@ -5826,7 +5903,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": [],
           "position": "RL"
@@ -5846,7 +5925,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": [],
           "position": "TP"
@@ -5856,7 +5937,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": [],
           "position": "HK"
@@ -5866,7 +5949,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": [],
           "position": "LP"
@@ -5874,7 +5959,7 @@
         "16": {
           "name": "Ryan Elias",
           "on": [
-            0
+            57
           ],
           "off": [],
           "reds": [],
@@ -5884,7 +5969,7 @@
         "17": {
           "name": "Nicky Smith",
           "on": [
-            0
+            45
           ],
           "off": [],
           "reds": [],
@@ -5894,7 +5979,7 @@
         "18": {
           "name": "Archie Griffin",
           "on": [
-            0
+            57
           ],
           "off": [],
           "reds": [],
@@ -5904,7 +5989,7 @@
         "19": {
           "name": "Adam Beard",
           "on": [
-            0
+            57
           ],
           "off": [],
           "reds": [],
@@ -5914,7 +5999,7 @@
         "20": {
           "name": "Olly Cracknell",
           "on": [
-            0
+            45
           ],
           "off": [],
           "reds": [],
@@ -5944,23 +6029,56 @@
         "23": {
           "name": "Louie Hennessey",
           "on": [
-            0
+            70
           ],
           "off": [],
           "reds": [],
           "yellows": [],
           "position": "CE"
         }
-      }
+      },
+      "scores": [
+        {
+          "minute": 17,
+          "type": "Penalty",
+          "player": "Edwards",
+          "value": 3
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Carr\u00e9",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Conversion",
+          "player": "Carr\u00e9",
+          "value": 2
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Botham",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "Botham",
+          "value": 2
+        }
+      ]
     },
     "stadium": "Aviva Stadium, Dublin",
+    "attendance": 51700,
     "referee": "Karl Dickson"
   },
   {
     "date": "2026-03-07T14:10:00",
     "home": {
       "team": "Scotland",
-      "score": null,
+      "score": 50,
       "lineup": {
         "15": {
           "name": "Blair Kinghorn",
@@ -5987,7 +6105,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            56
+          ],
           "reds": [],
           "yellows": [],
           "position": "OC"
@@ -6007,7 +6127,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            67
+          ],
           "reds": [],
           "yellows": [],
           "position": "LW"
@@ -6027,7 +6149,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            64
+          ],
           "reds": [],
           "yellows": [],
           "position": "SH"
@@ -6067,7 +6191,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": [],
           "position": "RL"
@@ -6077,7 +6203,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            34
+          ],
           "reds": [],
           "yellows": [],
           "position": "LL"
@@ -6087,7 +6215,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": [],
           "position": "TP"
@@ -6097,7 +6227,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": [],
           "position": "HK"
@@ -6107,7 +6239,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            64
+          ],
           "reds": [],
           "yellows": [],
           "position": "LP"
@@ -6115,7 +6249,7 @@
         "16": {
           "name": "Ewan Ashman",
           "on": [
-            0
+            52
           ],
           "off": [],
           "reds": [],
@@ -6125,7 +6259,7 @@
         "17": {
           "name": "Rory Sutherland",
           "on": [
-            0
+            64
           ],
           "off": [],
           "reds": [],
@@ -6135,7 +6269,7 @@
         "18": {
           "name": "Zander Fagerson",
           "on": [
-            0
+            40
           ],
           "off": [],
           "reds": [],
@@ -6145,7 +6279,7 @@
         "19": {
           "name": "Grant Gilchrist",
           "on": [
-            0
+            34
           ],
           "off": [],
           "reds": [],
@@ -6155,7 +6289,7 @@
         "20": {
           "name": "Freddy Douglas",
           "on": [
-            0
+            67
           ],
           "off": [],
           "reds": [],
@@ -6165,7 +6299,7 @@
         "21": {
           "name": "Josh Bayliss",
           "on": [
-            0
+            52
           ],
           "off": [],
           "reds": [],
@@ -6175,7 +6309,7 @@
         "22": {
           "name": "George Horne",
           "on": [
-            0
+            64
           ],
           "off": [],
           "reds": [],
@@ -6185,18 +6319,110 @@
         "23": {
           "name": "Tom Jordan",
           "on": [
-            0
+            56
           ],
           "off": [],
           "reds": [],
           "yellows": [],
           "position": "FH"
         }
-      }
+      },
+      "scores": [
+        {
+          "minute": 5,
+          "type": "Try",
+          "player": "Graham",
+          "value": 5
+        },
+        {
+          "minute": 6,
+          "type": "Conversion",
+          "player": "Graham",
+          "value": 2
+        },
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Steyn",
+          "value": 5
+        },
+        {
+          "minute": 27,
+          "type": "Missed conversion",
+          "player": "Steyn",
+          "value": 0
+        },
+        {
+          "minute": 32,
+          "type": "Try",
+          "player": "Schoeman",
+          "value": 5
+        },
+        {
+          "minute": 33,
+          "type": "Conversion",
+          "player": "Schoeman",
+          "value": 2
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "White",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Conversion",
+          "player": "White",
+          "value": 2
+        },
+        {
+          "minute": 51,
+          "type": "Try",
+          "player": "Steyn",
+          "value": 5
+        },
+        {
+          "minute": 52,
+          "type": "Conversion",
+          "player": "Steyn",
+          "value": 2
+        },
+        {
+          "minute": 59,
+          "type": "Try",
+          "player": "Graham",
+          "value": 5
+        },
+        {
+          "minute": 60,
+          "type": "Conversion",
+          "player": "Graham",
+          "value": 2
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Jordan",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "Jordan",
+          "value": 2
+        },
+        {
+          "minute": 78,
+          "type": "Penalty",
+          "player": "Russell",
+          "value": 3
+        }
+      ]
     },
     "away": {
       "team": "France",
-      "score": null,
+      "score": 40,
       "lineup": {
         "15": {
           "name": "Thomas Ramos",
@@ -6223,7 +6449,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": [],
           "position": "OC"
@@ -6263,7 +6491,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            70
+          ],
           "reds": [],
           "yellows": [],
           "position": "SH"
@@ -6273,7 +6503,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            43
+          ],
           "reds": [],
           "yellows": [],
           "position": "N8"
@@ -6303,7 +6535,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": [],
           "position": "RL"
@@ -6313,7 +6547,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": [],
           "position": "LL"
@@ -6323,7 +6559,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": [],
           "position": "TP"
@@ -6333,7 +6571,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": [],
           "position": "HK"
@@ -6343,7 +6583,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": [],
           "position": "LP"
@@ -6351,7 +6593,7 @@
         "16": {
           "name": "Peato Mauvaka",
           "on": [
-            0
+            45
           ],
           "off": [],
           "reds": [],
@@ -6361,7 +6603,7 @@
         "17": {
           "name": "Rodrigue Neti",
           "on": [
-            0
+            52
           ],
           "off": [],
           "reds": [],
@@ -6371,7 +6613,7 @@
         "18": {
           "name": "Demba Bamba",
           "on": [
-            0
+            52
           ],
           "off": [],
           "reds": [],
@@ -6381,7 +6623,7 @@
         "19": {
           "name": "Thibaud Flament",
           "on": [
-            0
+            45
           ],
           "off": [],
           "reds": [],
@@ -6391,7 +6633,7 @@
         "20": {
           "name": "Emmanuel Meafou",
           "on": [
-            0
+            45
           ],
           "off": [],
           "reds": [],
@@ -6401,7 +6643,7 @@
         "21": {
           "name": "Lenni Nouchi",
           "on": [
-            0
+            43
           ],
           "off": [],
           "reds": [],
@@ -6411,7 +6653,7 @@
         "22": {
           "name": "Baptiste Serin",
           "on": [
-            0
+            70
           ],
           "off": [],
           "reds": [],
@@ -6421,30 +6663,107 @@
         "23": {
           "name": "Pierre-Louis Barassi",
           "on": [
-            0
+            45
           ],
           "off": [],
           "reds": [],
           "yellows": [],
           "position": "CE"
         }
-      }
+      },
+      "scores": [
+        {
+          "minute": 18,
+          "type": "Try",
+          "player": "Bielle-Biarrey",
+          "value": 5
+        },
+        {
+          "minute": 19,
+          "type": "Conversion",
+          "player": "Bielle-Biarrey",
+          "value": 2
+        },
+        {
+          "minute": 22,
+          "type": "Try",
+          "player": "Attissogbe",
+          "value": 5
+        },
+        {
+          "minute": 23,
+          "type": "Conversion",
+          "player": "Attissogbe",
+          "value": 2
+        },
+        {
+          "minute": 66,
+          "type": "Try",
+          "player": "Dupont",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Conversion",
+          "player": "Dupont",
+          "value": 2
+        },
+        {
+          "minute": 74,
+          "type": "Try",
+          "player": "Ramos",
+          "value": 5
+        },
+        {
+          "minute": 75,
+          "type": "Missed conversion",
+          "player": "Ramos",
+          "value": 0
+        },
+        {
+          "minute": 78,
+          "type": "Try",
+          "player": "Jegou",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Conversion",
+          "player": "Jegou",
+          "value": 2
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Ramos",
+          "value": 5
+        },
+        {
+          "minute": 81,
+          "type": "Conversion",
+          "player": "Ramos",
+          "value": 2
+        }
+      ]
     },
     "stadium": "Murrayfield Stadium, Edinburgh",
+    "attendance": 67144,
     "referee": "Angus Gardner"
   },
   {
     "date": "2026-03-07T17:40:00",
     "home": {
       "team": "Italy",
-      "score": null,
+      "score": 23,
       "lineup": {
         "15": {
           "name": "Lorenzo Pani",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": [],
           "position": "FB"
@@ -6464,7 +6783,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": [],
           "position": "OC"
@@ -6504,7 +6825,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": [],
           "position": "SH"
@@ -6524,7 +6847,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": [],
           "position": "OF"
@@ -6544,7 +6869,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": [],
           "position": "RL"
@@ -6564,7 +6891,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": [],
           "position": "TP"
@@ -6574,17 +6903,23 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
-          "yellows": [],
+          "yellows": [
+            52
+          ],
           "position": "HK"
         },
         "1": {
           "name": "Danilo Fischetti",
           "on": [
-            0
+            80
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": [],
           "position": "LP"
@@ -6592,7 +6927,7 @@
         "16": {
           "name": "Tommaso Di Bartolomeo",
           "on": [
-            0
+            63
           ],
           "off": [],
           "reds": [],
@@ -6602,9 +6937,11 @@
         "17": {
           "name": "Mirco Spagnolo",
           "on": [
-            0
+            58
           ],
-          "off": [],
+          "off": [
+            80
+          ],
           "reds": [],
           "yellows": [],
           "position": "PR"
@@ -6612,7 +6949,7 @@
         "18": {
           "name": "Muhamed Hasa",
           "on": [
-            0
+            51
           ],
           "off": [],
           "reds": [],
@@ -6622,7 +6959,7 @@
         "19": {
           "name": "Federico Ruzza",
           "on": [
-            0
+            50
           ],
           "off": [],
           "reds": [],
@@ -6632,7 +6969,7 @@
         "20": {
           "name": "Riccardo Favretto",
           "on": [
-            0
+            74
           ],
           "off": [],
           "reds": [],
@@ -6642,7 +6979,7 @@
         "21": {
           "name": "Alessandro Fusco",
           "on": [
-            0
+            51
           ],
           "off": [],
           "reds": [],
@@ -6652,7 +6989,7 @@
         "22": {
           "name": "Leonardo Marin",
           "on": [
-            0
+            51
           ],
           "off": [],
           "reds": [],
@@ -6662,25 +6999,71 @@
         "23": {
           "name": "Tommaso Allan",
           "on": [
-            0
+            74
           ],
           "off": [],
           "reds": [],
           "yellows": [],
           "position": "FH"
         }
-      }
+      },
+      "scores": [
+        {
+          "minute": 21,
+          "type": "Penalty",
+          "player": "Garbisi",
+          "value": 3
+        },
+        {
+          "minute": 34,
+          "type": "Try",
+          "player": "Menocello",
+          "value": 5
+        },
+        {
+          "minute": 35,
+          "type": "Conversion",
+          "player": "Menocello",
+          "value": 2
+        },
+        {
+          "minute": 57,
+          "type": "Penalty",
+          "player": "Garbisi",
+          "value": 3
+        },
+        {
+          "minute": 61,
+          "type": "Penalty",
+          "player": "Garbisi",
+          "value": 3
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Marin",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Conversion",
+          "player": "Marin",
+          "value": 2
+        }
+      ]
     },
     "away": {
       "team": "England",
-      "score": null,
+      "score": 18,
       "lineup": {
         "15": {
           "name": "Elliot Daly",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": [],
           "position": "FB"
@@ -6740,7 +7123,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": [],
           "position": "SH"
@@ -6750,19 +7135,25 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": [],
           "position": "N8"
         },
         "7": {
-          "name": "Tom Curry",
+          "name": "Sam Underhill",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            67
+          ],
           "reds": [],
-          "yellows": [],
+          "yellows": [
+            55
+          ],
           "position": "OF"
         },
         "6": {
@@ -6770,7 +7161,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            76
+          ],
           "reds": [],
           "yellows": [],
           "position": "BF"
@@ -6792,7 +7185,9 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": [],
+          "yellows": [
+            64
+          ],
           "position": "LL"
         },
         "3": {
@@ -6800,7 +7195,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": [],
           "position": "TP"
@@ -6810,7 +7207,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            76
+          ],
           "reds": [],
           "yellows": [],
           "position": "HK"
@@ -6820,7 +7219,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            67
+          ],
           "reds": [],
           "yellows": [],
           "position": "LP"
@@ -6828,7 +7229,7 @@
         "16": {
           "name": "Luke Cowan-Dickie",
           "on": [
-            0
+            76
           ],
           "off": [],
           "reds": [],
@@ -6838,7 +7239,7 @@
         "17": {
           "name": "Bevan Rodd",
           "on": [
-            0
+            58
           ],
           "off": [],
           "reds": [],
@@ -6848,7 +7249,7 @@
         "18": {
           "name": "Trevor Davison",
           "on": [
-            0
+            68
           ],
           "off": [],
           "reds": [],
@@ -6858,7 +7259,7 @@
         "19": {
           "name": "Ollie Chessum",
           "on": [
-            0
+            67
           ],
           "off": [],
           "reds": [],
@@ -6866,9 +7267,9 @@
           "position": "LK"
         },
         "20": {
-          "name": "Sam Underhill",
+          "name": "Chandler Cunningham-South",
           "on": [
-            0
+            76
           ],
           "off": [],
           "reds": [],
@@ -6878,7 +7279,7 @@
         "21": {
           "name": "Henry Pollock",
           "on": [
-            0
+            74
           ],
           "off": [],
           "reds": [],
@@ -6888,7 +7289,7 @@
         "22": {
           "name": "Jack van Poortvliet",
           "on": [
-            0
+            58
           ],
           "off": [],
           "reds": [],
@@ -6898,16 +7299,55 @@
         "23": {
           "name": "Marcus Smith",
           "on": [
-            0
+            74
           ],
           "off": [],
           "reds": [],
           "yellows": [],
           "position": "FH"
         }
-      }
+      },
+      "scores": [
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Freeman",
+          "value": 5
+        },
+        {
+          "minute": 27,
+          "type": "Missed conversion",
+          "player": "Freeman",
+          "value": 0
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Roebuck",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Conversion",
+          "player": "Roebuck",
+          "value": 2
+        },
+        {
+          "minute": 45,
+          "type": "Penalty",
+          "player": "F. Smith",
+          "value": 3
+        },
+        {
+          "minute": 54,
+          "type": "Penalty",
+          "player": "F. Smith",
+          "value": 3
+        }
+      ]
     },
     "stadium": "Stadio Olimpico, Rome",
+    "attendance": 68985,
     "referee": "Luc Ramos"
   },
   {

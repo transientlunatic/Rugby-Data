@@ -321,6 +321,28 @@ async function loadJsonSafe(url, fallback = null) {
     }
 }
 
+// Load league table and season prediction data for a single competition/season
+async function loadSingleLeagueTableAndPrediction(comp, season) {
+    if (!comp || !season) return;
+    const key = `${comp}_${season}`;
+    if (key in state.leagueTableData && key in state.seasonPredictionData) return;
+    const dataDir = 'data/';
+    const [leagueData, predData] = await Promise.all([
+        loadJsonSafe(`${dataDir}league_table_${comp}_${season}.json`, null),
+        loadJsonSafe(`${dataDir}season_predicted_standings_${comp}_${season}.json`, null)
+    ]);
+    state.leagueTableData[key] = leagueData;
+    state.seasonPredictionData[key] = predData;
+}
+
+// Load heatmap data for a single competition/season
+async function loadSingleHeatmap(comp, season) {
+    if (!comp || !season) return;
+    const key = `${comp}_${season}`;
+    if (key in state.heatmapData) return;
+    state.heatmapData[key] = await loadJsonSafe(`data/team_heatmap_${comp}_${season}.json`, null);
+}
+
 // Show loading spinner in a section
 function showSectionLoader(sectionId) {
     const section = document.getElementById(sectionId);
@@ -507,10 +529,14 @@ function initializeDashboard() {
     setupNavigationHandlers();
 
     // Load core data for overview section
-    loadCoreData().then(() => {
+    loadCoreData().then(async () => {
         const overlay = document.getElementById('loading-overlay');
         if (overlay) overlay.remove();
         populateGlobalControls();
+        await Promise.all([
+            loadSingleLeagueTableAndPrediction(state.selectedLeagueTableCompetition, state.selectedLeagueTableSeason),
+            loadSingleHeatmap(state.selectedHeatmapCompetition, state.selectedHeatmapSeason)
+        ]);
         updateAllVisualizations();  // Show initial overview data
     });
 }
@@ -617,8 +643,8 @@ function populateSeasonSelects() {
         `<option value="${season}" ${season === state.selectedSeason ? 'selected' : ''}>${season}</option>`
     ).join('');
 
-    seasonSelect.innerHTML = options;
-    matchSeasonSelect.innerHTML = options;
+    if (seasonSelect) seasonSelect.innerHTML = options;
+    if (matchSeasonSelect) matchSeasonSelect.innerHTML = options;
 }
 
 // Populate team filter
@@ -864,7 +890,7 @@ function setupEventListeners() {
     // Global filter controls
     const applyFiltersBtn = document.getElementById('apply-filters');
     if (applyFiltersBtn) {
-        applyFiltersBtn.addEventListener('click', () => {
+        applyFiltersBtn.addEventListener('click', async () => {
             // Update global state from global controls
             const globalComp = document.getElementById('global-competition');
             const globalSeason = document.getElementById('global-season');
@@ -892,6 +918,12 @@ function setupEventListeners() {
             if (globalRankLimit) {
                 state.selectedRankLimit = parseInt(globalRankLimit.value);
             }
+
+            // Load data for the newly selected competition/season before updating
+            await Promise.all([
+                loadSingleLeagueTableAndPrediction(state.selectedLeagueTableCompetition, state.selectedLeagueTableSeason),
+                loadSingleHeatmap(state.selectedHeatmapCompetition, state.selectedHeatmapSeason)
+            ]);
 
             // Update all visualizations with new global filters
             updateAllVisualizations();

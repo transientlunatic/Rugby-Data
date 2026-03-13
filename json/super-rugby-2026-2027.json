@@ -1123,13 +1123,78 @@
     "date": "2026-03-13T19:05:00",
     "home": {
       "team": "Hurricanes",
-      "score": null
+      "score": 31,
+      "scores": [
+        {
+          "minute": 35,
+          "type": "Try",
+          "player": "Cam Roigard",
+          "value": 5
+        },
+        {
+          "minute": 49,
+          "type": "Try",
+          "player": "Brad Shields",
+          "value": 5
+        },
+        {
+          "minute": 52,
+          "type": "Try",
+          "player": "Devan Flanders",
+          "value": 5
+        },
+        {
+          "minute": 60,
+          "type": "Try",
+          "player": "Callum Harkin",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Try",
+          "player": "Warner Dearns",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Force",
-      "score": null
+      "score": 23,
+      "scores": [
+        {
+          "minute": 23,
+          "type": "Penalty",
+          "player": "Ben Donaldson",
+          "value": 3
+        },
+        {
+          "minute": 28,
+          "type": "Try",
+          "player": "Darby Lancaster",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Penalty",
+          "player": "Ben Donaldson",
+          "value": 3
+        },
+        {
+          "minute": 70,
+          "type": "Try",
+          "player": "Darby Lancaster",
+          "value": 5
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Lopeti Faifua",
+          "value": 5
+        }
+      ]
     },
-    "stadium": "2026 Super Rugby Pacific season"
+    "stadium": "2026 Super Rugby Pacific season",
+    "referee": "Todd Petrie"
   },
   {
     "date": "2026-03-14T15:35:00",

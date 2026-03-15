@@ -1117,6 +1117,7 @@
         }
       ]
     },
+    "attendance": 8086,
     "referee": "Angus Gardner"
   },
   {
@@ -1200,45 +1201,288 @@
     "date": "2026-03-14T15:35:00",
     "home": {
       "team": "Drua",
-      "score": null
+      "score": 42,
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        },
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Etonia Waqa",
+          "value": 5
+        },
+        {
+          "minute": 28,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        },
+        {
+          "minute": 37,
+          "type": "Try",
+          "player": "Elia Canakaivata",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Try",
+          "player": "Sairusi Ravudi",
+          "value": 5
+        },
+        {
+          "minute": 52,
+          "type": "Try",
+          "player": "Ilaisa Droasese",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Penalty",
+          "player": "Isaiah Armstrong-Ravula",
+          "value": 3
+        },
+        {
+          "minute": 71,
+          "type": "Try",
+          "player": "Ilaisa Droasese",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Brumbies",
-      "score": null
-    }
+      "score": 27,
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Hudson Creighton",
+          "value": 5
+        },
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Toby MacPherson",
+          "value": 5
+        },
+        {
+          "minute": 55,
+          "type": "Try",
+          "player": "Toby MacPherson",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Try",
+          "player": "Ryan Lonergan",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Andy Muirhead",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Paul Williams (referee)"
   },
   {
     "date": "2026-03-14T19:05:00",
     "home": {
       "team": "Crusaders",
-      "score": null
+      "score": 29,
+      "scores": [
+        {
+          "minute": 4,
+          "type": "Try",
+          "player": "Will Jordan",
+          "value": 5
+        },
+        {
+          "minute": 31,
+          "type": "Try",
+          "player": "Fletcher Newell",
+          "value": 5
+        },
+        {
+          "minute": 50,
+          "type": "Try",
+          "player": "Johnny Lee",
+          "value": 5
+        },
+        {
+          "minute": 56,
+          "type": "Try",
+          "player": "Johnny Lee",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Penalty",
+          "player": "Rivez Reihana",
+          "value": 3
+        }
+      ]
     },
     "away": {
       "team": "Highlanders",
-      "score": null
-    }
+      "score": 18,
+      "scores": [
+        {
+          "minute": 20,
+          "type": "Try",
+          "player": "Tanielu Tele\u02bba",
+          "value": 5
+        },
+        {
+          "minute": 27,
+          "type": "Try",
+          "player": "Jacob Ratumaitavuki-Kneepkens",
+          "value": 5
+        },
+        {
+          "minute": 36,
+          "type": "Penalty",
+          "player": "Cam Millar",
+          "value": 3
+        },
+        {
+          "minute": 46,
+          "type": "Penalty",
+          "player": "Cam Millar",
+          "value": 3
+        }
+      ]
+    },
+    "referee": "Jordan Way"
   },
   {
     "date": "2026-03-14T18:35:00",
     "home": {
       "team": "Reds",
-      "score": null
+      "score": 26,
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Harry Wilson",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Try",
+          "player": "Carter Gordon",
+          "value": 5
+        },
+        {
+          "minute": 71,
+          "type": "Try",
+          "player": "Isaac Henry",
+          "value": 5
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Carter Gordon",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Waratahs",
-      "score": null
-    }
+      "score": 17,
+      "scores": [
+        {
+          "minute": 17,
+          "type": "Try",
+          "player": "Jamie Adamson",
+          "value": 5
+        },
+        {
+          "minute": 56,
+          "type": "Try",
+          "player": "Ioane Moananu",
+          "value": 5
+        },
+        {
+          "minute": 66,
+          "type": "Try",
+          "player": "Harry Potter",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 18087,
+    "referee": "Ben O'Keeffe"
   },
   {
     "date": "2026-03-15T15:35:00",
     "home": {
       "team": "Blues",
-      "score": null
+      "score": 43,
+      "scores": [
+        {
+          "minute": 4,
+          "type": "Try",
+          "player": "Sam Nock",
+          "value": 5
+        },
+        {
+          "minute": 20,
+          "type": "Try",
+          "player": "AJ Lam",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Try",
+          "player": "Ofa Tu\u02bbungafasi",
+          "value": 5
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Marcel Renata",
+          "value": 5
+        },
+        {
+          "minute": 49,
+          "type": "Try",
+          "player": "Sam Darry",
+          "value": 5
+        },
+        {
+          "minute": 69,
+          "type": "Try",
+          "player": "Cody Vai",
+          "value": 5
+        },
+        {
+          "minute": 78,
+          "type": "Try",
+          "player": "Mason Tupaea",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Moana Pasifika",
-      "score": null
-    }
+      "score": 7,
+      "scores": [
+        {
+          "minute": 27,
+          "type": "Try",
+          "player": "Mills Sanerivi",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "James Doleman"
   },
   {
     "date": "2026-03-20T19:05:00",

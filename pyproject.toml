@@ -28,9 +28,17 @@ analysis = [
     "rugby-ranking",
     "arviz",
 ]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
 
 [project.scripts]
 rugby = "rugby.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
 
 [tool.hatch.build.targets.wheel]
 packages = ["rugby"]

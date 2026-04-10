@@ -2447,12 +2447,42 @@
     "date": "2026-04-10T19:05:00",
     "home": {
       "team": "Highlanders",
-      "score": null
+      "score": 10,
+      "scores": [
+        {
+          "minute": 23,
+          "type": "Penalty",
+          "player": "Cam Millar",
+          "value": 3
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Jona Nareki",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Brumbies",
-      "score": null
-    }
+      "score": 14,
+      "scores": [
+        {
+          "minute": 35,
+          "type": "Try",
+          "player": "Ryan Lonergan",
+          "value": 5
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Luke Reimer",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 12553,
+    "referee": "Ben O'Keeffe"
   },
   {
     "date": "2026-04-11T14:00:00",

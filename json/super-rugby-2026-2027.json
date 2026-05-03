@@ -3287,41 +3287,207 @@
         }
       ]
     },
+    "attendance": 10096,
     "referee": "Angus Gardner"
   },
   {
     "date": "2026-05-02T16:00:00",
     "home": {
       "team": "Drua",
-      "score": null
+      "score": 24,
+      "scores": [
+        {
+          "minute": 10,
+          "type": "Try",
+          "player": "Virimi Vakatawa",
+          "value": 5
+        },
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Isikeli Rabitu",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Try",
+          "player": "Isikeli Rabitu",
+          "value": 5
+        },
+        {
+          "minute": 48,
+          "type": "Try",
+          "player": "Elia Canakaivata",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Highlanders",
-      "score": null
+      "score": 14,
+      "scores": [
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Jonah Lowe",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Try",
+          "player": "Veveni Lasaqa",
+          "value": 5
+        }
+      ]
     },
-    "stadium": "2026 Super Rugby Pacific season"
+    "stadium": "2026 Super Rugby Pacific season",
+    "referee": "Paul Williams (referee)"
   },
   {
     "date": "2026-05-02T19:05:00",
     "home": {
       "team": "Moana Pasifika",
-      "score": null
+      "score": 19,
+      "scores": [
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Mills Sanerivi",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Try",
+          "player": "Mills Sanerivi",
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Chris Apoua",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Blues",
-      "score": null
-    }
+      "score": 45,
+      "scores": [
+        {
+          "minute": 24,
+          "type": "Try",
+          "player": "Marcel Renata",
+          "value": 5
+        },
+        {
+          "minute": 39,
+          "type": "Try",
+          "player": "Kade Banks",
+          "value": 5
+        },
+        {
+          "minute": 41,
+          "type": "Try",
+          "player": "Patrick Tuipulotu",
+          "value": 5
+        },
+        {
+          "minute": 48,
+          "type": "Try",
+          "player": "James Mullan",
+          "value": 5
+        },
+        {
+          "minute": 58,
+          "type": "Try",
+          "player": "Stephen Perofeta",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Try",
+          "player": "Beauden Barrett",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Try",
+          "player": "Terrell Peita",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Nic Berry"
   },
   {
     "date": "2026-05-02T19:35:00",
     "home": {
       "team": "Reds",
-      "score": null
+      "score": 30,
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Lukhan Salakaia-Loto",
+          "value": 5
+        },
+        {
+          "minute": 25,
+          "type": "Penalty",
+          "player": "Harry McLaughlin-Phillips",
+          "value": 3
+        },
+        {
+          "minute": 39,
+          "type": "Try",
+          "player": "Josh Flook",
+          "value": 5
+        },
+        {
+          "minute": 42,
+          "type": "Penalty",
+          "player": "Harry McLaughlin-Phillips",
+          "value": 3
+        },
+        {
+          "minute": 60,
+          "type": "Try",
+          "player": "Seru Uru",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Penalty",
+          "player": "Harry McLaughlin-Phillips",
+          "value": 3
+        }
+      ]
     },
     "away": {
       "team": "Brumbies",
-      "score": null
-    }
+      "score": 21,
+      "scores": [
+        {
+          "minute": 4,
+          "type": "Try",
+          "player": "Lachlan Shaw",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Try",
+          "player": "Rob Valetini",
+          "value": 5
+        },
+        {
+          "minute": 54,
+          "type": "Try",
+          "player": "David Feliuai",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Ben O'Keeffe"
   },
   {
     "date": "2026-05-08T19:05:00",

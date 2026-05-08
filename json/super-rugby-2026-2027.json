@@ -3493,23 +3493,142 @@
     "date": "2026-05-08T19:05:00",
     "home": {
       "team": "Crusaders",
-      "score": null
+      "score": 31,
+      "scores": [
+        {
+          "minute": 13,
+          "type": "Try",
+          "player": "George Bower",
+          "value": 5
+        },
+        {
+          "minute": 23,
+          "type": "Try",
+          "player": "Jamie Hannah",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Try",
+          "player": "Rivez Reihana",
+          "value": 5
+        },
+        {
+          "minute": 51,
+          "type": "Try",
+          "player": "Kyle Preston",
+          "value": 5
+        },
+        {
+          "minute": 61,
+          "type": "Try",
+          "player": "Sevu Reece",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Try",
+          "player": "George Bell",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Blues",
-      "score": null
-    }
+      "score": 20,
+      "scores": [
+        {
+          "minute": 8,
+          "type": "Penalty",
+          "player": "Stephen Perofeta",
+          "value": 3
+        },
+        {
+          "minute": 32,
+          "type": "Try",
+          "player": "AJ Lam",
+          "value": 5
+        },
+        {
+          "minute": 39,
+          "type": "Try",
+          "player": "Sam Nock",
+          "value": 5
+        },
+        {
+          "minute": 69,
+          "type": "Try",
+          "player": "Hoskins Sotutu",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 25000,
+    "referee": "Angus Gardner"
   },
   {
     "date": "2026-05-08T19:35:00",
     "home": {
       "team": "Reds",
-      "score": null
+      "score": 21,
+      "scores": [
+        {
+          "minute": 8,
+          "type": "Try",
+          "player": "Lachie Anderson",
+          "value": 5
+        },
+        {
+          "minute": 65,
+          "type": "Try",
+          "player": "Joe Brial",
+          "value": 5
+        },
+        {
+          "minute": 74,
+          "type": "Try",
+          "player": "Treyvon Pritchard",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Chiefs",
-      "score": null
-    }
+      "score": 31,
+      "scores": [
+        {
+          "minute": 11,
+          "type": "Try",
+          "player": "Wallace Sititi",
+          "value": 5
+        },
+        {
+          "minute": 36,
+          "type": "Penalty",
+          "player": "Damian McKenzie",
+          "value": 3
+        },
+        {
+          "minute": 51,
+          "type": "Try",
+          "player": "Samisoni Taukei'aho",
+          "value": 5
+        },
+        {
+          "minute": 70,
+          "type": "Try",
+          "player": "Samisoni Taukei'aho",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Try",
+          "player": "Wallace Sititi",
+          "value": 5
+        }
+      ]
+    },
+    "referee": "Marcus Playle"
   },
   {
     "date": "2026-05-09T16:35:00",

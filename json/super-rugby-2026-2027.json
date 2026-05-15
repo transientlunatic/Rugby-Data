@@ -3858,12 +3858,66 @@
     "date": "2026-05-15T19:05:00",
     "home": {
       "team": "Chiefs",
-      "score": null
+      "score": 42,
+      "scores": [
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Wallace Sititi",
+          "value": 5
+        },
+        {
+          "minute": 31,
+          "type": "Try",
+          "player": "Naitoa Ah Kuoi",
+          "value": 5
+        },
+        {
+          "minute": 36,
+          "type": "Try",
+          "player": "Naitoa Ah Kuoi",
+          "value": 5
+        },
+        {
+          "minute": 54,
+          "type": "Try",
+          "player": "Xavier Roe",
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Brodie McAlister",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Kyle Brown",
+          "value": 5
+        }
+      ]
     },
     "away": {
       "team": "Highlanders",
-      "score": null
-    }
+      "score": 12,
+      "scores": [
+        {
+          "minute": 19,
+          "type": "Try",
+          "player": "Lucas Casey",
+          "value": 5
+        },
+        {
+          "minute": 57,
+          "type": "Try",
+          "player": "Jacob Ratumaitavuki-Kneepkens",
+          "value": 5
+        }
+      ]
+    },
+    "attendance": 13082,
+    "referee": "Nic Berry"
   },
   {
     "date": "2026-05-16T16:35:00",

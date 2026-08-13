@@ -1,0 +1,132 @@
+name: Model Diagnostics
+
+# Periodic model-health check, independent of the weekly train/predict cycle.
+#
+# Runs:
+#   1. Posterior predictive + trace diagnostics against the live weekly-model
+#      checkpoint, using real match data (rugby_ranking.tools.run_diagnostics).
+#   2. Match-outcome calibration from the prediction archive (Brier score,
+#      outcome accuracy, 90% CI coverage).
+#   3. Simulation-based calibration (P-P tests) for VI inference — validates
+#      the *inference procedure* on synthetic data, independent of (1)/(2).
+#      MCMC-based SBC is deliberately excluded here (2-4 hours); run it
+#      manually when investigating a VI-specific failure.
+#
+# This does not gate the weekly pipeline — it only reports. A failure here
+# means "go look at the model", not "block match data / predictions".
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'  # 06:00 UTC on the 1st of each month
+  workflow_dispatch:
+    inputs:
+      sbc-sims:
+        description: 'Number of SBC simulations (fewer = faster, less powered)'
+        default: '20'
+
+jobs:
+  diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Rugby-Data
+        uses: actions/checkout@v4
+        with:
+          path: Rugby-Data
+
+      - name: Checkout rugby-pymc
+        uses: actions/checkout@v4
+        with:
+          repository: transientlunatic/rugby-pymc
+          path: rugby-pymc
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install rugby-pymc + test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install scikit-learn pytest
+          pip install ./rugby-pymc
+
+      - name: Download weekly-model checkpoint
+        id: download-checkpoint
+        uses: dawidd6/action-download-artifact@v6
+        continue-on-error: true
+        with:
+          workflow: train-model-weekly.yml
+          name: model-checkpoint-weekly
+          path: /tmp/checkpoint
+          if_no_artifact_found: warn
+
+      - name: Extract checkpoint
+        if: steps.download-checkpoint.outcome == 'success'
+        run: |
+          mkdir -p ~/.cache/rugby_ranking/weekly-model
+          cd ~/.cache/rugby_ranking/weekly-model
+          tar -xzf /tmp/checkpoint/checkpoint.tar.gz
+
+      - name: Run diagnostics against live checkpoint
+        if: steps.download-checkpoint.outcome == 'success'
+        working-directory: Rugby-Data
+        run: |
+          mkdir -p dashboard/data/model_diagnostics
+          python -m rugby_ranking.tools.run_diagnostics \
+            --checkpoint weekly-model \
+            --data-dir json \
+            --archive-dir dashboard/data/prediction_archive \
+            --output dashboard/data/model_diagnostics/latest.json
+
+      - name: Run VI simulation-based calibration (P-P tests)
+        id: sbc
+        continue-on-error: true
+        working-directory: rugby-pymc
+        run: |
+          pytest tests/test_statistical_calibration.py \
+            -m "statistical and not slow" -v -s \
+            --sbc-sims "${{ github.event.inputs.sbc-sims || '20' }}" \
+            -o addopts=""
+
+      - name: Copy SBC plots into dashboard data
+        if: always()
+        run: |
+          mkdir -p Rugby-Data/dashboard/data/model_diagnostics
+          cp rugby-pymc/tests/statistical_outputs/*.png \
+            Rugby-Data/dashboard/data/model_diagnostics/ 2>/dev/null || true
+
+      - name: Commit diagnostics output
+        if: always()
+        working-directory: Rugby-Data
+        run: |
+          git add dashboard/data/model_diagnostics/
+          if git diff --cached --quiet; then
+            echo "No diagnostics changes to commit"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update model diagnostics - $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Model Diagnostics" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.download-checkpoint.outcome }}" != "success" ]; then
+            echo "⚠️ No weekly-model checkpoint artifact found — skipped PPC/trace checks" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ Ran PPC + trace diagnostics against the live checkpoint (dashboard/data/model_diagnostics/latest.json)" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ "${{ steps.sbc.outcome }}" = "success" ]; then
+            echo "✅ VI simulation-based calibration (P-P tests): all parameters passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ VI simulation-based calibration (P-P tests): one or more parameters failed — see job log" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "_MCMC-based SBC (ground-truth check) is not run here — 2-4 hours. Run manually: \`pytest tests/test_statistical_calibration.py -m \"statistical and slow\" -v -s\`_" >> $GITHUB_STEP_SUMMARY

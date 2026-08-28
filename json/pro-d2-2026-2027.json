@@ -1626,7 +1626,7 @@
         "21": {
           "name": "Luka Matkava",
           "on": [
-            71
+            67
           ],
           "off": [],
           "reds": [],
@@ -1638,7 +1638,7 @@
             0
           ],
           "off": [
-            71
+            67
           ],
           "reds": [],
           "yellows": []
@@ -1894,7 +1894,7 @@
         "22": {
           "name": "William van Bost",
           "on": [
-            66
+            61
           ],
           "off": [],
           "reds": [],
@@ -1919,7 +1919,7 @@
             0
           ],
           "off": [
-            66
+            61
           ],
           "reds": [],
           "yellows": []
@@ -1927,7 +1927,7 @@
         "17": {
           "name": "Killian Taofifenua",
           "on": [
-            66
+            61
           ],
           "off": [],
           "reds": [],
@@ -2057,7 +2057,7 @@
             0
           ],
           "off": [
-            66
+            61
           ],
           "reds": [],
           "yellows": []
@@ -2913,12 +2913,14 @@
           "reds": [],
           "yellows": []
         },
-        "20": {
+        "21": {
           "name": "Ruben Courties",
           "on": [
-            11
+            56
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
@@ -2960,14 +2962,12 @@
           "reds": [],
           "yellows": []
         },
-        "21": {
+        "20": {
           "name": "Nathan Azais",
           "on": [
-            56
+            11
           ],
-          "off": [
-            62
-          ],
+          "off": [],
           "reds": [],
           "yellows": []
         },
@@ -3031,7 +3031,7 @@
           "value": 5
         },
         {
-          "minute": 54,
+          "minute": 53,
           "type": "Conversion",
           "player": "Jake Strachan",
           "value": 2
@@ -3997,7 +3997,9 @@
       "lineup": {
         "19": {
           "name": "Adrien Roux",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4007,22 +4009,30 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            31
+          ],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            21
+          ]
         },
         "12": {
           "name": "Mathieu Guillomot",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Hugo Descube",
-          "on": [],
+          "on": [
+            60
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4041,7 +4051,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
@@ -4057,9 +4069,12 @@
         "8": {
           "name": "Marco Tauleigne",
           "on": [
-            0
+            0,
+            31
           ],
-          "off": [],
+          "off": [
+            23
+          ],
           "reds": [],
           "yellows": []
         },
@@ -4068,7 +4083,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
@@ -4083,7 +4100,9 @@
         },
         "23": {
           "name": "Gareth Milasinovich",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4093,13 +4112,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            60
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Joris Moura",
-          "on": [],
+          "on": [
+            64
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4109,7 +4132,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            64
+          ],
           "reds": [],
           "yellows": []
         },
@@ -4124,21 +4149,27 @@
         },
         "20": {
           "name": "Thomas Lhusero",
-          "on": [],
+          "on": [
+            64
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Marco Trauth",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Joris Dupont",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4166,13 +4197,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            64
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Dorian Marco Pena",
-          "on": [],
+          "on": [
+            23
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4182,14 +4217,65 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 35,
+          "type": "Penalty",
+          "player": "Lucas Meret",
+          "value": 3
+        },
+        {
+          "minute": 40,
+          "type": "Penalty",
+          "player": "Lucas Meret",
+          "value": 3
+        },
+        {
+          "minute": 50,
+          "type": "Try",
+          "player": "Matteo Rodor",
+          "value": 5
+        },
+        {
+          "minute": 51,
+          "type": "Conversion",
+          "player": "Lucas Meret",
+          "value": 2
+        },
+        {
+          "minute": 58,
+          "type": "Penalty",
+          "player": "Lucas Meret",
+          "value": 3
+        },
+        {
+          "minute": 75,
+          "type": "Missed penalty",
+          "player": "Lucas Meret",
+          "value": 0
+        },
+        {
+          "minute": 77,
+          "type": "Try",
+          "player": "Dorian Marco Pena",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Missed conversion",
+          "player": "Lucas Meret",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 21,
       "team": "Valence-Romans"
     },
     "home": {
@@ -4199,7 +4285,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            48
+          ],
           "reds": [],
           "yellows": []
         },
@@ -4226,13 +4314,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Geoffrey Malaterre",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4246,9 +4338,11 @@
           "reds": [],
           "yellows": []
         },
-        "21": {
+        "9": {
           "name": "John Cooney",
-          "on": [],
+          "on": [
+            0
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4267,7 +4361,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            48
+          ],
           "reds": [],
           "yellows": []
         },
@@ -4282,7 +4378,9 @@
         },
         "18": {
           "name": "Kote Mikautadze",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4292,21 +4390,23 @@
           "on": [
             0
           ],
-          "off": [],
-          "reds": [],
-          "yellows": []
-        },
-        "9": {
-          "name": "Mathis Galthie",
-          "on": [
-            0
+          "off": [
+            62
           ],
-          "off": [],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Lucas Oudard",
+          "on": [
+            62
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Maxime Sidobre",
           "on": [],
           "off": [],
           "reds": [],
@@ -4317,22 +4417,30 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            51
+          ]
         },
         "2": {
           "name": "Yanis Charcosset",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            48
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Christian Judge",
-          "on": [],
+          "on": [
+            48
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4351,13 +4459,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Lucas da Silva",
-          "on": [],
+          "on": [
+            48
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -4373,22 +4485,75 @@
         },
         "17": {
           "name": "Hugo Reilhes",
-          "on": [],
+          "on": [
+            48
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Nic Krone",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Try",
+          "player": "Francisco Coria Marchetti",
+          "value": 5
+        },
+        {
+          "minute": 7,
+          "type": "Conversion",
+          "player": "Jamie Shillcock",
+          "value": 2
+        },
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Aymeric Luc",
+          "value": 5
+        },
+        {
+          "minute": 13,
+          "type": "Conversion",
+          "player": "Jamie Shillcock",
+          "value": 2
+        },
+        {
+          "minute": 27,
+          "type": "Missed penalty",
+          "player": "Jamie Shillcock",
+          "value": 0
+        },
+        {
+          "minute": 37,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 43,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        },
+        {
+          "minute": 66,
+          "type": "Penalty",
+          "player": "Jamie Shillcock",
+          "value": 3
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 23,
       "team": "Brive"
     },
     "round": 1,

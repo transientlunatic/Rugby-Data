@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T21:51:11.438616+00:00",
+  "generated_at": "2026-09-01T11:15:49.284581+00:00",
   "checkpoint": "weekly-model",
   "trace_diagnostics": {
     "inference_method": "vi",
@@ -14,7 +14,7 @@
     ],
     "note": "Rhat/ESS/divergences don't apply to a single VI approximation. See tests/test_statistical_calibration.py (SBC / P-P tests) for the applicable calibration check on VI posteriors."
   },
-  "n_observations_available": 435221,
+  "n_observations_available": 435589,
   "posterior_predictive_calibration": {
     "skipped": true,
     "reason": "no overlapping players/team-seasons between checkpoint and data_dir"

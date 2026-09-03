@@ -11,33 +11,37 @@ The repository is configured to automatically update rugby match data:
 
 ## What Gets Updated
 
-Currently, the automation supports the following leagues:
+Currently, the automation supports the following competitions, defined in `LEAGUE_CONFIGS` in `rugby/update.py`:
 
+InCrowd Sports API (club competitions):
 - **URC (United Rugby Championship)**: Latest season data including:
   - Match results for completed games
   - Future fixtures (without results)
   - Player lineups, scores, substitutions, and cards (for completed matches)
-
 - **Gallagher Premiership**: English top-tier rugby league with complete match data
-
 - **RFU Championship**: English second-tier rugby league with complete match data
-
 - **Top 14**: French top-tier rugby league with complete match data
-
 - **Pro D2**: French second-tier rugby league with complete match data
-
 - **European Rugby Champions Cup**: Premier European club competition
-
 - **European Rugby Challenge Cup**: Secondary European club competition
 
-All leagues include the same detailed data structure with match results, player lineups, scoring events, and match officials when available.
+Wikipedia (internationals and competitions without an API feed):
+- **Six Nations Championship**
+- **Mid-year Internationals**
+- **End-of-year Internationals**
+- **Rugby World Cup** (World Cup years only)
+- **Super Rugby**
+- **Japan Rugby League One**
+- **Currie Cup**
+- **National Provincial Championship (NPC)**
+
+Club competitions include the same detailed data structure with match results, player lineups, scoring events, and match officials when available. Wikipedia-sourced competitions include results and, where the source page has them, lineups and scoring events.
 
 ### Adding New Leagues
 
 The system is designed to be easily extensible. To add support for a new league:
 
-1. Obtain the competition ID and provider from the InCrowd Sports API
-2. Add an entry to the `LEAGUE_CONFIGS` dictionary in `update_data.py`:
+1. For a club competition on the InCrowd Sports API, obtain the competition ID and provider, then add an entry to the `LEAGUE_CONFIGS` dictionary in `rugby/update.py`:
 
 ```python
 LEAGUE_CONFIGS = {
@@ -51,7 +55,9 @@ LEAGUE_CONFIGS = {
 }
 ```
 
-3. The league will automatically be available via CLI and GitHub Actions
+2. For a competition without an API feed, add an entry with `'provider': 'wikipedia'` instead (see the internationals/Super Rugby/NPC entries in `rugby/update.py` for examples), and confirm `rugby/scrapers/six_nations.py`'s page-title logic resolves the right Wikipedia page for it.
+
+3. The league will automatically be available via `rugby data update -t <code>` and GitHub Actions.
 
 ## Manual Updates
 
@@ -71,34 +77,35 @@ To update data locally:
 
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+pip install .
 
 # Update current season (default - URC)
-python update_data.py
+rugby data update
 
 # Update specific season
-python update_data.py --season "2024-2025"
+rugby data update --season "2024-2025"
 
 # Dry run (preview changes)
-python update_data.py --dry-run
+rugby data update --dry-run
 
 # Update specific tournaments
-python update_data.py -t premiership
-python update_data.py -t euro-champions
-python update_data.py -t top14
+rugby data update -t premiership
+rugby data update -t euro-champions
+rugby data update -t top14
 
 # Update all available tournaments
-python update_data.py -t all
+rugby data update -t all
 
 # Update multiple specific tournaments
-python update_data.py -t urc -t premiership -t euro-champions
+rugby data update -t urc -t premiership -t euro-champions
 
-# Available tournament codes: urc, premiership, championship, top14, pro-d2, euro-champions, euro-challenge
+# Available tournament codes: urc, premiership, championship, top14, pro-d2,
+# euro-champions, euro-challenge, six-nations, mid-year-internationals,
+# end-of-year-internationals, world-cup, super-rugby, japan-league-one,
+# currie-cup, npc
 ```
 
 ## Data Sources
-
-All supported leagues use the same data source:
 
 ### InCrowd Sports API
 - **Source**: rugby-union-feeds.incrowdsports.com
@@ -106,8 +113,6 @@ All supported leagues use the same data source:
 - **Format**: JSON API
 - **Reliability**: High - Official data feed
 - **Coverage**: Complete match data including lineups, scores, and events
-
-#### Supported Competitions
 
 | League Code | Competition ID | Description |
 |-------------|---------------|-------------|
@@ -119,16 +124,34 @@ All supported leagues use the same data source:
 | euro-champions | 1008 | European Rugby Champions Cup |
 | euro-challenge | 1026 | European Rugby Challenge Cup |
 
+### Wikipedia
+- **Format**: Wikitext, parsed by `rugby/scrapers/six_nations.py`
+- **Reliability**: Medium - depends on page structure staying consistent
+- **Coverage**: Results always; lineups and scoring events when the source page includes them
+
+| League Code | Description |
+|-------------|-------------|
+| six-nations | Six Nations Championship |
+| mid-year-internationals | Mid-year (summer) internationals |
+| end-of-year-internationals | End-of-year (autumn) internationals |
+| world-cup | Rugby World Cup (World Cup years only) |
+| super-rugby | Super Rugby |
+| japan-league-one | Japan Rugby League One |
+| currie-cup | Currie Cup |
+| npc | National Provincial Championship (New Zealand) |
+
 ### Future Enhancements
 
 The system can be extended to support:
 
+- The Rugby Championship (Argentina / Australia / New Zealand / South Africa)
+- Major League Rugby (United States / Canada)
+- Rugby Europe Championship
 - Rugby Europe Super Cup - pending API availability or alternative data source
-- International matches integration - requires different data source
 - Improved error handling and retry logic
 - Data validation and consistency checks
 
-To add a new league, simply update the `LEAGUE_CONFIGS` dictionary in `update_data.py`.
+To add a new league, update the `LEAGUE_CONFIGS` dictionary in `rugby/update.py`.
 
 ## Troubleshooting
 

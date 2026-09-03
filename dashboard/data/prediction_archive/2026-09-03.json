@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-09-03T16:35:14_colomiers-vs-provence_2026-09-03",
+    "prediction_metadata": {
+      "timestamp": "2026-09-03T16:35:14.375055+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-09-03_Colomiers-vs-Provence",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-09-03T19:00:00+00:00",
+      "home_team": "Colomiers",
+      "away_team": "Provence",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Colomiers",
+        "mean": 29.394,
+        "std": 13.5467621223671,
+        "median": 29.0,
+        "ci_lower": 9.0,
+        "ci_upper": 54.0
+      },
+      "away": {
+        "team": "Provence",
+        "mean": 24.406,
+        "std": 11.80665761339762,
+        "median": 23.0,
+        "ci_lower": 6.0,
+        "ci_upper": 46.0
+      },
+      "home_win_prob": 0.58,
+      "away_win_prob": 0.402,
+      "draw_prob": 0.018,
+      "predicted_margin": 4.988,
+      "margin_std": 18.021538669048212,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

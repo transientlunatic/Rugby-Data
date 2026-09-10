@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-09-10T16:35:15_biarritz-vs-colomiers_2026-09-10",
+    "prediction_metadata": {
+      "timestamp": "2026-09-10T16:35:15.569985+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-09-10_Biarritz-vs-Colomiers",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-09-10T19:00:00+00:00",
+      "home_team": "Biarritz",
+      "away_team": "Colomiers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Biarritz",
+        "mean": 30.894,
+        "std": 15.32562442447289,
+        "median": 29.5,
+        "ci_lower": 9.0,
+        "ci_upper": 58.0
+      },
+      "away": {
+        "team": "Colomiers",
+        "mean": 21.58,
+        "std": 11.902083851158167,
+        "median": 20.0,
+        "ci_lower": 6.0,
+        "ci_upper": 44.0
+      },
+      "home_win_prob": 0.662,
+      "away_win_prob": 0.31,
+      "draw_prob": 0.028,
+      "predicted_margin": 9.314,
+      "margin_std": 19.503727951343045,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

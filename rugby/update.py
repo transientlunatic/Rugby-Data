@@ -113,7 +113,8 @@ LEAGUE_CONFIGS = {
         'comp_id': None,
         'provider': 'wikipedia',
         'name': 'Japan Rugby League One',
-        'filename_prefix': 'japan-league-one'
+        'filename_prefix': 'japan-league-one',
+        'season_start_month': 12  # Season runs Dec-June, not Aug-May like European leagues
     },
     'currie-cup': {
         'comp_id': None,
@@ -152,6 +153,26 @@ WORLD_CUP_YEARS = [1987, 1991, 1995, 1999, 2003, 2007, 2011, 2015, 2019, 2023, 2
 def is_world_cup_year(year: int) -> bool:
     """Check if a given year is a Rugby World Cup year."""
     return year in WORLD_CUP_YEARS or (year >= 1987 and (year - 1987) % 4 == 0)
+
+
+def default_season_for_league(league_config: Dict, now: datetime) -> str:
+    """
+    Determine the current season string for a league based on when its
+    season actually starts, not a single global assumption.
+
+    Calendar-year competitions (internationals, Southern Hemisphere leagues)
+    always use the current year. Others default to SEASON_START_MONTH
+    (Northern Hemisphere club season, starting August), unless the league
+    config overrides 'season_start_month' (e.g. Japan League One starts
+    in December).
+    """
+    if league_config.get('use_calendar_year'):
+        return f"{now.year}-{now.year + 1}"
+
+    start_month = league_config.get('season_start_month', SEASON_START_MONTH)
+    if now.month >= start_month:
+        return f"{now.year}-{now.year + 1}"
+    return f"{now.year - 1}-{now.year}"
 
 
 def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:

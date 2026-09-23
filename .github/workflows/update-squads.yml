@@ -1,0 +1,90 @@
+name: Update Squads
+
+on:
+  schedule:
+    - cron: '0 12 * * 4'  # Thursday 12:00 UTC (alongside lineup announcements)
+  push:
+    branches: [claude/automate-squads]  # TEMP: for smoke-testing before merge, will remove
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Year (e.g., "2026"). Defaults to current year.'
+        required: false
+      tournaments:
+        description: 'Comma-separated tournament codes: six-nations, rugby-championship, world-cup'
+        default: 'six-nations,rugby-championship,world-cup'
+
+jobs:
+  update-squads:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Scrape squads
+        run: |
+          YEAR="${{ github.event.inputs.year }}"
+          if [ -z "$YEAR" ]; then
+            YEAR=$(date -u +%Y)
+          fi
+
+          TOURNAMENTS="${{ github.event.inputs.tournaments }}"
+          if [ -z "$TOURNAMENTS" ]; then
+            TOURNAMENTS="six-nations,rugby-championship,world-cup"
+          fi
+
+          IFS=',' read -ra TLIST <<< "$TOURNAMENTS"
+          for t in "${TLIST[@]}"; do
+            t=$(echo "$t" | xargs)
+            case "$t" in
+              six-nations) NAME="Six Nations Championship" ;;
+              rugby-championship) NAME="Rugby Championship" ;;
+              world-cup) NAME="Rugby World Cup" ;;
+              *) NAME="$t" ;;
+            esac
+            echo "Attempting squads scrape: $NAME ($YEAR)"
+            # Squads pages don't exist year-round (e.g. pre-announcement, or a
+            # non-World-Cup year) - scrape-squads exits 1 in that case, which
+            # is expected and not a failure of this workflow.
+            rugby data scrape-squads --year "$YEAR" --tournament "$NAME" || echo "  Skipped: no squads page found for $NAME $YEAR"
+          done
+
+      - name: Check for changes
+        id: check-changes
+        run: |
+          git add squads/*.json || true
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check-changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update squad data - $(date -u +%Y-%m-%d)" \
+                     -m "Automated squad data update"
+          git push
+
+      - name: Summary
+        run: |
+          echo "### Squad Data Update" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check-changes.outputs.changed }}" = "true" ]; then
+            echo "✅ Squad data updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ No changes (no squads pages available yet for the requested tournaments/year)" >> $GITHUB_STEP_SUMMARY
+          fi

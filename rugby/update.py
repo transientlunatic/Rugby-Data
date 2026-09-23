@@ -102,6 +102,13 @@ LEAGUE_CONFIGS = {
         'filename_prefix': 'super-rugby',
         'use_calendar_year': True  # Use calendar year for season calculation
     },
+    'rugby-championship': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Rugby Championship',
+        'filename_prefix': 'rugby-championship',
+        'use_calendar_year': True  # Use calendar year for season calculation
+    },
     'japan-league-one': {
         'comp_id': None,
         'provider': 'wikipedia',

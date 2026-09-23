@@ -31,6 +31,7 @@ Wikipedia (internationals and competitions without an API feed):
 - **End-of-year Internationals**
 - **Rugby World Cup** (World Cup years only)
 - **Super Rugby**
+- **Rugby Championship** (Argentina / Australia / New Zealand / South Africa)
 - **Japan Rugby League One**
 - **Currie Cup**
 - **National Provincial Championship (NPC)**
@@ -101,8 +102,8 @@ rugby data update -t urc -t premiership -t euro-champions
 
 # Available tournament codes: urc, premiership, championship, top14, pro-d2,
 # euro-champions, euro-challenge, six-nations, mid-year-internationals,
-# end-of-year-internationals, world-cup, super-rugby, japan-league-one,
-# currie-cup, npc
+# end-of-year-internationals, world-cup, super-rugby, rugby-championship,
+# japan-league-one, currie-cup, npc
 ```
 
 ## Data Sources
@@ -136,15 +137,19 @@ rugby data update -t urc -t premiership -t euro-champions
 | end-of-year-internationals | End-of-year (autumn) internationals |
 | world-cup | Rugby World Cup (World Cup years only) |
 | super-rugby | Super Rugby |
+| rugby-championship | Rugby Championship (Argentina / Australia / New Zealand / South Africa) |
 | japan-league-one | Japan Rugby League One |
 | currie-cup | Currie Cup |
 | npc | National Provincial Championship (New Zealand) |
+
+### Known Issues
+
+- **Japan Rugby League One**: the Wikipedia page is found and rugbybox templates are detected, but they currently fail to parse into matches (0 matches saved on every run). Needs debugging against the live page - see `rugby/scrapers/six_nations.py`'s `parse_rugbybox`/`_parse_rugbybox_params`.
 
 ### Future Enhancements
 
 The system can be extended to support:
 
-- The Rugby Championship (Argentina / Australia / New Zealand / South Africa)
 - Major League Rugby (United States / Canada)
 - Rugby Europe Championship
 - Rugby Europe Super Cup - pending API availability or alternative data source

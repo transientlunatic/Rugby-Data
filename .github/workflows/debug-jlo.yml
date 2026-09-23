@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install .
-      - run: python debug_jlo.py 2026
+      - run: rugby data update -t japan-league-one --dry-run

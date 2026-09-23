@@ -129,6 +129,20 @@ LEAGUE_CONFIGS = {
         'filename_prefix': 'npc',
         'use_calendar_year': True  # Use calendar year for season calculation
     },
+    'major-league-rugby': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Major League Rugby',
+        'filename_prefix': 'major-league-rugby',
+        'use_calendar_year': True  # Use calendar year for season calculation
+    },
+    'rugby-europe-championship': {
+        'comp_id': None,
+        'provider': 'wikipedia',
+        'name': 'Rugby Europe Championship',
+        'filename_prefix': 'rugby-europe-championship',
+        'use_calendar_year': True  # Use calendar year for season calculation
+    },
 }
 
 SCORING_VALUES = {

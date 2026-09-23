@@ -371,24 +371,6 @@ def extract_match_sections_from_text(wikitext: str) -> List[Tuple[str, str, str]
     return matches
 
 
-def _extract_rugbyboxes_from_sections(heading_matches) -> List[Tuple[str, str, str]]:
-    """
-    Helper function to extract all rugbyboxes from a list of section matches.
-    Each section can contain one or more rugbybox templates.
-    
-    Args:
-        heading_matches: List of regex match objects with groups (heading, content)
-    
-    Returns:
-        List of (match_id, rugbybox_text, lineup_text) tuples
-    """
-    matches = []
-    
-    for heading_match in heading_matches:
-        heading = heading_match.group(1).strip()
-        match_content = heading_match.group(2)
-
-
 def extract_all_rugbyboxes(wikitext: str) -> List[Tuple[str, str, str]]:
     """
     Extract all rugbybox templates from wikitext, regardless of structure.

@@ -14,7 +14,8 @@ from rugby.scrapers.six_nations import (
     _parse_rugbybox_params,
 )
 
-YEAR = 2025
+import sys as _sys
+YEAR = int(_sys.argv[1]) if len(_sys.argv) > 1 else 2025
 NAME = "Japan Rugby League One"
 
 title = get_wikipedia_page_title(YEAR, NAME)

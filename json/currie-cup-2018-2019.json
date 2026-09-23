@@ -1,0 +1,120 @@
+[
+  {
+    "date": "2018-10-20T14:30:00",
+    "home": {
+      "team": "Sharks (Currie Cup)",
+      "score": 33
+    },
+    "away": {
+      "team": "Golden Lions",
+      "score": 24
+    },
+    "referee": "Marius van der Westhuizen"
+  },
+  {
+    "date": "2018-10-20T17:00:00",
+    "home": {
+      "team": "Western Province",
+      "score": 35
+    },
+    "away": {
+      "team": "Blue Bulls",
+      "score": 32
+    },
+    "referee": "Egon Seconds"
+  },
+  {
+    "date": "2018-10-30T18:00:00",
+    "home": {
+      "team": "Free State Cheetahs",
+      "score": 36,
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Penalty try",
+          "value": 5
+        },
+        {
+          "minute": 18,
+          "type": "Try",
+          "player": "Rabz Maxwane",
+          "value": 5
+        },
+        {
+          "minute": 19,
+          "type": "Conversion",
+          "player": "Rabz Maxwane",
+          "value": 2
+        },
+        {
+          "minute": 20,
+          "type": "Try",
+          "player": "Tian Schoeman",
+          "value": 5
+        },
+        {
+          "minute": 21,
+          "type": "Missed conversion",
+          "player": "Tian Schoeman",
+          "value": 0
+        },
+        {
+          "minute": 54,
+          "type": "Try",
+          "player": "Louis Fouch\u00e9",
+          "value": 5
+        },
+        {
+          "minute": 55,
+          "type": "Conversion",
+          "player": "Louis Fouch\u00e9",
+          "value": 2
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "William Small-Smith",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Missed conversion",
+          "player": "William Small-Smith",
+          "value": 0
+        },
+        {
+          "minute": 78,
+          "type": "Try",
+          "player": "William Small-Smith",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Missed conversion",
+          "player": "William Small-Smith",
+          "value": 0
+        }
+      ]
+    },
+    "away": {
+      "team": "SWD Eagles",
+      "score": 5,
+      "scores": [
+        {
+          "minute": 60,
+          "type": "Try",
+          "player": "Vuyo Mbotho",
+          "value": 5
+        },
+        {
+          "minute": 61,
+          "type": "Missed conversion",
+          "player": "Vuyo Mbotho",
+          "value": 0
+        }
+      ]
+    },
+    "referee": "Jaco Peyper"
+  }
+]

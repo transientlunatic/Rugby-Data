@@ -35,6 +35,8 @@ Wikipedia (internationals and competitions without an API feed):
 - **Japan Rugby League One**
 - **Currie Cup**
 - **National Provincial Championship (NPC)**
+- **Major League Rugby** (United States / Canada)
+- **Rugby Europe Championship** (tier-2 European nations)
 
 Club competitions include the same detailed data structure with match results, player lineups, scoring events, and match officials when available. Wikipedia-sourced competitions include results and, where the source page has them, lineups and scoring events.
 
@@ -103,7 +105,7 @@ rugby data update -t urc -t premiership -t euro-champions
 # Available tournament codes: urc, premiership, championship, top14, pro-d2,
 # euro-champions, euro-challenge, six-nations, mid-year-internationals,
 # end-of-year-internationals, world-cup, super-rugby, rugby-championship,
-# japan-league-one, currie-cup, npc
+# japan-league-one, currie-cup, npc, major-league-rugby, rugby-europe-championship
 ```
 
 ## Data Sources
@@ -141,13 +143,17 @@ rugby data update -t urc -t premiership -t euro-champions
 | japan-league-one | Japan Rugby League One |
 | currie-cup | Currie Cup |
 | npc | National Provincial Championship (New Zealand) |
+| major-league-rugby | Major League Rugby (United States / Canada) |
+| rugby-europe-championship | Rugby Europe Championship (tier-2 European nations) |
+
+### Known Issues
+
+- **Major League Rugby / Rugby Europe Championship**: newly added, not yet verified against the live Wikipedia pages (see PR for details) - recommend a `--dry-run` before relying on them in the weekly schedule.
 
 ### Future Enhancements
 
 The system can be extended to support:
 
-- Major League Rugby (United States / Canada)
-- Rugby Europe Championship
 - Rugby Europe Super Cup - pending API availability or alternative data source
 - Improved error handling and retry logic
 - Data validation and consistency checks

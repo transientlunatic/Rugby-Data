@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-09-24T17:42:49_brive-vs-colomiers_2026-09-24",
+    "prediction_metadata": {
+      "timestamp": "2026-09-24T17:42:49.765870+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-09-24_Brive-vs-Colomiers",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-09-24T19:00:00+00:00",
+      "home_team": "Brive",
+      "away_team": "Colomiers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Brive",
+        "mean": 32.254,
+        "std": 14.154062455705075,
+        "median": 31.0,
+        "ci_lower": 13.0,
+        "ci_upper": 56.049999999999955
+      },
+      "away": {
+        "team": "Colomiers",
+        "mean": 25.678,
+        "std": 12.768019266902757,
+        "median": 25.0,
+        "ci_lower": 7.0,
+        "ci_upper": 49.0
+      },
+      "home_win_prob": 0.638,
+      "away_win_prob": 0.338,
+      "draw_prob": 0.024,
+      "predicted_margin": 6.576,
+      "margin_std": 19.258770054185703,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

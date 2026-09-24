@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-09-24T17:42:49_toulouse-vs-montpellier_2026-09-27",
+    "prediction_metadata": {
+      "timestamp": "2026-09-24T17:42:49.799526+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-09-27_Toulouse-vs-Montpellier",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-09-27T19:05:00+00:00",
+      "home_team": "Toulouse",
+      "away_team": "Montpellier",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulouse",
+        "mean": 39.024,
+        "std": 17.335149956086333,
+        "median": 37.0,
+        "ci_lower": 14.0,
+        "ci_upper": 68.04999999999995
+      },
+      "away": {
+        "team": "Montpellier",
+        "mean": 24.838,
+        "std": 12.278589332655441,
+        "median": 23.0,
+        "ci_lower": 6.0,
+        "ci_upper": 47.049999999999955
+      },
+      "home_win_prob": 0.736,
+      "away_win_prob": 0.254,
+      "draw_prob": 0.01,
+      "predicted_margin": 14.186,
+      "margin_std": 21.853864738302008,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

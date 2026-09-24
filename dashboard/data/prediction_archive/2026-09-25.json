@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-09-24T17:42:49_blackheath-vs-caldy_2026-09-25",
+    "prediction_metadata": {
+      "timestamp": "2026-09-24T17:42:49.769944+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "championship_2026-09-25_Blackheath-vs-Caldy",
+      "competition": "championship",
+      "season": "2026-2027",
+      "date": "2026-09-25T18:45:00+00:00",
+      "home_team": "Blackheath",
+      "away_team": "Caldy",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Blackheath",
+        "mean": 39.484,
+        "std": 18.588860750460206,
+        "median": 37.0,
+        "ci_lower": 13.0,
+        "ci_upper": 75.14999999999986
+      },
+      "away": {
+        "team": "Caldy",
+        "mean": 30.572,
+        "std": 14.49388891912726,
+        "median": 29.5,
+        "ci_lower": 10.0,
+        "ci_upper": 59.0
+      },
+      "home_win_prob": 0.61,
+      "away_win_prob": 0.374,
+      "draw_prob": 0.016,
+      "predicted_margin": 8.912,
+      "margin_std": 24.30432587009975,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-09-24T17:42:49_montpellier-vs-toulon_2026-10-04",
+    "prediction_metadata": {
+      "timestamp": "2026-09-24T17:42:49.830265+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-04_Montpellier-vs-Toulon",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-04T19:05:00+00:00",
+      "home_team": "Montpellier",
+      "away_team": "Toulon",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Montpellier",
+        "mean": 34.274,
+        "std": 16.267480567069995,
+        "median": 32.0,
+        "ci_lower": 11.0,
+        "ci_upper": 63.0
+      },
+      "away": {
+        "team": "Toulon",
+        "mean": 20.29,
+        "std": 10.585362535123679,
+        "median": 19.0,
+        "ci_lower": 6.0,
+        "ci_upper": 40.0
+      },
+      "home_win_prob": 0.784,
+      "away_win_prob": 0.204,
+      "draw_prob": 0.012,
+      "predicted_margin": 13.984,
+      "margin_std": 18.882789624417256,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

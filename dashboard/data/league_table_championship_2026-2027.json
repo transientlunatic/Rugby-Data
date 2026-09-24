@@ -1,6 +1,114 @@
 [
   {
     "position": 1,
+    "team": "Portugal",
+    "played": 5,
+    "won": 5,
+    "drawn": 0,
+    "lost": 0,
+    "points_for": 204,
+    "points_against": 60,
+    "points_diff": 144,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 0,
+    "bonus_points": 0,
+    "match_points": 20,
+    "total_points": 20
+  },
+  {
+    "position": 2,
+    "team": "Georgia",
+    "played": 5,
+    "won": 4,
+    "drawn": 0,
+    "lost": 1,
+    "points_for": 227,
+    "points_against": 94,
+    "points_diff": 133,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 1,
+    "bonus_points": 1,
+    "match_points": 16,
+    "total_points": 17
+  },
+  {
+    "position": 3,
+    "team": "Spain",
+    "played": 5,
+    "won": 3,
+    "drawn": 0,
+    "lost": 2,
+    "points_for": 170,
+    "points_against": 138,
+    "points_diff": 32,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 0,
+    "bonus_points": 0,
+    "match_points": 12,
+    "total_points": 12
+  },
+  {
+    "position": 4,
+    "team": "Belgium",
+    "played": 5,
+    "won": 3,
+    "drawn": 0,
+    "lost": 2,
+    "points_for": 118,
+    "points_against": 104,
+    "points_diff": 14,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 0,
+    "bonus_points": 0,
+    "match_points": 12,
+    "total_points": 12
+  },
+  {
+    "position": 5,
+    "team": "SUI",
+    "played": 5,
+    "won": 2,
+    "drawn": 0,
+    "lost": 3,
+    "points_for": 97,
+    "points_against": 194,
+    "points_diff": -97,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 0,
+    "bonus_points": 0,
+    "match_points": 8,
+    "total_points": 8
+  },
+  {
+    "position": 6,
+    "team": "Romania",
+    "played": 5,
+    "won": 1,
+    "drawn": 0,
+    "lost": 4,
+    "points_for": 107,
+    "points_against": 162,
+    "points_diff": -55,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 2,
+    "bonus_points": 2,
+    "match_points": 4,
+    "total_points": 6
+  },
+  {
+    "position": 7,
     "team": "Worcester Warriors",
     "played": 1,
     "won": 1,
@@ -18,7 +126,7 @@
     "total_points": 5
   },
   {
-    "position": 2,
+    "position": 8,
     "team": "Cornish Pirates",
     "played": 1,
     "won": 1,
@@ -36,7 +144,7 @@
     "total_points": 5
   },
   {
-    "position": 3,
+    "position": 9,
     "team": "Ealing Trailfinders",
     "played": 1,
     "won": 1,
@@ -54,7 +162,7 @@
     "total_points": 5
   },
   {
-    "position": 4,
+    "position": 10,
     "team": "Nottingham Rugby",
     "played": 1,
     "won": 1,
@@ -72,7 +180,7 @@
     "total_points": 5
   },
   {
-    "position": 5,
+    "position": 11,
     "team": "Rotherham Titans",
     "played": 1,
     "won": 1,
@@ -90,7 +198,7 @@
     "total_points": 5
   },
   {
-    "position": 6,
+    "position": 12,
     "team": "Hartpury",
     "played": 1,
     "won": 1,
@@ -108,7 +216,7 @@
     "total_points": 5
   },
   {
-    "position": 7,
+    "position": 13,
     "team": "Ampthill",
     "played": 1,
     "won": 1,
@@ -126,7 +234,43 @@
     "total_points": 5
   },
   {
-    "position": 8,
+    "position": 14,
+    "team": "NLD",
+    "played": 5,
+    "won": 1,
+    "drawn": 0,
+    "lost": 4,
+    "points_for": 159,
+    "points_against": 186,
+    "points_diff": -27,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 1,
+    "bonus_points": 1,
+    "match_points": 4,
+    "total_points": 5
+  },
+  {
+    "position": 15,
+    "team": "Germany",
+    "played": 5,
+    "won": 1,
+    "drawn": 0,
+    "lost": 4,
+    "points_for": 77,
+    "points_against": 221,
+    "points_diff": -144,
+    "tries_for": 0,
+    "tries_against": 0,
+    "try_bonus": 0,
+    "losing_bonus": 0,
+    "bonus_points": 0,
+    "match_points": 4,
+    "total_points": 4
+  },
+  {
+    "position": 16,
     "team": "Caldy",
     "played": 1,
     "won": 0,
@@ -144,7 +288,7 @@
     "total_points": 2
   },
   {
-    "position": 9,
+    "position": 17,
     "team": "Richmond",
     "played": 1,
     "won": 0,
@@ -162,7 +306,7 @@
     "total_points": 2
   },
   {
-    "position": 10,
+    "position": 18,
     "team": "Coventry",
     "played": 1,
     "won": 0,
@@ -180,7 +324,7 @@
     "total_points": 2
   },
   {
-    "position": 11,
+    "position": 19,
     "team": "Blackheath",
     "played": 1,
     "won": 0,
@@ -198,7 +342,7 @@
     "total_points": 2
   },
   {
-    "position": 12,
+    "position": 20,
     "team": "Chinnor RFC Thame",
     "played": 1,
     "won": 0,
@@ -214,41 +358,5 @@
     "bonus_points": 1,
     "match_points": 0,
     "total_points": 1
-  },
-  {
-    "position": 13,
-    "team": "Doncaster Knights",
-    "played": 1,
-    "won": 0,
-    "drawn": 0,
-    "lost": 1,
-    "points_for": 19,
-    "points_against": 45,
-    "points_diff": -26,
-    "tries_for": 3,
-    "tries_against": 7,
-    "try_bonus": 0,
-    "losing_bonus": 0,
-    "bonus_points": 0,
-    "match_points": 0,
-    "total_points": 0
-  },
-  {
-    "position": 14,
-    "team": "Bedford Blues",
-    "played": 1,
-    "won": 0,
-    "drawn": 0,
-    "lost": 1,
-    "points_for": 5,
-    "points_against": 40,
-    "points_diff": -35,
-    "tries_for": 1,
-    "tries_against": 6,
-    "try_bonus": 0,
-    "losing_bonus": 0,
-    "bonus_points": 0,
-    "match_points": 0,
-    "total_points": 0
   }
 ]

@@ -62,6 +62,18 @@ LEAGUE_CONFIGS = {
 
 3. The league will automatically be available via `rugby data update -t <code>` and GitHub Actions.
 
+## Squad Data Updates
+
+In addition to match data, the repository automatically scrapes tournament squad lists from Wikipedia:
+
+- **Schedule**: Every Thursday at 12:00 UTC (aligned with typical lineup/squad announcement timing)
+- **Manual Trigger**: Can be triggered manually from the GitHub Actions tab (workflow: "Update Squads"), with optional `year` and `tournaments` inputs
+- **Coverage**: Six Nations Championship, Rugby Championship, Rugby World Cup
+
+Squad pages don't exist year-round (e.g. before a tournament's squads are announced, or in a non-World-Cup year for the World Cup), so a missing page for a given tournament/year is expected and does not fail the workflow - it's simply skipped.
+
+Squad data is saved to `squads/{year}_{tournament}_squads.json` via `rugby data scrape-squads --year <year> --tournament "<name>"`.
+
 ## Manual Updates
 
 You can manually trigger an update from the GitHub Actions interface:

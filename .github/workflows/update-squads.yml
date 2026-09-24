@@ -3,8 +3,6 @@ name: Update Squads
 on:
   schedule:
     - cron: '0 12 * * 4'  # Thursday 12:00 UTC (alongside lineup announcements)
-  push:
-    branches: [claude/automate-squads]  # TEMP: for smoke-testing before merge, will remove
   workflow_dispatch:
     inputs:
       year:

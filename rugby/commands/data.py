@@ -9,8 +9,8 @@ from pathlib import Path
 import click
 
 from ..update import (
-    LEAGUE_CONFIGS, SEASON_START_MONTH, MAX_ERRORS_TO_DISPLAY,
-    update_league_data
+    LEAGUE_CONFIGS, MAX_ERRORS_TO_DISPLAY,
+    update_league_data, default_season_for_league
 )
 from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
@@ -31,31 +31,15 @@ def data():
 @click.option('--dry-run', is_flag=True, help='Show what would be updated without saving')
 def update(season, tournaments, dry_run):
     """Update rugby data from various sources."""
-    if season is None:
-        now = datetime.now()
-
-        # Check if any of the selected tournaments use calendar year
-        # (internationals and Southern Hemisphere competitions)
-        uses_calendar_year = False
-        tournament_list = list(LEAGUE_CONFIGS.keys()) if 'all' in tournaments else tournaments
-        for tournament in tournament_list:
-            if tournament in LEAGUE_CONFIGS and LEAGUE_CONFIGS[tournament].get('use_calendar_year'):
-                uses_calendar_year = True
-                break
-
-        # For calendar-year competitions, always use current year
-        # For Northern Hemisphere club competitions, use August-based season
-        if uses_calendar_year:
-            season = f"{now.year}-{now.year + 1}"
-        else:
-            if now.month >= SEASON_START_MONTH:
-                season = f"{now.year}-{now.year + 1}"
-            else:
-                season = f"{now.year - 1}-{now.year}"
+    explicit_season = season
+    now = datetime.now()
 
     json_dir = find_data_dir()
 
-    click.echo(f"Updating data for season {season}")
+    if explicit_season:
+        click.echo(f"Updating data for season {explicit_season}")
+    else:
+        click.echo("Updating data for the current season (per-league)")
     if dry_run:
         click.echo("DRY RUN - No changes will be saved")
     click.echo()
@@ -66,6 +50,10 @@ def update(season, tournaments, dry_run):
         tournaments = list(LEAGUE_CONFIGS.keys())
 
     for tournament in tournaments:
+        # Each league's season is computed independently - leagues starting
+        # in different months (e.g. Japan League One in December vs European
+        # leagues in August) must not share one global "current season".
+        season = explicit_season or default_season_for_league(LEAGUE_CONFIGS[tournament], now)
         stats = update_league_data(tournament, season, json_dir, dry_run)
         for key in ['new_matches', 'updated_matches', 'total_matches']:
             total_stats[key] += stats.get(key, 0)

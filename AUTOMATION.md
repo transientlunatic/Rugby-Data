@@ -58,7 +58,7 @@ LEAGUE_CONFIGS = {
 }
 ```
 
-2. For a competition without an API feed, add an entry with `'provider': 'wikipedia'` instead (see the internationals/Super Rugby/NPC entries in `rugby/update.py` for examples), and confirm `rugby/scrapers/six_nations.py`'s page-title logic resolves the right Wikipedia page for it.
+2. For a competition without an API feed, add an entry with `'provider': 'wikipedia'` instead (see the internationals/Super Rugby/NPC entries in `rugby/update.py` for examples), and confirm `rugby/scrapers/six_nations.py`'s page-title logic resolves the right Wikipedia page for it. If the league's season doesn't start in August (the default) or run on the calendar year, set `'season_start_month'` to the month it actually starts (see `japan-league-one`, which starts in December) so the auto-computed "current season" doesn't point at a not-yet-started season.
 
 3. The league will automatically be available via `rugby data update -t <code>` and GitHub Actions.
 
@@ -148,7 +148,6 @@ rugby data update -t urc -t premiership -t euro-champions
 
 ### Known Issues
 
-- **Japan Rugby League One**: the Wikipedia page is found and rugbybox templates are detected, but they currently fail to parse into matches (0 matches saved on every run). Needs debugging against the live page - see `rugby/scrapers/six_nations.py`'s `parse_rugbybox`/`_parse_rugbybox_params`.
 - **Major League Rugby / Rugby Europe Championship**: newly added, not yet verified against the live Wikipedia pages (see PR for details) - recommend a `--dry-run` before relying on them in the weekly schedule.
 
 ### Future Enhancements

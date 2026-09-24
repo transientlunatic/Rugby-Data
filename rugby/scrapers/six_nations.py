@@ -91,6 +91,11 @@ def get_wikipedia_page_title(year: int, championship_name: str) -> str:
         # Format: "2024 Bunnings NPC"
         return f"{year} Bunnings NPC"
 
+    # Major League Rugby (United States / Canada)
+    if "Major League Rugby" in championship_name or "MLR" in championship_name:
+        # Format: "2024 MLR season"
+        return f"{year} MLR season"
+
     # RFU Championship (England second tier)
     if "RFU Championship" in championship_name or championship_name == "RFU Championship":
         # Format: "2018–19 RFU Championship"

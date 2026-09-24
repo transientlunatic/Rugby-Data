@@ -26,6 +26,7 @@ The following leagues are currently supported for automated data updates:
 - **European Rugby Challenge Cup** - Secondary European club competition
 - **Six Nations Championship**, **mid-year** and **end-of-year internationals**, and the **Rugby World Cup**
 - **Super Rugby**, the **Rugby Championship**, **Japan Rugby League One**, **Currie Cup**, and the **National Provincial Championship (NPC)**
+- **Major League Rugby** and the **Rugby Europe Championship**
 
 Use `rugby data update -t all` to update all supported leagues, or specify individual leagues with `-t <league-code>`. See [AUTOMATION.md](AUTOMATION.md) for the full list of league codes.
 

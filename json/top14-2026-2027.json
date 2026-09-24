@@ -576,7 +576,7 @@
     "round_type": "league",
     "stadium": "Septeo Stadium",
     "date": "2026-09-05T17:05:00.000Z",
-    "attendance": null
+    "attendance": 10852
   },
   {
     "away": {
@@ -1149,7 +1149,7 @@
     "round_type": "league",
     "stadium": "Stade Jean Dauger",
     "date": "2026-09-05T17:05:00.000Z",
-    "attendance": null
+    "attendance": 14800
   },
   {
     "away": {
@@ -1730,7 +1730,7 @@
     "round_type": "league",
     "stadium": "Stade Jean Bouin",
     "date": "2026-09-05T17:05:00.000Z",
-    "attendance": null
+    "attendance": 12065
   },
   {
     "away": {
@@ -2284,7 +2284,7 @@
     "round_type": "league",
     "stadium": "Stade Pierre-Fabre",
     "date": "2026-09-05T17:05:00.000Z",
-    "attendance": null
+    "attendance": 12200
   },
   {
     "away": {
@@ -2906,7 +2906,7 @@
     "round_type": "league",
     "stadium": "Matmut Stadium",
     "date": "2026-09-05T17:05:00.000Z",
-    "attendance": null
+    "attendance": 14733
   },
   {
     "away": {
@@ -3516,7 +3516,7 @@
     "round_type": "league",
     "stadium": "Stade Chaban-Delmas",
     "date": "2026-09-05T19:15:00.000Z",
-    "attendance": null
+    "attendance": 32930
   },
   {
     "away": {
@@ -4114,7 +4114,7 @@
     "round_type": "league",
     "stadium": "Stade Marcel Deflandre",
     "date": "2026-09-06T19:05:00.000Z",
-    "attendance": null
+    "attendance": 18000
   },
   {
     "away": {
@@ -5883,7 +5883,7 @@
     "round_type": "league",
     "stadium": "Stade de la Rabine",
     "date": "2026-09-12T14:35:00.000Z",
-    "attendance": null
+    "attendance": 12500
   },
   {
     "away": {
@@ -6542,7 +6542,7 @@
     },
     "round": 2,
     "round_type": "league",
-    "stadium": "Plenitude Arena",
+    "stadium": "Stade Dominique Duvauchelle",
     "date": "2026-09-12T14:35:00.000Z",
     "attendance": null
   },
@@ -9294,7 +9294,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            71
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9405,7 +9407,9 @@
         },
         "22": {
           "name": "Guillaume Martocq",
-          "on": [],
+          "on": [
+            71
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -12472,6 +12476,3492 @@
     "round_type": "league",
     "stadium": "Stade Chaban-Delmas",
     "date": "2026-09-20T19:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2026-09-26T12:30:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2026-09-26T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2026-09-26T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade Dominique Duvauchelle",
+    "date": "2026-09-26T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2026-09-26T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2026-09-26T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 4,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2026-09-27T19:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2026-10-03T12:30:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2026-10-03T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2026-10-03T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2026-10-03T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2026-10-03T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2026-10-03T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 5,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2026-10-04T19:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2026-10-10T12:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2026-10-10T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2026-10-10T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2026-10-10T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2026-10-10T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2026-10-10T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 6,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2026-10-11T19:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 7,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2026-10-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 8,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2026-10-31T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 9,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2026-11-07T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 10,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2026-11-28T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 11,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2026-12-05T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 12,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2026-12-19T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 13,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2026-12-26T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 14,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-01-02T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 15,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2027-01-23T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 16,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2027-01-30T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 17,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-02-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 18,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2027-02-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 19,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2027-03-20T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 20,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2027-03-27T15:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 21,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-04-17T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 22,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-04-24T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 23,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-05-08T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 24,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2027-05-15T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Stade Jean Dauger",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Stade Pierre-Fabre",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Stade Marcel-Michelin",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Matmut Stadium",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Septeo Stadium",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Stade Felix Mayol",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "round": 25,
+    "round_type": "league",
+    "stadium": "Stade Ernest Wallon",
+    "date": "2027-05-29T14:35:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Clermont Auvergne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Racing 92"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Plenitude Arena",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulouse"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Perpignan"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Stade Aim\u00e9 Giral",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Castres Olympique"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bordeaux-Begles"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Stade Chaban-Delmas",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Lyon O.U."
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Vannes"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Stade de la Rabine",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Montpellier"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "La Rochelle"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Stade Marcel Deflandre",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Bayonne"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Stade Francais Paris"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Stade Jean Bouin",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Toulon"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "Pau"
+    },
+    "round": 26,
+    "round_type": "league",
+    "stadium": "Stade du Hameau",
+    "date": "2027-06-05T19:00:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "round": 28,
+    "round_type": "knockout",
+    "stadium": "TBD",
+    "date": "2027-06-12T20:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "round": 28,
+    "round_type": "knockout",
+    "stadium": "TBD",
+    "date": "2027-06-12T20:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "round": 29,
+    "round_type": "knockout",
+    "stadium": "Stade Atlantique",
+    "date": "2027-06-18T19:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "round": 29,
+    "round_type": "knockout",
+    "stadium": "Stade Atlantique",
+    "date": "2027-06-18T19:05:00.000Z",
+    "attendance": null
+  },
+  {
+    "away": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "home": {
+      "lineup": {},
+      "scores": [],
+      "conference": null,
+      "score": null,
+      "team": "TBC"
+    },
+    "round": 30,
+    "round_type": "knockout",
+    "stadium": "Stade de France",
+    "date": "2027-06-26T19:00:00.000Z",
     "attendance": null
   }
 ]

@@ -49,5 +49,158 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-25T20:58:34_ealing-trailfinders-vs-richmond_2026-09-27",
+    "prediction_metadata": {
+      "timestamp": "2026-09-25T20:58:34.652272+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "championship_2026-09-27_Ealing Trailfinders-vs-Richmond",
+      "competition": "championship",
+      "season": "2026-2027",
+      "date": "2026-09-27T13:00:00+00:00",
+      "home_team": "Ealing Trailfinders",
+      "away_team": "Richmond",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Ealing Trailfinders",
+        "mean": 40.268,
+        "std": 18.645647642278345,
+        "median": 38.0,
+        "ci_lower": 12.950000000000003,
+        "ci_upper": 75.0
+      },
+      "away": {
+        "team": "Richmond",
+        "mean": 29.992,
+        "std": 14.621899192649359,
+        "median": 29.0,
+        "ci_lower": 8.0,
+        "ci_upper": 57.0
+      },
+      "home_win_prob": 0.674,
+      "away_win_prob": 0.31,
+      "draw_prob": 0.016,
+      "predicted_margin": 10.276,
+      "margin_std": 23.55877382208166,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-25T20:58:34_doncaster-knights-vs-hartpury_2026-09-27",
+    "prediction_metadata": {
+      "timestamp": "2026-09-25T20:58:34.656758+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "championship_2026-09-27_Doncaster Knights-vs-Hartpury",
+      "competition": "championship",
+      "season": "2026-2027",
+      "date": "2026-09-27T15:00:00+00:00",
+      "home_team": "Doncaster Knights",
+      "away_team": "Hartpury",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Doncaster Knights",
+        "mean": 35.888,
+        "std": 16.691178987716835,
+        "median": 33.0,
+        "ci_lower": 12.0,
+        "ci_upper": 66.04999999999995
+      },
+      "away": {
+        "team": "Hartpury",
+        "mean": 31.088,
+        "std": 14.585069626162229,
+        "median": 30.0,
+        "ci_lower": 10.0,
+        "ci_upper": 55.049999999999955
+      },
+      "home_win_prob": 0.568,
+      "away_win_prob": 0.402,
+      "draw_prob": 0.03,
+      "predicted_margin": 4.8,
+      "margin_std": 22.2094574449715,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-25T20:58:34_toulouse-vs-montpellier_2026-09-27",
+    "prediction_metadata": {
+      "timestamp": "2026-09-25T20:58:34.661339+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-09-27_Toulouse-vs-Montpellier",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-09-27T19:05:00+00:00",
+      "home_team": "Toulouse",
+      "away_team": "Montpellier",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulouse",
+        "mean": 38.792,
+        "std": 17.610699475035055,
+        "median": 37.0,
+        "ci_lower": 13.0,
+        "ci_upper": 69.0
+      },
+      "away": {
+        "team": "Montpellier",
+        "mean": 25.866,
+        "std": 13.594706469799192,
+        "median": 24.0,
+        "ci_lower": 6.0,
+        "ci_upper": 50.0
+      },
+      "home_win_prob": 0.714,
+      "away_win_prob": 0.266,
+      "draw_prob": 0.02,
+      "predicted_margin": 12.926,
+      "margin_std": 22.50752149837916,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

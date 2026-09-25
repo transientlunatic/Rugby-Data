@@ -49,5 +49,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-25T20:58:34_toulouse-vs-bayonne_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-09-25T20:58:34.730555+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-11_Toulouse-vs-Bayonne",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-11T19:05:00+00:00",
+      "home_team": "Toulouse",
+      "away_team": "Bayonne",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulouse",
+        "mean": 44.61,
+        "std": 18.87373571924753,
+        "median": 42.0,
+        "ci_lower": 18.0,
+        "ci_upper": 80.0
+      },
+      "away": {
+        "team": "Bayonne",
+        "mean": 28.508,
+        "std": 14.260923392263209,
+        "median": 27.0,
+        "ci_lower": 8.0,
+        "ci_upper": 53.049999999999955
+      },
+      "home_win_prob": 0.762,
+      "away_win_prob": 0.212,
+      "draw_prob": 0.026,
+      "predicted_margin": 16.102,
+      "margin_std": 23.592278313041323,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

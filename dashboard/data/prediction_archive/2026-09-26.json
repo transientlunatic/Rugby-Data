@@ -814,5 +814,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-26T15:47:35_pau-vs-la-rochelle_2026-09-26",
+    "prediction_metadata": {
+      "timestamp": "2026-09-26T15:47:35.491414+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-09-26_Pau-vs-La Rochelle",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-09-26T19:00:00+00:00",
+      "home_team": "Pau",
+      "away_team": "La Rochelle",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Pau",
+        "mean": 36.7,
+        "std": 16.465418306256296,
+        "median": 35.0,
+        "ci_lower": 14.0,
+        "ci_upper": 67.04999999999995
+      },
+      "away": {
+        "team": "La Rochelle",
+        "mean": 21.236,
+        "std": 11.268198791288695,
+        "median": 20.0,
+        "ci_lower": 5.0,
+        "ci_upper": 41.0
+      },
+      "home_win_prob": 0.766,
+      "away_win_prob": 0.216,
+      "draw_prob": 0.018,
+      "predicted_margin": 15.464,
+      "margin_std": 20.805496965946283,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

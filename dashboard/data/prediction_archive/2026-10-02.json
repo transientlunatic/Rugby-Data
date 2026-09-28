@@ -1,0 +1,206 @@
+[
+  {
+    "prediction_id": "2026-09-28T00:32:47_cardiff-rugby-vs-zebre-parma_2026-10-02",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.099983+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-02_Cardiff Rugby-vs-Zebre Parma",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-02T18:45:00+00:00",
+      "home_team": "Cardiff Rugby",
+      "away_team": "Zebre Parma",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Cardiff Rugby",
+        "mean": 38.732,
+        "std": 18.035747170549936,
+        "median": 36.5,
+        "ci_lower": 13.0,
+        "ci_upper": 72.04999999999995
+      },
+      "away": {
+        "team": "Zebre Parma",
+        "mean": 21.65,
+        "std": 11.089792604012034,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 40.0
+      },
+      "home_win_prob": 0.794,
+      "away_win_prob": 0.194,
+      "draw_prob": 0.012,
+      "predicted_margin": 17.082,
+      "margin_std": 21.564954810989054,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_edinburgh-rugby-vs-dhl-stormers_2026-10-02",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.109021+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-02_Edinburgh Rugby-vs-DHL Stormers",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-02T18:45:00+00:00",
+      "home_team": "Edinburgh Rugby",
+      "away_team": "DHL Stormers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Edinburgh Rugby",
+        "mean": 37.016,
+        "std": 18.105903567621255,
+        "median": 34.0,
+        "ci_lower": 11.900000000000006,
+        "ci_upper": 72.0
+      },
+      "away": {
+        "team": "DHL Stormers",
+        "mean": 26.796,
+        "std": 13.426331740278131,
+        "median": 25.0,
+        "ci_lower": 7.0,
+        "ci_upper": 51.0
+      },
+      "home_win_prob": 0.64,
+      "away_win_prob": 0.338,
+      "draw_prob": 0.022,
+      "predicted_margin": 10.22,
+      "margin_std": 23.19050667838027,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_benetton-rugby-vs-connacht-rugby_2026-10-02",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.117245+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-02_Benetton Rugby-vs-Connacht Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-02T18:45:00+00:00",
+      "home_team": "Benetton Rugby",
+      "away_team": "Connacht Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Benetton Rugby",
+        "mean": 32.05,
+        "std": 15.20327267400016,
+        "median": 31.0,
+        "ci_lower": 10.0,
+        "ci_upper": 58.049999999999955
+      },
+      "away": {
+        "team": "Connacht Rugby",
+        "mean": 22.608,
+        "std": 12.128575184249797,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.684,
+      "away_win_prob": 0.294,
+      "draw_prob": 0.022,
+      "predicted_margin": 9.442,
+      "margin_std": 19.778742022686885,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_bath-rugby-vs-exeter-chiefs_2026-10-02",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.125675+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-02_Bath Rugby-vs-Exeter Chiefs",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-02T18:45:00+00:00",
+      "home_team": "Bath Rugby",
+      "away_team": "Exeter Chiefs",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Bath Rugby",
+        "mean": 41.794,
+        "std": 19.33658615164528,
+        "median": 39.0,
+        "ci_lower": 15.0,
+        "ci_upper": 75.04999999999995
+      },
+      "away": {
+        "team": "Exeter Chiefs",
+        "mean": 25.406,
+        "std": 13.032619230223832,
+        "median": 23.0,
+        "ci_lower": 7.950000000000003,
+        "ci_upper": 50.0
+      },
+      "home_win_prob": 0.776,
+      "away_win_prob": 0.212,
+      "draw_prob": 0.012,
+      "predicted_margin": 16.388,
+      "margin_std": 23.309342676274678,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

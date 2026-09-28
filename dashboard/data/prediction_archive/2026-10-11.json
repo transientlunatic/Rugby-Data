@@ -151,5 +151,158 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_sale-sharks-vs-harlequins_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.464411+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-11_Sale Sharks-vs-Harlequins",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-11T14:00:00+00:00",
+      "home_team": "Sale Sharks",
+      "away_team": "Harlequins",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Sale Sharks",
+        "mean": 30.844,
+        "std": 14.992120063553386,
+        "median": 29.0,
+        "ci_lower": 12.0,
+        "ci_upper": 57.049999999999955
+      },
+      "away": {
+        "team": "Harlequins",
+        "mean": 26.546,
+        "std": 13.010452874515938,
+        "median": 26.0,
+        "ci_lower": 9.0,
+        "ci_upper": 51.0
+      },
+      "home_win_prob": 0.548,
+      "away_win_prob": 0.418,
+      "draw_prob": 0.034,
+      "predicted_margin": 4.298,
+      "margin_std": 20.346822749510547,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_exeter-chiefs-vs-newcastle-falcons_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.474417+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-11_Exeter Chiefs-vs-Newcastle Falcons",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-11T14:00:00+00:00",
+      "home_team": "Exeter Chiefs",
+      "away_team": "Newcastle Falcons",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Exeter Chiefs",
+        "mean": 35.002,
+        "std": 16.24739966887009,
+        "median": 32.0,
+        "ci_lower": 12.950000000000003,
+        "ci_upper": 64.0
+      },
+      "away": {
+        "team": "Newcastle Falcons",
+        "mean": 28.702,
+        "std": 13.895653852913867,
+        "median": 28.0,
+        "ci_lower": 7.950000000000003,
+        "ci_upper": 53.049999999999955
+      },
+      "home_win_prob": 0.6,
+      "away_win_prob": 0.372,
+      "draw_prob": 0.028,
+      "predicted_margin": 6.3,
+      "margin_std": 20.749409630155746,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_toulouse-vs-bayonne_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.484148+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-11_Toulouse-vs-Bayonne",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-11T19:05:00+00:00",
+      "home_team": "Toulouse",
+      "away_team": "Bayonne",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulouse",
+        "mean": 45.386,
+        "std": 19.63041018420145,
+        "median": 44.0,
+        "ci_lower": 17.0,
+        "ci_upper": 81.0
+      },
+      "away": {
+        "team": "Bayonne",
+        "mean": 26.036,
+        "std": 13.539080618712632,
+        "median": 24.0,
+        "ci_lower": 8.0,
+        "ci_upper": 51.0
+      },
+      "home_win_prob": 0.776,
+      "away_win_prob": 0.208,
+      "draw_prob": 0.016,
+      "predicted_margin": 19.35,
+      "margin_std": 24.304063446263466,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

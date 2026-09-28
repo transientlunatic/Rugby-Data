@@ -1,11 +1,15 @@
 {
   "archive_version": "1.0",
-  "created_at": 1790437655.9112988,
-  "last_updated": "2026-09-26T15:47:35.919327+00:00",
-  "total_predictions": 153,
+  "created_at": 1790555567.5774198,
+  "last_updated": "2026-09-28T00:32:47.587337+00:00",
+  "total_predictions": 203,
   "predictions_with_results": 0,
   "competitions": [
+    "celtic",
     "championship",
+    "euro-challenge",
+    "euro-champions",
+    "premiership",
     "pro-d2",
     "top14"
   ],
@@ -14,7 +18,7 @@
   ],
   "date_range": {
     "first_prediction": "2026-09-03T16:35:14.375055+00:00",
-    "last_prediction": "2026-09-26T15:47:35.913193+00:00"
+    "last_prediction": "2026-09-28T00:32:47.579616+00:00"
   },
   "files": [
     {
@@ -53,24 +57,44 @@
       "file": "2026-09-27.json"
     },
     {
+      "date": "2026-10-02",
+      "count": 4,
+      "file": "2026-10-02.json"
+    },
+    {
       "date": "2026-10-03",
-      "count": 18,
+      "count": 32,
       "file": "2026-10-03.json"
     },
     {
       "date": "2026-10-04",
-      "count": 3,
+      "count": 5,
       "file": "2026-10-04.json"
     },
     {
+      "date": "2026-10-09",
+      "count": 3,
+      "file": "2026-10-09.json"
+    },
+    {
       "date": "2026-10-10",
-      "count": 18,
+      "count": 32,
       "file": "2026-10-10.json"
     },
     {
       "date": "2026-10-11",
-      "count": 3,
+      "count": 6,
       "file": "2026-10-11.json"
+    },
+    {
+      "date": "2026-10-16",
+      "count": 3,
+      "file": "2026-10-16.json"
+    },
+    {
+      "date": "2026-10-17",
+      "count": 7,
+      "file": "2026-10-17.json"
     },
     {
       "date": "2026-10-24",

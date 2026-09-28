@@ -151,5 +151,107 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_saracens-vs-sale-sharks_2026-10-04",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.273076+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-04_Saracens-vs-Sale Sharks",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-04T14:00:00+00:00",
+      "home_team": "Saracens",
+      "away_team": "Sale Sharks",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Saracens",
+        "mean": 45.194,
+        "std": 18.62955619439175,
+        "median": 43.0,
+        "ci_lower": 18.0,
+        "ci_upper": 78.04999999999995
+      },
+      "away": {
+        "team": "Sale Sharks",
+        "mean": 23.92,
+        "std": 12.76877441260515,
+        "median": 22.5,
+        "ci_lower": 6.0,
+        "ci_upper": 47.0
+      },
+      "home_win_prob": 0.816,
+      "away_win_prob": 0.18,
+      "draw_prob": 0.004,
+      "predicted_margin": 21.274,
+      "margin_std": 22.71877910452056,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-09-28T00:32:47_montpellier-vs-toulon_2026-10-04",
+    "prediction_metadata": {
+      "timestamp": "2026-09-28T00:32:47.281962+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-04_Montpellier-vs-Toulon",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-04T19:05:00+00:00",
+      "home_team": "Montpellier",
+      "away_team": "Toulon",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Montpellier",
+        "mean": 31.86,
+        "std": 15.816586230915949,
+        "median": 30.0,
+        "ci_lower": 10.0,
+        "ci_upper": 60.09999999999991
+      },
+      "away": {
+        "team": "Toulon",
+        "mean": 20.584,
+        "std": 10.653212848713762,
+        "median": 19.5,
+        "ci_lower": 5.950000000000003,
+        "ci_upper": 41.0
+      },
+      "home_win_prob": 0.732,
+      "away_win_prob": 0.25,
+      "draw_prob": 0.018,
+      "predicted_margin": 11.276,
+      "margin_std": 18.969339050161974,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

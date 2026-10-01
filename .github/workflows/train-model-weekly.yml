@@ -124,6 +124,9 @@ jobs:
           config = ModelConfig(
               include_defense=True,
               separate_kicking_effect=True,
+              competition_home_advantage=True,
+              team_ar1=True,
+              win_prob_temperature=1.4,
           )
           model = RugbyModel(config)
           model.build_joint(df)
@@ -140,6 +143,15 @@ jobs:
               trace = fitter.fit_vi(n_samples=500, verbose=True)
           else:
               try:
+                  # A checkpoint with a different model structure cannot be warm-started
+                  import pickle
+                  _meta = Path.home() / '.cache/rugby_ranking/weekly-model/metadata.pkl'
+                  if _meta.exists():
+                      with open(_meta, 'rb') as _f:
+                          _prev = pickle.load(_f).get('model_config')
+                      _flags = lambda c: (bool(getattr(c, 'competition_home_advantage', False)), bool(getattr(c, 'team_ar1', False)))
+                      if _flags(_prev) != _flags(config):
+                          raise ValueError('previous checkpoint has a different model structure')
                   fitter = ModelFitter.load('weekly-model', model)
                   print('✓ Loaded previous checkpoint')
 

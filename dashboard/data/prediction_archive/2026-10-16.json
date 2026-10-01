@@ -151,5 +151,158 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_dragons-rfc-vs-perpignan_2026-10-16",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.222975+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-challenge_2026-10-16_Dragons RFC-vs-Perpignan",
+      "competition": "euro-challenge",
+      "season": "2026-2027",
+      "date": "2026-10-16T19:00:00+00:00",
+      "home_team": "Dragons RFC",
+      "away_team": "Perpignan",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Dragons RFC",
+        "mean": 33.858,
+        "std": 15.998432298197221,
+        "median": 32.0,
+        "ci_lower": 10.0,
+        "ci_upper": 64.04999999999995
+      },
+      "away": {
+        "team": "Perpignan",
+        "mean": 25.806,
+        "std": 12.971058707753967,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 51.0
+      },
+      "home_win_prob": 0.6021650247076973,
+      "away_win_prob": 0.3678349752923027,
+      "draw_prob": 0.03,
+      "predicted_margin": 8.052,
+      "margin_std": 21.047595967235782,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_edinburgh-rugby-vs-toulon_2026-10-16",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.233797+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-challenge_2026-10-16_Edinburgh Rugby-vs-Toulon",
+      "competition": "euro-challenge",
+      "season": "2026-2027",
+      "date": "2026-10-16T19:00:00+00:00",
+      "home_team": "Edinburgh Rugby",
+      "away_team": "Toulon",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Edinburgh Rugby",
+        "mean": 34.068,
+        "std": 16.179226681148887,
+        "median": 33.0,
+        "ci_lower": 10.0,
+        "ci_upper": 63.049999999999955
+      },
+      "away": {
+        "team": "Toulon",
+        "mean": 22.556,
+        "std": 11.258013323850705,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 42.049999999999955
+      },
+      "home_win_prob": 0.6370248080035036,
+      "away_win_prob": 0.3429751919964964,
+      "draw_prob": 0.02,
+      "predicted_margin": 11.512,
+      "margin_std": 20.547745764438492,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_gloucester-rugby-vs-bordeaux-begles_2026-10-16",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.244649+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-10-16_Gloucester Rugby-vs-Bordeaux-Begles",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-10-16T19:00:00+00:00",
+      "home_team": "Gloucester Rugby",
+      "away_team": "Bordeaux-Begles",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Gloucester Rugby",
+        "mean": 42.998,
+        "std": 17.798370599580178,
+        "median": 41.0,
+        "ci_lower": 17.0,
+        "ci_upper": 73.0
+      },
+      "away": {
+        "team": "Bordeaux-Begles",
+        "mean": 29.69,
+        "std": 13.92860007323062,
+        "median": 28.0,
+        "ci_lower": 8.950000000000003,
+        "ci_upper": 54.0
+      },
+      "home_win_prob": 0.6535088407203639,
+      "away_win_prob": 0.33449115927963613,
+      "draw_prob": 0.012,
+      "predicted_margin": 13.308,
+      "margin_std": 22.734932064996368,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

@@ -355,5 +355,260 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_lyon-vs-hollywoodbets-sharks_2026-10-17",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.255579+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-challenge_2026-10-17_Lyon-vs-Hollywoodbets Sharks",
+      "competition": "euro-challenge",
+      "season": "2026-2027",
+      "date": "2026-10-17T12:00:00+00:00",
+      "home_team": "Lyon",
+      "away_team": "Hollywoodbets Sharks",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Lyon",
+        "mean": 36.604,
+        "std": 16.158563797565673,
+        "median": 35.0,
+        "ci_lower": 13.0,
+        "ci_upper": 68.0
+      },
+      "away": {
+        "team": "Hollywoodbets Sharks",
+        "mean": 29.334,
+        "std": 13.708772519813726,
+        "median": 28.0,
+        "ci_lower": 10.0,
+        "ci_upper": 55.049999999999955
+      },
+      "home_win_prob": 0.580740961740263,
+      "away_win_prob": 0.39725903825973696,
+      "draw_prob": 0.022,
+      "predicted_margin": 7.27,
+      "margin_std": 21.39151934762933,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_sale-sharks-vs-glasgow-warriors_2026-10-17",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.266646+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-10-17_Sale Sharks-vs-Glasgow Warriors",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-10-17T12:00:00+00:00",
+      "home_team": "Sale Sharks",
+      "away_team": "Glasgow Warriors",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Sale Sharks",
+        "mean": 29.278,
+        "std": 14.407661711742126,
+        "median": 28.0,
+        "ci_lower": 9.0,
+        "ci_upper": 54.0
+      },
+      "away": {
+        "team": "Glasgow Warriors",
+        "mean": 28.666,
+        "std": 14.164690042496519,
+        "median": 27.0,
+        "ci_lower": 8.950000000000003,
+        "ci_upper": 54.0
+      },
+      "home_win_prob": 0.5005722612582897,
+      "away_win_prob": 0.4834277387417103,
+      "draw_prob": 0.016,
+      "predicted_margin": 0.612,
+      "margin_std": 20.674270386158735,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_vodacom-bulls-vs-stade-francais_2026-10-17",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.277818+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-10-17_Vodacom Bulls-vs-Stade Francais",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-10-17T12:00:00+00:00",
+      "home_team": "Vodacom Bulls",
+      "away_team": "Stade Francais",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Vodacom Bulls",
+        "mean": 42.088,
+        "std": 18.023547264620248,
+        "median": 41.0,
+        "ci_lower": 17.0,
+        "ci_upper": 75.0
+      },
+      "away": {
+        "team": "Stade Francais",
+        "mean": 24.63,
+        "std": 11.544743392557496,
+        "median": 24.0,
+        "ci_lower": 6.950000000000003,
+        "ci_upper": 47.0
+      },
+      "home_win_prob": 0.7253416097865845,
+      "away_win_prob": 0.2626583902134155,
+      "draw_prob": 0.012,
+      "predicted_margin": 17.458,
+      "margin_std": 21.04700064142157,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_zebre-parma-vs-ulster-rugby_2026-10-17",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.290442+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-challenge_2026-10-17_Zebre Parma-vs-Ulster Rugby",
+      "competition": "euro-challenge",
+      "season": "2026-2027",
+      "date": "2026-10-17T14:15:00+00:00",
+      "home_team": "Zebre Parma",
+      "away_team": "Ulster Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Zebre Parma",
+        "mean": 30.09,
+        "std": 14.667852603568116,
+        "median": 28.0,
+        "ci_lower": 10.0,
+        "ci_upper": 57.049999999999955
+      },
+      "away": {
+        "team": "Ulster Rugby",
+        "mean": 33.246,
+        "std": 14.595666617184705,
+        "median": 32.0,
+        "ci_lower": 12.950000000000003,
+        "ci_upper": 61.0
+      },
+      "home_win_prob": 0.4395025199894049,
+      "away_win_prob": 0.5484974800105951,
+      "draw_prob": 0.012,
+      "predicted_margin": -3.156,
+      "margin_std": 21.393729548631768,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-01T19:10:53_clermont-vs-leinster-rugby_2026-10-17",
+    "prediction_metadata": {
+      "timestamp": "2026-10-01T19:10:53.302342+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-10-17_Clermont-vs-Leinster Rugby",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-10-17T14:15:00+00:00",
+      "home_team": "Clermont",
+      "away_team": "Leinster Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Clermont",
+        "mean": 31.728,
+        "std": 14.762317433248752,
+        "median": 30.0,
+        "ci_lower": 10.0,
+        "ci_upper": 58.049999999999955
+      },
+      "away": {
+        "team": "Leinster Rugby",
+        "mean": 29.052,
+        "std": 12.990815832733524,
+        "median": 27.5,
+        "ci_lower": 11.0,
+        "ci_upper": 53.049999999999955
+      },
+      "home_win_prob": 0.5398403971684398,
+      "away_win_prob": 0.4481596028315602,
+      "draw_prob": 0.012,
+      "predicted_margin": 2.676,
+      "margin_std": 19.594055833338842,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

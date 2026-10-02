@@ -355,5 +355,158 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-02T22:09:13_saracens-vs-sale-sharks_2026-10-04",
+    "prediction_metadata": {
+      "timestamp": "2026-10-02T22:09:13.079931+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-04_Saracens-vs-Sale Sharks",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-04T14:00:00+00:00",
+      "home_team": "Saracens",
+      "away_team": "Sale Sharks",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Saracens",
+        "mean": 41.326,
+        "std": 17.131249925209776,
+        "median": 39.0,
+        "ci_lower": 17.0,
+        "ci_upper": 72.04999999999995
+      },
+      "away": {
+        "team": "Sale Sharks",
+        "mean": 22.76,
+        "std": 11.698136603750187,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 44.0
+      },
+      "home_win_prob": 0.7361531540730197,
+      "away_win_prob": 0.24784684592698025,
+      "draw_prob": 0.016,
+      "predicted_margin": 18.566,
+      "margin_std": 20.207465056260766,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-02T22:09:13_blackheath-vs-doncaster-knights_2026-10-04",
+    "prediction_metadata": {
+      "timestamp": "2026-10-02T22:09:13.091501+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "championship_2026-10-04_Blackheath-vs-Doncaster Knights",
+      "competition": "championship",
+      "season": "2026-2027",
+      "date": "2026-10-04T15:00:00+00:00",
+      "home_team": "Blackheath",
+      "away_team": "Doncaster Knights",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Blackheath",
+        "mean": 32.418,
+        "std": 15.308144106977828,
+        "median": 30.0,
+        "ci_lower": 10.0,
+        "ci_upper": 60.09999999999991
+      },
+      "away": {
+        "team": "Doncaster Knights",
+        "mean": 27.548,
+        "std": 14.053458506716415,
+        "median": 25.0,
+        "ci_lower": 8.950000000000003,
+        "ci_upper": 53.049999999999955
+      },
+      "home_win_prob": 0.5587379050261171,
+      "away_win_prob": 0.4192620949738829,
+      "draw_prob": 0.022,
+      "predicted_margin": 4.87,
+      "margin_std": 20.49919754526991,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-02T22:09:13_montpellier-vs-toulon_2026-10-04",
+    "prediction_metadata": {
+      "timestamp": "2026-10-02T22:09:13.103278+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-04_Montpellier-vs-Toulon",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-04T19:05:00+00:00",
+      "home_team": "Montpellier",
+      "away_team": "Toulon",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Montpellier",
+        "mean": 34.07,
+        "std": 15.607597508905718,
+        "median": 33.0,
+        "ci_lower": 10.0,
+        "ci_upper": 61.049999999999955
+      },
+      "away": {
+        "team": "Toulon",
+        "mean": 19.488,
+        "std": 10.458769334869185,
+        "median": 19.0,
+        "ci_lower": 4.900000000000006,
+        "ci_upper": 38.049999999999955
+      },
+      "home_win_prob": 0.7061157713360652,
+      "away_win_prob": 0.2818842286639348,
+      "draw_prob": 0.012,
+      "predicted_margin": 14.582,
+      "margin_std": 18.53340972406319,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

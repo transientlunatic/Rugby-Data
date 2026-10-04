@@ -5396,7 +5396,7 @@
     "round_type": "league",
     "stadium": "Sixways",
     "date": "2026-09-26T12:00:00.000Z",
-    "attendance": null
+    "attendance": 5000
   },
   {
     "away": {
@@ -8425,7 +8425,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8449,28 +8451,36 @@
         },
         "19": {
           "name": "Mackenzie Graham",
-          "on": [],
+          "on": [
+            52
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Marcus Rhodes",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Dafydd-Rhys Tiueti",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Sam Maunder",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8480,7 +8490,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8489,7 +8501,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8507,13 +8521,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Jordon Poole",
-          "on": [],
+          "on": [
+            52
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8529,7 +8547,9 @@
         },
         "17": {
           "name": "Keston Lines",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8548,7 +8568,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8572,7 +8594,9 @@
         },
         "18": {
           "name": "Coby Stanton-Ford",
-          "on": [],
+          "on": [
+            53
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8582,13 +8606,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Peter Sullivan",
-          "on": [],
+          "on": [
+            52
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8598,7 +8626,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8607,14 +8637,137 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            53
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 2,
+          "type": "Try",
+          "player": "Senitiki Nayalo",
+          "value": 5
+        },
+        {
+          "minute": 3,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        },
+        {
+          "minute": 9,
+          "type": "Try",
+          "player": "Senitiki Nayalo",
+          "value": 5
+        },
+        {
+          "minute": 10,
+          "type": "Missed conversion",
+          "player": "Bruce Houston",
+          "value": 0
+        },
+        {
+          "minute": 23,
+          "type": "Try",
+          "player": "Murray Davidson",
+          "value": 5
+        },
+        {
+          "minute": 25,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        },
+        {
+          "minute": 30,
+          "type": "Try",
+          "player": "Murray Davidson",
+          "value": 5
+        },
+        {
+          "minute": 31,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        },
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Josh Barton",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        },
+        {
+          "minute": 39,
+          "type": "Try",
+          "player": "Bruce Houston",
+          "value": 5
+        },
+        {
+          "minute": 41,
+          "type": "Missed conversion",
+          "player": "Bruce Houston",
+          "value": 0
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Senitiki Nayalo",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Missed conversion",
+          "player": "Bruce Houston",
+          "value": 0
+        },
+        {
+          "minute": 56,
+          "type": "Try",
+          "player": "Mackenzie Graham",
+          "value": 5
+        },
+        {
+          "minute": 58,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        },
+        {
+          "minute": 73,
+          "type": "Try",
+          "player": "Tom Bacon",
+          "value": 5
+        },
+        {
+          "minute": 74,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        },
+        {
+          "minute": 75,
+          "type": "Try",
+          "player": "Marcus Rhodes",
+          "value": 5
+        },
+        {
+          "minute": 76,
+          "type": "Conversion",
+          "player": "Bruce Houston",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 64,
       "team": "Coventry"
     },
     "home": {
@@ -8624,7 +8777,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8633,13 +8788,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Matthew Gould",
-          "on": [],
+          "on": [
+            32
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8667,20 +8826,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Jacob Wright",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Iestyn Rees",
-          "on": [],
+          "on": [
+            29
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8690,7 +8855,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8705,7 +8872,9 @@
         },
         "18": {
           "name": "Oliver Crane",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8742,7 +8911,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            32
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8751,13 +8922,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Max Pearce",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8767,13 +8942,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            29
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Evan Mitchell",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8783,13 +8962,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Oran Murphy",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8805,15 +8988,66 @@
         },
         "21": {
           "name": "Matt Durbridge",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 11,
+          "type": "Try",
+          "player": "Matty Ward",
+          "value": 5
+        },
+        {
+          "minute": 12,
+          "type": "Conversion",
+          "player": "Shane O'Leary",
+          "value": 2
+        },
+        {
+          "minute": 17,
+          "type": "Try",
+          "player": "David Williams",
+          "value": 5
+        },
+        {
+          "minute": 18,
+          "type": "Missed conversion",
+          "player": "Shane O'Leary",
+          "value": 0
+        },
+        {
+          "minute": 66,
+          "type": "Try",
+          "player": "Jay Ecclesfield",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Conversion",
+          "player": "Evan Mitchell",
+          "value": 2
+        },
+        {
+          "minute": 82,
+          "type": "Try",
+          "player": "Oliver Crane",
+          "value": 5
+        },
+        {
+          "minute": 83,
+          "type": "Conversion",
+          "player": "Evan Mitchell",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 26,
       "team": "Nottingham Rugby"
     },
     "round": 3,
@@ -8827,7 +9061,9 @@
       "lineup": {
         "16": {
           "name": "Seb Smith",
-          "on": [],
+          "on": [
+            47
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8837,13 +9073,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            47
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Asa Stewart-Harris",
-          "on": [],
+          "on": [
+            77
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8851,22 +9091,29 @@
         "7": {
           "name": "Ollie Mullarkey",
           "on": [
-            0
+            0,
+            81
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Tom Gulley",
-          "on": [],
+          "on": [
+            47
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Barnaby Merrett",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8894,7 +9141,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8903,7 +9152,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8912,7 +9163,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            47
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8921,7 +9174,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            77
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8936,21 +9191,27 @@
         },
         "23": {
           "name": "Oscar Wilson",
-          "on": [],
+          "on": [
+            23
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Jevaughn Warren",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Finn Keylock",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8971,11 +9232,15 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            43
+          ]
         },
         "19": {
           "name": "Kennedy Sylvester-Junior",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -8985,7 +9250,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            23
+          ],
           "reds": [],
           "yellows": []
         },
@@ -8994,7 +9261,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9012,24 +9281,89 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            81
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 31,
+          "type": "Try",
+          "player": "Will Roue",
+          "value": 5
+        },
+        {
+          "minute": 32,
+          "type": "Conversion",
+          "player": "Will Roue",
+          "value": 2
+        },
+        {
+          "minute": 40,
+          "type": "Try",
+          "player": "Ed Timpson",
+          "value": 5
+        },
+        {
+          "minute": 40,
+          "type": "Conversion",
+          "player": "Will Roue",
+          "value": 2
+        },
+        {
+          "minute": 45,
+          "type": "Try",
+          "player": "Tyler Offiah",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Conversion",
+          "player": "Will Roue",
+          "value": 2
+        },
+        {
+          "minute": 57,
+          "type": "Try",
+          "player": "Tayo Adegbemile",
+          "value": 5
+        },
+        {
+          "minute": 57,
+          "type": "Conversion",
+          "player": "Will Roue",
+          "value": 2
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Seb Smith",
+          "value": 5
+        },
+        {
+          "minute": 81,
+          "type": "Missed conversion",
+          "player": "Will Roue",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 33,
       "team": "Ampthill"
     },
     "home": {
       "lineup": {
-        "11": {
+        "14": {
           "name": "Keir Clark",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            82
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9038,7 +9372,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            79
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9047,13 +9383,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            78
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Harry Short",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9063,11 +9403,13 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
-        "14": {
+        "11": {
           "name": "Jack Cotgreave",
           "on": [
             0
@@ -9081,27 +9423,35 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Sam Allford",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Casey Williams",
-          "on": [],
+          "on": [
+            78
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "George Perry",
-          "on": [],
+          "on": [
+            79
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9120,13 +9470,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Harry Edwards",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9145,7 +9499,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            77
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9163,13 +9519,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Max Knight",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9185,7 +9545,9 @@
         },
         "22": {
           "name": "Charlie Powell",
-          "on": [],
+          "on": [
+            82
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9197,11 +9559,15 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            55
+          ]
         },
         "19": {
           "name": "Oli Smith",
-          "on": [],
+          "on": [
+            77
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9216,9 +9582,52 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 18,
+          "type": "Try",
+          "player": "Caio James",
+          "value": 5
+        },
+        {
+          "minute": 20,
+          "type": "Missed conversion",
+          "player": "Harry Bazalgette",
+          "value": 0
+        },
+        {
+          "minute": 36,
+          "type": "Try",
+          "player": "Ollie Allsopp",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Missed conversion",
+          "player": "Harry Bazalgette",
+          "value": 0
+        },
+        {
+          "minute": 43,
+          "type": "Penalty Try",
+          "player": null,
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Ollie Allsopp",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Conversion",
+          "player": "Harry Bazalgette",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 24,
       "team": "Hartpury"
     },
     "round": 3,
@@ -9235,7 +9644,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            53
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9262,7 +9673,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            65
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9277,14 +9690,18 @@
         },
         "16": {
           "name": "Alun Walker",
-          "on": [],
+          "on": [
+            53
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Nathan Chamberlain",
-          "on": [],
+          "on": [
+            53
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9294,7 +9711,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9303,13 +9722,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Cam Rafferty",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9319,7 +9742,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            53
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9337,13 +9762,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            53
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Isaiah Wharton",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9362,7 +9791,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            60
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9371,13 +9802,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "James Johnston",
-          "on": [],
+          "on": [
+            65
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9393,14 +9828,18 @@
         },
         "17": {
           "name": "Ramaz Rukhadze",
-          "on": [],
+          "on": [
+            53
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Scott Hall",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9416,15 +9855,90 @@
         },
         "21": {
           "name": "Luke Carter",
-          "on": [],
+          "on": [
+            60
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 4,
+          "type": "Try",
+          "player": "Jamie Campbell",
+          "value": 5
+        },
+        {
+          "minute": 5,
+          "type": "Conversion",
+          "player": "Liam Richman",
+          "value": 2
+        },
+        {
+          "minute": 17,
+          "type": "Try",
+          "player": "Jack Metcalf",
+          "value": 5
+        },
+        {
+          "minute": 18,
+          "type": "Missed conversion",
+          "player": "Liam Richman",
+          "value": 0
+        },
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Ben Currie",
+          "value": 5
+        },
+        {
+          "minute": 26,
+          "type": "Missed conversion",
+          "player": "Liam Richman",
+          "value": 0
+        },
+        {
+          "minute": 36,
+          "type": "Try",
+          "player": "Callum Pascoe",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Conversion",
+          "player": "Liam Richman",
+          "value": 2
+        },
+        {
+          "minute": 41,
+          "type": "Try",
+          "player": "Jack Metcalf",
+          "value": 5
+        },
+        {
+          "minute": 42,
+          "type": "Conversion",
+          "player": "Liam Richman",
+          "value": 2
+        },
+        {
+          "minute": 46,
+          "type": "Try",
+          "player": "Chris Moore",
+          "value": 5
+        },
+        {
+          "minute": 48,
+          "type": "Conversion",
+          "player": "Liam Richman",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 38,
       "team": "Chinnor RFC Thame"
     },
     "home": {
@@ -9445,7 +9959,9 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            24
+          ]
         },
         "15": {
           "name": "Charlie Hyde",
@@ -9470,7 +9986,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            56
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9479,13 +9997,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Matthew Kilcourse",
-          "on": [],
+          "on": [
+            56
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9495,7 +10017,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            65
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9504,7 +10028,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9524,11 +10050,15 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            16
+          ]
         },
         "20": {
           "name": "Oliver Barker",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9544,7 +10074,9 @@
         },
         "18": {
           "name": "Ryan Higginson",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9560,7 +10092,9 @@
         },
         "19": {
           "name": "Martin Gerrard",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9570,13 +10104,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Nye Thomas",
-          "on": [],
+          "on": [
+            53
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9590,7 +10128,9 @@
         },
         "17": {
           "name": "Monty Weatherby",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9600,13 +10140,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Matt Gallagher",
-          "on": [],
+          "on": [
+            65
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9616,14 +10160,77 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            53
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 12,
+          "type": "Try",
+          "player": "Rhys Tudor",
+          "value": 5
+        },
+        {
+          "minute": 13,
+          "type": "Conversion",
+          "player": "Ollie Davies",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Ollie Davies",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Conversion",
+          "player": "Ollie Davies",
+          "value": 2
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Connor Wilkinson",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Conversion",
+          "player": "Ollie Davies",
+          "value": 2
+        },
+        {
+          "minute": 66,
+          "type": "Try",
+          "player": "Ollie Davies",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Conversion",
+          "player": "Ollie Davies",
+          "value": 2
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Matt Gallagher",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Conversion",
+          "player": "Ollie Davies",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 35,
       "team": "Caldy"
     },
     "round": 3,
@@ -9640,7 +10247,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9649,13 +10258,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            71
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Kyle Whyte",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9690,13 +10303,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            46
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Fyn Brown",
-          "on": [],
+          "on": [
+            56
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9712,7 +10329,9 @@
         },
         "19": {
           "name": "Freddie Stevenson",
-          "on": [],
+          "on": [
+            71
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9749,13 +10368,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "George Davis",
-          "on": [],
+          "on": [
+            19
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9774,7 +10397,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            19
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9789,14 +10414,18 @@
         },
         "21": {
           "name": "Rory Scannell",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Matt Cornish",
-          "on": [],
+          "on": [
+            46
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9813,7 +10442,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            56
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9827,9 +10458,70 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 2,
+          "type": "Try",
+          "player": "Fionn Gibbons",
+          "value": 5
+        },
+        {
+          "minute": 2,
+          "type": "Conversion",
+          "player": "Louie Johnson",
+          "value": 2
+        },
+        {
+          "minute": 24,
+          "type": "Try",
+          "player": "Francis Moore",
+          "value": 5
+        },
+        {
+          "minute": 24,
+          "type": "Conversion",
+          "player": "Louie Johnson",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Kyle Hatherell",
+          "value": 5
+        },
+        {
+          "minute": 42,
+          "type": "Conversion",
+          "player": "Louie Johnson",
+          "value": 2
+        },
+        {
+          "minute": 57,
+          "type": "Try",
+          "player": "Fionn Gibbons",
+          "value": 5
+        },
+        {
+          "minute": 57,
+          "type": "Missed conversion",
+          "player": "Louie Johnson",
+          "value": 0
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Matt Cornish",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Conversion",
+          "player": "Louie Johnson",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 33,
       "team": "Ealing Trailfinders"
     },
     "home": {
@@ -9845,7 +10537,9 @@
         },
         "21": {
           "name": "Will Becconsall",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9855,7 +10549,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9864,13 +10560,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Josh King",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9886,7 +10586,9 @@
         },
         "18": {
           "name": "Osman Dimen",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9912,13 +10614,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Matt Pritchard",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9928,7 +10634,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
@@ -9970,7 +10678,9 @@
         },
         "17": {
           "name": "Jamie Clark",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -9980,7 +10690,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10014,28 +10726,99 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Luke Ratcliff",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Alex Everett",
+          "value": 5
+        },
+        {
+          "minute": 7,
+          "type": "Conversion",
+          "player": "Arwel Robson",
+          "value": 2
+        },
+        {
+          "minute": 17,
+          "type": "Try",
+          "player": "Morgan Nelson",
+          "value": 5
+        },
+        {
+          "minute": 18,
+          "type": "Conversion",
+          "player": "Arwel Robson",
+          "value": 2
+        },
+        {
+          "minute": 38,
+          "type": "Try",
+          "player": "Henry Palmer",
+          "value": 5
+        },
+        {
+          "minute": 39,
+          "type": "Conversion",
+          "player": "Arwel Robson",
+          "value": 2
+        },
+        {
+          "minute": 41,
+          "type": "Missed penalty",
+          "player": "Arwel Robson",
+          "value": 0
+        },
+        {
+          "minute": 54,
+          "type": "Try",
+          "player": "Nick Lilley",
+          "value": 5
+        },
+        {
+          "minute": 55,
+          "type": "Conversion",
+          "player": "Arwel Robson",
+          "value": 2
+        },
+        {
+          "minute": 83,
+          "type": "Try",
+          "player": "Matt Pritchard",
+          "value": 5
+        },
+        {
+          "minute": 84,
+          "type": "Conversion",
+          "player": "Arwel Robson",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 35,
       "team": "Cornish Pirates"
     },
     "round": 3,
     "round_type": "league",
     "stadium": "Mennaye Field",
     "date": "2026-10-03T14:00:00.000Z",
-    "attendance": null
+    "attendance": 1794
   },
   {
     "away": {
@@ -10054,20 +10837,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Will Davies-King",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Alex Day",
-          "on": [],
+          "on": [
+            46
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10077,7 +10866,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10086,7 +10877,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10095,13 +10888,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Ben Dufficy",
-          "on": [],
+          "on": [
+            66
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10120,7 +10917,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10129,7 +10928,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            66
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10144,7 +10945,9 @@
         },
         "20": {
           "name": "Tui Uru",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10160,7 +10963,9 @@
         },
         "17": {
           "name": "Monty Royston",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10170,13 +10975,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            46
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Tommy Herman",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10213,28 +11022,107 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Dean Adamson",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Kayde Sylvester",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 1,
+          "type": "Try",
+          "player": "James Bennett",
+          "value": 5
+        },
+        {
+          "minute": 2,
+          "type": "Conversion",
+          "player": "Will Maisey",
+          "value": 2
+        },
+        {
+          "minute": 27,
+          "type": "Try",
+          "player": "Lucas Titherington",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Conversion",
+          "player": "Will Maisey",
+          "value": 2
+        },
+        {
+          "minute": 49,
+          "type": "Try",
+          "player": "Henry Walker",
+          "value": 5
+        },
+        {
+          "minute": 50,
+          "type": "Missed conversion",
+          "player": "Will Maisey",
+          "value": 0
+        },
+        {
+          "minute": 68,
+          "type": "Try",
+          "player": "Tommy Herman",
+          "value": 5
+        },
+        {
+          "minute": 69,
+          "type": "Conversion",
+          "player": "Ben Dufficy",
+          "value": 2
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Lucas Titherington",
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Conversion",
+          "player": "Ben Dufficy",
+          "value": 2
+        },
+        {
+          "minute": 82,
+          "type": "Try",
+          "player": "Monty Royston",
+          "value": 5
+        },
+        {
+          "minute": 82,
+          "type": "Missed conversion",
+          "player": "Ben Dufficy",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 38,
       "team": "Bedford Blues"
     },
     "home": {
@@ -10255,14 +11143,18 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            81
+          ]
         },
         "12": {
           "name": "Ali Mgijima",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10277,15 +11169,21 @@
         },
         "23": {
           "name": "Mitchel Babalola",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Curran Maguire",
-          "on": [],
-          "off": [],
+          "on": [
+            6
+          ],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10294,7 +11192,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10309,7 +11209,9 @@
         },
         "17": {
           "name": "Zac Nearchou",
-          "on": [],
+          "on": [
+            20
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10319,13 +11221,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            66
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Corrie Barrett",
-          "on": [],
+          "on": [
+            57
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10341,7 +11247,9 @@
         },
         "21": {
           "name": "Jack Baldry",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10351,20 +11259,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            6
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Dewald Kotze",
-          "on": [],
+          "on": [
+            66
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Harry Stone",
-          "on": [],
+          "on": [
+            48
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10401,7 +11315,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            48
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10410,7 +11326,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10419,35 +11337,114 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            20
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Cam Nordli-Kelemeti",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Isaac Shaw",
+          "value": 5
+        },
+        {
+          "minute": 15,
+          "type": "Conversion",
+          "player": "Lloyd Hayes",
+          "value": 2
+        },
+        {
+          "minute": 18,
+          "type": "Try",
+          "player": "Jean-Baptiste Bruzulier",
+          "value": 5
+        },
+        {
+          "minute": 19,
+          "type": "Conversion",
+          "player": "Lloyd Hayes",
+          "value": 2
+        },
+        {
+          "minute": 23,
+          "type": "Try",
+          "player": "Lloyd Hayes",
+          "value": 5
+        },
+        {
+          "minute": 24,
+          "type": "Conversion",
+          "player": "Lloyd Hayes",
+          "value": 2
+        },
+        {
+          "minute": 43,
+          "type": "Try",
+          "player": "Ben Cambriani",
+          "value": 5
+        },
+        {
+          "minute": 44,
+          "type": "Conversion",
+          "player": "Lloyd Hayes",
+          "value": 2
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Lekima Ravuvu",
+          "value": 5
+        },
+        {
+          "minute": 44,
+          "type": "Conversion",
+          "player": "Lloyd Hayes",
+          "value": 2
+        },
+        {
+          "minute": 65,
+          "type": "Try",
+          "player": "Jackson Barling",
+          "value": 5
+        },
+        {
+          "minute": 66,
+          "type": "Missed conversion",
+          "player": "Lloyd Hayes",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 40,
       "team": "Rotherham Titans"
     },
     "round": 3,
     "round_type": "league",
     "stadium": "Clifton Lane",
     "date": "2026-10-03T14:00:00.000Z",
-    "attendance": null
+    "attendance": 762
   },
   {
     "away": {
       "lineup": {
         "22": {
           "name": "Will Reed",
-          "on": [],
+          "on": [
+            44
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10484,7 +11481,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            51
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10493,7 +11492,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            44
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10508,21 +11509,27 @@
         },
         "16": {
           "name": "Austin Wallis",
-          "on": [],
+          "on": [
+            44
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Lloyd Williams",
-          "on": [],
+          "on": [
+            44
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Tim Anstee",
-          "on": [],
+          "on": [
+            44
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10532,7 +11539,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            79
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10550,7 +11559,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            44
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10559,7 +11570,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10568,27 +11581,35 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            44
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Hallam Chapman",
-          "on": [],
+          "on": [
+            44
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Harry Wright",
-          "on": [],
+          "on": [
+            57
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Siva Naulago",
-          "on": [],
+          "on": [
+            51
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10604,7 +11625,9 @@
         },
         "17": {
           "name": "Finn Haynes",
-          "on": [],
+          "on": [
+            79
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10614,7 +11637,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            44
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10623,7 +11648,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            44
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10637,9 +11664,94 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 25,
+          "type": "Try",
+          "player": "Alfie Garside",
+          "value": 5
+        },
+        {
+          "minute": 26,
+          "type": "Conversion",
+          "player": "Billy Twelvetrees",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Will Lane",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Conversion",
+          "player": "Billy Twelvetrees",
+          "value": 2
+        },
+        {
+          "minute": 52,
+          "type": "Try",
+          "player": "Hallam Chapman",
+          "value": 5
+        },
+        {
+          "minute": 53,
+          "type": "Missed conversion",
+          "player": "Will Reed",
+          "value": 0
+        },
+        {
+          "minute": 67,
+          "type": "Try",
+          "player": "Alfie Garside",
+          "value": 5
+        },
+        {
+          "minute": 68,
+          "type": "Conversion",
+          "player": "Will Reed",
+          "value": 2
+        },
+        {
+          "minute": 71,
+          "type": "Try",
+          "player": "Alfie Garside",
+          "value": 5
+        },
+        {
+          "minute": 72,
+          "type": "Conversion",
+          "player": "Will Reed",
+          "value": 2
+        },
+        {
+          "minute": 78,
+          "type": "Try",
+          "player": "Juan Gonzalez",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Missed conversion",
+          "player": "Will Reed",
+          "value": 0
+        },
+        {
+          "minute": 86,
+          "type": "Try",
+          "player": "Austin Wallis",
+          "value": 5
+        },
+        {
+          "minute": 87,
+          "type": "Conversion",
+          "player": "Will Reed",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 45,
       "team": "Worcester Warriors"
     },
     "home": {
@@ -10649,7 +11761,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10658,20 +11772,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Ben Wright",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Fergus Dick",
-          "on": [],
+          "on": [
+            66
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10681,20 +11801,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            66
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Sam Dardis",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Barnaby Vaughan",
-          "on": [],
+          "on": [
+            76
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10704,13 +11830,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Jason Baggott",
-          "on": [],
+          "on": [
+            73
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10729,7 +11859,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10765,7 +11897,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            73
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10774,13 +11908,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            76
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Freddie Charles",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10799,7 +11937,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10814,14 +11954,18 @@
         },
         "17": {
           "name": "Eric Nixon",
-          "on": [],
+          "on": [
+            57
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Miles Wakeling",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10836,16 +11980,65 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Jake Monson",
+          "value": 5
+        },
+        {
+          "minute": 8,
+          "type": "Conversion",
+          "player": "Callum Grieve",
+          "value": 2
+        },
+        {
+          "minute": 18,
+          "type": "Try",
+          "player": "Greg Kitson",
+          "value": 5
+        },
+        {
+          "minute": 19,
+          "type": "Conversion",
+          "player": "Callum Grieve",
+          "value": 2
+        },
+        {
+          "minute": 41,
+          "type": "Try",
+          "player": "Tom Riman",
+          "value": 5
+        },
+        {
+          "minute": 41,
+          "type": "Missed conversion",
+          "player": "Callum Grieve",
+          "value": 0
+        },
+        {
+          "minute": 82,
+          "type": "Try",
+          "player": "Iwan Coyle",
+          "value": 5
+        },
+        {
+          "minute": 82,
+          "type": "Conversion",
+          "player": "Lewis Dennett",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 26,
       "team": "Richmond"
     },
     "round": 3,
     "round_type": "league",
     "stadium": "Athletic Ground",
     "date": "2026-10-03T14:00:00.000Z",
-    "attendance": null
+    "attendance": 1731
   },
   {
     "away": {
@@ -10866,7 +12059,9 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            45
+          ]
         },
         "16": {
           "name": "Ben Sowrey",
@@ -10880,13 +12075,19 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            49
+          ]
         },
         "22": {
           "name": "Kieran Wilkinson",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10905,7 +12106,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10916,18 +12119,24 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            34
+          ]
         },
         "19": {
           "name": "Patrick Hogg",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Ollie Fox",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10970,14 +12179,18 @@
         },
         "18": {
           "name": "Callum Hancock",
-          "on": [],
+          "on": [
+            53
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Josh Bainbridge",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -10987,7 +12200,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -10996,7 +12211,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11005,13 +12222,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Ryan Olowofela",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -11021,13 +12242,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Logovi'i Mulipola",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -11037,28 +12262,83 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            53
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 7,
+          "type": "Try",
+          "player": "Penaia Tagutu",
+          "value": 5
+        },
+        {
+          "minute": 8,
+          "type": "Conversion",
+          "player": "Alex Dolly",
+          "value": 2
+        },
+        {
+          "minute": 11,
+          "type": "Try",
+          "player": "Ben Glanville",
+          "value": 5
+        },
+        {
+          "minute": 12,
+          "type": "Missed conversion",
+          "player": "Alex Dolly",
+          "value": 0
+        },
+        {
+          "minute": 32,
+          "type": "Try",
+          "player": "Penaia Tagutu",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Conversion",
+          "player": "Alex Dolly",
+          "value": 2
+        },
+        {
+          "minute": 76,
+          "type": "Try",
+          "player": "Telusa Veainu",
+          "value": 5
+        },
+        {
+          "minute": 76,
+          "type": "Conversion",
+          "player": "Kieran Wilkinson",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 26,
       "team": "Doncaster Knights"
     },
     "home": {
       "lineup": {
         "17": {
           "name": "James Cornish",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Ed Dunford",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -11068,7 +12348,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11083,7 +12365,9 @@
         },
         "16": {
           "name": "Ben Chapman",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -11099,7 +12383,9 @@
         },
         "18": {
           "name": "Kabous Bezuidenhout",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -11109,16 +12395,22 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            59
+          ]
         },
         "8": {
           "name": "Kieran Curran",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            57
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11127,7 +12419,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11142,8 +12436,12 @@
         },
         "20": {
           "name": "Harry Taylor",
-          "on": [],
-          "off": [],
+          "on": [
+            57
+          ],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11152,27 +12450,35 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Kyle McGhie",
-          "on": [],
+          "on": [
+            74
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Jake Hennessey",
-          "on": [],
+          "on": [
+            71
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Tom Johnson",
-          "on": [],
+          "on": [
+            59
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -11200,7 +12506,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11209,7 +12517,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            71
+          ],
           "reds": [],
           "yellows": []
         },
@@ -11234,16 +12544,86 @@
         "7": {
           "name": "Noah Sloot",
           "on": [
-            0
+            0,
+            62
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 19,
+          "type": "Penalty",
+          "player": "Sam Morley",
+          "value": 3
+        },
+        {
+          "minute": 28,
+          "type": "Try",
+          "player": "Luke Pollock",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Conversion",
+          "player": "Sam Morley",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Try",
+          "player": "Archie Holland",
+          "value": 5
+        },
+        {
+          "minute": 43,
+          "type": "Conversion",
+          "player": "Sam Morley",
+          "value": 2
+        },
+        {
+          "minute": 44,
+          "type": "Try",
+          "player": "Jordan Burns",
+          "value": 5
+        },
+        {
+          "minute": 45,
+          "type": "Conversion",
+          "player": "Sam Morley",
+          "value": 2
+        },
+        {
+          "minute": 52,
+          "type": "Penalty",
+          "player": "Sam Morley",
+          "value": 3
+        },
+        {
+          "minute": 67,
+          "type": "Penalty",
+          "player": "Sam Morley",
+          "value": 3
+        },
+        {
+          "minute": 70,
+          "type": "Missed penalty",
+          "player": "Sam Morley",
+          "value": 0
+        },
+        {
+          "minute": 73,
+          "type": "Penalty",
+          "player": "Sam Morley",
+          "value": 3
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 33,
       "team": "Blackheath"
     },
     "round": 3,

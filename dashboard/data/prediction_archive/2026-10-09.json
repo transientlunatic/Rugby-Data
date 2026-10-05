@@ -610,5 +610,158 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-05T00:34:01_glasgow-warriors-vs-connacht-rugby_2026-10-09",
+    "prediction_metadata": {
+      "timestamp": "2026-10-05T00:34:01.518398+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-09_Glasgow Warriors-vs-Connacht Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-09T18:45:00+00:00",
+      "home_team": "Glasgow Warriors",
+      "away_team": "Connacht Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Glasgow Warriors",
+        "mean": 38.068,
+        "std": 17.219854122494766,
+        "median": 36.0,
+        "ci_lower": 14.0,
+        "ci_upper": 68.0
+      },
+      "away": {
+        "team": "Connacht Rugby",
+        "mean": 20.404,
+        "std": 11.078302397028166,
+        "median": 19.0,
+        "ci_lower": 6.0,
+        "ci_upper": 41.0
+      },
+      "home_win_prob": 0.7234666292872496,
+      "away_win_prob": 0.2585333707127504,
+      "draw_prob": 0.018,
+      "predicted_margin": 17.664,
+      "margin_std": 20.052508670986782,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-05T00:34:01_dragons-rfc-vs-ospreys_2026-10-09",
+    "prediction_metadata": {
+      "timestamp": "2026-10-05T00:34:01.533334+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-09_Dragons RFC-vs-Ospreys",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-09T18:45:00+00:00",
+      "home_team": "Dragons RFC",
+      "away_team": "Ospreys",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Dragons RFC",
+        "mean": 36.176,
+        "std": 16.224334316082125,
+        "median": 34.0,
+        "ci_lower": 13.0,
+        "ci_upper": 65.0
+      },
+      "away": {
+        "team": "Ospreys",
+        "mean": 31.854,
+        "std": 15.181195078122144,
+        "median": 30.0,
+        "ci_lower": 10.0,
+        "ci_upper": 59.0
+      },
+      "home_win_prob": 0.5464992217499477,
+      "away_win_prob": 0.4375007782500523,
+      "draw_prob": 0.016,
+      "predicted_margin": 4.322,
+      "margin_std": 22.184911899757456,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-05T00:34:01_leicester-tigers-vs-gloucester-rugby_2026-10-09",
+    "prediction_metadata": {
+      "timestamp": "2026-10-05T00:34:01.547908+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-09_Leicester Tigers-vs-Gloucester Rugby",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-09T18:45:00+00:00",
+      "home_team": "Leicester Tigers",
+      "away_team": "Gloucester Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Leicester Tigers",
+        "mean": 37.034,
+        "std": 17.018485361512052,
+        "median": 36.0,
+        "ci_lower": 13.0,
+        "ci_upper": 68.0
+      },
+      "away": {
+        "team": "Gloucester Rugby",
+        "mean": 33.176,
+        "std": 15.476854460774645,
+        "median": 32.0,
+        "ci_lower": 11.0,
+        "ci_upper": 61.09999999999991
+      },
+      "home_win_prob": 0.5332427774959586,
+      "away_win_prob": 0.4487572225040414,
+      "draw_prob": 0.018,
+      "predicted_margin": 3.858,
+      "margin_std": 22.799952543810264,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

@@ -1375,5 +1375,209 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-08T19:36:42_vodacom-bulls-vs-ulster-rugby_2026-10-24",
+    "prediction_metadata": {
+      "timestamp": "2026-10-08T19:36:42.352805+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-24_Vodacom Bulls-vs-Ulster Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-24T11:45:00+00:00",
+      "home_team": "Vodacom Bulls",
+      "away_team": "Ulster Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Vodacom Bulls",
+        "mean": 38.072,
+        "std": 16.791272018522005,
+        "median": 36.0,
+        "ci_lower": 14.0,
+        "ci_upper": 70.04999999999995
+      },
+      "away": {
+        "team": "Ulster Rugby",
+        "mean": 31.482,
+        "std": 14.314247308189138,
+        "median": 30.0,
+        "ci_lower": 10.950000000000003,
+        "ci_upper": 56.049999999999955
+      },
+      "home_win_prob": 0.56300067269509,
+      "away_win_prob": 0.42499932730490997,
+      "draw_prob": 0.012,
+      "predicted_margin": 6.59,
+      "margin_std": 21.86910834945037,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-08T19:36:42_vannes-vs-clermont_2026-10-24",
+    "prediction_metadata": {
+      "timestamp": "2026-10-08T19:36:42.370363+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-24_Vannes-vs-Clermont",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-24T12:30:00+00:00",
+      "home_team": "Vannes",
+      "away_team": "Clermont",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Vannes",
+        "mean": 34.966,
+        "std": 16.699725866013488,
+        "median": 34.0,
+        "ci_lower": 11.0,
+        "ci_upper": 62.0
+      },
+      "away": {
+        "team": "Clermont",
+        "mean": 24.584,
+        "std": 13.00611179407589,
+        "median": 23.0,
+        "ci_lower": 6.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.6330989253813581,
+      "away_win_prob": 0.33890107461864183,
+      "draw_prob": 0.028,
+      "predicted_margin": 10.382,
+      "margin_std": 21.39158890779271,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-08T19:36:42_dhl-stormers-vs-scarlets_2026-10-24",
+    "prediction_metadata": {
+      "timestamp": "2026-10-08T19:36:42.388174+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-24_DHL Stormers-vs-Scarlets",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-24T14:00:00+00:00",
+      "home_team": "DHL Stormers",
+      "away_team": "Scarlets",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "DHL Stormers",
+        "mean": 32.078,
+        "std": 15.287116013166122,
+        "median": 31.0,
+        "ci_lower": 10.0,
+        "ci_upper": 57.0
+      },
+      "away": {
+        "team": "Scarlets",
+        "mean": 24.512,
+        "std": 12.516303607695045,
+        "median": 24.0,
+        "ci_lower": 6.950000000000003,
+        "ci_upper": 44.049999999999955
+      },
+      "home_win_prob": 0.6003457053829018,
+      "away_win_prob": 0.3796542946170982,
+      "draw_prob": 0.02,
+      "predicted_margin": 7.566,
+      "margin_std": 19.867602875032507,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-08T19:36:42_benetton-rugby-vs-glasgow-warriors_2026-10-24",
+    "prediction_metadata": {
+      "timestamp": "2026-10-08T19:36:42.405767+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-24_Benetton Rugby-vs-Glasgow Warriors",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-24T14:00:00+00:00",
+      "home_team": "Benetton Rugby",
+      "away_team": "Glasgow Warriors",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Benetton Rugby",
+        "mean": 24.542,
+        "std": 12.988465498279616,
+        "median": 23.0,
+        "ci_lower": 6.0,
+        "ci_upper": 50.09999999999991
+      },
+      "away": {
+        "team": "Glasgow Warriors",
+        "mean": 31.232,
+        "std": 14.05354674094764,
+        "median": 30.0,
+        "ci_lower": 10.0,
+        "ci_upper": 56.049999999999955
+      },
+      "home_win_prob": 0.3776707059063318,
+      "away_win_prob": 0.6103292940936682,
+      "draw_prob": 0.012,
+      "predicted_margin": -6.69,
+      "margin_std": 18.93573077544144,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

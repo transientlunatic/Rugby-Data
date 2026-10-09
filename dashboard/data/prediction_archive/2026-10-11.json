@@ -1069,5 +1069,209 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-09T22:17:42_sale-sharks-vs-harlequins_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-10-09T22:17:42.918989+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-11_Sale Sharks-vs-Harlequins",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-11T14:00:00+00:00",
+      "home_team": "Sale Sharks",
+      "away_team": "Harlequins",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Sale Sharks",
+        "mean": 33.788,
+        "std": 14.759371802349854,
+        "median": 32.0,
+        "ci_lower": 11.0,
+        "ci_upper": 60.0
+      },
+      "away": {
+        "team": "Harlequins",
+        "mean": 25.656,
+        "std": 13.463493751623313,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 49.0
+      },
+      "home_win_prob": 0.6038316256902798,
+      "away_win_prob": 0.38016837430972017,
+      "draw_prob": 0.016,
+      "predicted_margin": 8.132,
+      "margin_std": 20.44051310510575,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-09T22:17:42_exeter-chiefs-vs-newcastle-falcons_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-10-09T22:17:42.931848+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-11_Exeter Chiefs-vs-Newcastle Falcons",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-11T14:00:00+00:00",
+      "home_team": "Exeter Chiefs",
+      "away_team": "Newcastle Falcons",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Exeter Chiefs",
+        "mean": 47.216,
+        "std": 19.998633553320587,
+        "median": 45.0,
+        "ci_lower": 19.0,
+        "ci_upper": 82.0
+      },
+      "away": {
+        "team": "Newcastle Falcons",
+        "mean": 25.346,
+        "std": 12.870830742419077,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 48.0
+      },
+      "home_win_prob": 0.7289413776770705,
+      "away_win_prob": 0.26105862232292953,
+      "draw_prob": 0.01,
+      "predicted_margin": 21.87,
+      "margin_std": 24.222656749415414,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-09T22:17:42_ealing-trailfinders-vs-hartpury_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-10-09T22:17:42.944901+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "championship_2026-10-11_Ealing Trailfinders-vs-Hartpury",
+      "competition": "championship",
+      "season": "2026-2027",
+      "date": "2026-10-11T15:00:00+00:00",
+      "home_team": "Ealing Trailfinders",
+      "away_team": "Hartpury",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Ealing Trailfinders",
+        "mean": 42.594,
+        "std": 17.696699240253817,
+        "median": 41.0,
+        "ci_lower": 18.950000000000003,
+        "ci_upper": 72.0
+      },
+      "away": {
+        "team": "Hartpury",
+        "mean": 24.77,
+        "std": 12.865189466152453,
+        "median": 23.0,
+        "ci_lower": 6.0,
+        "ci_upper": 48.049999999999955
+      },
+      "home_win_prob": 0.7325012659235791,
+      "away_win_prob": 0.24949873407642087,
+      "draw_prob": 0.018,
+      "predicted_margin": 17.824,
+      "margin_std": 21.721901942509547,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-09T22:17:42_toulouse-vs-bayonne_2026-10-11",
+    "prediction_metadata": {
+      "timestamp": "2026-10-09T22:17:42.958035+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-11_Toulouse-vs-Bayonne",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-11T19:05:00+00:00",
+      "home_team": "Toulouse",
+      "away_team": "Bayonne",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulouse",
+        "mean": 51.482,
+        "std": 20.92036510197659,
+        "median": 50.0,
+        "ci_lower": 21.0,
+        "ci_upper": 91.0
+      },
+      "away": {
+        "team": "Bayonne",
+        "mean": 21.466,
+        "std": 11.327879060088874,
+        "median": 20.0,
+        "ci_lower": 6.0,
+        "ci_upper": 42.0
+      },
+      "home_win_prob": 0.8316817802316707,
+      "away_win_prob": 0.16031821976832927,
+      "draw_prob": 0.008,
+      "predicted_margin": 30.016,
+      "margin_std": 23.698433365942144,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

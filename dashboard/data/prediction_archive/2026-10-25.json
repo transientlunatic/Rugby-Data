@@ -1,0 +1,104 @@
+[
+  {
+    "prediction_id": "2026-10-10T17:22:24_harlequins-vs-saracens_2026-10-25",
+    "prediction_metadata": {
+      "timestamp": "2026-10-10T17:22:24.835599+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-25_Harlequins-vs-Saracens",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-25T15:00:00+00:00",
+      "home_team": "Harlequins",
+      "away_team": "Saracens",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Harlequins",
+        "mean": 32.356,
+        "std": 15.176075381995176,
+        "median": 31.0,
+        "ci_lower": 11.0,
+        "ci_upper": 59.0
+      },
+      "away": {
+        "team": "Saracens",
+        "mean": 33.404,
+        "std": 15.328561054449956,
+        "median": 32.0,
+        "ci_lower": 11.0,
+        "ci_upper": 62.0
+      },
+      "home_win_prob": 0.46998932396757476,
+      "away_win_prob": 0.5100106760324252,
+      "draw_prob": 0.02,
+      "predicted_margin": -1.048,
+      "margin_std": 21.905197921954507,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-10T17:22:24_la-rochelle-vs-bordeaux-begles_2026-10-25",
+    "prediction_metadata": {
+      "timestamp": "2026-10-10T17:22:24.854159+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-10-25_La Rochelle-vs-Bordeaux-Begles",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-10-25T19:05:00+00:00",
+      "home_team": "La Rochelle",
+      "away_team": "Bordeaux-Begles",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "La Rochelle",
+        "mean": 29.344,
+        "std": 14.45716652736628,
+        "median": 27.0,
+        "ci_lower": 10.0,
+        "ci_upper": 58.0
+      },
+      "away": {
+        "team": "Bordeaux-Begles",
+        "mean": 25.33,
+        "std": 12.184297271488413,
+        "median": 24.0,
+        "ci_lower": 6.0,
+        "ci_upper": 47.0
+      },
+      "home_win_prob": 0.543751942630946,
+      "away_win_prob": 0.420248057369054,
+      "draw_prob": 0.036,
+      "predicted_margin": 4.014,
+      "margin_std": 19.116532216905867,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

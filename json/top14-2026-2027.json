@@ -19144,15 +19144,6 @@
     },
     "home": {
       "lineup": {
-        "23": {
-          "name": "Daniel Tupou",
-          "on": [
-            58
-          ],
-          "off": [],
-          "reds": [],
-          "yellows": []
-        },
         "8": {
           "name": "Maxime Baudonne",
           "on": [
@@ -19293,6 +19284,15 @@
           "off": [
             45
           ],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Taniela Tupou",
+          "on": [
+            58
+          ],
+          "off": [],
           "reds": [],
           "yellows": []
         },
@@ -20541,7 +20541,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20556,14 +20558,18 @@
         },
         "19": {
           "name": "Adam Beard",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Alex Masibaka",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20579,14 +20585,18 @@
         },
         "21": {
           "name": "Ali Price",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Lennox Anyanwu",
-          "on": [],
+          "on": [
+            62
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20603,15 +20613,20 @@
         "3": {
           "name": "Wilfrid Hounkpatin",
           "on": [
-            0
+            0,
+            59
           ],
-          "off": [],
+          "off": [
+            31
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Reda Wardi",
-          "on": [],
+          "on": [
+            31
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20621,11 +20636,13 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
-        "11": {
+        "14": {
           "name": "Melvyn Rates",
           "on": [
             0
@@ -20636,7 +20653,9 @@
         },
         "16": {
           "name": "Lyam Akrab",
-          "on": [],
+          "on": [
+            69
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20655,7 +20674,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20664,7 +20685,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            69
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20680,7 +20703,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            62
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20689,7 +20714,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20704,7 +20731,9 @@
         },
         "22": {
           "name": "Stuart Hogg",
-          "on": [],
+          "on": [
+            24
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20718,19 +20747,76 @@
           "reds": [],
           "yellows": []
         },
-        "14": {
+        "11": {
           "name": "Mael Moustin",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            24
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 21,
+          "type": "Penalty",
+          "player": "Domingo Miotti",
+          "value": 3
+        },
+        {
+          "minute": 23,
+          "type": "Try",
+          "player": "Justo Piccardo",
+          "value": 5
+        },
+        {
+          "minute": 23,
+          "type": "Missed conversion",
+          "player": "Domingo Miotti",
+          "value": 0
+        },
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Stuart Hogg",
+          "value": 5
+        },
+        {
+          "minute": 33,
+          "type": "Conversion",
+          "player": "Domingo Miotti",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Missed penalty",
+          "player": "Domingo Miotti",
+          "value": 0
+        },
+        {
+          "minute": 42,
+          "type": "Missed penalty",
+          "player": "Stuart Hogg",
+          "value": 0
+        },
+        {
+          "minute": 79,
+          "type": "Try",
+          "player": "Alexis Bernadet",
+          "value": 5
+        },
+        {
+          "minute": 79,
+          "type": "Conversion",
+          "player": "Stuart Hogg",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 22,
       "team": "Montpellier"
     },
     "home": {
@@ -20758,7 +20844,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            18
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20773,7 +20861,9 @@
         },
         "17": {
           "name": "Sergo Abramishvili",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20789,14 +20879,18 @@
         },
         "20": {
           "name": "Thibaut Motassi",
-          "on": [],
+          "on": [
+            71
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Giorgi Melikidze",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20806,7 +20900,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            59
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20815,7 +20911,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20824,13 +20922,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Freddy Duguivalu",
-          "on": [],
+          "on": [
+            50
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20846,7 +20948,9 @@
         },
         "16": {
           "name": "Tomasi Maka",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20856,7 +20960,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20871,14 +20977,18 @@
         },
         "18": {
           "name": "Pierre-Henri Azagoh",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Tani Vili",
-          "on": [],
+          "on": [
+            18
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -20888,7 +20998,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            71
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20897,7 +21009,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            8
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20906,14 +21020,21 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Juan-Martin Scelzo",
-          "on": [],
-          "off": [],
+          "on": [
+            8,
+            59
+          ],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20927,9 +21048,70 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 17,
+          "type": "Try",
+          "player": "Paul Alo-Emile",
+          "value": 5
+        },
+        {
+          "minute": 18,
+          "type": "Missed conversion",
+          "player": "Louis Carbonel",
+          "value": 0
+        },
+        {
+          "minute": 27,
+          "type": "Try",
+          "player": "Tani Vili",
+          "value": 5
+        },
+        {
+          "minute": 28,
+          "type": "Missed conversion",
+          "player": "Louis Carbonel",
+          "value": 0
+        },
+        {
+          "minute": 31,
+          "type": "Penalty",
+          "player": "Louis Carbonel",
+          "value": 3
+        },
+        {
+          "minute": 37,
+          "type": "Penalty",
+          "player": "Louis Carbonel",
+          "value": 3
+        },
+        {
+          "minute": 52,
+          "type": "Try",
+          "player": "Freddy Duguivalu",
+          "value": 5
+        },
+        {
+          "minute": 53,
+          "type": "Conversion",
+          "player": "Louis Carbonel",
+          "value": 2
+        },
+        {
+          "minute": 76,
+          "type": "Try",
+          "player": "Leo Barre",
+          "value": 5
+        },
+        {
+          "minute": 77,
+          "type": "Conversion",
+          "player": "Louis Carbonel",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 30,
       "team": "Stade Francais Paris"
     },
     "round": 6,
@@ -20955,7 +21137,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20964,7 +21148,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            71
+          ],
           "reds": [],
           "yellows": []
         },
@@ -20973,34 +21159,46 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Joe Jonas",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Simon Bourgeois",
-          "on": [],
-          "off": [],
+          "on": [
+            49
+          ],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Wayan de Benedittis",
-          "on": [],
+          "on": [
+            41
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Mills Sanerivi",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21052,7 +21250,9 @@
         },
         "20": {
           "name": "Simione Kuruvoli",
-          "on": [],
+          "on": [
+            71
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21062,7 +21262,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21071,7 +21273,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21080,7 +21284,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            41
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21089,23 +21295,31 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Inia Tabuavou",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Matteo Desjeux",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            67
+          ]
         },
         "10": {
           "name": "Maxime Lafage",
@@ -21119,23 +21333,53 @@
         "3": {
           "name": "Nick Schonert",
           "on": [
-            0
+            0,
+            74
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Joe Edwards",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 55,
+          "type": "Try",
+          "player": "Nathanael Hulleu",
+          "value": 5
+        },
+        {
+          "minute": 55,
+          "type": "Conversion",
+          "player": "Maxime Lafage",
+          "value": 2
+        },
+        {
+          "minute": 63,
+          "type": "Try",
+          "player": "Wayan de Benedittis",
+          "value": 5
+        },
+        {
+          "minute": 64,
+          "type": "Missed conversion",
+          "player": "Maxime Lafage",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 12,
       "team": "Vannes"
     },
     "home": {
@@ -21154,7 +21398,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21178,7 +21424,9 @@
         },
         "18": {
           "name": "Peceli Yato",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21188,13 +21436,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            8
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Giorgi Tetrashvili",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21222,7 +21474,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21231,20 +21485,30 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Riko Buliruarua",
-          "on": [],
-          "off": [],
+          "on": [
+            8,
+            28
+          ],
+          "off": [
+            16,
+            61
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Luke McGrath",
-          "on": [],
+          "on": [
+            66
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21263,7 +21527,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            66
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21278,14 +21544,18 @@
         },
         "23": {
           "name": "Marco Riccioni",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Sama Malolo",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21295,21 +21565,30 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Jaco van Tonder",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Tristan Tedder",
-          "on": [],
-          "off": [],
+          "on": [
+            16,
+            61
+          ],
+          "off": [
+            28
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21318,7 +21597,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21332,9 +21613,52 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 49,
+          "type": "Try",
+          "player": "Peceli Yato",
+          "value": 5
+        },
+        {
+          "minute": 49,
+          "type": "Conversion",
+          "player": "Antoine Aucagne",
+          "value": 2
+        },
+        {
+          "minute": 59,
+          "type": "Try",
+          "player": "Theo Forner",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Conversion",
+          "player": "Antoine Aucagne",
+          "value": 2
+        },
+        {
+          "minute": 70,
+          "type": "Try",
+          "player": "Luke McGrath",
+          "value": 5
+        },
+        {
+          "minute": 71,
+          "type": "Conversion",
+          "player": "Antoine Aucagne",
+          "value": 2
+        },
+        {
+          "minute": 76,
+          "type": "Missed penalty",
+          "player": "Antoine Aucagne",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 21,
       "team": "Perpignan"
     },
     "round": 6,
@@ -21348,14 +21672,18 @@
       "lineup": {
         "16": {
           "name": "Quentin Lespiaucq",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Diego Jurd",
-          "on": [],
+          "on": [
+            75
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21374,7 +21702,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            66
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21392,16 +21722,22 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Thomas Adelaide",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            68
+          ]
         },
         "15": {
           "name": "Davit Niniashvili",
@@ -21414,7 +21750,9 @@
         },
         "20": {
           "name": "Thomas Lavault",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21424,13 +21762,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Levani Botia",
-          "on": [],
+          "on": [
+            36
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21446,7 +21788,9 @@
         },
         "23": {
           "name": "Aleksandre Kuntelia",
-          "on": [],
+          "on": [
+            47
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21462,14 +21806,20 @@
         },
         "17": {
           "name": "Nathan Fraissenon",
-          "on": [],
-          "off": [],
+          "on": [
+            54
+          ],
+          "off": [
+            75
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Christophe Loustalot",
-          "on": [],
+          "on": [
+            66
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21479,7 +21829,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            75
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21488,7 +21840,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21506,7 +21860,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            36
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21515,7 +21871,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            47
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21531,16 +21889,80 @@
         "1": {
           "name": "Alexandre Kaddouri",
           "on": [
-            0
+            0,
+            75
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 4,
+          "type": "Try",
+          "player": "Antoine Hastoy",
+          "value": 5
+        },
+        {
+          "minute": 5,
+          "type": "Conversion",
+          "player": "Antoine Hastoy",
+          "value": 2
+        },
+        {
+          "minute": 8,
+          "type": "Try",
+          "player": "Valentin Bouju",
+          "value": 5
+        },
+        {
+          "minute": 8,
+          "type": "Conversion",
+          "player": "Antoine Hastoy",
+          "value": 2
+        },
+        {
+          "minute": 37,
+          "type": "Missed penalty",
+          "player": "Antoine Hastoy",
+          "value": 0
+        },
+        {
+          "minute": 39,
+          "type": "Try",
+          "player": "Dillyn Leyds",
+          "value": 5
+        },
+        {
+          "minute": 40,
+          "type": "Conversion",
+          "player": "Antoine Hastoy",
+          "value": 2
+        },
+        {
+          "minute": 53,
+          "type": "Try",
+          "player": "Watisoni Waqanisaravi",
+          "value": 5
+        },
+        {
+          "minute": 54,
+          "type": "Conversion",
+          "player": "Antoine Hastoy",
+          "value": 2
+        },
+        {
+          "minute": 77,
+          "type": "Missed penalty",
+          "player": "Antoine Hastoy",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 28,
       "team": "La Rochelle"
     },
     "home": {
@@ -21550,20 +21972,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Marvin Okuya",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Maxime Gouzou",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21588,14 +22016,18 @@
         },
         "19": {
           "name": "Janse Roux",
-          "on": [],
+          "on": [
+            52
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Thomas Gallo",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21605,7 +22037,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21614,7 +22048,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            52
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21623,13 +22059,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Camille Chat",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21657,7 +22097,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21666,7 +22108,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21681,7 +22125,9 @@
         },
         "20": {
           "name": "Charlie Cassang",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21691,13 +22137,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Matteo Nocera",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21707,7 +22157,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            70
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21731,15 +22183,54 @@
         },
         "21": {
           "name": "Martin Meliande",
-          "on": [],
+          "on": [
+            70
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 13,
+          "type": "Penalty",
+          "player": "L\u00e9o Berdeu",
+          "value": 3
+        },
+        {
+          "minute": 20,
+          "type": "Penalty",
+          "player": "L\u00e9o Berdeu",
+          "value": 3
+        },
+        {
+          "minute": 28,
+          "type": "Missed penalty",
+          "player": "L\u00e9o Berdeu",
+          "value": 0
+        },
+        {
+          "minute": 30,
+          "type": "Try",
+          "player": "Jiuta Wainiqolo",
+          "value": 5
+        },
+        {
+          "minute": 31,
+          "type": "Conversion",
+          "player": "L\u00e9o Berdeu",
+          "value": 2
+        },
+        {
+          "minute": 48,
+          "type": "Penalty",
+          "player": "L\u00e9o Berdeu",
+          "value": 3
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 16,
       "team": "Lyon O.U."
     },
     "round": 6,
@@ -21756,7 +22247,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21765,7 +22258,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21774,7 +22269,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            70
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21789,7 +22286,9 @@
         },
         "22": {
           "name": "Andrea Cocagi",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21823,7 +22322,9 @@
         },
         "23": {
           "name": "Levan Chilachava",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21833,20 +22334,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            67
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Pierre Colonna",
-          "on": [],
+          "on": [
+            70
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Atunaisa Sokobale",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21862,7 +22369,9 @@
         },
         "19": {
           "name": "Simon Meka",
-          "on": [],
+          "on": [
+            67
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21876,7 +22385,9 @@
         },
         "18": {
           "name": "Chris Gabriel",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21886,7 +22397,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21910,7 +22423,9 @@
         },
         "20": {
           "name": "Jeremy Fernandez",
-          "on": [],
+          "on": [
+            66
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21920,7 +22435,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21929,7 +22446,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            66
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21943,9 +22462,58 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 6,
+          "type": "Penalty",
+          "player": "Theo Vidal",
+          "value": 3
+        },
+        {
+          "minute": 14,
+          "type": "Try",
+          "player": "Christian Ambadiang",
+          "value": 5
+        },
+        {
+          "minute": 15,
+          "type": "Conversion",
+          "player": "Theo Vidal",
+          "value": 2
+        },
+        {
+          "minute": 36,
+          "type": "Try",
+          "player": "Teddy Durand-Pradere",
+          "value": 5
+        },
+        {
+          "minute": 37,
+          "type": "Conversion",
+          "player": "Theo Vidal",
+          "value": 2
+        },
+        {
+          "minute": 44,
+          "type": "Penalty",
+          "player": "Theo Vidal",
+          "value": 3
+        },
+        {
+          "minute": 61,
+          "type": "Penalty",
+          "player": "Theo Vidal",
+          "value": 3
+        },
+        {
+          "minute": 70,
+          "type": "Penalty",
+          "player": "Theo Vidal",
+          "value": 3
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 26,
       "team": "Castres Olympique"
     },
     "home": {
@@ -21955,7 +22523,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            61
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21964,7 +22534,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -21979,7 +22551,9 @@
         },
         "22": {
           "name": "Clement Laporte",
-          "on": [],
+          "on": [
+            74
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -21989,7 +22563,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22007,7 +22583,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            54
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22052,9 +22630,13 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            35
+          ]
         },
         "12": {
           "name": "Fabien Brau-Boirie",
@@ -22077,13 +22659,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Bastien Vergnes-Taillefer",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22099,14 +22685,18 @@
         },
         "19": {
           "name": "Santiago Grondona",
-          "on": [],
+          "on": [
+            74
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Daniel Bibi Biziwu",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22116,35 +22706,116 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Guram Papidze",
-          "on": [],
+          "on": [
+            54
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Hugo Auradou",
-          "on": [],
+          "on": [
+            40
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Thomas Souverbie",
-          "on": [],
+          "on": [
+            61
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 9,
+          "type": "Penalty",
+          "player": "Axel Desperes",
+          "value": 3
+        },
+        {
+          "minute": 22,
+          "type": "Try",
+          "player": "Tumua Manu",
+          "value": 5
+        },
+        {
+          "minute": 23,
+          "type": "Conversion",
+          "player": "Axel Desperes",
+          "value": 2
+        },
+        {
+          "minute": 34,
+          "type": "Penalty",
+          "player": "Axel Desperes",
+          "value": 3
+        },
+        {
+          "minute": 40,
+          "type": "Try",
+          "player": "Emilien Gailleton",
+          "value": 5
+        },
+        {
+          "minute": 41,
+          "type": "Conversion",
+          "player": "Axel Desperes",
+          "value": 2
+        },
+        {
+          "minute": 48,
+          "type": "Penalty",
+          "player": "Axel Desperes",
+          "value": 3
+        },
+        {
+          "minute": 59,
+          "type": "Try",
+          "player": "Facundo Isa",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Missed conversion",
+          "player": "Axel Desperes",
+          "value": 0
+        },
+        {
+          "minute": 62,
+          "type": "Missed penalty",
+          "player": "Axel Desperes",
+          "value": 0
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Aaron Grandidier Nkanang",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Conversion",
+          "player": "Axel Desperes",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 35,
       "team": "Pau"
     },
     "round": 6,
@@ -22156,13 +22827,6 @@
   {
     "away": {
       "lineup": {
-        "23": {
-          "name": "Daniel Tupou",
-          "on": [],
-          "off": [],
-          "reds": [],
-          "yellows": []
-        },
         "8": {
           "name": "Maxime Baudonne",
           "on": [
@@ -22174,7 +22838,9 @@
         },
         "18": {
           "name": "Nathan Hughes",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22193,7 +22859,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22211,7 +22879,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22229,7 +22899,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22238,20 +22910,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            47
+          ],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Nicolas Martins",
-          "on": [],
+          "on": [
+            45
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Yanis Basse",
-          "on": [],
+          "on": [
+            75
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22270,13 +22948,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Gia Kharaishvili",
-          "on": [],
+          "on": [
+            55
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Taniela Tupou",
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22286,13 +22977,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            75
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Maxime Machenaud",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22302,13 +22997,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Jordan Joseph",
-          "on": [],
+          "on": [
+            47
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22324,7 +23023,9 @@
         },
         "20": {
           "name": "Fabien Sanconnie",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22334,7 +23035,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            45
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22348,16 +23051,49 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 29,
+          "type": "Try",
+          "player": "Antoine Gibert",
+          "value": 5
+        },
+        {
+          "minute": 29,
+          "type": "Conversion",
+          "player": "Ugo Seunes",
+          "value": 2
+        },
+        {
+          "minute": 54,
+          "type": "Penalty",
+          "player": "Ugo Seunes",
+          "value": 3
+        },
+        {
+          "minute": 69,
+          "type": "Try",
+          "player": "Nathan Hughes",
+          "value": 5
+        },
+        {
+          "minute": 70,
+          "type": "Missed conversion",
+          "player": "Ugo Seunes",
+          "value": 0
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 15,
       "team": "Racing 92"
     },
     "home": {
       "lineup": {
         "17": {
           "name": "Leo Ametlla",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22365,25 +23101,35 @@
         "15": {
           "name": "Rayan Rebbadj",
           "on": [
-            0
+            0,
+            74
           ],
-          "off": [],
+          "off": [
+            71
+          ],
           "reds": [],
           "yellows": []
         },
         "19": {
           "name": "Joe Quere Karaba",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            74
+          ]
         },
         "14": {
           "name": "Setariki Tuicuvu",
           "on": [
-            0
+            0,
+            16
           ],
-          "off": [],
+          "off": [
+            11
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22392,13 +23138,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            40
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Luka Keletaona",
-          "on": [],
+          "on": [
+            71
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22408,14 +23158,21 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Beka Gigashvili",
-          "on": [],
-          "off": [],
+          "on": [
+            11,
+            55
+          ],
+          "off": [
+            16
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22424,14 +23181,20 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Huw Jones",
-          "on": [],
-          "off": [],
+          "on": [
+            40
+          ],
+          "off": [
+            74
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22440,7 +23203,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22449,7 +23214,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22467,16 +23234,22 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            6
+          ]
         },
         "4": {
           "name": "Junior Kpoku",
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            50
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22509,7 +23282,9 @@
         },
         "21": {
           "name": "Ben White",
-          "on": [],
+          "on": [
+            63
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22534,22 +23309,84 @@
         },
         "16": {
           "name": "Pierre Damond",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Judicael Cancoriet",
-          "on": [],
-          "off": [],
+          "on": [
+            50,
+            79
+          ],
+          "off": [
+            79
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 19,
+          "type": "Try",
+          "player": "Jean-Baptiste Gros",
+          "value": 5
+        },
+        {
+          "minute": 20,
+          "type": "Conversion",
+          "player": "Tomas Albornoz",
+          "value": 2
+        },
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Teddy Baubigny",
+          "value": 5
+        },
+        {
+          "minute": 27,
+          "type": "Conversion",
+          "player": "Tomas Albornoz",
+          "value": 2
+        },
+        {
+          "minute": 42,
+          "type": "Penalty",
+          "player": "Tomas Albornoz",
+          "value": 3
+        },
+        {
+          "minute": 57,
+          "type": "Penalty",
+          "player": "Tomas Albornoz",
+          "value": 3
+        },
+        {
+          "minute": 62,
+          "type": "Penalty",
+          "player": "Tomas Albornoz",
+          "value": 3
+        },
+        {
+          "minute": 67,
+          "type": "Penalty",
+          "player": "Tomas Albornoz",
+          "value": 3
+        },
+        {
+          "minute": 77,
+          "type": "Penalty",
+          "player": "Tomas Albornoz",
+          "value": 3
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 29,
       "team": "Toulon"
     },
     "round": 6,
@@ -22563,7 +23400,9 @@
       "lineup": {
         "16": {
           "name": "Connor Sa",
-          "on": [],
+          "on": [
+            67
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22571,9 +23410,12 @@
         "10": {
           "name": "Arthur Retiere",
           "on": [
-            0
+            0,
+            68
           ],
-          "off": [],
+          "off": [
+            63
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22582,13 +23424,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Lasha Pkhakadze",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22604,7 +23450,9 @@
         },
         "21": {
           "name": "Romain Gardrat",
-          "on": [],
+          "on": [
+            72
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22614,7 +23462,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            67
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22639,7 +23489,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            72
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22648,7 +23500,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            58
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22663,7 +23517,9 @@
         },
         "20": {
           "name": "Adam Zapedowski",
-          "on": [],
+          "on": [
+            26
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22675,7 +23531,9 @@
           ],
           "off": [],
           "reds": [],
-          "yellows": []
+          "yellows": [
+            44
+          ]
         },
         "7": {
           "name": "Temo Matiu",
@@ -22691,20 +23549,28 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            49
+          ],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "Hugo Reus",
-          "on": [],
-          "off": [],
+          "on": [
+            63
+          ],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Pablo Uberti",
-          "on": [],
+          "on": [
+            58
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22723,13 +23589,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            26
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Matis Perchaud",
-          "on": [],
+          "on": [
+            49
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22753,9 +23623,58 @@
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 2,
+          "type": "Penalty",
+          "player": "Maxime Lucu",
+          "value": 3
+        },
+        {
+          "minute": 14,
+          "type": "Missed penalty",
+          "player": "Maxime Lucu",
+          "value": 0
+        },
+        {
+          "minute": 23,
+          "type": "Try",
+          "player": "Hugo Avogadro",
+          "value": 5
+        },
+        {
+          "minute": 24,
+          "type": "Conversion",
+          "player": "Maxime Lucu",
+          "value": 2
+        },
+        {
+          "minute": 35,
+          "type": "Penalty",
+          "player": "Maxime Lucu",
+          "value": 3
+        },
+        {
+          "minute": 53,
+          "type": "Try",
+          "player": "Maxime Lucu",
+          "value": 5
+        },
+        {
+          "minute": 54,
+          "type": "Conversion",
+          "player": "Maxime Lucu",
+          "value": 2
+        },
+        {
+          "minute": 65,
+          "type": "Penalty",
+          "player": "Hugo Reus",
+          "value": 3
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 23,
       "team": "Bordeaux-Begles"
     },
     "home": {
@@ -22765,7 +23684,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22789,21 +23710,27 @@
         },
         "19": {
           "name": "Kevin Noah",
-          "on": [],
+          "on": [
+            67
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "20": {
           "name": "Baptiste Germain",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "22": {
           "name": "AJ Lam",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22813,13 +23740,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
         "16": {
           "name": "Peniami Narisia",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22829,13 +23760,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
         "17": {
           "name": "Sacha Lotrian",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22845,13 +23780,17 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            68
+          ],
           "reds": [],
           "yellows": []
         },
         "18": {
           "name": "Leo Michaux Vargas",
-          "on": [],
+          "on": [
+            68
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22879,20 +23818,26 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
         "23": {
           "name": "Giorgi Dzmanashvili",
-          "on": [],
+          "on": [
+            55
+          ],
           "off": [],
           "reds": [],
           "yellows": []
         },
         "21": {
           "name": "Mathys Belaubre",
-          "on": [],
+          "on": [
+            75
+          ],
           "off": [],
           "reds": [],
           "yellows": []
@@ -22911,7 +23856,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            75
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22920,7 +23867,9 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            55
+          ],
           "reds": [],
           "yellows": []
         },
@@ -22947,14 +23896,59 @@
           "on": [
             0
           ],
-          "off": [],
+          "off": [
+            67
+          ],
           "reds": [],
           "yellows": []
         }
       },
-      "scores": [],
+      "scores": [
+        {
+          "minute": 19,
+          "type": "Penalty",
+          "player": "Harry Plummer",
+          "value": 3
+        },
+        {
+          "minute": 26,
+          "type": "Try",
+          "player": "Justin Bouraux",
+          "value": 5
+        },
+        {
+          "minute": 27,
+          "type": "Conversion",
+          "player": "Harry Plummer",
+          "value": 2
+        },
+        {
+          "minute": 46,
+          "type": "Try",
+          "player": "Louis Vermeulen",
+          "value": 5
+        },
+        {
+          "minute": 47,
+          "type": "Missed conversion",
+          "player": "Harry Plummer",
+          "value": 0
+        },
+        {
+          "minute": 57,
+          "type": "Try",
+          "player": "Bautista Delguy",
+          "value": 5
+        },
+        {
+          "minute": 58,
+          "type": "Conversion",
+          "player": "Harry Plummer",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 22,
       "team": "Clermont Auvergne"
     },
     "round": 6,
@@ -22965,17 +23959,615 @@
   },
   {
     "away": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "1": {
+          "name": "Andy Bordelai",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Ewan Johnson",
+          "on": [
+            0,
+            62
+          ],
+          "off": [
+            55
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Alexandre Fischer",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Esteban Capilla",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Sireli Maqala",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Baptiste Heguy",
+          "on": [
+            0
+          ],
+          "off": [
+            69
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "10": {
+          "name": "Joris Segonds",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Emerick Setiano",
+          "on": [
+            50
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Guillaume Cramont",
+          "on": [
+            44
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Baptiste Tilloles",
+          "on": [],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Ignacio Calles",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Lucas Paulos",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Leo Coly",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Rob du Preez",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Mateo Carreras",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Yohan Orabe",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Tevita Tatafu",
+          "on": [
+            0
+          ],
+          "off": [
+            50
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "22": {
+          "name": "Guillaume Martocq",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Tom Spring",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Arthur Iturria",
+          "on": [
+            55
+          ],
+          "off": [
+            62
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Giovanni Habel-Kuffner",
+          "on": [
+            69
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Matthieu Uhila",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Lucas Martin",
+          "on": [
+            0
+          ],
+          "off": [
+            44
+          ],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 5,
+          "type": "Try",
+          "player": "Sireli Maqala",
+          "value": 5
+        },
+        {
+          "minute": 5,
+          "type": "Conversion",
+          "player": "Joris Segonds",
+          "value": 2
+        },
+        {
+          "minute": 9,
+          "type": "Penalty",
+          "player": "Joris Segonds",
+          "value": 3
+        },
+        {
+          "minute": 13,
+          "type": "Penalty",
+          "player": "Joris Segonds",
+          "value": 3
+        },
+        {
+          "minute": 16,
+          "type": "Try",
+          "player": "Tom Spring",
+          "value": 5
+        },
+        {
+          "minute": 17,
+          "type": "Conversion",
+          "player": "Joris Segonds",
+          "value": 2
+        },
+        {
+          "minute": 49,
+          "type": "Try",
+          "player": "Guillaume Cramont",
+          "value": 5
+        },
+        {
+          "minute": 50,
+          "type": "Conversion",
+          "player": "Joris Segonds",
+          "value": 2
+        },
+        {
+          "minute": 80,
+          "type": "Try",
+          "player": "Mateo Carreras",
+          "value": 5
+        },
+        {
+          "minute": 80,
+          "type": "Conversion",
+          "player": "Joris Segonds",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 34,
       "team": "Bayonne"
     },
     "home": {
-      "lineup": {},
-      "scores": [],
+      "lineup": {
+        "22": {
+          "name": "Teddy Thomas",
+          "on": [
+            56
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "23": {
+          "name": "Joel Merkler",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "12": {
+          "name": "Santiago Chocobares",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "7": {
+          "name": "Efrain Elias",
+          "on": [
+            0,
+            63
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "11": {
+          "name": "Matthis Lebel",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "4": {
+          "name": "Joshua Brennan",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "15": {
+          "name": "Juan-Cruz Mallia",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "3": {
+          "name": "Dorian Aldegheri",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "18": {
+          "name": "Romeo Bonnard Martin",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "21": {
+          "name": "Kalvin Gourgues",
+          "on": [
+            59
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "1": {
+          "name": "Cyril Baille",
+          "on": [
+            0
+          ],
+          "off": [
+            49
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "5": {
+          "name": "Thibaud Flament",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "17": {
+          "name": "Rodrigue Neti",
+          "on": [
+            49
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "19": {
+          "name": "Alexandre Roumat",
+          "on": [
+            56
+          ],
+          "off": [
+            63
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "8": {
+          "name": "Th\u00e9o Ntamack",
+          "on": [
+            0
+          ],
+          "off": [
+            56
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "20": {
+          "name": "Paul Graou",
+          "on": [
+            73
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "6": {
+          "name": "Fran\u00e7ois Cros",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "9": {
+          "name": "Antoine Dupont",
+          "on": [
+            0
+          ],
+          "off": [
+            73
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "13": {
+          "name": "Tommaso Menoncello",
+          "on": [
+            0
+          ],
+          "off": [
+            59
+          ],
+          "reds": [],
+          "yellows": [
+            49
+          ]
+        },
+        "10": {
+          "name": "Romain Ntamack",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "2": {
+          "name": "Julien Marchand",
+          "on": [
+            0
+          ],
+          "off": [
+            61
+          ],
+          "reds": [],
+          "yellows": []
+        },
+        "14": {
+          "name": "Ange Capuozzo",
+          "on": [
+            0
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        },
+        "16": {
+          "name": "Thomas Lacombre",
+          "on": [
+            61
+          ],
+          "off": [],
+          "reds": [],
+          "yellows": []
+        }
+      },
+      "scores": [
+        {
+          "minute": 2,
+          "type": "Try",
+          "player": "Cyril Baille",
+          "value": 5
+        },
+        {
+          "minute": 3,
+          "type": "Missed conversion",
+          "player": "Romain Ntamack",
+          "value": 0
+        },
+        {
+          "minute": 10,
+          "type": "Try",
+          "player": "Antoine Dupont",
+          "value": 5
+        },
+        {
+          "minute": 11,
+          "type": "Conversion",
+          "player": "Romain Ntamack",
+          "value": 2
+        },
+        {
+          "minute": 24,
+          "type": "Try",
+          "player": "Julien Marchand",
+          "value": 5
+        },
+        {
+          "minute": 24,
+          "type": "Conversion",
+          "player": "Romain Ntamack",
+          "value": 2
+        },
+        {
+          "minute": 33,
+          "type": "Try",
+          "player": "Julien Marchand",
+          "value": 5
+        },
+        {
+          "minute": 34,
+          "type": "Missed conversion",
+          "player": "Romain Ntamack",
+          "value": 0
+        },
+        {
+          "minute": 58,
+          "type": "Try",
+          "player": "Joshua Brennan",
+          "value": 5
+        },
+        {
+          "minute": 59,
+          "type": "Conversion",
+          "player": "Romain Ntamack",
+          "value": 2
+        },
+        {
+          "minute": 66,
+          "type": "Try",
+          "player": "Romain Ntamack",
+          "value": 5
+        },
+        {
+          "minute": 67,
+          "type": "Conversion",
+          "player": "Romain Ntamack",
+          "value": 2
+        },
+        {
+          "minute": 72,
+          "type": "Try",
+          "player": "Antoine Dupont",
+          "value": 5
+        },
+        {
+          "minute": 73,
+          "type": "Conversion",
+          "player": "Romain Ntamack",
+          "value": 2
+        }
+      ],
       "conference": null,
-      "score": null,
+      "score": 45,
       "team": "Toulouse"
     },
     "round": 6,

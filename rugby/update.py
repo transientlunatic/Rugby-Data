@@ -190,6 +190,30 @@ def default_season_for_league(league_config: Dict, now: datetime) -> str:
     return f"{now.year - 1}-{now.year}"
 
 
+def seasons_to_update(league_config: Dict, now: datetime, json_dir: Path,
+                      league_prefix: str) -> List[str]:
+    """Seasons the scheduled job should refresh: the current one, plus the
+    previous one while it still has finished matches without a result.
+
+    Without this, results that land after the season rolls over (or were
+    missed while it was running) are never fetched.
+    """
+    current = default_season_for_league(league_config, now)
+    start = int(current.split('-')[0])
+    previous = f"{start - 1}-{start}"
+    seasons = [current]
+    if league_config.get('use_year_only'):
+        return seasons
+    path = json_dir / f"{league_prefix}-{previous}.json"
+    cutoff = (now - timedelta(days=2)).strftime('%Y-%m-%d')
+    for m in load_existing_data(path):
+        if (str(m.get('date', ''))[:10] < cutoff and m.get('status') != 'void'
+                and (m.get('home') or {}).get('score') is None):
+            seasons.insert(0, previous)
+            break
+    return seasons
+
+
 def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:
     """Fetch URL with retry logic."""
     for attempt in range(max_retries):

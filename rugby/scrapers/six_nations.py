@@ -27,7 +27,7 @@ import json
 from datetime import datetime
 from typing import Dict, List, Optional, Any, Tuple
 
-HEADERS = {'User-Agent': 'RugbyDataBot/1.0'}
+HEADERS = {'User-Agent': 'RugbyDataBot/1.0 (https://github.com/transientlunatic/Rugby-Data; mail@daniel-williams.co.uk)'}
 
 def get_wikipedia_page_title(year: int, championship_name: str) -> str:
     """

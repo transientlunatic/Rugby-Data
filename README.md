@@ -1,8 +1,6 @@
 # Rugby Data Repository
 
-This repository contains scoring information from various professional rugby union leagues in both YAML and JSON format.
-
-The data in each format should be the same.
+This repository contains scoring information from various professional rugby union leagues in JSON format (`json/`).
 
 Please submit a pull request if you spot any mistakes!
 
@@ -79,6 +77,23 @@ rugby data normalise           # fix files in place (and un-reverse season filen
 
 A test fails if non-canonical names are committed. To record a new variant or
 rename, add it to `TEAM_NAME_ALIASES` and run `rugby data normalise`.
+
+## Cleaning
+
+```bash
+rugby data clean --check   # list duplicate rows and placeholder results; exit 1 if found
+rugby data clean           # fix in place
+```
+
+Duplicate rows for one fixture are collapsed (keeping the one with a score, then
+the most lineup/scoring detail); `TBC v TBC` knockout slots are left alone.
+Placeholder results (0-0 with no scorers or lineups, i.e. cancelled or never
+played) get `null` scores and `"status": "void"`, so they are not read as
+results.
+
+The scheduled update also refreshes the *previous* season while it still has
+finished matches with no result, so results that arrive after the season rolls
+over are picked up.
 
 ## Data checks on scheduled updates
 

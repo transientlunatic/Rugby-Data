@@ -87,6 +87,8 @@ def check_match(match: dict, now: Optional[datetime] = None) -> List[Tuple[str, 
             found.append((WARNING, "scoreless", "0-0 result (usually a cancelled or placeholder fixture)"))
         if when is not None and when > now + timedelta(days=1):
             found.append((WARNING, "future_result", f"has a result but is dated {when.date()}"))
+    elif when is not None and match.get("status") != "void" and when < now - timedelta(days=3):
+        found.append((WARNING, "missing_result", f"dated {when.date()} but has no result"))
     return found
 
 
@@ -155,7 +157,7 @@ def validate_directory(
         for m in matches:
             counts[match_key(m)] = counts.get(match_key(m), 0) + 1
         for m in selected:
-            if counts[match_key(m)] > 1 and match_key(m) != "||":
+            if counts[match_key(m)] > 1 and match_key(m) != "||" and "TBC" not in match_key(m):
                 issues.append(Issue(path.name, ERROR, "duplicate",
                                     f"{counts[match_key(m)]} matches with the same date and teams", _label(m)))
     return issues

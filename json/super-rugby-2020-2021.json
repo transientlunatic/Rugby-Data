@@ -92,7 +92,7 @@
       "team": "Emirates Lions",
       "score": 8
     },
-    "stadium": "José Amalfitani Stadium",
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
     "attendance": 6820,
     "referee": "Rasta Rasivhenge"
   },
@@ -189,7 +189,7 @@
       "team": "Hurricanes",
       "score": 26
     },
-    "stadium": "José Amalfitani Stadium",
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
     "attendance": 8540,
     "referee": "Rasta Rasivhenge"
   },
@@ -286,7 +286,7 @@
       "team": "Reds",
       "score": 27
     },
-    "stadium": "José Amalfitani Stadium",
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
     "attendance": 8100,
     "referee": "Federico Anselmi"
   },
@@ -614,13 +614,14 @@
     "date": "2020-03-14T18:40:00",
     "home": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
-    "stadium": "José Amalfitani Stadium"
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-15T16:05:00",
@@ -640,871 +641,944 @@
     "date": "2020-03-20T19:05:00",
     "home": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
-    "stadium": "Rugby League Park"
+    "stadium": "Rugby League Park",
+    "status": "void"
   },
   {
     "date": "2020-03-20T19:15:00",
     "home": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
-    "stadium": "Melbourne Rectangular Stadium"
+    "stadium": "Melbourne Rectangular Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-21T16:45:00",
     "home": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
-    "stadium": "Forsyth Barr Stadium"
+    "stadium": "Forsyth Barr Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-21T19:35:00",
     "home": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
-    "stadium": "Eden Park, Auckland"
+    "stadium": "Eden Park, Auckland",
+    "status": "void"
   },
   {
     "date": "2020-03-21T19:45:00",
     "home": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
-    "stadium": "Scully Park, Tamworth, New South Wales|Tamworth"
+    "stadium": "Scully Park, Tamworth, New South Wales|Tamworth",
+    "status": "void"
   },
   {
     "date": "2020-03-21T15:05:00",
     "home": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Kings Park Stadium"
+    "stadium": "Kings Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-21T17:15:00",
     "home": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
-    "stadium": "José Amalfitani Stadium"
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-27T19:05:00",
     "home": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
-    "stadium": "Wellington Regional Stadium"
+    "stadium": "Wellington Regional Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-27T18:15:00",
     "home": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
-    "stadium": "Lang Park"
+    "stadium": "Lang Park",
+    "status": "void"
   },
   {
     "date": "2020-03-28T19:05:00",
     "home": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Forsyth Barr Stadium"
+    "stadium": "Forsyth Barr Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-28T19:15:00",
     "home": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Sunwolves",
-      "score": 0
-    }
+      "score": null
+    },
+    "status": "void"
   },
   {
     "date": "2020-03-28T15:05:00",
     "home": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Ellis Park Stadium"
+    "stadium": "Ellis Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-03-28T17:15:00",
     "home": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
-    "stadium": "Newlands Stadium"
+    "stadium": "Newlands Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-03T19:05:00",
     "home": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
-    "stadium": "Rugby League Park"
+    "stadium": "Rugby League Park",
+    "status": "void"
   },
   {
     "date": "2020-04-04T19:05:00",
     "home": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
-    "stadium": "Waikato Stadium"
+    "stadium": "Waikato Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-04T19:15:00",
     "home": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
-    "stadium": "Canberra Stadium"
+    "stadium": "Canberra Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-04T15:05:00",
     "home": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Newlands Stadium"
+    "stadium": "Newlands Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-04T17:15:00",
     "home": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
-    "stadium": "Ellis Park Stadium"
+    "stadium": "Ellis Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-04T18:40:00",
     "home": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
-    "stadium": "José Amalfitani Stadium"
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-05T14:15:00",
     "home": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Reds",
-      "score": 0
-    }
+      "score": null
+    },
+    "status": "void"
   },
   {
     "date": "2020-04-10T17:00:00",
     "home": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Forsyth Barr Stadium"
+    "stadium": "Forsyth Barr Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-11T16:45:00",
     "home": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
-    "stadium": "Eden Park, Auckland"
+    "stadium": "Eden Park, Auckland",
+    "status": "void"
   },
   {
     "date": "2020-04-11T19:15:00",
     "home": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
-    "stadium": "Lang Park"
+    "stadium": "Lang Park",
+    "status": "void"
   },
   {
     "date": "2020-04-11T15:05:00",
     "home": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Kings Park Stadium"
+    "stadium": "Kings Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-11T17:15:00",
     "home": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
-    "stadium": "Loftus Versfeld Stadium"
+    "stadium": "Loftus Versfeld Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-12T16:05:00",
     "home": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
-    "stadium": "Canberra Stadium"
+    "stadium": "Canberra Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-17T19:05:00",
     "home": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Wellington Regional Stadium"
+    "stadium": "Wellington Regional Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-17T19:15:00",
     "home": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Melbourne Rectangular Stadium"
+    "stadium": "Melbourne Rectangular Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-18T16:45:00",
     "home": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
-    "stadium": "Okara Park"
+    "stadium": "Okara Park",
+    "status": "void"
   },
   {
     "date": "2020-04-18T19:15:00",
     "home": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
-    "stadium": "Western Sydney Stadium"
+    "stadium": "Western Sydney Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-18T15:05:00",
     "home": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
-    "stadium": "Ellis Park Stadium"
+    "stadium": "Ellis Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-18T17:15:00",
     "home": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
-    "stadium": "Newlands Stadium"
+    "stadium": "Newlands Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-24T19:05:00",
     "home": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
-    "stadium": "Rugby League Park"
+    "stadium": "Rugby League Park",
+    "status": "void"
   },
   {
     "date": "2020-04-24T19:15:00",
     "home": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
-    "stadium": "Melbourne Rectangular Stadium"
+    "stadium": "Melbourne Rectangular Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-25T19:05:00",
     "home": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
-    "stadium": "Navigation Homes Stadium, Pukekohe"
+    "stadium": "Navigation Homes Stadium, Pukekohe",
+    "status": "void"
   },
   {
     "date": "2020-04-25T15:05:00",
     "home": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
-    "stadium": "Kings Park Stadium"
+    "stadium": "Kings Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-25T17:15:00",
     "home": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
-    "stadium": "Loftus Versfeld Stadium"
+    "stadium": "Loftus Versfeld Stadium",
+    "status": "void"
   },
   {
     "date": "2020-04-26T16:05:00",
     "home": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Lang Park"
+    "stadium": "Lang Park",
+    "status": "void"
   },
   {
     "date": "2020-05-01T19:05:00",
     "home": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Wellington Regional Stadium"
+    "stadium": "Wellington Regional Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-02T16:45:00",
     "home": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
-    "stadium": "Rugby League Park"
+    "stadium": "Rugby League Park",
+    "status": "void"
   },
   {
     "date": "2020-05-02T19:05:00",
     "home": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
-    "stadium": "Forsyth Barr Stadium"
+    "stadium": "Forsyth Barr Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-02T19:15:00",
     "home": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
-    "stadium": "Brookvale Oval"
+    "stadium": "Brookvale Oval",
+    "status": "void"
   },
   {
     "date": "2020-05-02T19:25:00",
     "home": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Jaguares",
-      "score": 0
-    }
+      "score": null
+    },
+    "status": "void"
   },
   {
     "date": "2020-05-02T15:35:00",
     "home": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
-    "stadium": "Kings Park Stadium"
+    "stadium": "Kings Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-02T17:45:00",
     "home": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
-    "stadium": "Loftus Versfeld Stadium"
+    "stadium": "Loftus Versfeld Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-08T19:05:00",
     "home": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Wellington Regional Stadium"
+    "stadium": "Wellington Regional Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-08T19:00:00",
     "home": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Waratahs",
-      "score": 0
-    }
+      "score": null
+    },
+    "status": "void"
   },
   {
     "date": "2020-05-09T16:45:00",
     "home": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Waikato Stadium"
+    "stadium": "Waikato Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-09T19:05:00",
     "home": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
-    "stadium": "Eden Park, Auckland"
+    "stadium": "Eden Park, Auckland",
+    "status": "void"
   },
   {
     "date": "2020-05-09T19:15:00",
     "home": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
-    "stadium": "Manuka Oval, Griffith, Australian Capital Territory|Griffith"
+    "stadium": "Manuka Oval, Griffith, Australian Capital Territory|Griffith",
+    "status": "void"
   },
   {
     "date": "2020-05-09T15:05:00",
     "home": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
-    "stadium": "Ellis Park Stadium"
+    "stadium": "Ellis Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-09T16:40:00",
     "home": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
-    "stadium": "José Amalfitani Stadium"
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-15T19:05:00",
     "home": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
-    "stadium": "Waikato Stadium"
+    "stadium": "Waikato Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-15T19:15:00",
     "home": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
-    "stadium": "Melbourne Rectangular Stadium"
+    "stadium": "Melbourne Rectangular Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-16T13:45:00",
     "home": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "DHL Stormers",
-      "score": 0
-    }
+      "score": null
+    },
+    "status": "void"
   },
   {
     "date": "2020-05-16T19:05:00",
     "home": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
-    "stadium": "Forsyth Barr Stadium"
+    "stadium": "Forsyth Barr Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-16T19:15:00",
     "home": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Lang Park"
+    "stadium": "Lang Park",
+    "status": "void"
   },
   {
     "date": "2020-05-16T15:05:00",
     "home": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Ellis Park Stadium"
+    "stadium": "Ellis Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-16T17:15:00",
     "home": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
-    "stadium": "Loftus Versfeld Stadium"
+    "stadium": "Loftus Versfeld Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-22T19:05:00",
     "home": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
-    "stadium": "Waikato Stadium"
+    "stadium": "Waikato Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-22T19:15:00",
     "home": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
-    "stadium": "Lang Park"
+    "stadium": "Lang Park",
+    "status": "void"
   },
   {
     "date": "2020-05-23T19:05:00",
     "home": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
-    "stadium": "Forsyth Barr Stadium"
+    "stadium": "Forsyth Barr Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-23T19:15:00",
     "home": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
-    "stadium": "Western Sydney Stadium"
+    "stadium": "Western Sydney Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-23T15:05:00",
     "home": {
       "team": "Hollywoodbets Sharks",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Kings Park Stadium"
+    "stadium": "Kings Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-23T15:35:00",
     "home": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
-    "stadium": "Newlands Stadium"
+    "stadium": "Newlands Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-23T17:45:00",
     "home": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
-    "stadium": "José Amalfitani Stadium"
+    "stadium": "Jos\u00e9 Amalfitani Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-29T19:05:00",
     "home": {
       "team": "Blues",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Highlanders",
-      "score": 0
+      "score": null
     },
-    "stadium": "Eden Park, Auckland"
+    "stadium": "Eden Park, Auckland",
+    "status": "void"
   },
   {
     "date": "2020-05-29T19:15:00",
     "home": {
       "team": "Brumbies",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Sunwolves",
-      "score": 0
+      "score": null
     },
-    "stadium": "Canberra Stadium"
+    "stadium": "Canberra Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-30T16:45:00",
     "home": {
       "team": "Hurricanes",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Waratahs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Wellington Regional Stadium"
+    "stadium": "Wellington Regional Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-30T19:05:00",
     "home": {
       "team": "Crusaders",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Chiefs",
-      "score": 0
+      "score": null
     },
-    "stadium": "Rugby League Park"
+    "stadium": "Rugby League Park",
+    "status": "void"
   },
   {
     "date": "2020-05-30T19:15:00",
     "home": {
       "team": "Rebels",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Reds",
-      "score": 0
+      "score": null
     },
-    "stadium": "Melbourne Rectangular Stadium"
+    "stadium": "Melbourne Rectangular Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-30T15:05:00",
     "home": {
       "team": "Emirates Lions",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "Jaguares",
-      "score": 0
+      "score": null
     },
-    "stadium": "Ellis Park Stadium"
+    "stadium": "Ellis Park Stadium",
+    "status": "void"
   },
   {
     "date": "2020-05-30T17:45:00",
     "home": {
       "team": "Vodacom Bulls",
-      "score": 0
+      "score": null
     },
     "away": {
       "team": "DHL Stormers",
-      "score": 0
+      "score": null
     },
-    "stadium": "Loftus Versfeld Stadium"
+    "stadium": "Loftus Versfeld Stadium",
+    "status": "void"
   }
 ]

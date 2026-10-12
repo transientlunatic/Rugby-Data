@@ -27,6 +27,8 @@ class TestCanonicalName:
         ("Crusaders |", "Crusaders"),
         ("Neath–Swansea Ospreys", "Ospreys"),
         ("Neath-Swansea Ospreys", "Ospreys"),
+        ("Free State Cheetahs", "Cheetahs"),
+        ("Toyota Cheetahs", "Cheetahs"),
         ("Glasgow ", "Glasgow Warriors"),
         ("Bedford Blues ", "Bedford Blues"),        # stray whitespace
         ("  Cornish Pirates", "Cornish Pirates"),

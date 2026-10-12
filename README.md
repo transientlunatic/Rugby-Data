@@ -63,3 +63,19 @@ Pro D2 (French second-tier) data is now available via automated updates for curr
 ## European Challenge & Champions Cup
 
 The European Champions' and Challenge Cups data are available between the 2006-2007 season and the 2021-2022 season. Automated updates are now available for current seasons.
+
+## Team names
+
+Team names in `json/` are canonical: one spelling per club, whatever the source
+called it that year ("Leinster" and "Leinster Rugby" are both `Leinster Rugby`;
+Canterbury Crusaders is `Crusaders`; Neath-Swansea Ospreys is `Ospreys`).
+`rugby/team_names.py` holds the table and is applied whenever data is written
+(`rugby data update`), so new matches arrive canonical.
+
+```bash
+rugby data normalise --check   # list anything not canonical; exit 1 if found
+rugby data normalise           # fix files in place (and un-reverse season filenames)
+```
+
+A test fails if non-canonical names are committed. To record a new variant or
+rename, add it to `TEAM_NAME_ALIASES` and run `rugby data normalise`.

@@ -11,6 +11,8 @@ sees one spelling per club and no downstream alias tables are needed.
 Rename entries record *same franchise* changes:
   - Canterbury Crusaders (to 2004) -> Crusaders
   - Neath-Swansea Ospreys (2003-05) -> Ospreys
+  - Free State Cheetahs (Currie Cup) and Toyota Cheetahs (Challenge Cup)
+    -> Cheetahs
 """
 
 import json
@@ -58,6 +60,8 @@ TEAM_NAME_ALIASES: Dict[str, str] = {
     'Biarritz Olympique': 'Biarritz',
     'Canterbury Crusaders': 'Crusaders',
     'Neath-Swansea Ospreys': 'Ospreys',
+    'Free State Cheetahs': 'Cheetahs',
+    'Toyota Cheetahs': 'Cheetahs',
 }
 
 # A JSON string value following a "team" key, in compact or indented files.

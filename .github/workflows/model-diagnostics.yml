@@ -17,7 +17,7 @@ name: Model Diagnostics
 
 on:
   schedule:
-    - cron: '0 6 1 * *'  # 06:00 UTC on the 1st of each month
+    - cron: '0 6 * * 1'  # 06:00 UTC Mondays (after Sunday results, training and predictions)
   workflow_dispatch:
     inputs:
       sbc-sims:

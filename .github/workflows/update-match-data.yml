@@ -65,6 +65,7 @@ jobs:
         run: |
           rugby data normalise
           rugby data normalise --check
+          rugby data clean
 
       - name: Validate new and changed matches
         run: rugby data validate --against HEAD

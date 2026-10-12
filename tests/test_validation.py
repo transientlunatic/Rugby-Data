@@ -23,7 +23,7 @@ def rules(m):
 class TestCheckMatch:
     def test_good_match_and_fixture_are_clean(self):
         assert rules(match()) == set()
-        assert rules(match(hs=None, as_=None)) == set()          # not yet played
+        assert rules(match(hs=None, as_=None, date="2026-10-20T14:00:00Z")) == set()   # not yet played
 
     def test_each_rule(self):
         assert (ERROR, "blank_team") in rules(match(home=""))
@@ -37,12 +37,13 @@ class TestCheckMatch:
         assert (ERROR, "malformed") in rules({"date": "2026-10-03T14:00:00Z"})
 
     def test_nan_score_counts_as_no_score(self):
-        assert rules(match(hs=float("nan"), as_=float("nan"))) == set()
+        assert rules(match(hs=float("nan"), as_=float("nan"), date="2026-10-20T14:00:00Z")) == set()
 
     def test_warnings(self):
         assert (WARNING, "scoreless") in rules(match(hs=0, as_=0))
         assert (WARNING, "future_result") in rules(match(date="2026-12-01T14:00:00Z"))
         assert not any(sev == ERROR for sev, _ in rules(match(hs=0, as_=0)))
+        assert (WARNING, "missing_result") in rules(match(hs=None, as_=None))   # played 9 days ago
 
 
 def git(cwd, *args):

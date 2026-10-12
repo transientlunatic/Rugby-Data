@@ -10,10 +10,11 @@ import click
 
 from ..update import (
     LEAGUE_CONFIGS, MAX_ERRORS_TO_DISPLAY,
-    update_league_data, default_season_for_league
+    update_league_data, default_season_for_league, seasons_to_update
 )
 from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
+from ..cleanup import clean_directory
 from ..team_names import normalise_directory
 from ..validation import ERROR, summarise, validate_directory
 
@@ -43,6 +44,25 @@ def normalise(check):
             click.echo(f"  rename {name} -> {info['renamed_to']}")
     for old, n in sorted(totals.items(), key=lambda kv: -kv[1]):
         click.echo(f"  {n:6d}  {old!r}")
+    click.echo(f"{len(report)} file(s) {'need changes' if check else 'updated'}.")
+    if check:
+        sys.exit(1)
+
+
+@data.command()
+@click.option('--check', is_flag=True, help='Report what would change and exit 1 if anything would; write nothing.')
+def clean(check):
+    """Drop duplicate matches and mark placeholder 0-0 fixtures as void.
+
+    Void fixtures (0-0, no scorers or lineups: cancelled or never played) get
+    null scores and "status": "void". Safe to re-run.
+    """
+    report = clean_directory(find_data_dir(), check=check)
+    for name, c in report.items():
+        click.echo(f"  {name}: {c['duplicates']} duplicate(s) removed, {c['void']} marked void")
+    if not report:
+        click.echo("No duplicates or placeholder results.")
+        return
     click.echo(f"{len(report)} file(s) {'need changes' if check else 'updated'}.")
     if check:
         sys.exit(1)
@@ -108,12 +128,17 @@ def update(season, tournaments, dry_run):
         # Each league's season is computed independently - leagues starting
         # in different months (e.g. Japan League One in December vs European
         # leagues in August) must not share one global "current season".
-        season = explicit_season or default_season_for_league(LEAGUE_CONFIGS[tournament], now)
-        stats = update_league_data(tournament, season, json_dir, dry_run)
-        for key in ['new_matches', 'updated_matches', 'total_matches']:
-            total_stats[key] += stats.get(key, 0)
-        total_stats['errors'].extend(stats.get('errors', []))
-        total_stats['warnings'].extend(stats.get('warnings', []))
+        config = LEAGUE_CONFIGS[tournament]
+        # Besides the current season, also refresh the previous one while it
+        # still has finished matches with no result (see seasons_to_update).
+        seasons = [explicit_season] if explicit_season else seasons_to_update(
+            config, now, json_dir, config['filename_prefix'])
+        for season in seasons:
+            stats = update_league_data(tournament, season, json_dir, dry_run)
+            for key in ['new_matches', 'updated_matches', 'total_matches']:
+                total_stats[key] += stats.get(key, 0)
+            total_stats['errors'].extend(stats.get('errors', []))
+            total_stats['warnings'].extend(stats.get('warnings', []))
 
     click.echo()
     click.echo("=" * 50)

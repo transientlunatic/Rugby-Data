@@ -14,12 +14,37 @@ from ..update import (
 )
 from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
+from ..team_names import normalise_directory
 
 
 @click.group()
 def data():
     """Data acquisition and management commands."""
     pass
+
+
+@data.command()
+@click.option('--check', is_flag=True, help='Report what would change and exit 1 if anything would; write nothing.')
+def normalise(check):
+    """Make team names and season filenames canonical in the JSON data.
+
+    See rugby/team_names.py for the name table. Safe to re-run.
+    """
+    report = normalise_directory(find_data_dir(), check=check)
+    if not report:
+        click.echo("All team names and filenames are canonical.")
+        return
+    totals = {}
+    for name, info in report.items():
+        for old, n in info['teams'].items():
+            totals[old] = totals.get(old, 0) + n
+        if info['renamed_to']:
+            click.echo(f"  rename {name} -> {info['renamed_to']}")
+    for old, n in sorted(totals.items(), key=lambda kv: -kv[1]):
+        click.echo(f"  {n:6d}  {old!r}")
+    click.echo(f"{len(report)} file(s) {'need changes' if check else 'updated'}.")
+    if check:
+        sys.exit(1)
 
 
 @data.command()

@@ -12,6 +12,7 @@ import click
 import requests
 
 from .scrapers.six_nations import scrape_championship
+from .team_names import canonical_team_name, normalise_match_teams
 
 
 # Configure retry settings
@@ -220,18 +221,21 @@ def load_existing_data(filepath: Path) -> List[Dict]:
 
 
 def save_data(filepath: Path, data: List[Dict]):
-    """Save data to JSON file."""
+    """Save data to JSON file, with canonical team names."""
+    for match in data:
+        normalise_match_teams(match)
     filepath.parent.mkdir(parents=True, exist_ok=True)
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
 
 
 def get_match_key(match: Dict) -> str:
-    """Generate a unique key for a match."""
+    """Generate a unique key for a match (on canonical team names, so a
+    variant spelling never defeats de-duplication)."""
     date = match.get('date', '')
-    home = match.get('home', {}).get('team', '')
-    away = match.get('away', {}).get('team', '')
-    return f"{date[:10]}|{home.strip()}|{away.strip()}"
+    home = canonical_team_name(match.get('home', {}).get('team', '')) or ''
+    away = canonical_team_name(match.get('away', {}).get('team', '')) or ''
+    return f"{date[:10]}|{home}|{away}"
 
 
 def validate_match_data(match: Dict) -> bool:
@@ -344,7 +348,7 @@ def process_match(match: Dict, season: str, start_year: str, league_config: Dict
     if "officials" in match:
         match_dict["officials"] = match['officials']
 
-    return match_dict
+    return normalise_match_teams(match_dict)
 
 
 def update_wikipedia_data(league: str, season: str, league_config: Dict,
@@ -386,6 +390,7 @@ def update_wikipedia_data(league: str, season: str, league_config: Dict,
                     stats['errors'].append(f"Invalid match data: {match.get('home', {}).get('team')} v {match.get('away', {}).get('team')}")
                     continue
 
+                normalise_match_teams(match)
                 match_key = get_match_key(match)
                 if match_key in existing_matches:
                     old_match = existing_data[existing_matches[match_key]]

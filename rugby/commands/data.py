@@ -15,6 +15,7 @@ from ..update import (
 from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
 from ..team_names import normalise_directory
+from ..validation import ERROR, summarise, validate_directory
 
 
 @click.group()
@@ -44,6 +45,35 @@ def normalise(check):
         click.echo(f"  {n:6d}  {old!r}")
     click.echo(f"{len(report)} file(s) {'need changes' if check else 'updated'}.")
     if check:
+        sys.exit(1)
+
+
+@data.command()
+@click.option('--against', default='HEAD', show_default=True,
+              help='Git ref to compare with; only matches new or changed since then are checked.')
+@click.option('--all', 'every_match', is_flag=True,
+              help='Audit every match (report only; historical problems are expected).')
+@click.option('--strict', is_flag=True, help='Fail on warnings too.')
+def validate(against, every_match, strict):
+    """Check matches the last update added or changed for obvious problems.
+
+    Exits 1 on errors (blank/duplicate/non-canonical teams, half results, ...),
+    so a scheduled job stops before committing them. Warnings (e.g. 0-0) are
+    reported. A markdown summary is written to $GITHUB_STEP_SUMMARY when set.
+    """
+    import os
+
+    issues = validate_directory(find_data_dir(), against=against, every_match=every_match)
+    errors = [i for i in issues if i.severity == ERROR]
+    for i in issues:
+        click.echo(f"{i.severity.upper():7s} {i.rule:15s} {i.file}: {i.match} -- {i.message}")
+    scope = 'every match' if every_match else f"matches new or changed since {against}"
+    click.echo(f"{len(errors)} error(s), {len(issues) - len(errors)} warning(s) in {scope}.")
+    summary_file = os.environ.get('GITHUB_STEP_SUMMARY')
+    if summary_file:
+        with open(summary_file, 'a') as f:
+            f.write("### Data validation\n" + summarise(issues))
+    if not every_match and (errors or (strict and issues)):
         sys.exit(1)
 
 

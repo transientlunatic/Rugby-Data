@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install .
+          pip install ".[dev]"
 
       - name: Update match data
         run: |
@@ -58,6 +58,19 @@ jobs:
           fi
 
           rugby data update $ARGS
+
+      # The steps below stop the job before anything is committed. A failure
+      # here means "go and look at the data", not "retry": see the job summary.
+      - name: Normalise team names
+        run: |
+          rugby data normalise
+          rugby data normalise --check
+
+      - name: Validate new and changed matches
+        run: rugby data validate --against HEAD
+
+      - name: Run tests
+        run: pytest -q
 
       - name: Check for changes
         id: check-changes

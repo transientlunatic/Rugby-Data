@@ -79,3 +79,17 @@ rugby data normalise           # fix files in place (and un-reverse season filen
 
 A test fails if non-canonical names are committed. To record a new variant or
 rename, add it to `TEAM_NAME_ALIASES` and run `rugby data normalise`.
+
+## Data checks on scheduled updates
+
+The scheduled `Update Match Data` job normalises names, then runs
+`rugby data validate` and the tests **before** committing, so a bad update stops
+the job instead of landing on `master` (commits made with the default token
+don't trigger the `Tests` workflow, so this is the only gate).
+
+`rugby data validate` checks only matches that are new or changed since `HEAD`,
+so historical oddities (blank team names, 0-0 placeholders, duplicates in old
+seasons) can't block a run. Errors stop the job: blank or non-canonical team
+names, a team playing itself, half a result, negative scores, unparseable
+dates, duplicates. Warnings are reported only: 0-0 results and results dated
+in the future. `rugby data validate --all` audits everything (report only).

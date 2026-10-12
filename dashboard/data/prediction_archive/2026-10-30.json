@@ -151,5 +151,158 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-12T00:55:54_glasgow-warriors-vs-10bet-lions_2026-10-30",
+    "prediction_metadata": {
+      "timestamp": "2026-10-12T00:55:54.455081+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-30_Glasgow Warriors-vs-10bet Lions",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-30T19:45:00+00:00",
+      "home_team": "Glasgow Warriors",
+      "away_team": "10bet Lions",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Glasgow Warriors",
+        "mean": 40.64,
+        "std": 16.81768117190952,
+        "median": 40.0,
+        "ci_lower": 16.0,
+        "ci_upper": 70.0
+      },
+      "away": {
+        "team": "10bet Lions",
+        "mean": 19.378,
+        "std": 10.210539456855354,
+        "median": 18.0,
+        "ci_lower": 5.950000000000003,
+        "ci_upper": 38.0
+      },
+      "home_win_prob": 0.7865182545813353,
+      "away_win_prob": 0.1994817454186647,
+      "draw_prob": 0.014,
+      "predicted_margin": 21.262,
+      "margin_std": 19.43598096315182,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-12T00:55:54_connacht-rugby-vs-leinster-rugby_2026-10-30",
+    "prediction_metadata": {
+      "timestamp": "2026-10-12T00:55:54.467464+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-30_Connacht Rugby-vs-Leinster Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-30T19:45:00+00:00",
+      "home_team": "Connacht Rugby",
+      "away_team": "Leinster Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Connacht Rugby",
+        "mean": 26.502,
+        "std": 12.746214967589397,
+        "median": 25.0,
+        "ci_lower": 8.950000000000003,
+        "ci_upper": 51.0
+      },
+      "away": {
+        "team": "Leinster Rugby",
+        "mean": 30.408,
+        "std": 14.62605674814644,
+        "median": 29.0,
+        "ci_lower": 10.0,
+        "ci_upper": 55.049999999999955
+      },
+      "home_win_prob": 0.43610822815652617,
+      "away_win_prob": 0.5378917718434738,
+      "draw_prob": 0.026,
+      "predicted_margin": -3.906,
+      "margin_std": 18.261795202005743,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-12T00:55:54_bristol-bears-vs-leicester-tigers_2026-10-30",
+    "prediction_metadata": {
+      "timestamp": "2026-10-12T00:55:54.479958+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-30_Bristol Bears-vs-Leicester Tigers",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-30T19:45:00+00:00",
+      "home_team": "Bristol Bears",
+      "away_team": "Leicester Tigers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Bristol Bears",
+        "mean": 38.746,
+        "std": 16.450698586990157,
+        "median": 38.0,
+        "ci_lower": 13.0,
+        "ci_upper": 69.04999999999995
+      },
+      "away": {
+        "team": "Leicester Tigers",
+        "mean": 29.34,
+        "std": 14.334727064021834,
+        "median": 28.0,
+        "ci_lower": 8.0,
+        "ci_upper": 54.049999999999955
+      },
+      "home_win_prob": 0.6213471610353579,
+      "away_win_prob": 0.35665283896464206,
+      "draw_prob": 0.022,
+      "predicted_margin": 9.406,
+      "margin_std": 22.08395716351578,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

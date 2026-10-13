@@ -15,6 +15,9 @@ from ..update import (
 from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
 from ..cleanup import clean_directory
+from ..enrich import enrich_season, seasons_on_disk
+from ..fix_dates import fix_directory
+from ..scrapers.espn import ESPN_LEAGUES
 from ..team_names import normalise_directory
 from ..validation import ERROR, summarise, validate_directory
 
@@ -47,6 +50,52 @@ def normalise(check):
     click.echo(f"{len(report)} file(s) {'need changes' if check else 'updated'}.")
     if check:
         sys.exit(1)
+
+
+@data.command(name='enrich-lineups')
+@click.option('--tournament', '-t', 'tournaments', multiple=True, required=True,
+              type=click.Choice(list(ESPN_LEAGUES.keys())), help='Competition to enrich (repeatable).')
+@click.option('--season', default=None, help='One season, e.g. "2024-2025". Default: every season on disk.')
+@click.option('--dry-run', is_flag=True, help='Report what would change without writing.')
+def enrich_lineups(tournaments, season, dry_run):
+    """Add or improve lineups from ESPN.
+
+    ESPN has no substitution minutes, so these lineups record who started and
+    who was on the bench only (matches are tagged "lineup_source": "espn").
+    A lineup that already has minutes is never replaced.
+    """
+    json_dir = find_data_dir()
+    cache = {}
+    for league in tournaments:
+        seasons = [season] if season else seasons_on_disk(json_dir, league)
+        for s in seasons:
+            stats = enrich_season(league, s, json_dir, dry_run, cache)
+            if not stats.get('matches') and not stats.get('no_file'):
+                continue
+            detail = ', '.join(f"{k}={v}" for k, v in sorted(stats.items()) if k != 'matches')
+            click.echo(f"{league} {s}: {stats.get('matches', 0)} results; {detail or 'nothing to do'}")
+
+
+@data.command(name='fix-dates')
+@click.option('--dry-run', is_flag=True, help='Report what would change without writing or renaming.')
+@click.option('--no-espn', is_flag=True, help='Only the offline rule (autumn dates a year late); skip ESPN lookups.')
+def fix_dates(dry_run, no_espn):
+    """Repair match dates that are in the wrong year.
+
+    Autumn matches a year late are moved back; Top 14 files whose dates are
+    all wrong get their year rebuilt from the season ESPN identifies (and are renamed if labelled a year early).
+    """
+    report = fix_directory(find_data_dir(), dry_run=dry_run, use_espn=not no_espn)
+    for r in report:
+        bits = []
+        if r['shifted']:
+            bits.append(f"{r['shifted']} autumn dates moved back a year")
+        if r['redated']:
+            bits.append(f"{r['redated']} years corrected ({r['confirmed']} confirmed by ESPN, {r['disagree']} disagree)")
+        if r['renamed_to']:
+            bits.append(f"renamed to {r['renamed_to']}")
+        click.echo(f"  {r['file']}: " + '; '.join(bits))
+    click.echo(f"{len(report)} file(s) {'would change' if dry_run else 'updated'}.")
 
 
 @data.command()

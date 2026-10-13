@@ -51,8 +51,9 @@ The Pro14 Rainbow Cup is not currently included.
 
 ## Top 14
 
-Top 14 data are available from the 2009-2010 season to the 2014-2015 season, and 2016-2017 to 2021-2022 seasons. Automated updates are now available for current seasons.
-The 2006-2007 and 2015-2016 seasons are incomplete.
+Top 14 data are available for 2011-2012 to 2015-2016, 2017-2018 to 2018-2019, and 2021-2022 onwards. 2016-2017, 2019-2020 and 2020-2021 are missing, and 2015-2016 is incomplete (88 matches). Automated updates are now available for current seasons.
+Lineups come from the main feed for recent seasons and from ESPN for earlier ones (starters and bench only, no substitution minutes: see below).
+The 2010-2016 files originally had every date set to 2019, and 2017-2019 had autumn dates a year late; both were repaired with `rugby data fix-dates` (see below).
 
 ## Pro D2 (France)
 
@@ -77,6 +78,35 @@ rugby data normalise           # fix files in place (and un-reverse season filen
 
 A test fails if non-canonical names are committed. To record a new variant or
 rename, add it to `TEAM_NAME_ALIASES` and run `rugby data normalise`.
+
+## Lineups from ESPN
+
+The main feed has no Super Rugby, NPC or (for older seasons) Top 14 lineups, so
+`rugby data enrich-lineups` fills them from ESPN's public JSON:
+
+```bash
+rugby data enrich-lineups -t top14 -t super-rugby -t npc --dry-run   # report only
+rugby data enrich-lineups -t npc --season 2024-2025
+```
+
+- ESPN gives the matchday 23 but **no substitution minutes**. Starters are
+  `on: [0]`, the bench `on: []`, and enriched matches carry
+  `"lineup_source": "espn"` so consumers can tell.
+- A lineup that already records minutes or cards is never replaced; a missing
+  or shorter one is.
+- Matches are paired by date (±1 day), team and score, so a mis-dated match is
+  skipped rather than given someone else's lineup.
+- Coverage when this was added: Top 14 2010 onward, Super Rugby Pacific 2022
+  onward, NPC 2016 onward. The Currie Cup has no rosters on ESPN.
+- ESPN's API is undocumented and may change without notice.
+
+## Date repairs
+
+`rugby data fix-dates` corrects matches whose date is in the wrong year (autumn
+matches carrying the following year; files whose dates were all 2019). It is
+idempotent, and `rugby data validate` now reports a `season_date` error for any
+new northern-hemisphere match dated outside its season (2019-20 is exempt, as
+it ran into autumn 2020).
 
 ## Cleaning
 

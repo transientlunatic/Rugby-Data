@@ -15,6 +15,8 @@ from ..update import (
 from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
 from ..cleanup import clean_directory
+from ..enrich import enrich_season, seasons_on_disk
+from ..scrapers.espn import ESPN_LEAGUES
 from ..team_names import normalise_directory
 from ..validation import ERROR, summarise, validate_directory
 
@@ -47,6 +49,30 @@ def normalise(check):
     click.echo(f"{len(report)} file(s) {'need changes' if check else 'updated'}.")
     if check:
         sys.exit(1)
+
+
+@data.command(name='enrich-lineups')
+@click.option('--tournament', '-t', 'tournaments', multiple=True, required=True,
+              type=click.Choice(list(ESPN_LEAGUES.keys())), help='Competition to enrich (repeatable).')
+@click.option('--season', default=None, help='One season, e.g. "2024-2025". Default: every season on disk.')
+@click.option('--dry-run', is_flag=True, help='Report what would change without writing.')
+def enrich_lineups(tournaments, season, dry_run):
+    """Add or improve lineups from ESPN.
+
+    ESPN has no substitution minutes, so these lineups record who started and
+    who was on the bench only (matches are tagged "lineup_source": "espn").
+    A lineup that already has minutes is never replaced.
+    """
+    json_dir = find_data_dir()
+    cache = {}
+    for league in tournaments:
+        seasons = [season] if season else seasons_on_disk(json_dir, league)
+        for s in seasons:
+            stats = enrich_season(league, s, json_dir, dry_run, cache)
+            if not stats.get('matches') and not stats.get('no_file'):
+                continue
+            detail = ', '.join(f"{k}={v}" for k, v in sorted(stats.items()) if k != 'matches')
+            click.echo(f"{league} {s}: {stats.get('matches', 0)} results; {detail or 'nothing to do'}")
 
 
 @data.command()

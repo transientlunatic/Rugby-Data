@@ -78,6 +78,27 @@ rugby data normalise           # fix files in place (and un-reverse season filen
 A test fails if non-canonical names are committed. To record a new variant or
 rename, add it to `TEAM_NAME_ALIASES` and run `rugby data normalise`.
 
+## Lineups from ESPN
+
+The main feed has no Super Rugby, NPC or (for older seasons) Top 14 lineups, so
+`rugby data enrich-lineups` fills them from ESPN's public JSON:
+
+```bash
+rugby data enrich-lineups -t top14 -t super-rugby -t npc --dry-run   # report only
+rugby data enrich-lineups -t npc --season 2024-2025
+```
+
+- ESPN gives the matchday 23 but **no substitution minutes**. Starters are
+  `on: [0]`, the bench `on: []`, and enriched matches carry
+  `"lineup_source": "espn"` so consumers can tell.
+- A lineup that already records minutes or cards is never replaced; a missing
+  or shorter one is.
+- Matches are paired by date (±1 day), team and score, so a mis-dated match is
+  skipped rather than given someone else's lineup.
+- Coverage when this was added: Top 14 2010 onward, Super Rugby Pacific 2022
+  onward, NPC 2016 onward. The Currie Cup has no rosters on ESPN.
+- ESPN's API is undocumented and may change without notice.
+
 ## Cleaning
 
 ```bash

@@ -17,6 +17,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
+from .fix_dates import date_problem, season_of
 from .team_names import canonical_team_name
 
 ERROR = "error"
@@ -149,9 +150,13 @@ def validate_directory(
         if not selected:
             continue
 
+        season = season_of(path.name)
         for m in selected:
             for severity, rule, message in check_match(m, now):
                 issues.append(Issue(path.name, severity, rule, message, _label(m)))
+            problem = season and date_problem(season[0], season[1], m.get("date"))
+            if problem:
+                issues.append(Issue(path.name, ERROR, "season_date", problem, _label(m)))
 
         counts: Dict[str, int] = {}
         for m in matches:

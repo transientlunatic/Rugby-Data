@@ -46,9 +46,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 27,
+      "home_tries": 6,
+      "away_tries": 4,
+      "result_fetched_at": "2026-10-15T17:50:58.982882+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:58.992526+00:00",
+    "calibration_metrics": {
+      "home_score_error": 1.2680000000000007,
+      "away_score_error": 5.350000000000001,
+      "margin_error": -4.082000000000001,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-28T00:32:47_edinburgh-rugby-vs-dhl-stormers_2026-10-02",
@@ -97,9 +111,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 17,
+      "away_score": 13,
+      "home_tries": 2,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-15T17:50:59.016815+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.026343+00:00",
+    "calibration_metrics": {
+      "home_score_error": -20.016,
+      "away_score_error": -13.796,
+      "margin_error": -6.220000000000001,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-28T00:32:47_benetton-rugby-vs-connacht-rugby_2026-10-02",
@@ -148,9 +176,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 22,
+      "home_tries": 3,
+      "away_tries": 4,
+      "result_fetched_at": "2026-10-15T17:50:59.050990+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.060600+00:00",
+    "calibration_metrics": {
+      "home_score_error": -13.049999999999997,
+      "away_score_error": -0.6080000000000005,
+      "margin_error": -12.442,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-28T00:32:47_bath-rugby-vs-exeter-chiefs_2026-10-02",
@@ -199,9 +241,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 34,
+      "home_tries": 5,
+      "away_tries": 5,
+      "result_fetched_at": "2026-10-15T17:50:59.152998+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.162748+00:00",
+    "calibration_metrics": {
+      "home_score_error": -1.793999999999997,
+      "away_score_error": 8.594000000000001,
+      "margin_error": -10.388000000000002,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-01T19:10:52_cardiff-rugby-vs-zebre-parma_2026-10-02",
@@ -250,9 +306,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 27,
+      "home_tries": 6,
+      "away_tries": 4,
+      "result_fetched_at": "2026-10-15T17:50:58.982882+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:58.993609+00:00",
+    "calibration_metrics": {
+      "home_score_error": 1.8019999999999996,
+      "away_score_error": 6.097999999999999,
+      "margin_error": -4.295999999999999,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-01T19:10:52_edinburgh-rugby-vs-dhl-stormers_2026-10-02",
@@ -301,9 +371,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 17,
+      "away_score": 13,
+      "home_tries": 2,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-15T17:50:59.016815+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.027405+00:00",
+    "calibration_metrics": {
+      "home_score_error": -14.297999999999998,
+      "away_score_error": -13.024000000000001,
+      "margin_error": -1.274,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-01T19:10:52_benetton-rugby-vs-connacht-rugby_2026-10-02",
@@ -352,9 +436,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 22,
+      "home_tries": 3,
+      "away_tries": 4,
+      "result_fetched_at": "2026-10-15T17:50:59.050990+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.061671+00:00",
+    "calibration_metrics": {
+      "home_score_error": -9.056000000000001,
+      "away_score_error": -3.4299999999999997,
+      "margin_error": -5.6259999999999994,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-01T19:10:52_nottingham-rugby-vs-coventry_2026-10-02",
@@ -403,9 +501,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 26,
+      "away_score": 64,
+      "home_tries": 4,
+      "away_tries": 10,
+      "result_fetched_at": "2026-10-15T17:50:59.086224+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.095789+00:00",
+    "calibration_metrics": {
+      "home_score_error": -13.664000000000001,
+      "away_score_error": 27.35,
+      "margin_error": -41.014,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-01T19:10:52_hartpury-vs-ampthill_2026-10-02",
@@ -454,9 +566,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 24,
+      "away_score": 33,
+      "home_tries": 3,
+      "away_tries": 5,
+      "result_fetched_at": "2026-10-15T17:50:59.119680+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.129317+00:00",
+    "calibration_metrics": {
+      "home_score_error": -16.729999999999997,
+      "away_score_error": -0.490000000000002,
+      "margin_error": -16.240000000000002,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-01T19:10:52_bath-rugby-vs-exeter-chiefs_2026-10-02",
@@ -505,8 +631,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 34,
+      "home_tries": 5,
+      "away_tries": 5,
+      "result_fetched_at": "2026-10-15T17:50:59.152998+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:50:59.163908+00:00",
+    "calibration_metrics": {
+      "home_score_error": -1.5379999999999967,
+      "away_score_error": 6.870000000000001,
+      "margin_error": -8.408,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

@@ -4,6 +4,7 @@
     "Bayonne",
     "Black Lion",
     "Cardiff Rugby",
+    "Cheetahs",
     "Connacht Rugby",
     "Dragons RFC",
     "Edinburgh Rugby",
@@ -18,7 +19,6 @@
     "Perpignan",
     "Racing 92",
     "Scarlets",
-    "Toyota Cheetahs",
     "Vannes",
     "Vodacom Bulls",
     "Zebre Parma"
@@ -26,6 +26,7 @@
   "matrix": [
     [
       0.0,
+      null,
       null,
       null,
       null,
@@ -45,13 +46,13 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
       null,
       0.0,
       25.0,
+      null,
       null,
       null,
       null,
@@ -68,7 +69,6 @@
       null,
       1.0,
       null,
-      null,
       -10.0,
       null
     ],
@@ -76,6 +76,7 @@
       null,
       -25.0,
       0.0,
+      null,
       null,
       null,
       null,
@@ -91,7 +92,6 @@
       null,
       null,
       -18.0,
-      null,
       3.0,
       null,
       null
@@ -101,6 +101,7 @@
       null,
       null,
       0.0,
+      16.0,
       -12.0,
       null,
       null,
@@ -115,7 +116,6 @@
       -3.0,
       null,
       null,
-      16.0,
       null,
       null,
       null
@@ -124,7 +124,32 @@
       null,
       null,
       null,
+      -16.0,
+      0.0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -47.0,
+      null,
+      null,
+      null,
+      null,
+      0.0,
+      null,
+      null,
+      null,
+      null,
+      4.0
+    ],
+    [
+      null,
+      null,
+      null,
       12.0,
+      null,
       0.0,
       null,
       null,
@@ -141,10 +166,10 @@
       null,
       null,
       null,
-      null,
       31.0
     ],
     [
+      null,
       null,
       null,
       null,
@@ -165,13 +190,13 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
       -15.0,
       40.0,
       21.0,
+      null,
       null,
       null,
       null,
@@ -187,12 +212,12 @@
       null,
       null,
       null,
-      null,
       4.0,
       6.0,
       null
     ],
     [
+      null,
       null,
       null,
       null,
@@ -213,12 +238,12 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
       -35.0,
       -38.0,
+      null,
       null,
       null,
       null,
@@ -235,12 +260,12 @@
       null,
       null,
       24.0,
-      null,
       -24.0,
       null,
       null
     ],
     [
+      null,
       null,
       null,
       null,
@@ -261,7 +286,6 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
@@ -269,6 +293,7 @@
       null,
       null,
       11.0,
+      47.0,
       -28.0,
       null,
       null,
@@ -283,12 +308,12 @@
       null,
       14.0,
       null,
-      47.0,
       null,
       null,
       2.0
     ],
     [
+      null,
       null,
       null,
       null,
@@ -309,10 +334,10 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
+      null,
       null,
       null,
       null,
@@ -333,10 +358,10 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
+      null,
       null,
       null,
       null,
@@ -357,11 +382,11 @@
       22.0,
       null,
       null,
-      null,
       null
     ],
     [
       -25.0,
+      null,
       null,
       null,
       null,
@@ -381,7 +406,6 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
@@ -389,6 +413,7 @@
       null,
       null,
       3.0,
+      0.0,
       -13.0,
       null,
       null,
@@ -403,12 +428,12 @@
       0.0,
       -6.0,
       null,
-      0.0,
       null,
       null,
       18.0
     ],
     [
+      null,
       null,
       null,
       null,
@@ -429,13 +454,13 @@
       null,
       null,
       null,
-      null,
       null
     ],
     [
       null,
       -1.0,
       18.0,
+      null,
       null,
       null,
       null,
@@ -451,7 +476,6 @@
       null,
       null,
       0.0,
-      null,
       10.0,
       null,
       null
@@ -459,31 +483,8 @@
     [
       null,
       null,
-      null,
-      -16.0,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      -47.0,
-      null,
-      null,
-      null,
-      null,
-      0.0,
-      null,
-      null,
-      0.0,
-      null,
-      null,
-      4.0
-    ],
-    [
-      null,
-      null,
       -3.0,
+      null,
       null,
       null,
       null,
@@ -499,7 +500,6 @@
       null,
       null,
       -10.0,
-      null,
       0.0,
       null,
       null
@@ -507,6 +507,7 @@
     [
       null,
       10.0,
+      null,
       null,
       null,
       null,
@@ -524,7 +525,6 @@
       null,
       null,
       null,
-      null,
       0.0,
       null
     ],
@@ -533,6 +533,7 @@
       null,
       null,
       null,
+      -4.0,
       -31.0,
       null,
       null,
@@ -547,7 +548,6 @@
       -18.0,
       null,
       null,
-      -4.0,
       null,
       null,
       0.0

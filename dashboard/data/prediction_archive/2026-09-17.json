@@ -46,8 +46,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 28,
+      "away_score": 29,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-15T17:51:01.222510+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:01.232303+00:00",
+    "calibration_metrics": {
+      "home_score_error": -12.552,
+      "away_score_error": 3.1439999999999984,
+      "margin_error": -15.696,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

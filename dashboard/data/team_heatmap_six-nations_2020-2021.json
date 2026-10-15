@@ -1,15 +1,93 @@
 {
   "teams": [
     "",
-    "(1 BP)"
+    "(1 BP)",
+    "England",
+    "France",
+    "Ireland",
+    "Italy",
+    "Scotland",
+    "Wales"
   ],
   "matrix": [
     [
       0.0,
-      -8.583333333333334
+      5.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
     ],
     [
-      8.583333333333334,
+      -5.5,
+      0.0,
+      null,
+      null,
+      null,
+      13.0,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      0.0,
+      null,
+      12.0,
+      29.0,
+      7.0,
+      3.0
+    ],
+    [
+      null,
+      null,
+      null,
+      0.0,
+      8.0,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      -12.0,
+      -8.0,
+      0.0,
+      33.0,
+      7.0,
+      10.0
+    ],
+    [
+      null,
+      -13.0,
+      -29.0,
+      null,
+      -33.0,
+      0.0,
+      -17.0,
+      -42.0
+    ],
+    [
+      null,
+      null,
+      -7.0,
+      null,
+      -7.0,
+      17.0,
+      0.0,
+      4.0
+    ],
+    [
+      null,
+      null,
+      -3.0,
+      null,
+      -10.0,
+      42.0,
+      -4.0,
       0.0
     ]
   ]

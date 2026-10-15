@@ -46,9 +46,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 18,
+      "home_tries": 6,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-15T17:51:22.181613+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.192590+00:00",
+    "calibration_metrics": {
+      "home_score_error": 0.9759999999999991,
+      "away_score_error": -6.838000000000001,
+      "margin_error": 7.814,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-25T20:58:34_ealing-trailfinders-vs-richmond_2026-09-27",
@@ -97,9 +111,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 36,
+      "away_score": 19,
+      "home_tries": 6,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-15T17:51:22.104559+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.115817+00:00",
+    "calibration_metrics": {
+      "home_score_error": -4.268000000000001,
+      "away_score_error": -10.992,
+      "margin_error": 6.724,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-25T20:58:34_doncaster-knights-vs-hartpury_2026-09-27",
@@ -148,9 +176,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 29,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-15T17:51:22.142966+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.154089+00:00",
+    "calibration_metrics": {
+      "home_score_error": -6.887999999999998,
+      "away_score_error": -16.088,
+      "margin_error": 9.2,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-25T20:58:34_toulouse-vs-montpellier_2026-09-27",
@@ -199,9 +241,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 18,
+      "home_tries": 6,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-15T17:51:22.181613+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.193444+00:00",
+    "calibration_metrics": {
+      "home_score_error": 1.2079999999999984,
+      "away_score_error": -7.866,
+      "margin_error": 9.074,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-26T15:47:35_ealing-trailfinders-vs-richmond_2026-09-27",
@@ -250,9 +306,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 36,
+      "away_score": 19,
+      "home_tries": 6,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-15T17:51:22.104559+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.116737+00:00",
+    "calibration_metrics": {
+      "home_score_error": -4.591999999999999,
+      "away_score_error": -10.702000000000002,
+      "margin_error": 6.109999999999999,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-26T15:47:35_doncaster-knights-vs-hartpury_2026-09-27",
@@ -301,9 +371,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 29,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-15T17:51:22.142966+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.155035+00:00",
+    "calibration_metrics": {
+      "home_score_error": -5.972000000000001,
+      "away_score_error": -17.689999999999998,
+      "margin_error": 11.718,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-09-26T15:47:35_toulouse-vs-montpellier_2026-09-27",
@@ -352,8 +436,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 40,
+      "away_score": 18,
+      "home_tries": 6,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-15T17:51:22.181613+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-15T17:51:22.194313+00:00",
+    "calibration_metrics": {
+      "home_score_error": 0.4159999999999968,
+      "away_score_error": -6.91,
+      "margin_error": 7.3260000000000005,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

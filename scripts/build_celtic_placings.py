@@ -29,7 +29,7 @@ CAP = {'2003-2004': 22, '2004-2005': 20, '2005-2006': 20, '2006-2007': 20,
 CANON = {'Borders': 'Border Reivers', 'Llanelli Scarlets': 'Scarlets',
          'Newport Gwent Dragons': 'Dragons RFC', 'DHL Stormers': 'Stormers',
          'Vodacom Bulls': 'Bulls', 'Hollywoodbets Sharks': 'Sharks',
-         'Emirates Lions': 'Lions'}
+         'Emirates Lions': 'Lions', 'Fidelity SecureDrive Lions': 'Lions'}
 # Non-club fixtures that leak into some season files.
 EXCLUDE = {'England', 'Canada Women', 'France Women', 'Ireland Women'}
 SHORT = {'Leinster Rugby': 'Leinster', 'Munster Rugby': 'Munster', 'Ulster Rugby': 'Ulster',

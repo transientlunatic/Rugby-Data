@@ -62,7 +62,11 @@ def build():
             rows, tryfrac = bc.table(matches, cap)
             low = min(r['played'] for r in rows)
             if len(rows) < 4 or low < 0.5 * cap:
-                continue  # too little of the season to call it a placing
+                # too little of the season to call it a placing; say so, because a club listed
+                # under two names (a sponsor change) also lands here
+                few = [r['team'] for r in rows if r['played'] < 0.5 * cap]
+                print(f'skipping {league} {season}: fewest games {low} of {cap} ({few})', file=sys.stderr)
+                continue
             for r in rows:
                 r['short'] = short(r['team'])
             status = 'complete' if low == cap else 'near' if low >= 0.9 * cap else 'partial'

@@ -100,5 +100,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-17T15:08:46_montauban-vs-oyonnax_2026-10-22",
+    "prediction_metadata": {
+      "timestamp": "2026-10-17T15:08:46.040314+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-22_Montauban-vs-Oyonnax",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-22T19:00:00+00:00",
+      "home_team": "Montauban",
+      "away_team": "Oyonnax",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Montauban",
+        "mean": 29.928,
+        "std": 15.621101625685688,
+        "median": 27.5,
+        "ci_lower": 7.0,
+        "ci_upper": 58.0
+      },
+      "away": {
+        "team": "Oyonnax",
+        "mean": 33.73,
+        "std": 16.083814845987256,
+        "median": 31.0,
+        "ci_lower": 10.0,
+        "ci_upper": 64.0
+      },
+      "home_win_prob": 0.44988022178332654,
+      "away_win_prob": 0.5401197782166735,
+      "draw_prob": 0.01,
+      "predicted_margin": -3.802,
+      "margin_std": 22.512103322435244,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

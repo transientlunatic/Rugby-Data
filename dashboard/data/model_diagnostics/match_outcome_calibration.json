@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-17T15:08:45.432503+00:00",
+  "generated_at": "2026-10-19T00:08:10.812095+00:00",
   "latest_prematch": {
-    "n": 72,
-    "outcome_accuracy": 0.7083333333333334,
-    "mean_home_error": -2.076666666666667,
-    "mean_away_error": -3.3183333333333334,
-    "mae_home": 9.300111111111114,
-    "mae_away": 9.079944444444443,
-    "mae_margin": 12.542444444444442,
-    "home_ci_coverage": 0.9861111111111112,
-    "away_ci_coverage": 0.9166666666666666,
-    "brier_score": 0.13865760393167897
+    "n": 106,
+    "outcome_accuracy": 0.660377358490566,
+    "mean_home_error": -2.0527547169811324,
+    "mean_away_error": -0.5163584905660372,
+    "mae_home": 9.511849056603769,
+    "mae_away": 9.377716981132073,
+    "mae_margin": 13.725679245283024,
+    "home_ci_coverage": 0.9811320754716981,
+    "away_ci_coverage": 0.9433962264150944,
+    "brier_score": 0.14700309511990062
   },
   "earliest_prematch": {
-    "n": 72,
-    "outcome_accuracy": 0.7083333333333334,
-    "mean_home_error": -2.423138888888889,
-    "mean_away_error": -3.5360277777777775,
-    "mae_home": 9.416972222222222,
-    "mae_away": 9.034249999999997,
-    "mae_margin": 12.430666666666669,
-    "home_ci_coverage": 0.9722222222222222,
-    "away_ci_coverage": 0.9166666666666666,
-    "brier_score": 0.14091810176155162
+    "n": 106,
+    "outcome_accuracy": 0.6509433962264151,
+    "mean_home_error": -2.860396226415095,
+    "mean_away_error": -1.358886792452831,
+    "mae_home": 9.854094339622636,
+    "mae_away": 9.294320754716976,
+    "mae_margin": 13.88233962264151,
+    "home_ci_coverage": 0.9622641509433962,
+    "away_ci_coverage": 0.9433962264150944,
+    "brier_score": 0.1509081823390671
   }
 }

@@ -3211,5 +3211,617 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_narbonne-vs-brive_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.300598+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Narbonne-vs-Brive",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T17:00:00+00:00",
+      "home_team": "Narbonne",
+      "away_team": "Brive",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Narbonne",
+        "mean": 33.194,
+        "std": 16.924076459293133,
+        "median": 31.0,
+        "ci_lower": 8.0,
+        "ci_upper": 64.0
+      },
+      "away": {
+        "team": "Brive",
+        "mean": 25.408,
+        "std": 13.718510706341268,
+        "median": 24.0,
+        "ci_lower": 6.0,
+        "ci_upper": 49.049999999999955
+      },
+      "home_win_prob": 0.5903852342813575,
+      "away_win_prob": 0.3816147657186425,
+      "draw_prob": 0.028,
+      "predicted_margin": 7.786,
+      "margin_std": 21.14966203039661,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_agen-vs-nissa-rugby_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.331998+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Agen-vs-Nissa Rugby",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T17:30:00+00:00",
+      "home_team": "Agen",
+      "away_team": "Nissa Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Agen",
+        "mean": 38.068,
+        "std": 17.379625312416835,
+        "median": 36.0,
+        "ci_lower": 13.0,
+        "ci_upper": 70.0
+      },
+      "away": {
+        "team": "Nissa Rugby",
+        "mean": 22.97,
+        "std": 12.417451429339275,
+        "median": 22.0,
+        "ci_lower": 6.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.674072862556104,
+      "away_win_prob": 0.309927137443896,
+      "draw_prob": 0.016,
+      "predicted_margin": 15.098,
+      "margin_std": 21.631190350972364,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_aurillac-vs-nevers_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.363590+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Aurillac-vs-Nevers",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T17:30:00+00:00",
+      "home_team": "Aurillac",
+      "away_team": "Nevers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Aurillac",
+        "mean": 46.624,
+        "std": 20.404083512865753,
+        "median": 44.0,
+        "ci_lower": 18.0,
+        "ci_upper": 85.0
+      },
+      "away": {
+        "team": "Nevers",
+        "mean": 23.19,
+        "std": 12.904801432025213,
+        "median": 22.0,
+        "ci_lower": 6.0,
+        "ci_upper": 48.0
+      },
+      "home_win_prob": 0.7585453980899284,
+      "away_win_prob": 0.2294546019100716,
+      "draw_prob": 0.012,
+      "predicted_margin": 23.434,
+      "margin_std": 24.135568027291175,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_soyaux-angouleme-vs-dax_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.395181+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Soyaux Angouleme-vs-Dax",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T17:30:00+00:00",
+      "home_team": "Soyaux Angouleme",
+      "away_team": "Dax",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Soyaux Angouleme",
+        "mean": 31.23,
+        "std": 15.476598463486736,
+        "median": 29.5,
+        "ci_lower": 7.0,
+        "ci_upper": 58.0
+      },
+      "away": {
+        "team": "Dax",
+        "mean": 23.598,
+        "std": 13.435639024624024,
+        "median": 22.0,
+        "ci_lower": 6.0,
+        "ci_upper": 49.0
+      },
+      "home_win_prob": 0.5916279234150168,
+      "away_win_prob": 0.3903720765849832,
+      "draw_prob": 0.018,
+      "predicted_margin": 7.632,
+      "margin_std": 20.63299726166802,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_valence-romans-vs-colomiers_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.426824+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Valence-Romans-vs-Colomiers",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T17:30:00+00:00",
+      "home_team": "Valence-Romans",
+      "away_team": "Colomiers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Valence-Romans",
+        "mean": 30.386,
+        "std": 14.846043378624488,
+        "median": 29.0,
+        "ci_lower": 8.0,
+        "ci_upper": 57.0
+      },
+      "away": {
+        "team": "Colomiers",
+        "mean": 24.254,
+        "std": 13.229719724922369,
+        "median": 23.0,
+        "ci_lower": 6.0,
+        "ci_upper": 48.0
+      },
+      "home_win_prob": 0.564189236679484,
+      "away_win_prob": 0.399810763320516,
+      "draw_prob": 0.036,
+      "predicted_margin": 6.132,
+      "margin_std": 20.378090587687552,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_cardiff-rugby-vs-hollywoodbets-sharks_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.458970+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-23_Cardiff Rugby-vs-Hollywoodbets Sharks",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-23T18:45:00+00:00",
+      "home_team": "Cardiff Rugby",
+      "away_team": "Hollywoodbets Sharks",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Cardiff Rugby",
+        "mean": 29.706,
+        "std": 15.312072491991408,
+        "median": 28.0,
+        "ci_lower": 7.0,
+        "ci_upper": 58.049999999999955
+      },
+      "away": {
+        "team": "Hollywoodbets Sharks",
+        "mean": 22.678,
+        "std": 13.219164723990696,
+        "median": 21.0,
+        "ci_lower": 3.0,
+        "ci_upper": 46.0
+      },
+      "home_win_prob": 0.5824360071547615,
+      "away_win_prob": 0.38556399284523846,
+      "draw_prob": 0.032,
+      "predicted_margin": 7.028,
+      "margin_std": 19.782396619216794,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_connacht-rugby-vs-zebre-parma_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.490799+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-23_Connacht Rugby-vs-Zebre Parma",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-23T18:45:00+00:00",
+      "home_team": "Connacht Rugby",
+      "away_team": "Zebre Parma",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Connacht Rugby",
+        "mean": 30.26,
+        "std": 15.433612668458412,
+        "median": 28.0,
+        "ci_lower": 8.0,
+        "ci_upper": 59.049999999999955
+      },
+      "away": {
+        "team": "Zebre Parma",
+        "mean": 17.064,
+        "std": 11.359045030283136,
+        "median": 15.0,
+        "ci_lower": 0.0,
+        "ci_upper": 37.0
+      },
+      "home_win_prob": 0.6839591182343909,
+      "away_win_prob": 0.30004088176560906,
+      "draw_prob": 0.016,
+      "predicted_margin": 13.196,
+      "margin_std": 18.99256654588842,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_edinburgh-rugby-vs-10bet-lions_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.522225+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-10-23_Edinburgh Rugby-vs-10bet Lions",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-10-23T18:45:00+00:00",
+      "home_team": "Edinburgh Rugby",
+      "away_team": "10bet Lions",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Edinburgh Rugby",
+        "mean": 29.008,
+        "std": 15.522755425503552,
+        "median": 27.0,
+        "ci_lower": 7.0,
+        "ci_upper": 57.0
+      },
+      "away": {
+        "team": "10bet Lions",
+        "mean": 17.536,
+        "std": 10.93255249244201,
+        "median": 16.5,
+        "ci_lower": 0.0,
+        "ci_upper": 36.0
+      },
+      "home_win_prob": 0.6488808148749138,
+      "away_win_prob": 0.3231191851250862,
+      "draw_prob": 0.028,
+      "predicted_margin": 11.472,
+      "margin_std": 18.814707438597072,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_gloucester-rugby-vs-bath-rugby_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.553866+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-23_Gloucester Rugby-vs-Bath Rugby",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-23T18:45:00+00:00",
+      "home_team": "Gloucester Rugby",
+      "away_team": "Bath Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Gloucester Rugby",
+        "mean": 39.516,
+        "std": 19.14747356702706,
+        "median": 38.0,
+        "ci_lower": 12.0,
+        "ci_upper": 74.04999999999995
+      },
+      "away": {
+        "team": "Bath Rugby",
+        "mean": 30.478,
+        "std": 16.07686275365937,
+        "median": 28.0,
+        "ci_lower": 9.900000000000006,
+        "ci_upper": 60.049999999999955
+      },
+      "home_win_prob": 0.592167545365987,
+      "away_win_prob": 0.36983245463401293,
+      "draw_prob": 0.038,
+      "predicted_margin": 9.038,
+      "margin_std": 25.455776476077094,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_newcastle-falcons-vs-sale-sharks_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.585719+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-10-23_Newcastle Falcons-vs-Sale Sharks",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-10-23T18:45:00+00:00",
+      "home_team": "Newcastle Falcons",
+      "away_team": "Sale Sharks",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Newcastle Falcons",
+        "mean": 26.584,
+        "std": 14.48982208310371,
+        "median": 26.0,
+        "ci_lower": 7.0,
+        "ci_upper": 52.049999999999955
+      },
+      "away": {
+        "team": "Sale Sharks",
+        "mean": 24.956,
+        "std": 13.606250916398682,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 50.0
+      },
+      "home_win_prob": 0.5068873723665125,
+      "away_win_prob": 0.4511126276334875,
+      "draw_prob": 0.042,
+      "predicted_margin": 1.628,
+      "margin_std": 19.97622627024434,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_provence-vs-beziers_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.617575+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Provence-vs-Beziers",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T19:00:00+00:00",
+      "home_team": "Provence",
+      "away_team": "Beziers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Provence",
+        "mean": 35.608,
+        "std": 16.19525658950793,
+        "median": 34.0,
+        "ci_lower": 13.0,
+        "ci_upper": 63.049999999999955
+      },
+      "away": {
+        "team": "Beziers",
+        "mean": 18.53,
+        "std": 10.618526263093198,
+        "median": 17.0,
+        "ci_lower": 3.0,
+        "ci_upper": 39.0
+      },
+      "home_win_prob": 0.7270894762003571,
+      "away_win_prob": 0.23891052379964284,
+      "draw_prob": 0.034,
+      "predicted_margin": 17.078,
+      "margin_std": 19.48311874418467,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-19T00:08:11_grenoble-vs-biarritz_2026-10-23",
+    "prediction_metadata": {
+      "timestamp": "2026-10-19T00:08:11.649553+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-23_Grenoble-vs-Biarritz",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-23T19:00:00+00:00",
+      "home_team": "Grenoble",
+      "away_team": "Biarritz",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Grenoble",
+        "mean": 35.99,
+        "std": 17.611981717001637,
+        "median": 34.0,
+        "ci_lower": 13.0,
+        "ci_upper": 71.0
+      },
+      "away": {
+        "team": "Biarritz",
+        "mean": 22.518,
+        "std": 11.625045204213187,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 42.049999999999955
+      },
+      "home_win_prob": 0.6812035712269656,
+      "away_win_prob": 0.31079642877303437,
+      "draw_prob": 0.008,
+      "predicted_margin": 13.472,
+      "margin_std": 21.453699354656763,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

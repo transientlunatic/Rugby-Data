@@ -151,5 +151,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-23T21:16:45_dax-vs-provence_2026-10-29",
+    "prediction_metadata": {
+      "timestamp": "2026-10-23T21:16:45.198072+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-10-29_Dax-vs-Provence",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-10-29T20:00:00+00:00",
+      "home_team": "Dax",
+      "away_team": "Provence",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Dax",
+        "mean": 34.114,
+        "std": 15.510544929176408,
+        "median": 32.0,
+        "ci_lower": 13.0,
+        "ci_upper": 62.0
+      },
+      "away": {
+        "team": "Provence",
+        "mean": 22.444,
+        "std": 12.168108480778761,
+        "median": 20.0,
+        "ci_lower": 6.0,
+        "ci_upper": 44.049999999999955
+      },
+      "home_win_prob": 0.6706588093808074,
+      "away_win_prob": 0.31134119061919263,
+      "draw_prob": 0.018,
+      "predicted_margin": 11.67,
+      "margin_std": 19.639172589495722,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

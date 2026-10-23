@@ -46,9 +46,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 24,
+      "away_score": 23,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-23T21:16:43.865365+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-23T21:16:43.881473+00:00",
+    "calibration_metrics": {
+      "home_score_error": -7.513999999999999,
+      "away_score_error": -10.642000000000003,
+      "margin_error": 3.128,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-16T20:47:06_montauban-vs-oyonnax_2026-10-22",
@@ -97,9 +111,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 24,
+      "away_score": 23,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-23T21:16:43.865365+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-23T21:16:43.882246+00:00",
+    "calibration_metrics": {
+      "home_score_error": -5.111999999999998,
+      "away_score_error": -10.868000000000002,
+      "margin_error": 5.756,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-17T15:08:46_montauban-vs-oyonnax_2026-10-22",
@@ -148,9 +176,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 24,
+      "away_score": 23,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-23T21:16:43.865365+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-23T21:16:43.882897+00:00",
+    "calibration_metrics": {
+      "home_score_error": -5.928000000000001,
+      "away_score_error": -10.729999999999997,
+      "margin_error": 4.802,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-19T00:08:11_montauban-vs-oyonnax_2026-10-22",
@@ -199,9 +241,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 24,
+      "away_score": 23,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-23T21:16:43.865365+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-23T21:16:43.883662+00:00",
+    "calibration_metrics": {
+      "home_score_error": -6.3359999999999985,
+      "away_score_error": -10.854,
+      "margin_error": 4.518,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-22T17:53:55_montauban-vs-oyonnax_2026-10-22",
@@ -250,8 +306,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 24,
+      "away_score": 23,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-10-23T21:16:43.865365+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-23T21:16:43.884314+00:00",
+    "calibration_metrics": {
+      "home_score_error": -6.045999999999999,
+      "away_score_error": -11.206000000000003,
+      "margin_error": 5.16,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-10-24T15:35:34_grenoble-vs-provence_2026-11-19",
+    "prediction_metadata": {
+      "timestamp": "2026-10-24T15:35:34.708626+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-11-19_Grenoble-vs-Provence",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-11-19T20:00:00+00:00",
+      "home_team": "Grenoble",
+      "away_team": "Provence",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Grenoble",
+        "mean": 29.398,
+        "std": 14.631185734587612,
+        "median": 28.0,
+        "ci_lower": 9.950000000000003,
+        "ci_upper": 59.0
+      },
+      "away": {
+        "team": "Provence",
+        "mean": 22.676,
+        "std": 12.082840063495004,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.5938664810143548,
+      "away_win_prob": 0.3821335189856452,
+      "draw_prob": 0.024,
+      "predicted_margin": 6.722,
+      "margin_std": 18.758377221924075,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

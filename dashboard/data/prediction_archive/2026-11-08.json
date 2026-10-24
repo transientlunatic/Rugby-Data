@@ -1,0 +1,53 @@
+[
+  {
+    "prediction_id": "2026-10-24T15:35:34_la-rochelle-vs-bayonne_2026-11-08",
+    "prediction_metadata": {
+      "timestamp": "2026-10-24T15:35:34.675004+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-11-08_La Rochelle-vs-Bayonne",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-11-08T20:05:00+00:00",
+      "home_team": "La Rochelle",
+      "away_team": "Bayonne",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "La Rochelle",
+        "mean": 31.838,
+        "std": 15.457158729857179,
+        "median": 29.0,
+        "ci_lower": 10.0,
+        "ci_upper": 60.0
+      },
+      "away": {
+        "team": "Bayonne",
+        "mean": 20.338,
+        "std": 10.885024391336934,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 40.0
+      },
+      "home_win_prob": 0.6458805084763698,
+      "away_win_prob": 0.3281194915236302,
+      "draw_prob": 0.026,
+      "predicted_margin": 11.5,
+      "margin_std": 19.139122236926124,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

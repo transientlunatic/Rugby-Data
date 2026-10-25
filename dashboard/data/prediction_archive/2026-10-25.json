@@ -46,9 +46,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.985024+00:00",
+    "calibration_metrics": {
+      "home_score_error": 0.6439999999999984,
+      "away_score_error": -18.404000000000003,
+      "margin_error": 19.048000000000002,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-10T17:22:24_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -97,9 +111,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.038527+00:00",
+    "calibration_metrics": {
+      "home_score_error": -10.344000000000001,
+      "away_score_error": -0.3299999999999983,
+      "margin_error": -10.014,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-12T00:55:54_harlequins-vs-saracens_2026-10-25",
@@ -148,9 +176,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.986400+00:00",
+    "calibration_metrics": {
+      "home_score_error": 1.3180000000000014,
+      "away_score_error": -16.242,
+      "margin_error": 17.56,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-12T00:55:54_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -199,9 +241,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.039871+00:00",
+    "calibration_metrics": {
+      "home_score_error": -11.196000000000002,
+      "away_score_error": 0.9379999999999988,
+      "margin_error": -12.134,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-16T20:47:07_harlequins-vs-saracens_2026-10-25",
@@ -250,9 +306,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.987665+00:00",
+    "calibration_metrics": {
+      "home_score_error": 5.838000000000001,
+      "away_score_error": -10.596,
+      "margin_error": 16.434,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-17T15:08:46_harlequins-vs-saracens_2026-10-25",
@@ -301,9 +371,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.988888+00:00",
+    "calibration_metrics": {
+      "home_score_error": 7.058,
+      "away_score_error": -10.012,
+      "margin_error": 17.07,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-17T15:08:46_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -352,9 +436,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.041069+00:00",
+    "calibration_metrics": {
+      "home_score_error": -8.797999999999998,
+      "away_score_error": 2.248000000000001,
+      "margin_error": -11.046,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-19T00:08:12_harlequins-vs-saracens_2026-10-25",
@@ -403,9 +501,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.990071+00:00",
+    "calibration_metrics": {
+      "home_score_error": 6.100000000000001,
+      "away_score_error": -9.943999999999999,
+      "margin_error": 16.044,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-19T00:08:12_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -454,9 +566,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.042273+00:00",
+    "calibration_metrics": {
+      "home_score_error": -8.852,
+      "away_score_error": 2.6320000000000014,
+      "margin_error": -11.484,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-22T17:53:56_harlequins-vs-saracens_2026-10-25",
@@ -505,9 +631,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.991314+00:00",
+    "calibration_metrics": {
+      "home_score_error": 5.472000000000001,
+      "away_score_error": -8.974,
+      "margin_error": 14.446,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-22T17:53:56_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -556,9 +696,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.043495+00:00",
+    "calibration_metrics": {
+      "home_score_error": -9.079999999999998,
+      "away_score_error": 3.594000000000001,
+      "margin_error": -12.674,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-23T21:16:45_harlequins-vs-saracens_2026-10-25",
@@ -607,9 +761,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.992541+00:00",
+    "calibration_metrics": {
+      "home_score_error": 6.411999999999999,
+      "away_score_error": -10.172,
+      "margin_error": 16.584,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-23T21:16:45_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -658,9 +826,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.044695+00:00",
+    "calibration_metrics": {
+      "home_score_error": -7.9780000000000015,
+      "away_score_error": 4.001999999999999,
+      "margin_error": -11.98,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-24T15:35:32_harlequins-vs-saracens_2026-10-25",
@@ -709,9 +891,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 33,
+      "away_score": 15,
+      "home_tries": 4,
+      "away_tries": 3,
+      "result_fetched_at": "2026-10-25T23:43:54.970415+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:54.993756+00:00",
+    "calibration_metrics": {
+      "home_score_error": 6.309999999999999,
+      "away_score_error": -8.808,
+      "margin_error": 15.118,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-24T15:35:32_la-rochelle-vs-bordeaux-begles_2026-10-25",
@@ -760,8 +956,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 19,
+      "away_score": 25,
+      "home_tries": 3,
+      "away_tries": 1,
+      "result_fetched_at": "2026-10-25T23:43:55.024659+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-10-25T23:43:55.045879+00:00",
+    "calibration_metrics": {
+      "home_score_error": -7.890000000000001,
+      "away_score_error": 3.2340000000000018,
+      "margin_error": -11.123999999999999,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

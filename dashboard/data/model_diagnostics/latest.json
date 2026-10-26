@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T11:20:40.035872+00:00",
+  "generated_at": "2026-10-26T11:36:15.135636+00:00",
   "checkpoint": "weekly-model",
   "trace_diagnostics": {
     "inference_method": "vi",
@@ -14,21 +14,21 @@
     ],
     "note": "Rhat/ESS/divergences don't apply to a single VI approximation. See tests/test_statistical_calibration.py (SBC / P-P tests) for the applicable calibration check on VI posteriors."
   },
-  "n_observations_available": 558904,
+  "n_observations_available": 560192,
   "posterior_predictive_calibration": {
     "skipped": true,
     "reason": "no overlapping players/team-seasons between checkpoint and data_dir"
   },
   "match_outcome_calibration": {
-    "n": 106,
-    "outcome_accuracy": 0.660377358490566,
-    "mean_home_error": -2.0527547169811324,
-    "mean_away_error": -0.5163584905660372,
-    "mae_home": 9.511849056603769,
-    "mae_away": 9.377716981132073,
-    "mae_margin": 13.725679245283024,
-    "home_ci_coverage": 0.9811320754716981,
-    "away_ci_coverage": 0.9433962264150944,
-    "brier_score": 0.14700309511990062
+    "n": 135,
+    "outcome_accuracy": 0.6962962962962963,
+    "mean_home_error": -2.127096296296296,
+    "mean_away_error": -1.3030370370370363,
+    "mae_home": 9.438918518518516,
+    "mae_away": 9.362681481481482,
+    "mae_margin": 12.96017777777778,
+    "home_ci_coverage": 0.9851851851851852,
+    "away_ci_coverage": 0.9407407407407408,
+    "brier_score": 0.14071651970064916
   }
 }

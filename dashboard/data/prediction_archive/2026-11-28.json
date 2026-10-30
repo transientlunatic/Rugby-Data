@@ -763,5 +763,107 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-30T22:03:28_bayonne-vs-castres_2026-11-28",
+    "prediction_metadata": {
+      "timestamp": "2026-10-30T22:03:28.069929+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-11-28_Bayonne-vs-Castres",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-11-28T15:35:00+00:00",
+      "home_team": "Bayonne",
+      "away_team": "Castres",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Bayonne",
+        "mean": 32.632,
+        "std": 15.051929311553387,
+        "median": 31.0,
+        "ci_lower": 11.0,
+        "ci_upper": 60.049999999999955
+      },
+      "away": {
+        "team": "Castres",
+        "mean": 20.472,
+        "std": 11.78139278693313,
+        "median": 19.0,
+        "ci_lower": 3.0,
+        "ci_upper": 42.0
+      },
+      "home_win_prob": 0.6755671677318705,
+      "away_win_prob": 0.30643283226812945,
+      "draw_prob": 0.018,
+      "predicted_margin": 12.16,
+      "margin_std": 18.741035190191603,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-30T22:03:28_bordeaux-begles-vs-montpellier_2026-11-28",
+    "prediction_metadata": {
+      "timestamp": "2026-10-30T22:03:28.099769+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-11-28_Bordeaux-Begles-vs-Montpellier",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-11-28T15:35:00+00:00",
+      "home_team": "Bordeaux-Begles",
+      "away_team": "Montpellier",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Bordeaux-Begles",
+        "mean": 28.018,
+        "std": 13.896822514517481,
+        "median": 26.0,
+        "ci_lower": 7.0,
+        "ci_upper": 55.0
+      },
+      "away": {
+        "team": "Montpellier",
+        "mean": 21.4,
+        "std": 12.09495762704442,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 44.0
+      },
+      "home_win_prob": 0.5740625620531455,
+      "away_win_prob": 0.39793743794685443,
+      "draw_prob": 0.028,
+      "predicted_margin": 6.618,
+      "margin_std": 18.674797883779092,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

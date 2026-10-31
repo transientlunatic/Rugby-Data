@@ -253,5 +253,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-10-31T16:52:21_pau-vs-toulouse_2026-11-01",
+    "prediction_metadata": {
+      "timestamp": "2026-10-31T16:52:21.090274+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-11-01_Pau-vs-Toulouse",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-11-01T20:05:00+00:00",
+      "home_team": "Pau",
+      "away_team": "Toulouse",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Pau",
+        "mean": 30.642,
+        "std": 14.113462934375816,
+        "median": 29.0,
+        "ci_lower": 10.0,
+        "ci_upper": 56.049999999999955
+      },
+      "away": {
+        "team": "Toulouse",
+        "mean": 31.248,
+        "std": 15.466301949722824,
+        "median": 30.0,
+        "ci_lower": 7.950000000000003,
+        "ci_upper": 60.049999999999955
+      },
+      "home_win_prob": 0.4791400459966567,
+      "away_win_prob": 0.5048599540033433,
+      "draw_prob": 0.016,
+      "predicted_margin": -0.606,
+      "margin_std": 21.327136797985798,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

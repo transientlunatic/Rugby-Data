@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T11:36:15.135636+00:00",
+  "generated_at": "2026-11-02T13:55:15.341383+00:00",
   "checkpoint": "weekly-model",
   "trace_diagnostics": {
     "inference_method": "vi",
@@ -22,11 +22,11 @@
   "match_outcome_calibration": {
     "n": 135,
     "outcome_accuracy": 0.6962962962962963,
-    "mean_home_error": -2.127096296296296,
+    "mean_home_error": -2.1270962962962954,
     "mean_away_error": -1.3030370370370363,
-    "mae_home": 9.438918518518516,
-    "mae_away": 9.362681481481482,
-    "mae_margin": 12.96017777777778,
+    "mae_home": 9.438918518518518,
+    "mae_away": 9.362681481481486,
+    "mae_margin": 12.960177777777776,
     "home_ci_coverage": 0.9851851851851852,
     "away_ci_coverage": 0.9407407407407408,
     "brier_score": 0.14071651970064916

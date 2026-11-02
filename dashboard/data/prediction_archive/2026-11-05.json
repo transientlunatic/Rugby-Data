@@ -304,5 +304,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-02T01:09:36_agen-vs-biarritz_2026-11-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-02T01:09:36.465699+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "pro-d2_2026-11-05_Agen-vs-Biarritz",
+      "competition": "pro-d2",
+      "season": "2026-2027",
+      "date": "2026-11-05T20:00:00+00:00",
+      "home_team": "Agen",
+      "away_team": "Biarritz",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Agen",
+        "mean": 43.322,
+        "std": 18.12375005345196,
+        "median": 43.0,
+        "ci_lower": 17.0,
+        "ci_upper": 75.04999999999995
+      },
+      "away": {
+        "team": "Biarritz",
+        "mean": 20.64,
+        "std": 11.448772860005565,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 41.0
+      },
+      "home_win_prob": 0.7822210126661691,
+      "away_win_prob": 0.20577898733383093,
+      "draw_prob": 0.012,
+      "predicted_margin": 22.682,
+      "margin_std": 21.53362198980933,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

@@ -1579,5 +1579,821 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_10bet-lions-vs-vodacom-bulls_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.230721+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-12-05_10bet Lions-vs-Vodacom Bulls",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-12-05T12:30:00+00:00",
+      "home_team": "10bet Lions",
+      "away_team": "Vodacom Bulls",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "10bet Lions",
+        "mean": 20.63,
+        "std": 11.743129906460203,
+        "median": 19.0,
+        "ci_lower": 5.0,
+        "ci_upper": 41.049999999999955
+      },
+      "away": {
+        "team": "Vodacom Bulls",
+        "mean": 32.112,
+        "std": 15.905453655900546,
+        "median": 31.0,
+        "ci_lower": 7.0,
+        "ci_upper": 62.0
+      },
+      "home_win_prob": 0.30534944537362385,
+      "away_win_prob": 0.6666505546263761,
+      "draw_prob": 0.028,
+      "predicted_margin": -11.482,
+      "margin_std": 19.972723299540302,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_hollywoodbets-sharks-vs-dhl-stormers_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.277439+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-12-05_Hollywoodbets Sharks-vs-DHL Stormers",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:00:00+00:00",
+      "home_team": "Hollywoodbets Sharks",
+      "away_team": "DHL Stormers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Hollywoodbets Sharks",
+        "mean": 27.866,
+        "std": 14.06812155193436,
+        "median": 26.0,
+        "ci_lower": 7.0,
+        "ci_upper": 53.049999999999955
+      },
+      "away": {
+        "team": "DHL Stormers",
+        "mean": 21.986,
+        "std": 12.626551548225667,
+        "median": 21.0,
+        "ci_lower": 3.0,
+        "ci_upper": 44.049999999999955
+      },
+      "home_win_prob": 0.5923722762058669,
+      "away_win_prob": 0.3836277237941331,
+      "draw_prob": 0.024,
+      "predicted_margin": 5.88,
+      "margin_std": 18.722222090339596,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_cardiff-rugby-vs-ulster-rugby_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.325748+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-12-05_Cardiff Rugby-vs-Ulster Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:00:00+00:00",
+      "home_team": "Cardiff Rugby",
+      "away_team": "Ulster Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Cardiff Rugby",
+        "mean": 30.472,
+        "std": 14.674372763426723,
+        "median": 29.0,
+        "ci_lower": 10.0,
+        "ci_upper": 57.0
+      },
+      "away": {
+        "team": "Ulster Rugby",
+        "mean": 26.026,
+        "std": 13.70668902397658,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 51.049999999999955
+      },
+      "home_win_prob": 0.5521043130385365,
+      "away_win_prob": 0.4198956869614635,
+      "draw_prob": 0.028,
+      "predicted_margin": 4.446,
+      "margin_std": 19.616500299492774,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_gloucester-rugby-vs-newcastle-falcons_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.375773+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-12-05_Gloucester Rugby-vs-Newcastle Falcons",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:00:00+00:00",
+      "home_team": "Gloucester Rugby",
+      "away_team": "Newcastle Falcons",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Gloucester Rugby",
+        "mean": 51.382,
+        "std": 20.6353113860683,
+        "median": 50.0,
+        "ci_lower": 21.0,
+        "ci_upper": 86.0
+      },
+      "away": {
+        "team": "Newcastle Falcons",
+        "mean": 21.7,
+        "std": 12.986685489377187,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.8175755249780968,
+      "away_win_prob": 0.17642447502190317,
+      "draw_prob": 0.006,
+      "predicted_margin": 29.682,
+      "margin_std": 24.652563274434566,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_harlequins-vs-leicester-tigers_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.423410+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-12-05_Harlequins-vs-Leicester Tigers",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:05:00+00:00",
+      "home_team": "Harlequins",
+      "away_team": "Leicester Tigers",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Harlequins",
+        "mean": 28.852,
+        "std": 14.186969232362491,
+        "median": 27.0,
+        "ci_lower": 7.0,
+        "ci_upper": 54.049999999999955
+      },
+      "away": {
+        "team": "Leicester Tigers",
+        "mean": 25.904,
+        "std": 14.584607776693893,
+        "median": 24.0,
+        "ci_lower": 5.950000000000003,
+        "ci_upper": 52.0
+      },
+      "home_win_prob": 0.5358932512947802,
+      "away_win_prob": 0.4341067487052198,
+      "draw_prob": 0.03,
+      "predicted_margin": 2.948,
+      "margin_std": 20.421686903877454,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_perpignan-vs-clermont_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.471230+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Perpignan-vs-Clermont",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Perpignan",
+      "away_team": "Clermont",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Perpignan",
+        "mean": 28.68,
+        "std": 13.348318246131234,
+        "median": 28.0,
+        "ci_lower": 7.0,
+        "ci_upper": 51.049999999999955
+      },
+      "away": {
+        "team": "Clermont",
+        "mean": 22.7,
+        "std": 12.46442938926608,
+        "median": 21.0,
+        "ci_lower": 7.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.5616540167431451,
+      "away_win_prob": 0.4163459832568549,
+      "draw_prob": 0.022,
+      "predicted_margin": 5.98,
+      "margin_std": 17.951033396437097,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_vannes-vs-bayonne_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.519684+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Vannes-vs-Bayonne",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Vannes",
+      "away_team": "Bayonne",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Vannes",
+        "mean": 34.61,
+        "std": 16.06729286469877,
+        "median": 33.0,
+        "ci_lower": 10.0,
+        "ci_upper": 62.0
+      },
+      "away": {
+        "team": "Bayonne",
+        "mean": 22.182,
+        "std": 11.892723657766542,
+        "median": 21.0,
+        "ci_lower": 6.0,
+        "ci_upper": 44.0
+      },
+      "home_win_prob": 0.6795664231956923,
+      "away_win_prob": 0.3124335768043077,
+      "draw_prob": 0.008,
+      "predicted_margin": 12.428,
+      "margin_std": 19.3215117420972,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_castres-vs-lyon_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.566817+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Castres-vs-Lyon",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Castres",
+      "away_team": "Lyon",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Castres",
+        "mean": 28.316,
+        "std": 14.066561200236539,
+        "median": 27.0,
+        "ci_lower": 9.0,
+        "ci_upper": 54.0
+      },
+      "away": {
+        "team": "Lyon",
+        "mean": 21.932,
+        "std": 12.058332222990042,
+        "median": 21.0,
+        "ci_lower": 3.0,
+        "ci_upper": 43.049999999999955
+      },
+      "home_win_prob": 0.5787496503414573,
+      "away_win_prob": 0.39525034965854267,
+      "draw_prob": 0.026,
+      "predicted_margin": 6.384,
+      "margin_std": 18.430207378106196,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_montpellier-vs-la-rochelle_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.615631+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Montpellier-vs-La Rochelle",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Montpellier",
+      "away_team": "La Rochelle",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Montpellier",
+        "mean": 25.41,
+        "std": 12.892862366441365,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 50.0
+      },
+      "away": {
+        "team": "La Rochelle",
+        "mean": 16.948,
+        "std": 10.062072152394853,
+        "median": 16.0,
+        "ci_lower": 3.0,
+        "ci_upper": 36.0
+      },
+      "home_win_prob": 0.6272929055728779,
+      "away_win_prob": 0.3487070944271221,
+      "draw_prob": 0.024,
+      "predicted_margin": 8.462,
+      "margin_std": 16.8929735689132,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_pau-vs-stade-francais_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.663868+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Pau-vs-Stade Francais",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Pau",
+      "away_team": "Stade Francais",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Pau",
+        "mean": 31.502,
+        "std": 14.617044708148088,
+        "median": 31.0,
+        "ci_lower": 8.0,
+        "ci_upper": 56.0
+      },
+      "away": {
+        "team": "Stade Francais",
+        "mean": 21.812,
+        "std": 11.69053702787002,
+        "median": 20.0,
+        "ci_lower": 5.0,
+        "ci_upper": 43.049999999999955
+      },
+      "home_win_prob": 0.6376367393788861,
+      "away_win_prob": 0.3483632606211139,
+      "draw_prob": 0.014,
+      "predicted_margin": 9.69,
+      "margin_std": 18.427639566694374,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_toulon-vs-bordeaux-begles_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.711388+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Toulon-vs-Bordeaux-Begles",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Toulon",
+      "away_team": "Bordeaux-Begles",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulon",
+        "mean": 24.84,
+        "std": 12.856220284360408,
+        "median": 24.0,
+        "ci_lower": 6.950000000000003,
+        "ci_upper": 47.049999999999955
+      },
+      "away": {
+        "team": "Bordeaux-Begles",
+        "mean": 21.316,
+        "std": 12.439298372496738,
+        "median": 19.0,
+        "ci_lower": 4.900000000000006,
+        "ci_upper": 45.049999999999955
+      },
+      "home_win_prob": 0.5549169593041927,
+      "away_win_prob": 0.42708304069580727,
+      "draw_prob": 0.018,
+      "predicted_margin": 3.524,
+      "margin_std": 18.297361121210894,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_toulouse-vs-racing-92_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.759142+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-05_Toulouse-vs-Racing 92",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-05T15:35:00+00:00",
+      "home_team": "Toulouse",
+      "away_team": "Racing 92",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulouse",
+        "mean": 41.76,
+        "std": 18.23771915564005,
+        "median": 40.0,
+        "ci_lower": 15.0,
+        "ci_upper": 76.04999999999995
+      },
+      "away": {
+        "team": "Racing 92",
+        "mean": 19.626,
+        "std": 10.366201039918144,
+        "median": 19.0,
+        "ci_lower": 5.0,
+        "ci_upper": 38.0
+      },
+      "home_win_prob": 0.7881724958043944,
+      "away_win_prob": 0.20182750419560558,
+      "draw_prob": 0.01,
+      "predicted_margin": 22.134,
+      "margin_std": 21.49167382964854,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_scarlets-vs-connacht-rugby_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.807183+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-12-05_Scarlets-vs-Connacht Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-12-05T17:15:00+00:00",
+      "home_team": "Scarlets",
+      "away_team": "Connacht Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Scarlets",
+        "mean": 32.812,
+        "std": 15.939531235265358,
+        "median": 31.0,
+        "ci_lower": 12.0,
+        "ci_upper": 63.0
+      },
+      "away": {
+        "team": "Connacht Rugby",
+        "mean": 26.864,
+        "std": 13.889618569276841,
+        "median": 26.0,
+        "ci_lower": 7.0,
+        "ci_upper": 52.0
+      },
+      "home_win_prob": 0.5664454740122293,
+      "away_win_prob": 0.40355452598777064,
+      "draw_prob": 0.03,
+      "predicted_margin": 5.948,
+      "margin_std": 21.190122604647666,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_saracens-vs-northampton-saints_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.854847+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-12-05_Saracens-vs-Northampton Saints",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-12-05T17:30:00+00:00",
+      "home_team": "Saracens",
+      "away_team": "Northampton Saints",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Saracens",
+        "mean": 31.122,
+        "std": 16.29770278290778,
+        "median": 29.0,
+        "ci_lower": 7.0,
+        "ci_upper": 61.049999999999955
+      },
+      "away": {
+        "team": "Northampton Saints",
+        "mean": 23.38,
+        "std": 13.756002326257438,
+        "median": 21.0,
+        "ci_lower": 5.0,
+        "ci_upper": 48.0
+      },
+      "home_win_prob": 0.5884035181712648,
+      "away_win_prob": 0.3915964818287352,
+      "draw_prob": 0.02,
+      "predicted_margin": 7.742,
+      "margin_std": 22.165907064679306,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_glasgow-warriors-vs-benetton-rugby_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.903295+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-12-05_Glasgow Warriors-vs-Benetton Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-12-05T19:45:00+00:00",
+      "home_team": "Glasgow Warriors",
+      "away_team": "Benetton Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Glasgow Warriors",
+        "mean": 38.374,
+        "std": 18.258864258217155,
+        "median": 38.0,
+        "ci_lower": 9.900000000000006,
+        "ci_upper": 71.09999999999991
+      },
+      "away": {
+        "team": "Benetton Rugby",
+        "mean": 13.788,
+        "std": 9.125078410622015,
+        "median": 13.0,
+        "ci_lower": 0.0,
+        "ci_upper": 31.0
+      },
+      "home_win_prob": 0.7935490983972524,
+      "away_win_prob": 0.18645090160274758,
+      "draw_prob": 0.02,
+      "predicted_margin": 24.586,
+      "margin_std": 20.184216705138695,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-09T01:36:00_zebre-parma-vs-munster-rugby_2026-12-05",
+    "prediction_metadata": {
+      "timestamp": "2026-11-09T01:36:00.951474+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "celtic_2026-12-05_Zebre Parma-vs-Munster Rugby",
+      "competition": "celtic",
+      "season": "2026-2027",
+      "date": "2026-12-05T19:45:00+00:00",
+      "home_team": "Zebre Parma",
+      "away_team": "Munster Rugby",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Zebre Parma",
+        "mean": 18.71,
+        "std": 11.433192904871325,
+        "median": 17.0,
+        "ci_lower": 3.0,
+        "ci_upper": 39.049999999999955
+      },
+      "away": {
+        "team": "Munster Rugby",
+        "mean": 30.33,
+        "std": 15.525498381694547,
+        "median": 29.0,
+        "ci_lower": 8.0,
+        "ci_upper": 58.049999999999955
+      },
+      "home_win_prob": 0.32152247933039185,
+      "away_win_prob": 0.6504775206696081,
+      "draw_prob": 0.028,
+      "predicted_margin": -11.62,
+      "margin_std": 19.199156231459757,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

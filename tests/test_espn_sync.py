@@ -219,3 +219,15 @@ class TestUpdateRouting:
         update.fetch_with_retry('https://rugby-union-feeds.incrowdsports.com/v1/matches')
         update.fetch_with_retry('https://example.org/')
         assert seen == [{'X-APP-ID': 'abc'}, {}]
+
+
+def test_unannounced_kickoff_does_not_overwrite_ours(tmp_path, fake_espn):
+    write(tmp_path, [match('2024-11-01', 'Leinster Rugby', 'Scarlets'), match('2024-11-02', 'Munster Rugby', 'Ospreys')])
+    tbc = event('1', '2024-11-01', 'Leinster', 'Scarlets', completed=False)
+    tbc['kickoff'] = '2024-11-01T00:00:00.000Z'
+    moved = event('2', '2024-11-02', 'Munster', 'Ospreys', completed=False)
+    moved['kickoff'] = '2024-11-02T14:00:00.000Z'
+    fake_espn['events'] = [tbc, moved]
+    assert espn_sync.sync_season('celtic', '2024-2025', tmp_path, fixtures=True)['redated'] == 1
+    out = {m['home']['team']: m['date'] for m in read(tmp_path)}
+    assert out == {'Leinster Rugby': '2024-11-01T19:35:00.000Z', 'Munster Rugby': '2024-11-02T14:00:00.000Z'}

@@ -7,7 +7,7 @@ present) ``dashboard/celtic_placings.html`` with the data embedded.
 Standings use the usual 4/2/0 + losing-bonus (lost by <= 7) + try-bonus
 (>= 4 tries) scheme, ordered by points, then wins, then points difference.
 Playoffs are removed by capping each team at the regular-season game count.
-Try bonuses can only be applied where try events were recorded (2011-12 on).
+Try bonuses can only be applied where try events were recorded (2008-09 on).
 """
 import collections
 import glob
@@ -16,13 +16,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Regular-season games per team. 2020-21 (conference format + Rainbow Cup) and
-# 2002-03 (a single match) are not covered.
+# Regular-season games per team. 2019-20 (conferences, cut short by COVID),
+# 2020-21 (conference format + Rainbow Cup) and 2002-03 (a single match) are
+# not covered. (2019-20 used to be listed with 18 games, but its file then
+# held a copy of 2021-22.)
 CAP = {'2003-2004': 22, '2004-2005': 20, '2005-2006': 20, '2006-2007': 20,
        '2007-2008': 18, '2008-2009': 18, '2009-2010': 18, '2010-2011': 22,
        '2011-2012': 22, '2012-2013': 22, '2013-2014': 22, '2014-2015': 22,
        '2015-2016': 22, '2016-2017': 22, '2017-2018': 21, '2018-2019': 21,
-       '2019-2020': 18, '2021-2022': 18, '2022-2023': 18, '2023-2024': 18,
+       '2021-2022': 18, '2022-2023': 18, '2023-2024': 18,
        '2024-2025': 18, '2025-2026': 18}
 
 # Same franchise, different name / sponsor.

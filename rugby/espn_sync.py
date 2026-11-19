@@ -166,7 +166,9 @@ def _apply_detail(m: dict, detail: Dict[str, dict], stats: collections.Counter) 
     changed = lineup_changed = False
     if _mark_awarded(m, detail, stats):
         return True
-    if not _has_events(m):
+    if not _has_events(m) and not (detail['home']['scores'] or detail['away']['scores']):
+        stats['no_play_by_play'] += 1              # ESPN has the match but no timeline
+    elif not _has_events(m):
         if all(espn.scores_reconcile(detail[s]['scores'], m[s].get('score')) for s in ('home', 'away')):
             for s in ('home', 'away'):
                 m[s]['scores'] = detail[s]['scores']
@@ -272,6 +274,12 @@ def sync_season(prefix: str, season: str, json_dir: Path, dry_run: bool = False,
             if e['id'] in paired or (not e['completed'] and not fixtures):
                 continue
             home, away = resolve_team(e['home'], known), resolve_team(e['away'], known)
+            if e['completed'] and any(
+                    _has_result(m) and (m['home']['score'], m['away']['score']) == (e['home_score'], e['away_score'])
+                    and same_team(m['home']['team'], e['home']) and same_team(m['away']['team'], e['away'])
+                    for m in matches):
+                stats['already_here_other_date'] += 1      # same teams and score, our date differs
+                continue
             same = [m for m in matches if _same_fixture(m, e)]
             if same:
                 m = same[0]

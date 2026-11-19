@@ -254,3 +254,10 @@ def test_awarded_walkover_is_marked_and_empty_rosters_are_not_lineups(tmp_path, 
     out = read(tmp_path)[0]
     assert stats['awarded'] == 1 and out['status'] == 'awarded'
     assert out['home']['lineup'] == {} and 'lineup_source' not in out and 'lineups_added' not in stats
+
+
+def test_same_result_on_another_date_is_not_added_again(tmp_path, fake_espn):
+    write(tmp_path, [match('2025-05-10', 'Stade Francais', 'Racing 92', 19, 16)])
+    fake_espn['events'] = [event('1', '2025-04-21', 'Stade Francais Paris', 'Racing 92', 19, 16)]
+    stats = espn_sync.sync_season('celtic', '2024-2025', tmp_path, add_missing=True)
+    assert stats.get('already_here_other_date') == 1 and len(read(tmp_path)) == 1

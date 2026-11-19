@@ -3,6 +3,7 @@ Core data update logic for fetching rugby data from various sources.
 """
 
 import json
+import os
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -11,9 +12,16 @@ from typing import List, Dict, Optional
 import click
 import requests
 
+from .espn_sync import load_matches, sync_season
+from .scrapers.espn import ESPN_LEAGUES
 from .scrapers.six_nations import scrape_championship
 from .team_names import canonical_team_name, normalise_match_teams
 
+
+# The InCrowd feed has required an X-APP-ID header since late October 2026.
+# With one in this environment variable it is used as before; without, the
+# club competitions come from ESPN (see update_from_espn).
+INCROWD_APP_ID_ENV = 'INCROWD_APP_ID'
 
 # Configure retry settings
 MAX_RETRIES = 3
@@ -216,9 +224,12 @@ def seasons_to_update(league_config: Dict, now: datetime, json_dir: Path,
 
 def fetch_with_retry(url: str, timeout: int = 30, max_retries: int = MAX_RETRIES) -> Optional[requests.Response]:
     """Fetch URL with retry logic."""
+    headers = {}
+    if 'incrowdsports.com' in url and os.environ.get(INCROWD_APP_ID_ENV):
+        headers['X-APP-ID'] = os.environ[INCROWD_APP_ID_ENV]
     for attempt in range(max_retries):
         try:
-            response = requests.get(url, timeout=timeout)
+            response = requests.get(url, timeout=timeout, headers=headers)
             response.raise_for_status()
             return response
         except requests.RequestException as e:
@@ -444,6 +455,35 @@ def update_wikipedia_data(league: str, season: str, league_config: Dict,
     return stats
 
 
+def update_from_espn(league: str, season: str, league_config: Dict,
+                     json_dir: Path, dry_run: bool = False) -> Dict:
+    """Update a club competition from ESPN: new results with scoring events and
+    lineups, new and re-dated fixtures. Matches already in the file keep
+    their round, venue and anything else ESPN doesn't supply."""
+    prefix = league_config['filename_prefix']
+    click.echo("  Source: ESPN (no InCrowd app id configured)")
+    try:
+        got = sync_season(prefix, season, json_dir, dry_run=dry_run, add_missing=True, fixtures=True)
+    except Exception as e:      # network or format surprises: report, don't crash the run
+        return {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0,
+                'errors': [f"ESPN update failed for {league_config['name']} {season}: {e}"], 'warnings': []}
+    if got:
+        click.echo("  " + ", ".join(f"{k}={v}" for k, v in sorted(got.items())))
+    warnings = []
+    if got.get('no_espn_events'):
+        warnings.append(f"ESPN lists no {league_config['name']} matches for {season}")
+    if got.get('events_dont_add_up'):
+        warnings.append(f"{league_config['name']} {season}: {got['events_dont_add_up']} match(es) whose ESPN "
+                        "scoring events don't add up to the score; result kept, events left out")
+    matches = load_matches(json_dir / f"{prefix}-{season}.json") or []
+    return {
+        'new_matches': got.get('matches_added', 0) + got.get('fixtures_added', 0) + got.get('placeholders_filled', 0),
+        'updated_matches': got.get('results_added', 0) + got.get('events_added', 0) + got.get('redated', 0),
+        'total_matches': len(matches),
+        'errors': [], 'warnings': warnings,
+    }
+
+
 def update_league_data(league: str, season: str, json_dir: Path,
                        dry_run: bool = False) -> Dict:
     """Update data for a specific rugby league/competition."""
@@ -468,6 +508,14 @@ def update_league_data(league: str, season: str, json_dir: Path,
         if start_year < api_cutoff:
             click.echo(f"  Using Wikipedia for {season} (API data available from {api_cutoff}-{api_cutoff+1} onwards)")
             return update_wikipedia_data(league, season, league_config, json_dir, dry_run)
+
+    if not os.environ.get(INCROWD_APP_ID_ENV):
+        if league_config['filename_prefix'] in ESPN_LEAGUES:
+            return update_from_espn(league, season, league_config, json_dir, dry_run)
+        msg = (f"Skipped {league_config['name']} {season}: the InCrowd feed needs an app id "
+               f"(set {INCROWD_APP_ID_ENV}) and ESPN doesn't cover this competition")
+        click.echo(f"  {msg}")
+        return {'new_matches': 0, 'updated_matches': 0, 'total_matches': 0, 'errors': [], 'warnings': [msg]}
 
     start_year = season.split("-")[0]
     base_url = f"https://rugby-union-feeds.incrowdsports.com/v1/matches?compId={league_config['comp_id']}&season={start_year}01&provider={league_config['provider']}"

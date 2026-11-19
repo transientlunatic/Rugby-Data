@@ -191,6 +191,17 @@ def test_season_windows():
     assert espn_sync.season_window('2019-2020', False) == ('2019-08-01', '2020-09-20')
     assert espn_sync.season_window('2020-2021', False) == ('2020-09-21', '2021-07-31')
     assert espn_sync.season_window('2024-2025', True) == ('2024-01-01', '2024-12-31')
+    assert espn_sync.season_window('2019-2020', False, 'premiership') == ('2019-08-01', '2020-11-01')
+    assert espn_sync.season_window('2020-2021', False, 'premiership') == ('2020-11-02', '2021-07-31')
+    assert espn_sync.season_window('2020-2021', False, 'top14') == ('2020-08-01', '2021-07-31')
+
+
+def test_new_file_uses_the_competitions_spellings(tmp_path, fake_espn):
+    write(tmp_path, [match('2023-10-04', 'Munster Rugby', 'Ospreys', 7, 0)], name='celtic-2023-2024.json')
+    fake_espn['events'] = [event('1', '2024-10-04', 'Munster', 'Ospreys', 7, 0)]
+    espn_sync.sync_season('celtic', '2024-2025', tmp_path, add_missing=True)
+    out = read(tmp_path)[0]
+    assert (out['home']['team'], out['away']['team']) == ('Munster Rugby', 'Ospreys')
 
 
 class TestUpdateRouting:

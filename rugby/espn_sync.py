@@ -27,19 +27,28 @@ from .scrapers import espn
 from .scrapers.espn import ESPN_LEAGUES, REQUEST_PAUSE, find_event, has_minutes, same_team
 from .team_names import canonical_team_name
 
-COVID_RESTART_END = '2020-09-20'   # 2019-20 restarted in Aug 2020 and ended 12 Sep 2020
+# Last day of the 2019-20 season where COVID pushed it into autumn 2020 (the
+# next season starts the day after). Top 14 2019-20 was abandoned in March.
+COVID_SEASON_END = {
+    'celtic': '2020-09-20',          # final 12 Sep 2020; 2020-21 began 2 Oct
+    'premiership': '2020-11-01',     # final 24 Oct 2020; 2020-21 began 20 Nov
+    'euro-champions': '2020-11-01',  # final 17 Oct 2020; 2020-21 began 11 Dec
+    'euro-challenge': '2020-11-01',  # final 16 Oct 2020; 2020-21 began 11 Dec
+}
+COVID_RESTART_END = COVID_SEASON_END['celtic']   # kept for existing callers
 
 
-def season_window(season: str, calendar_year: bool) -> Tuple[str, str]:
+def season_window(season: str, calendar_year: bool, prefix: str = 'celtic') -> Tuple[str, str]:
     """First and last dates (inclusive) of a season's matches."""
     start = int(season.split('-')[0])
     if calendar_year:
         return f'{start}-01-01', f'{start}-12-31'
     lo, hi = f'{start}-08-01', f'{start + 1}-07-31'
-    if start == 2019:
-        hi = COVID_RESTART_END
-    elif start == 2020:
-        lo = (_day(COVID_RESTART_END) + timedelta(days=1)).strftime('%Y-%m-%d')
+    covid_end = COVID_SEASON_END.get(prefix)
+    if covid_end and start == 2019:
+        hi = covid_end
+    elif covid_end and start == 2020:
+        lo = (_day(covid_end) + timedelta(days=1)).strftime('%Y-%m-%d')
     return lo, hi
 
 
@@ -80,6 +89,17 @@ def resolve_team(espn_name: str, known: List[str]) -> str:
     if len(hits) == 1:
         return hits[0]
     return canonical_team_name(espn_name) or espn_name
+
+
+def _league_team_names(json_dir: Path, prefix: str) -> List[str]:
+    names = set()
+    for p in Path(json_dir).glob(f'{prefix}-*.json'):
+        for m in load_matches(p) or []:
+            if not _is_placeholder(m):
+                names.update((m.get(s) or {}).get('team') for s in ('home', 'away'))
+    names.discard(None)
+    names.discard('')
+    return sorted(names)
 
 
 def _day(s: str) -> datetime:
@@ -174,7 +194,7 @@ def sync_season(prefix: str, season: str, json_dir: Path, dry_run: bool = False,
             return {'no_file': 1}
         matches = []
 
-    lo, hi = season_window(season, cfg['calendar_year'])
+    lo, hi = season_window(season, cfg['calendar_year'], prefix)
     events: List[dict] = []
     for y in range(int(lo[:4]), int(hi[:4]) + 1):
         key = (slug, y, 'all')
@@ -227,6 +247,8 @@ def sync_season(prefix: str, season: str, json_dir: Path, dry_run: bool = False,
     if add_missing or fixtures:
         known = sorted({m[s]['team'] for m in matches for s in ('home', 'away')
                         if (m.get(s) or {}).get('team') and not _is_placeholder(m)})
+        if not known:   # a new file: use the spellings in this competition's other seasons
+            known = _league_team_names(Path(json_dir), prefix)
         for e in events:
             if e['id'] in paired or (not e['completed'] and not fixtures):
                 continue

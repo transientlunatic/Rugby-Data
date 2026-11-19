@@ -143,10 +143,29 @@ def _same_fixture(m: dict, e: dict) -> bool:
             or (same_team(h, e['away']) and same_team(a, e['home'])))
 
 
+AWARDED_SCORES = {(28, 0), (0, 28)}   # what a match forfeited for COVID (or similar) was awarded
+
+
+def _mark_awarded(m: dict, detail: Optional[Dict[str, dict]], stats: collections.Counter) -> bool:
+    """A 28-0 result with no scoring at all in ESPN's play-by-play was awarded,
+    not played: say so, so it isn't read as a real 28-0 win."""
+    if (m['home'].get('score'), m['away'].get('score')) not in AWARDED_SCORES or _has_events(m):
+        return False
+    if detail is not None and (detail['home']['scores'] or detail['away']['scores']):
+        return False
+    if m.get('status') == 'awarded':
+        return False
+    m['status'] = 'awarded'
+    stats['awarded'] += 1
+    return True
+
+
 def _apply_detail(m: dict, detail: Dict[str, dict], stats: collections.Counter) -> bool:
     """Copy scoring events and lineups from ``detail`` into ``m`` where they
     are missing or improve on what's there. Returns True if anything changed."""
     changed = lineup_changed = False
+    if _mark_awarded(m, detail, stats):
+        return True
     if not _has_events(m):
         if all(espn.scores_reconcile(detail[s]['scores'], m[s].get('score')) for s in ('home', 'away')):
             for s in ('home', 'away'):
@@ -158,7 +177,7 @@ def _apply_detail(m: dict, detail: Dict[str, dict], stats: collections.Counter) 
             stats['events_dont_add_up'] += 1
     for s in ('home', 'away'):
         ours, theirs = m[s].get('lineup'), detail[s]['lineup']
-        if has_minutes(ours) or not has_minutes(theirs) and ours and len(ours) >= len(theirs):
+        if not theirs or has_minutes(ours) or not has_minutes(theirs) and ours and len(ours) >= len(theirs):
             continue
         m[s]['lineup'] = theirs
         m['lineup_source'] = 'espn'
@@ -294,6 +313,8 @@ def sync_season(prefix: str, season: str, json_dir: Path, dry_run: bool = False,
                 detail = _detail(slug, e, target)
                 if detail is not None:
                     _apply_detail(target, detail, stats)
+                else:
+                    _mark_awarded(target, None, stats)
 
     if changed and not dry_run:
         save_matches(path, matches)

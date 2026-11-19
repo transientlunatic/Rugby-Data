@@ -242,3 +242,15 @@ def test_unannounced_kickoff_does_not_overwrite_ours(tmp_path, fake_espn):
     assert espn_sync.sync_season('celtic', '2024-2025', tmp_path, fixtures=True)['redated'] == 1
     out = {m['home']['team']: m['date'] for m in read(tmp_path)}
     assert out == {'Leinster Rugby': '2024-11-01T19:35:00.000Z', 'Munster Rugby': '2024-11-02T14:00:00.000Z'}
+
+
+def test_awarded_walkover_is_marked_and_empty_rosters_are_not_lineups(tmp_path, fake_espn, monkeypatch):
+    write(tmp_path, [])
+    fake_espn['events'] = [event('1', '2024-12-18', 'Scarlets', 'Toulon', 28, 0)]
+    monkeypatch.setattr(espn, 'fetch_plays', lambda slug, eid: [])
+    monkeypatch.setattr(espn, 'fetch_summary', lambda slug, eid: {'rosters': [
+        {'homeAway': 'home', 'team': {'id': '1'}, 'roster': []}, {'homeAway': 'away', 'team': {'id': '2'}, 'roster': []}]})
+    stats = espn_sync.sync_season('celtic', '2024-2025', tmp_path, add_missing=True)
+    out = read(tmp_path)[0]
+    assert stats['awarded'] == 1 and out['status'] == 'awarded'
+    assert out['home']['lineup'] == {} and 'lineup_source' not in out and 'lineups_added' not in stats

@@ -154,6 +154,10 @@ ESPN_ALIASES = {
     'lou rugby': 'lyon',
     'section paloise': 'pau',
     'rc enisei': 'enisei stm',
+    # older names of the same clubs, still found in some files
+    'border reivers': 'borders',
+    'newport gwent dragons': 'dragons rfc',
+    'llanelli scarlets': 'scarlets',
 }
 
 

@@ -16,6 +16,7 @@ from ..data_loader import find_data_dir, show_data_info
 from ..scrapers.squads import scrape_squads, get_page_title
 from ..cleanup import clean_directory
 from ..enrich import enrich_season, seasons_on_disk
+from ..espn_sync import sync_season
 from ..fix_dates import fix_directory
 from ..scrapers.espn import ESPN_LEAGUES
 from ..team_names import normalise_directory
@@ -74,6 +75,32 @@ def enrich_lineups(tournaments, season, dry_run):
                 continue
             detail = ', '.join(f"{k}={v}" for k, v in sorted(stats.items()) if k != 'matches')
             click.echo(f"{league} {s}: {stats.get('matches', 0)} results; {detail or 'nothing to do'}")
+
+
+@data.command(name='enrich-events')
+@click.option('--tournament', '-t', 'tournaments', multiple=True, required=True,
+              type=click.Choice(list(ESPN_LEAGUES.keys())), help='Competition to enrich (repeatable).')
+@click.option('--season', default=None, help='One season, e.g. "2010-2011". Default: every season on disk.')
+@click.option('--add-missing', is_flag=True, help='Also add completed matches ESPN has and the file lacks.')
+@click.option('--dry-run', is_flag=True, help='Report what would change without writing.')
+def enrich_events(tournaments, season, add_missing, dry_run):
+    """Add scoring events and minute-stamped lineups from ESPN's play-by-play.
+
+    Only fills gaps: events a match already has, and lineups that already
+    record substitution minutes, are kept. Events that don't add up to the
+    final score are not written. Filled matches are tagged
+    "events_source": "espn" (and "lineup_source": "espn").
+    """
+    json_dir = find_data_dir()
+    cache = {}
+    for league in tournaments:
+        seasons = [season] if season else seasons_on_disk(json_dir, league)
+        for s in seasons:
+            stats = sync_season(league, s, json_dir, dry_run=dry_run, add_missing=add_missing, events_cache=cache)
+            if stats.get('no_file'):
+                continue
+            detail = ', '.join(f"{k}={v}" for k, v in sorted(stats.items()))
+            click.echo(f"{league} {s}: {detail or 'nothing to do'}")
 
 
 @data.command(name='fix-dates')

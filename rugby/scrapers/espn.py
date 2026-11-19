@@ -121,6 +121,7 @@ def fetch_lineups(slug: int, event_id: str) -> Optional[Dict[str, Dict[str, dict
 ESPN_ALIASES = {
     'stade toulousain': 'toulouse',
     'nsw waratahs': 'new south wales waratahs',
+    'benetton treviso': 'benetton rugby',
 }
 
 

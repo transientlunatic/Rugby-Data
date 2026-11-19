@@ -64,7 +64,7 @@ Connacht v Munster 18 Apr 2010 (12-18 here, 7-18 on ESPN), and home/away reverse
 
 ## Top 14
 
-Top 14 data are available for 2011-2012 to 2015-2016, 2017-2018 to 2018-2019, and 2021-2022 onwards. 2016-2017, 2019-2020 and 2020-2021 are missing, and 2015-2016 is incomplete (88 matches). Automated updates are now available for current seasons.
+Top 14 data are available from 2011-2012 onwards. 2015-2016 (completed), 2016-2017, 2019-2020 (abandoned after 17 rounds) and 2020-2021 come from ESPN; 2016-2017 lacks four of its 187 matches, which ESPN doesn't have. Automated updates are now available for current seasons.
 Lineups come from the main feed for recent seasons and from ESPN for earlier ones (starters and bench only, no substitution minutes: see below).
 The 2010-2016 files originally had every date set to 2019, and 2017-2019 had autumn dates a year late; both were repaired with `rugby data fix-dates` (see below).
 

@@ -46,9 +46,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.734299+00:00",
+    "calibration_metrics": {
+      "home_score_error": -9.838000000000001,
+      "away_score_error": -2.338000000000001,
+      "margin_error": -7.5,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-25T23:44:23_la-rochelle-vs-bayonne_2026-11-08",
@@ -97,9 +111,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.735299+00:00",
+    "calibration_metrics": {
+      "home_score_error": -9.693999999999999,
+      "away_score_error": -1.0740000000000016,
+      "margin_error": -8.62,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-29T19:01:14_la-rochelle-vs-bayonne_2026-11-08",
@@ -148,9 +176,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.736190+00:00",
+    "calibration_metrics": {
+      "home_score_error": -12.786000000000001,
+      "away_score_error": -0.4740000000000002,
+      "margin_error": -12.312000000000001,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-30T22:03:27_la-rochelle-vs-bayonne_2026-11-08",
@@ -199,9 +241,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.737056+00:00",
+    "calibration_metrics": {
+      "home_score_error": -10.444000000000003,
+      "away_score_error": -0.9540000000000006,
+      "margin_error": -9.49,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-31T16:52:21_la-rochelle-vs-bayonne_2026-11-08",
@@ -250,9 +306,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.737913+00:00",
+    "calibration_metrics": {
+      "home_score_error": -11.213999999999999,
+      "away_score_error": -0.9699999999999989,
+      "margin_error": -10.244,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-11-02T01:09:36_la-rochelle-vs-bayonne_2026-11-08",
@@ -301,9 +371,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.738816+00:00",
+    "calibration_metrics": {
+      "home_score_error": -9.847999999999999,
+      "away_score_error": 0.5040000000000013,
+      "margin_error": -10.352,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-11-05T20:44:19_la-rochelle-vs-bayonne_2026-11-08",
@@ -352,9 +436,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.741618+00:00",
+    "calibration_metrics": {
+      "home_score_error": -8.538,
+      "away_score_error": 0.3999999999999986,
+      "margin_error": -8.938,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-11-06T23:00:26_la-rochelle-vs-bayonne_2026-11-08",
@@ -403,9 +501,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.742496+00:00",
+    "calibration_metrics": {
+      "home_score_error": -8.963999999999999,
+      "away_score_error": -0.7379999999999995,
+      "margin_error": -8.226,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-11-07T17:35:15_la-rochelle-vs-bayonne_2026-11-08",
@@ -454,8 +566,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 22,
+      "away_score": 18,
+      "home_tries": 3,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:10:40.710163+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:10:40.743334+00:00",
+    "calibration_metrics": {
+      "home_score_error": -9.04,
+      "away_score_error": 0.08399999999999963,
+      "margin_error": -9.124,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

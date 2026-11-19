@@ -46,9 +46,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 34,
+      "away_score": 14,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:11:08.048293+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:11:08.076127+00:00",
+    "calibration_metrics": {
+      "home_score_error": 1.274000000000001,
+      "away_score_error": -19.356,
+      "margin_error": 20.63,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-24T15:35:34_pau-vs-toulouse_2026-11-01",
@@ -97,9 +111,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 34,
+      "away_score": 14,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:11:08.048293+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:11:08.077011+00:00",
+    "calibration_metrics": {
+      "home_score_error": -0.2079999999999984,
+      "away_score_error": -19.055999999999997,
+      "margin_error": 18.848,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-25T23:44:22_pau-vs-toulouse_2026-11-01",
@@ -148,9 +176,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 34,
+      "away_score": 14,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:11:08.048293+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:11:08.077755+00:00",
+    "calibration_metrics": {
+      "home_score_error": 1.6480000000000032,
+      "away_score_error": -20.466,
+      "margin_error": 22.114,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-29T19:01:14_pau-vs-toulouse_2026-11-01",
@@ -199,9 +241,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 34,
+      "away_score": 14,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:11:08.048293+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:11:08.078472+00:00",
+    "calibration_metrics": {
+      "home_score_error": 3.7560000000000002,
+      "away_score_error": -16.448,
+      "margin_error": 20.204,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-30T22:03:26_pau-vs-toulouse_2026-11-01",
@@ -250,9 +306,23 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 34,
+      "away_score": 14,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:11:08.048293+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:11:08.079148+00:00",
+    "calibration_metrics": {
+      "home_score_error": 3.2959999999999994,
+      "away_score_error": -16.294,
+      "margin_error": 19.59,
+      "outcome_correct": true,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   },
   {
     "prediction_id": "2026-10-31T16:52:21_pau-vs-toulouse_2026-11-01",
@@ -301,8 +371,22 @@
     "model_inputs": {
       "season": "2026-2027"
     },
-    "actual_result": null,
-    "result_updated_at": null,
-    "calibration_metrics": null
+    "actual_result": {
+      "home_score": 34,
+      "away_score": 14,
+      "home_tries": 4,
+      "away_tries": 2,
+      "result_fetched_at": "2026-11-19T21:11:08.048293+00:00",
+      "result_source": "rugby-data-json"
+    },
+    "result_updated_at": "2026-11-19T21:11:08.079805+00:00",
+    "calibration_metrics": {
+      "home_score_error": 3.3580000000000005,
+      "away_score_error": -17.248,
+      "margin_error": 20.606,
+      "outcome_correct": false,
+      "home_in_ci": true,
+      "away_in_ci": true
+    }
   }
 ]

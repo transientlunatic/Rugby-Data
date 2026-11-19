@@ -58,6 +58,7 @@ TEAM_NAME_ALIASES: Dict[str, str] = {
     'Bordeaux-Beg': 'Bordeaux-Begles',
     'Castres Olympique': 'Castres',
     'Biarritz Olympique': 'Biarritz',
+    'Bourgoin-Jallieu': 'Bourgoin',
     'Canterbury Crusaders': 'Crusaders',
     'Neath-Swansea Ospreys': 'Ospreys',
     'Free State Cheetahs': 'Cheetahs',

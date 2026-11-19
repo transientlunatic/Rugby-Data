@@ -191,6 +191,17 @@ def test_season_windows():
     assert espn_sync.season_window('2019-2020', False) == ('2019-08-01', '2020-09-20')
     assert espn_sync.season_window('2020-2021', False) == ('2020-09-21', '2021-07-31')
     assert espn_sync.season_window('2024-2025', True) == ('2024-01-01', '2024-12-31')
+    assert espn_sync.season_window('2019-2020', False, 'premiership') == ('2019-08-01', '2020-11-01')
+    assert espn_sync.season_window('2020-2021', False, 'premiership') == ('2020-11-02', '2021-07-31')
+    assert espn_sync.season_window('2020-2021', False, 'top14') == ('2020-08-01', '2021-07-31')
+
+
+def test_new_file_uses_the_competitions_spellings(tmp_path, fake_espn):
+    write(tmp_path, [match('2023-10-04', 'Munster Rugby', 'Ospreys', 7, 0)], name='celtic-2023-2024.json')
+    fake_espn['events'] = [event('1', '2024-10-04', 'Munster', 'Ospreys', 7, 0)]
+    espn_sync.sync_season('celtic', '2024-2025', tmp_path, add_missing=True)
+    out = read(tmp_path)[0]
+    assert (out['home']['team'], out['away']['team']) == ('Munster Rugby', 'Ospreys')
 
 
 class TestUpdateRouting:
@@ -231,3 +242,22 @@ def test_unannounced_kickoff_does_not_overwrite_ours(tmp_path, fake_espn):
     assert espn_sync.sync_season('celtic', '2024-2025', tmp_path, fixtures=True)['redated'] == 1
     out = {m['home']['team']: m['date'] for m in read(tmp_path)}
     assert out == {'Leinster Rugby': '2024-11-01T19:35:00.000Z', 'Munster Rugby': '2024-11-02T14:00:00.000Z'}
+
+
+def test_awarded_walkover_is_marked_and_empty_rosters_are_not_lineups(tmp_path, fake_espn, monkeypatch):
+    write(tmp_path, [])
+    fake_espn['events'] = [event('1', '2024-12-18', 'Scarlets', 'Toulon', 28, 0)]
+    monkeypatch.setattr(espn, 'fetch_plays', lambda slug, eid: [])
+    monkeypatch.setattr(espn, 'fetch_summary', lambda slug, eid: {'rosters': [
+        {'homeAway': 'home', 'team': {'id': '1'}, 'roster': []}, {'homeAway': 'away', 'team': {'id': '2'}, 'roster': []}]})
+    stats = espn_sync.sync_season('celtic', '2024-2025', tmp_path, add_missing=True)
+    out = read(tmp_path)[0]
+    assert stats['awarded'] == 1 and out['status'] == 'awarded'
+    assert out['home']['lineup'] == {} and 'lineup_source' not in out and 'lineups_added' not in stats
+
+
+def test_same_result_on_another_date_is_not_added_again(tmp_path, fake_espn):
+    write(tmp_path, [match('2025-05-10', 'Stade Francais', 'Racing 92', 19, 16)])
+    fake_espn['events'] = [event('1', '2025-04-21', 'Stade Francais Paris', 'Racing 92', 19, 16)]
+    stats = espn_sync.sync_season('celtic', '2024-2025', tmp_path, add_missing=True)
+    assert stats.get('already_here_other_date') == 1 and len(read(tmp_path)) == 1

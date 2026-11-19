@@ -150,6 +150,10 @@ ESPN_ALIASES = {
     'stade toulousain': 'toulouse',
     'nsw waratahs': 'new south wales waratahs',
     'benetton treviso': 'benetton rugby',
+    'bristol rugby': 'bristol bears',
+    'lou rugby': 'lyon',
+    'section paloise': 'pau',
+    'rc enisei': 'enisei stm',
 }
 
 

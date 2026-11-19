@@ -13,6 +13,14 @@ The repository is configured to automatically update rugby match data:
 
 Currently, the automation supports the following competitions, defined in `LEAGUE_CONFIGS` in `rugby/update.py`:
 
+> **Source change (November 2026).** The InCrowd feed now rejects requests
+> without an `X-APP-ID` header, and we don't have an app id. Until one is set
+> as the `INCROWD_APP_ID` repository secret (it is passed to the update step
+> and sent automatically), the club competitions update from **ESPN** instead:
+> URC, Premiership, Top 14, Champions Cup and Challenge Cup. **Pro D2 and the RFU
+> Championship are not on ESPN** and are skipped with a warning, so they stop
+> receiving updates. See "ESPN" under Data Sources.
+
 InCrowd Sports API (club competitions):
 - **URC (United Rugby Championship)**: Latest season data including:
   - Match results for completed games
@@ -138,6 +146,32 @@ rugby data update -t urc -t premiership -t euro-champions
 | pro-d2 | 1013 | French second-tier rugby |
 | euro-champions | 1008 | European Rugby Champions Cup |
 | euro-challenge | 1026 | European Rugby Challenge Cup |
+
+### ESPN
+- **Format**: JSON, undocumented and unauthenticated: the site API's scoreboard
+  and match summary, and the core API's play-by-play
+  (`sports.core.api.espn.com/v2/sports/rugby/leagues/{league}/events/{id}/competitions/{id}/plays`)
+- **Used for**: the weekly update of the club competitions while no InCrowd app
+  id is configured (`rugby/espn_sync.py`), `rugby data enrich-events` and
+  `rugby data enrich-lineups`
+- **Coverage**: results, fixtures, scoring events with minute and scorer, and
+  lineups with substitution and card minutes. Celtic League from 2008-09.
+  No missed kicks, and no round numbers: matches already in a file keep their
+  round; new ones take the round of fixtures within three days (or of the
+  `TBC v TBC` knockout slot they replace).
+- **Safeguards**: existing scoring events and minute-stamped lineups are never
+  replaced; events that don't add up to the final score are not written (the
+  result is); a fixture already in the file with a different score or with
+  home and away swapped is reported, not duplicated. Rows added or filled are
+  tagged `"source"`, `"events_source"` or `"lineup_source": "espn"`.
+
+| File prefix | ESPN league id |
+|-------------|----------------|
+| celtic | 270557 |
+| premiership | 267979 |
+| euro-champions | 271937 |
+| euro-challenge | 272073 |
+| top14 | 270559 |
 
 ### Wikipedia
 - **Format**: Wikitext, parsed by `rugby/scrapers/six_nations.py`

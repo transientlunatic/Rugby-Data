@@ -73,6 +73,9 @@ def _is_placeholder(m: dict) -> bool:
 
 def resolve_team(espn_name: str, known: List[str]) -> str:
     """The spelling this file already uses for an ESPN team, else canonical."""
+    exact = [k for k in known if espn._norm(k) == espn._norm(espn_name)]
+    if len(exact) == 1:
+        return exact[0]
     hits = [k for k in known if same_team(k, espn_name)]
     if len(hits) == 1:
         return hits[0]
@@ -81,6 +84,18 @@ def resolve_team(espn_name: str, known: List[str]) -> str:
 
 def _day(s: str) -> datetime:
     return datetime.strptime(str(s)[:10], '%Y-%m-%d')
+
+
+def _time_unknown(e: dict) -> bool:
+    """ESPN lists kick-offs not yet announced at midnight UTC."""
+    return not e['completed'] and e['kickoff'][11:16] == '00:00'
+
+
+def _keep_time(e: dict, old: str) -> str:
+    """ESPN's date, with our kick-off time if ESPN doesn't know its own."""
+    if _time_unknown(e) and len(str(old)) > 10:
+        return e['kickoff'][:10] + str(old)[10:]
+    return e['kickoff']
 
 
 def _round_from_neighbours(date: str, matches: List[dict]) -> Dict:
@@ -222,7 +237,7 @@ def sync_season(prefix: str, season: str, json_dir: Path, dry_run: bool = False,
                 if e['completed']:
                     stats['already_here_differs'] += 1      # ESPN's score or orientation differs
                 elif fixtures and not _has_result(m) and str(m['date'])[:16] != e['kickoff'][:16] \
-                        and same_team(m['home']['team'], e['home']):
+                        and not _time_unknown(e) and same_team(m['home']['team'], e['home']):
                     m['date'] = e['kickoff']                # kick-off time moved
                     stats['redated'] += 1
                     changed = True
@@ -233,7 +248,7 @@ def sync_season(prefix: str, season: str, json_dir: Path, dry_run: bool = False,
                      and abs((_day(m['date']) - _day(e['date'])).days) <= 60]
             if len(moved) == 1:
                 target = moved[0]
-                target['date'] = e['kickoff']
+                target['date'] = _keep_time(e, target['date'])
                 stats['redated'] += 1
             else:
                 placeholder = [m for m in matches if _is_placeholder(m) and str(m.get('date', ''))[:4].isdigit()

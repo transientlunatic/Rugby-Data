@@ -48,6 +48,17 @@ RFU Championship (English second-tier) data is now available via automated updat
 
 Celtic League data are available (in its various guises) between the 2006-2007 season and the 2021-2022 season. Automated updates are now available for current seasons.
 The Pro14 Rainbow Cup is not currently included.
+Scoring events run from 2008-2009 (2006-07 and 2007-08 have results and lineups only; ESPN has no detail for them).
+
+Repairs made in November 2026 (`scripts/repair_celtic_seasons.py`, then `rugby data enrich-events`):
+`celtic-2019-2020.json` had been a copy of 2021-22 and now holds the real 2019-20 season, recovered from
+`celtic-2020-2021.json` where it had been filed a year late. 2019-20 has 104 matches (56 were cancelled for COVID).
+`celtic-2020-2021.json` now has only 2020-21, made complete (96) from ESPN.
+`celtic-2012-2013.json` lost 50 matches from 2013-14 to `celtic-2013-2014.json`; both now have 135.
+2008-09, 2009-10 and 2010-11 gained scoring events, and 2014-15, 2015-16 and 2018-19 their missing matches.
+Known disagreements with ESPN, left as they are: Scarlets v Ospreys 18 Apr 2009 (18-29 here, 19-28 on ESPN),
+Connacht v Munster 18 Apr 2010 (12-18 here, 7-18 on ESPN), and home/away reversed relative to ESPN for eight
+2021-22 matches (six South African derbies and two Leinster v Munster games) and the 2015 final.
 
 ## Top 14
 
@@ -99,6 +110,25 @@ rugby data enrich-lineups -t npc --season 2024-2025
 - Coverage when this was added: Top 14 2010 onward, Super Rugby Pacific 2022
   onward, NPC 2016 onward. The Currie Cup has no rosters on ESPN.
 - ESPN's API is undocumented and may change without notice.
+
+## Scoring events from ESPN
+
+`rugby data enrich-events` fills scoring events, and lineups with substitution
+and card minutes, from ESPN's play-by-play:
+
+```bash
+rugby data enrich-events -t celtic --season 2010-2011 --dry-run
+rugby data enrich-events -t celtic --season 2020-2021 --add-missing   # also add matches the file lacks
+```
+
+- Existing scoring events and minute-stamped lineups are never replaced.
+- Events that don't add up to the final score are not written (ESPN misses
+  the odd kick); ESPN has no missed kicks at all.
+- Filled matches carry `"events_source": "espn"` / `"lineup_source": "espn"`;
+  added ones `"source": "espn"`.
+- Available for the competitions in `ESPN_LEAGUES` (`rugby/scrapers/espn.py`).
+  This is also how the weekly update gets club results while the InCrowd feed
+  needs an app id (see AUTOMATION.md).
 
 ## Date repairs
 

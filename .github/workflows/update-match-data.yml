@@ -40,6 +40,10 @@ jobs:
           pip install ".[dev]"
 
       - name: Update match data
+        env:
+          # Optional. Without it the club competitions update from ESPN, and
+          # Pro D2 / RFU Championship are skipped (see AUTOMATION.md).
+          INCROWD_APP_ID: ${{ secrets.INCROWD_APP_ID }}
         run: |
           ARGS=""
           if [ -n "${{ github.event.inputs.season }}" ]; then

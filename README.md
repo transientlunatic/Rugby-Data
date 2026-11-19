@@ -55,6 +55,8 @@ Repairs made in November 2026 (`scripts/repair_celtic_seasons.py`, then `rugby d
 `celtic-2020-2021.json` where it had been filed a year late. 2019-20 has 104 matches (56 were cancelled for COVID).
 `celtic-2020-2021.json` now has only 2020-21, made complete (96) from ESPN.
 `celtic-2012-2013.json` lost 50 matches from 2013-14 to `celtic-2013-2014.json`; both now have 135.
+`celtic-2006-2007.json` had 69 of 110 matches; the other 41 results come from Wikipedia
+(`scripts/fill_from_wikipedia.py`, tagged `"source": "wikipedia"`, no events or lineups).
 2008-09, 2009-10 and 2010-11 gained scoring events, and 2014-15, 2015-16 and 2018-19 their missing matches.
 Known disagreements with ESPN, left as they are: Scarlets v Ospreys 18 Apr 2009 (18-29 here, 19-28 on ESPN),
 Connacht v Munster 18 Apr 2010 (12-18 here, 7-18 on ESPN), and home/away reversed relative to ESPN for eight
@@ -69,6 +71,16 @@ The 2010-2016 files originally had every date set to 2019, and 2017-2019 had aut
 ## Pro D2 (France)
 
 Pro D2 (French second-tier) data is now available via automated updates for current seasons.
+
+## COVID-season repairs (Premiership and European cups)
+
+The 2019-20 and 2020-21 files of the Premiership and both European cups had
+the same fault as the Celtic ones: each 2019-20 file was a copy of 2021-22
+dated two years early, and each 2020-21 file held the real 2019-20 season
+dated a year late. `scripts/repair_covid_seasons.py` rebuilt 2019-20 from
+the misfiled rows (checked against ESPN), and the 2020-21 seasons were then
+completed from ESPN (the Premiership's entirely, as its file held none of
+it). Each competition's 2019-20 runs to its delayed autumn-2020 final.
 
 ## European Challenge & Champions Cup
 
@@ -126,6 +138,9 @@ rugby data enrich-events -t celtic --season 2020-2021 --add-missing   # also add
   the odd kick); ESPN has no missed kicks at all.
 - Filled matches carry `"events_source": "espn"` / `"lineup_source": "espn"`;
   added ones `"source": "espn"`.
+- A 28-0 result with no scoring in ESPN's play-by-play (the forfeits of the
+  COVID seasons) gets `"status": "awarded"`: it was never played, so leave it
+  out of anything that models team strength.
 - Available for the competitions in `ESPN_LEAGUES` (`rugby/scrapers/espn.py`).
   This is also how the weekly update gets club results while the InCrowd feed
   needs an app id (see AUTOMATION.md).

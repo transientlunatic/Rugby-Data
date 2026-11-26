@@ -406,5 +406,107 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-26T22:12:54_sale-sharks-vs-exeter-chiefs_2026-12-06",
+    "prediction_metadata": {
+      "timestamp": "2026-11-26T22:12:54.824737+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "premiership_2026-12-06_Sale Sharks-vs-Exeter Chiefs",
+      "competition": "premiership",
+      "season": "2026-2027",
+      "date": "2026-12-06T15:00:00+00:00",
+      "home_team": "Sale Sharks",
+      "away_team": "Exeter Chiefs",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Sale Sharks",
+        "mean": 25.816,
+        "std": 13.824403929283896,
+        "median": 24.0,
+        "ci_lower": 7.0,
+        "ci_upper": 50.0
+      },
+      "away": {
+        "team": "Exeter Chiefs",
+        "mean": 26.304,
+        "std": 14.906763028907381,
+        "median": 24.0,
+        "ci_lower": 5.0,
+        "ci_upper": 52.049999999999955
+      },
+      "home_win_prob": 0.48457107588545073,
+      "away_win_prob": 0.49742892411454925,
+      "draw_prob": 0.018,
+      "predicted_margin": -0.488,
+      "margin_std": 20.221717434481178,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-26T22:12:54_toulon-vs-bordeaux-begles_2026-12-06",
+    "prediction_metadata": {
+      "timestamp": "2026-11-26T22:12:54.882225+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-12-06_Toulon-vs-Bordeaux-Begles",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-12-06T20:05:00+00:00",
+      "home_team": "Toulon",
+      "away_team": "Bordeaux-Begles",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Toulon",
+        "mean": 27.482,
+        "std": 13.835377696326184,
+        "median": 25.0,
+        "ci_lower": 7.0,
+        "ci_upper": 52.0
+      },
+      "away": {
+        "team": "Bordeaux-Begles",
+        "mean": 20.792,
+        "std": 11.846211883973712,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 42.0
+      },
+      "home_win_prob": 0.6040733511828598,
+      "away_win_prob": 0.3819266488171402,
+      "draw_prob": 0.014,
+      "predicted_margin": 6.69,
+      "margin_std": 18.040230042879166,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]

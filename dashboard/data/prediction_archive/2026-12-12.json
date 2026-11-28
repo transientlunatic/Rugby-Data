@@ -1,0 +1,257 @@
+[
+  {
+    "prediction_id": "2026-11-28T01:02:00_ospreys-vs-harlequins_2026-12-12",
+    "prediction_metadata": {
+      "timestamp": "2026-11-28T01:02:00.768388+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-challenge_2026-12-12_Ospreys-vs-Harlequins",
+      "competition": "euro-challenge",
+      "season": "2026-2027",
+      "date": "2026-12-12T13:00:00+00:00",
+      "home_team": "Ospreys",
+      "away_team": "Harlequins",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Ospreys",
+        "mean": 38.554,
+        "std": 17.691667078034225,
+        "median": 37.0,
+        "ci_lower": 13.0,
+        "ci_upper": 70.04999999999995
+      },
+      "away": {
+        "team": "Harlequins",
+        "mean": 27.156,
+        "std": 14.916154464204237,
+        "median": 26.0,
+        "ci_lower": 7.0,
+        "ci_upper": 56.049999999999955
+      },
+      "home_win_prob": 0.631874440256689,
+      "away_win_prob": 0.35812555974331095,
+      "draw_prob": 0.01,
+      "predicted_margin": 11.398,
+      "margin_std": 23.456930660254763,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-28T01:02:00_ulster-rugby-vs-bayonne_2026-12-12",
+    "prediction_metadata": {
+      "timestamp": "2026-11-28T01:02:00.817745+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-challenge_2026-12-12_Ulster Rugby-vs-Bayonne",
+      "competition": "euro-challenge",
+      "season": "2026-2027",
+      "date": "2026-12-12T13:00:00+00:00",
+      "home_team": "Ulster Rugby",
+      "away_team": "Bayonne",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Ulster Rugby",
+        "mean": 41.066,
+        "std": 18.727563749724627,
+        "median": 38.0,
+        "ci_lower": 14.0,
+        "ci_upper": 75.09999999999991
+      },
+      "away": {
+        "team": "Bayonne",
+        "mean": 21.168,
+        "std": 12.337089446056554,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.7181692248095198,
+      "away_win_prob": 0.26583077519048015,
+      "draw_prob": 0.016,
+      "predicted_margin": 19.898,
+      "margin_std": 23.51109516802652,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-28T01:02:00_10bet-lions-vs-toulouse_2026-12-12",
+    "prediction_metadata": {
+      "timestamp": "2026-11-28T01:02:00.867379+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-12-12_10bet Lions-vs-Toulouse",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-12-12T13:00:00+00:00",
+      "home_team": "10bet Lions",
+      "away_team": "Toulouse",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "10bet Lions",
+        "mean": 22.754,
+        "std": 13.561470569226627,
+        "median": 21.0,
+        "ci_lower": 4.900000000000006,
+        "ci_upper": 47.049999999999955
+      },
+      "away": {
+        "team": "Toulouse",
+        "mean": 30.856,
+        "std": 15.80478611054259,
+        "median": 29.0,
+        "ci_lower": 8.0,
+        "ci_upper": 59.049999999999955
+      },
+      "home_win_prob": 0.3748882161588031,
+      "away_win_prob": 0.6031117838411969,
+      "draw_prob": 0.022,
+      "predicted_margin": -8.102,
+      "margin_std": 20.176808370007382,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-28T01:02:00_leicester-tigers-vs-clermont_2026-12-12",
+    "prediction_metadata": {
+      "timestamp": "2026-11-28T01:02:00.918217+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-12-12_Leicester Tigers-vs-Clermont",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-12-12T15:15:00+00:00",
+      "home_team": "Leicester Tigers",
+      "away_team": "Clermont",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Leicester Tigers",
+        "mean": 35.804,
+        "std": 17.30819412879345,
+        "median": 34.0,
+        "ci_lower": 10.950000000000003,
+        "ci_upper": 66.04999999999995
+      },
+      "away": {
+        "team": "Clermont",
+        "mean": 19.358,
+        "std": 12.083121947576297,
+        "median": 17.0,
+        "ci_lower": 0.0,
+        "ci_upper": 41.049999999999955
+      },
+      "home_win_prob": 0.7143889115672595,
+      "away_win_prob": 0.2576110884327405,
+      "draw_prob": 0.028,
+      "predicted_margin": 16.446,
+      "margin_std": 20.930625504270054,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-28T01:02:00_montpellier-vs-vodacom-bulls_2026-12-12",
+    "prediction_metadata": {
+      "timestamp": "2026-11-28T01:02:00.968452+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "euro-champions_2026-12-12_Montpellier-vs-Vodacom Bulls",
+      "competition": "euro-champions",
+      "season": "2026-2027",
+      "date": "2026-12-12T15:15:00+00:00",
+      "home_team": "Montpellier",
+      "away_team": "Vodacom Bulls",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Montpellier",
+        "mean": 33.214,
+        "std": 17.31681852997253,
+        "median": 31.0,
+        "ci_lower": 9.900000000000006,
+        "ci_upper": 64.0
+      },
+      "away": {
+        "team": "Vodacom Bulls",
+        "mean": 21.584,
+        "std": 12.46093672241377,
+        "median": 20.0,
+        "ci_lower": 3.0,
+        "ci_upper": 45.0
+      },
+      "home_win_prob": 0.6233207930658557,
+      "away_win_prob": 0.35867920693414423,
+      "draw_prob": 0.018,
+      "predicted_margin": 11.63,
+      "margin_std": 20.958843002417858,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
+  }
+]

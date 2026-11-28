@@ -253,5 +253,56 @@
     "actual_result": null,
     "result_updated_at": null,
     "calibration_metrics": null
+  },
+  {
+    "prediction_id": "2026-11-28T01:01:58_clermont-vs-toulon_2026-11-29",
+    "prediction_metadata": {
+      "timestamp": "2026-11-28T01:01:58.562540+00:00",
+      "model_checkpoint": "weekly-model",
+      "model_version": "standard",
+      "prediction_type": "teams_only",
+      "software_version": "rugby-ranking==0.1.0"
+    },
+    "match_metadata": {
+      "match_id": "top14_2026-11-29_Clermont-vs-Toulon",
+      "competition": "top14",
+      "season": "2026-2027",
+      "date": "2026-11-29T20:05:00+00:00",
+      "home_team": "Clermont",
+      "away_team": "Toulon",
+      "stadium": null,
+      "round": null
+    },
+    "prediction": {
+      "home": {
+        "team": "Clermont",
+        "mean": 28.954,
+        "std": 14.56378673285214,
+        "median": 28.0,
+        "ci_lower": 7.0,
+        "ci_upper": 57.049999999999955
+      },
+      "away": {
+        "team": "Toulon",
+        "mean": 19.178,
+        "std": 10.486291813601222,
+        "median": 18.0,
+        "ci_lower": 3.0,
+        "ci_upper": 38.0
+      },
+      "home_win_prob": 0.6474677536956476,
+      "away_win_prob": 0.3265322463043524,
+      "draw_prob": 0.026,
+      "predicted_margin": 9.776,
+      "margin_std": 17.380846469605558,
+      "home_season_used": null,
+      "away_season_used": null
+    },
+    "model_inputs": {
+      "season": "2026-2027"
+    },
+    "actual_result": null,
+    "result_updated_at": null,
+    "calibration_metrics": null
   }
 ]
